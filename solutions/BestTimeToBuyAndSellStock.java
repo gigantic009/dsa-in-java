@@ -1,34 +1,25 @@
-/**
- * Question:
- * Given daily stock prices, choose one day to buy and a later day to sell to maximise profit. Return 0 if no profit is possible.
- *
- * LeetCode: #121
- *
- * Companies:
- * Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs, Intuit, MakeMyTrip, Microsoft
- */
+import java.util.Scanner;
+
 public class BestTimeToBuyAndSellStock {
-    public static int maxProfit(int[] prices) {
+    public static long maxProfit(int[] prices) {
         int minPrice = prices[0];
-        int maxProfit = 0;
+        long bestProfit = 0;
 
         for (int i = 1; i < prices.length; i++) {
-            int profit = prices[i] - minPrice;
-
-            if (profit > maxProfit) {
-                maxProfit = profit;
-            }
-
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
-            }
+            bestProfit = Math.max(bestProfit, (long) prices[i] - minPrice);
+            minPrice = Math.min(minPrice, prices[i]);
         }
-
-        return maxProfit;
+        return bestProfit;
     }
 
     public static void main(String[] args) {
-        int[] prices = {7, 1, 5, 3, 6, 4};
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] prices = new int[n];
+
+        for (int i = 0; i < n; i++) prices[i] = scanner.nextInt();
+
         System.out.println(maxProfit(prices));
+        scanner.close();
     }
 }
