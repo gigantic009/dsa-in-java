@@ -1,6 +1,7 @@
 /*
  * Problem: Find the median of two sorted arrays of possibly different lengths.
- * LeetCode: #4nies: Not listed
+ * LeetCode: #4
+ * Companies: Not listed in the question bank
  * Time Complexity: O(log(min(n, m)))
  * Space Complexity: O(1)
  */
