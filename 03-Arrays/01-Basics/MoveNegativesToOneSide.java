@@ -9,19 +9,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MoveNegativesToOneSide {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         int n = scanner.nextInt();
         int[] numbers = new int[n];
-
         for (int i = 0; i < n; i++) {
             numbers[i] = scanner.nextInt();
         }
-
         int nextNegativePosition = 0;
-
         for (int i = 0; i < n; i++) {
             if (numbers[i] < 0) {
                 int temp = numbers[i];
@@ -30,7 +25,6 @@ public class MoveNegativesToOneSide {
                 nextNegativePosition++;
             }
         }
-
         System.out.println(Arrays.toString(numbers));
         scanner.close();
     }
