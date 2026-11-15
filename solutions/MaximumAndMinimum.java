@@ -1,7 +1,11 @@
 /**
- * Question: Given an array, find its minimum and maximum elements.
- * Companies listed in the supplied Apna College sheet: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe.
- * Note: These are source-reported associations, not independently verified interview claims.
+ * Question:
+ * Given an array of integers, find the minimum and maximum elements.
+ *
+ * LeetCode: Not available (no exact problem number verified).
+ *
+ * Companies:
+ * ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
  */
 public class MaximumAndMinimum {
     public static int[] findMinMax(int[] arr) {
