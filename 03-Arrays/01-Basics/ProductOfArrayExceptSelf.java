@@ -1,3 +1,9 @@
+/*
+ * Problem: Return an array where each position contains the product of all input elements except the element at that position, without division.
+ * LeetCode: #238
+ * Companies: Microsoft, Facebook
+ * Time: O(n) | Auxiliary space: O(1), excluding output
+ */
 import java.util.Scanner;
 
 public class ProductOfArrayExceptSelf {
