@@ -1,7 +1,7 @@
 /*
  * Problem: Print every combination of r elements selected from an array of n elements.
  * LeetCode: Not available
- * Companies: Not listed
+ * Companies: Amazon
  */
 import java.util.*;
 public class CombinationsOfR {
