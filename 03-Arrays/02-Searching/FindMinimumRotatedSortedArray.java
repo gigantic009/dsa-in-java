@@ -1,9 +1,56 @@
 /*
  * Problem: Find the minimum element in a sorted array that has been rotated.
  * LeetCode: #153
- * Companies: Adobe, Amazon, Microsoft, Morgan Stanley, Samsung, Snapdeal, Times Internet
+ * Companies: Adobe, Amazon, Microsoft, Morgan Stanley, Samsung,
+ *            Snapdeal, Times Internet
+ * Note: This version also handles duplicate values.
+ * Time Complexity: O(log n) normally; O(n) in the worst case with duplicates.
+ * Space Complexity: O(1)
  */
-import java.util.*;
+
+import java.util.Scanner;
+
 public class FindMinimumRotatedSortedArray {
- public static void main(String[] z){Scanner s=new Scanner(System.in);int n=s.nextInt();if(n==0){System.out.println("Array is empty");return;}int[] a=new int[n];for(int i=0;i<n;i++)a[i]=s.nextInt();int l=0,r=n-1;while(l<r){int m=l+(r-l)/2;if(a[m]>a[r])l=m+1;else if(a[m]<a[r])r=m;else r--;}System.out.println(a[l]);}
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        if (n == 0) {
+            System.out.println("Array is empty");
+            sc.close();
+            return;
+        }
+
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        int left = 0;
+        int right = n - 1;
+
+        while (left < right) {
+
+            int middle = left + (right - left) / 2;
+
+            if (numbers[middle] > numbers[right]) {
+                left = middle + 1;
+
+            } else if (numbers[middle] < numbers[right]) {
+                right = middle;
+
+            } else {
+                // Equal values do not tell us which half has the minimum.
+                right--;
+            }
+        }
+
+        System.out.println(numbers[left]);
+
+        sc.close();
+    }
 }
