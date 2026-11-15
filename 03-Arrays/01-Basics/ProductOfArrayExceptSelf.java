@@ -1,40 +1,63 @@
 /*
- * Problem: Return an array where each position contains the product of all input elements except the element at that position, without division.
+ * Problem: For each index, find the product of all array elements
+ * except the element at that index. Do not use division.
  * LeetCode: #238
  * Companies: Microsoft, Facebook
- * Time: O(n) | Auxiliary space: O(1), excluding output
+ * Time Complexity: O(n)
+ * Space Complexity: O(1) extra space, excluding the output array.
  */
+
 import java.util.Scanner;
 
 public class ProductOfArrayExceptSelf {
-    public static long[] productExceptSelf(int[] nums) {
-        int n = nums.length;
+
+    public static long[] productExceptSelf(int[] numbers) {
+
+        int n = numbers.length;
         long[] answer = new long[n];
-        long prefix = 1;
 
+        long prefixProduct = 1;
+
+        // Store the product of all elements to the left of each index.
         for (int i = 0; i < n; i++) {
-            answer[i] = prefix;
-            prefix *= nums[i];
+
+            answer[i] = prefixProduct;
+
+            prefixProduct = prefixProduct * numbers[i];
         }
 
-        long suffix = 1;
+        long suffixProduct = 1;
+
+        // Multiply by the product of all elements to the right.
         for (int i = n - 1; i >= 0; i--) {
-            answer[i] *= suffix;
-            suffix *= nums[i];
+
+            answer[i] = answer[i] * suffixProduct;
+
+            suffixProduct = suffixProduct * numbers[i];
         }
+
         return answer;
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] nums = new int[n];
 
-        for (int i = 0; i < n; i++) nums[i] = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        long[] result = productExceptSelf(nums);
-        for (long value : result) System.out.print(value + " ");
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        long[] answer = productExceptSelf(numbers);
+
+        for (long value : answer) {
+            System.out.print(value + " ");
+        }
+
         System.out.println();
-        scanner.close();
+
+        sc.close();
     }
 }
