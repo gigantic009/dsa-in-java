@@ -4,20 +4,20 @@
 
 ## Easy / Foundation
 
-- [x] **3Sum** — Pattern: Two Pointers / Palindrome| Companies: Adobe Amazon Microsoft Morgan Stanley Samsung Snapdeal Times Internet
-- [x] **Best time to Buy and Sell Stock** — Pattern: Array Fundamentals| Companies: Amazon D-E-Shaw Directi Flipkart Goldman Sachs Intuit MakeMyTrip Microsoft
-- [x] **Container With Most Water** — Pattern: Two Pointers / Palindrome| Companies: Flipkart, Dunzo
-- [x] **Contains Duplicate** — Pattern: Hashing / Frequency| Companies: Amazon
-- [x] **Given Sum Pair** — Pattern: Array Fundamentals| Companies: Infosys, Amazon, Flipkart
-- [x] **Maximum and Minimum Element in an Array** — Pattern: Array Fundamentals| Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
-- [ ] **Mo's Algorithm** — Pattern: Array Fundamentals| Companies: Microsoft
-- [ ] **Print all Possible Combinations of r Elements in a Given Array of Size n** — Pattern: Array Fundamentals| Companies: Amazon
-- [x] **Product of Array Except Self** — Pattern: Array Fundamentals| Companies: Microsoft, Facebook
-- [x] **Repeat and Missing Number Array** — Pattern: Array Fundamentals| Companies: Amazon Interview Qs
-- [ ] **Space Optimization Using Bit Manipulations** — Pattern: Bit Manipulation| Companies: Amazon
-- [ ] **Given an Array of Numbers Arrange the Numbers to Form the Biggest Number** — Pattern: Array Fundamentals| Companies: Barclays
-- [x] **Reverse the Array** — Pattern: Array Fundamentals| Companies: Infosys Moonfrog Labs
-- [x] **Trapping Rain Water** — Pattern: Array Fundamentals| Companies: Samsung
+- [x] **3Sum** — Pattern: Two Pointers / Palindrome | Companies: Adobe Amazon Microsoft Morgan Stanley Samsung Snapdeal Times Internet
+- [x] **Best time to Buy and Sell Stock** — Pattern: Array Fundamentals | Companies: Amazon D-E-Shaw Directi Flipkart Goldman Sachs Intuit MakeMyTrip Microsoft
+- [x] **Container With Most Water** — Pattern: Two Pointers / Palindrome | Companies: Flipkart, Dunzo
+- [x] **Contains Duplicate** — Pattern: Hashing / Frequency | Companies: Amazon
+- [x] **Given Sum Pair** — Pattern: Array Fundamentals | Companies: Infosys, Amazon, Flipkart
+- [x] **Maximum and Minimum Element in an Array** — Pattern: Array Fundamentals | Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
+- [ ] **Mo's Algorithm** — Pattern: Array Fundamentals | Companies: Microsoft
+- [ ] **Print all Possible Combinations of r Elements in a Given Array of Size n** — Pattern: Array Fundamentals | Companies: Amazon
+- [x] **Product of Array Except Self** — Pattern: Array Fundamentals | Companies: Microsoft, Facebook
+- [x] **Repeat and Missing Number Array** — Pattern: Array Fundamentals | Companies: Amazon Interview Qs
+- [ ] **Space Optimization Using Bit Manipulations** — Pattern: Bit Manipulation | Companies: Amazon
+- [ ] **Given an Array of Numbers Arrange the Numbers to Form the Biggest Number** — Pattern: Array Fundamentals | Companies: Barclays
+- [x] **Reverse the Array** — Pattern: Array Fundamentals | Companies: Infosys Moonfrog Labs
+- [x] **Trapping Rain Water** — Pattern: Array Fundamentals | Companies: Samsung
 - [ ] **find all pairs on integer array whose sum is equal to given number** — Pattern: Array Fundamentals
 - [ ] **find common elements In 3 sorted arrays** — Pattern: Array Fundamentals
 - [x] **find duplicate in an array of N+1 Integers** — Pattern: Hashing / Frequency
@@ -43,16 +43,16 @@
 
 ## Medium / Intermediate
 
-- [ ] **Find Minimum in Rotated Sorted Array** — Pattern: Binary Search| Companies: Adobe Amazon Microsoft Morgan Stanley Samsung Snapdeal Times Internet
-- [ ] **Find Minimum Number of Merge Operations to Make an Array Palindrome** — Pattern: Two Pointers / Palindrome| Companies: Amazon
-- [x] **Find Pair with Sum in Sorted & Rotated Array** — Pattern: Two Pointers / Palindrome| Companies: Microsoft, Google, Apple
-- [ ] **Kth - Smallest Element** — Pattern: Array Fundamentals| Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
-- [ ] **Kth-Largest Element in an Array** — Pattern: Array Fundamentals| Companies: Amazon Microsoft Walmart Adobe
-- [ ] **Maximum Product Subarray** — Pattern: Array Fundamentals| Companies: Amazon D-E-Shaw Microsoft Morgan Stanley OYO Rooms Google
-- [ ] **Maximum-Subarray** — Pattern: Array Fundamentals| Companies: Microsoft + Facebook Interview Qs
-- [ ] **Next Permutation** — Pattern: Backtracking| Companies: Uber, Goldman Sachs, Adobe
-- [ ] **Search in Rotated Sorted Array** — Pattern: Binary Search| Companies: Microsoft Google Adobe Amazon D-E-Shaw Flipkart Hike Intuit MakeMyTrip Pay
-- [ ] **Subarray Sum Divisible K** — Pattern: Prefix Sum / Hashing| Companies: Snapdeal Microsoft
+- [ ] **Find Minimum in Rotated Sorted Array** — Pattern: Binary Search | Companies: Adobe Amazon Microsoft Morgan Stanley Samsung Snapdeal Times Internet
+- [ ] **Find Minimum Number of Merge Operations to Make an Array Palindrome** — Pattern: Two Pointers / Palindrome | Companies: Amazon
+- [x] **Find Pair with Sum in Sorted & Rotated Array** — Pattern: Two Pointers / Palindrome | Companies: Microsoft, Google, Apple
+- [ ] **Kth - Smallest Element** — Pattern: Array Fundamentals | Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
+- [ ] **Kth-Largest Element in an Array** — Pattern: Array Fundamentals | Companies: Amazon Microsoft Walmart Adobe
+- [ ] **Maximum Product Subarray** — Pattern: Array Fundamentals | Companies: Amazon D-E-Shaw Microsoft Morgan Stanley OYO Rooms Google
+- [ ] **Maximum-Subarray** — Pattern: Array Fundamentals | Companies: Microsoft + Facebook Interview Qs
+- [ ] **Next Permutation** — Pattern: Backtracking | Companies: Uber, Goldman Sachs, Adobe
+- [ ] **Search in Rotated Sorted Array** — Pattern: Binary Search | Companies: Microsoft Google Adobe Amazon D-E-Shaw Flipkart Hike Intuit MakeMyTrip Pay
+- [ ] **Subarray Sum Divisible K** — Pattern: Prefix Sum / Hashing | Companies: Snapdeal Microsoft
 - [ ] **Count Inversion** — Pattern: Sorting
 - [ ] **Find if there is any subarray with sum equal to 0** — Pattern: Array Fundamentals
 - [ ] **find Largest sum contiguous Subarray [V. IMP]** — Pattern: Array Fundamentals
