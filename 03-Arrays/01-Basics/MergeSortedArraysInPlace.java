@@ -1,10 +1,98 @@
 /*
- * Problem: Merge two sorted arrays so that their combined sorted values occupy the two arrays, without an extra array.
+ * Problem: Merge two sorted arrays so that their combined sorted values
+ * occupy the two arrays, without using an extra array.
  * LeetCode: #88 (related merge problem)
  * Companies: Not listed
+ * Time Complexity: O((n + m) * log(n + m))
+ * Space Complexity: O(1), excluding the input arrays.
  */
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class MergeSortedArraysInPlace {
- static void swap(int[] a,int[] b,int i,int j){int t=a[i];a[i]=b[j];b[j]=t;}
- public static void main(String[] z){Scanner s=new Scanner(System.in);int n=s.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=s.nextInt();int m=s.nextInt();int[] b=new int[m];for(int i=0;i<m;i++)b[i]=s.nextInt();int gap=(n+m+1)/2;while(gap>0){int i=0,j=gap;while(j<n+m){int x=i<n?a[i]:b[i-n],y=j<n?a[j]:b[j-n];if(x>y){if(i<n&&j<n)swap(a,a,i,j);else if(i<n)swap(a,b,i,j-n);else swap(b,b,i-n,j-n);}i++;j++;}if(gap==1)break;gap=(gap+1)/2;}System.out.println(Arrays.toString(a));System.out.println(Arrays.toString(b));}
+
+    // Get an element from the correct array using its combined index.
+    public static int getElement(int[] first, int[] second, int index) {
+
+        if (index < first.length) {
+            return first[index];
+        }
+
+        return second[index - first.length];
+    }
+
+    // Swap two elements using their combined-array indices.
+    public static void swapElements(
+            int[] first, int[] second, int firstIndex, int secondIndex) {
+
+        int firstValue = getElement(first, second, firstIndex);
+        int secondValue = getElement(first, second, secondIndex);
+
+        if (firstIndex < first.length) {
+            first[firstIndex] = secondValue;
+        } else {
+            second[firstIndex - first.length] = secondValue;
+        }
+
+        if (secondIndex < first.length) {
+            first[secondIndex] = firstValue;
+        } else {
+            second[secondIndex - first.length] = firstValue;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] first = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            first[i] = sc.nextInt();
+        }
+
+        int m = sc.nextInt();
+        int[] second = new int[m];
+
+        for (int i = 0; i < m; i++) {
+            second[i] = sc.nextInt();
+        }
+
+        // Start with a gap of approximately half the combined length.
+        int gap = (n + m + 1) / 2;
+
+        while (gap > 0) {
+
+            int left = 0;
+            int right = gap;
+
+            // Compare elements that are 'gap' positions apart.
+            while (right < n + m) {
+
+                int leftValue = getElement(first, second, left);
+                int rightValue = getElement(first, second, right);
+
+                if (leftValue > rightValue) {
+                    swapElements(first, second, left, right);
+                }
+
+                left++;
+                right++;
+            }
+
+            // Reduce the gap for the next pass.
+            if (gap == 1) {
+                break;
+            }
+
+            gap = (gap + 1) / 2;
+        }
+
+        System.out.println(Arrays.toString(first));
+        System.out.println(Arrays.toString(second));
+
+        sc.close();
+    }
 }
