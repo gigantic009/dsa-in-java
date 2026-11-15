@@ -11,6 +11,7 @@ The following are implemented Java examples in this repository. Each source file
 | Java basics | Sum using a method | [SumOfTwo.java](01-Java-Basics/SumOfTwo.java) | O(1) | O(1) |
 | Arrays | Find minimum and maximum | [ArrayMinMax.java](03-Arrays/ArrayMinMax.java) | O(n) | O(1) |
 | Arrays | Reverse an array in place | [ReverseArray.java](03-Arrays/ReverseArray.java) | O(n) | O(1) |
+| Arrays | Contains duplicate values | [ContainsDuplicate.java](03-Arrays/ContainsDuplicate.java) | O(n) average | O(n) |
 | Arrays | Binary search in sorted array | [BinarySearch.java](03-Arrays/BinarySearch.java) | O(log n) | O(1) |
 | Arrays | Maximum subarray sum (Kadane) | [KadaneAlgorithm.java](03-Arrays/KadaneAlgorithm.java) | O(n) | O(1) |
 | Sorting | Merge sort | [MergeSort.java](04-Searching-and-Sorting/MergeSort.java) | O(n log n) | O(n) |
