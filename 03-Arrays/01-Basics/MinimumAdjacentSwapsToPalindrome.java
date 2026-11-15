@@ -1,10 +1,95 @@
 /*
- * Problem: Find the minimum adjacent swaps needed to rearrange an array into a palindrome, or report that it is impossible.
+ * Problem: Find the minimum adjacent swaps needed to rearrange an array
+ * into a palindrome, or report that it is impossible.
  * LeetCode: Not available
  * Companies: Not listed
- * Assumption: The source title does not specify the operation; this implementation counts adjacent swaps.
+ * Assumption: This solution counts adjacent swaps.
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(n), for the frequency map.
  */
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class MinimumAdjacentSwapsToPalindrome {
- public static void main(String[] z){Scanner s=new Scanner(System.in);int n=s.nextInt();int[] a=new int[n];Map<Integer,Integer> f=new HashMap<>();for(int i=0;i<n;i++){a[i]=s.nextInt();f.merge(a[i],1,Integer::sum);}int odd=0;for(int c:f.values())if(c%2==1)odd++;if(odd>1){System.out.println(-1);return;}long swaps=0;int l=0,r=n-1;while(l<r){int k=r;while(k>l&&a[k]!=a[l])k--;if(k==l){int t=a[l];a[l]=a[l+1];a[l+1]=t;swaps++;}else{while(k<r){int t=a[k];a[k]=a[k+1];a[k+1]=t;k++;swaps++;}l++;r--;}}System.out.println(swaps);}
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
+
+        Map<Integer, Integer> frequency = new HashMap<>();
+
+        // Read the array and count how often each number appears.
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+
+            frequency.put(
+                    numbers[i],
+                    frequency.getOrDefault(numbers[i], 0) + 1
+            );
+        }
+
+        // A palindrome can have at most one number with odd frequency.
+        int oddFrequencyCount = 0;
+
+        for (int count : frequency.values()) {
+            if (count % 2 != 0) {
+                oddFrequencyCount++;
+            }
+        }
+
+        if (oddFrequencyCount > 1) {
+            System.out.println(-1);
+            sc.close();
+            return;
+        }
+
+        int left = 0;
+        int right = n - 1;
+        long swaps = 0;
+
+        while (left < right) {
+
+            int match = right;
+
+            // Find a matching number for the left-side element.
+            while (match > left && numbers[match] != numbers[left]) {
+                match--;
+            }
+
+            if (match == left) {
+
+                // No match was found, so move this element one step inward.
+                int temp = numbers[left];
+                numbers[left] = numbers[left + 1];
+                numbers[left + 1] = temp;
+
+                swaps++;
+
+            } else {
+
+                // Move the matching element to the right-side position.
+                while (match < right) {
+
+                    int temp = numbers[match];
+                    numbers[match] = numbers[match + 1];
+                    numbers[match + 1] = temp;
+
+                    match++;
+                    swaps++;
+                }
+
+                left++;
+                right--;
+            }
+        }
+
+        System.out.println(swaps);
+
+        sc.close();
+    }
 }
