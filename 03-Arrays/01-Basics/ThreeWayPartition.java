@@ -1,9 +1,68 @@
 /*
- * Problem: Rearrange an array into three regions: values below a, values from a through b, and values above b.
+ * Problem: Partition an array into values below a, from a through b,
+ * and values above b.
  * LeetCode: Not available
  * Companies: Not listed
+ * Time Complexity: O(n)
+ * Space Complexity: O(1), excluding the input array.
  */
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class ThreeWayPartition {
-    public static void main(String[] args){Scanner sc=new Scanner(System.in);int n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int low=sc.nextInt(),high=sc.nextInt();if(low>high){System.out.println("Invalid range");return;}int l=0,m=0,r=n-1;while(m<=r){if(a[m]<low){int t=a[l];a[l++]=a[m];a[m++]=t;}else if(a[m]>high){int t=a[m];a[m]=a[r];a[r--]=t;}else m++;}System.out.println(Arrays.toString(a));}
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        int low = sc.nextInt();
+        int high = sc.nextInt();
+
+        if (low > high) {
+            System.out.println("Invalid range");
+            sc.close();
+            return;
+        }
+
+        int left = 0;
+        int middle = 0;
+        int right = n - 1;
+
+        // Keep values below low on the left and above high on the right.
+        while (middle <= right) {
+
+            if (numbers[middle] < low) {
+
+                int temp = numbers[left];
+                numbers[left] = numbers[middle];
+                numbers[middle] = temp;
+
+                left++;
+                middle++;
+
+            } else if (numbers[middle] > high) {
+
+                int temp = numbers[middle];
+                numbers[middle] = numbers[right];
+                numbers[right] = temp;
+
+                right--;
+
+            } else {
+                middle++;
+            }
+        }
+
+        System.out.println(Arrays.toString(numbers));
+
+        sc.close();
+    }
 }
