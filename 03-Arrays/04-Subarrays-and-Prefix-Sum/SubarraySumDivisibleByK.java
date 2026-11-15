@@ -1,9 +1,54 @@
 /*
- * Problem: Count the number of subarrays whose sum is divisible by k.
+ * Problem: Count the subarrays whose sum is divisible by k.
  * LeetCode: #974
  * Companies: Not listed
+ * Time Complexity: O(n)
+ * Space Complexity: O(min(n, |k|)) for the frequency map.
  */
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class SubarraySumDivisibleByK {
- public static void main(String[] z){Scanner s=new Scanner(System.in);int n=s.nextInt(),k=s.nextInt();if(k==0){System.out.println("k must be non-zero");return;}Map<Integer,Long> f=new HashMap<>();f.put(0,1L);long sum=0,ans=0;for(int i=0;i<n;i++){sum+=s.nextLong();int r=(int)((sum%k+k)%k);ans+=f.getOrDefault(r,0L);f.put(r,f.getOrDefault(r,0L)+1);}System.out.println(ans);}
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        if (k == 0) {
+            System.out.println("k must be non-zero");
+            sc.close();
+            return;
+        }
+
+        Map<Integer, Long> remainderFrequency = new HashMap<>();
+
+        // An empty prefix has remainder 0.
+        remainderFrequency.put(0, 1L);
+
+        long prefixSum = 0;
+        long answer = 0;
+
+        for (int i = 0; i < n; i++) {
+
+            prefixSum += sc.nextLong();
+
+            // Make the remainder non-negative, even for negative sums.
+            int remainder = (int) ((prefixSum % k + Math.abs((long) k)) % Math.abs((long) k));
+
+            long previousCount = remainderFrequency.getOrDefault(remainder, 0L);
+
+            answer += previousCount;
+
+            remainderFrequency.put(remainder, previousCount + 1);
+        }
+
+        System.out.println(answer);
+
+        sc.close();
+    }
 }
