@@ -1,7 +1,8 @@
 /*
  * Problem: Sort an array containing only 0, 1 and 2.
  * Do not use a comparison-based sorting algorithm.
- * LeetCode: #75nies: Not listed
+ * LeetCode: #75
+ * Companies: Not listed in the question bank
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  */
