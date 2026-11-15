@@ -1,7 +1,8 @@
 /*
  * Problem: An array contains n + 1 values from 1 to n.
  * Exactly one value is repeated. Find that value without changing the array.
- * LeetCode: #287nies: Not listed
+ * LeetCode: #287
+ * Companies: Not listed in the question bank
  * Time Complexity: O(n)
  * Space Complexity: O(1), excluding the input array.
  */
