@@ -1,9 +1,62 @@
 /*
- * Problem: Print all distinct value pairs in an integer array whose sum equals the target.
+ * Problem: Print all distinct value pairs whose sum equals the target.
  * LeetCode: Not available
  * Companies: Not listed
+ * Time Complexity: O(n log n), due to sorting.
+ * Space Complexity: O(n), for storing the input and distinct pairs.
  */
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class AllPairsWithGivenSum {
- public static void main(String[] z){Scanner s=new Scanner(System.in);int n=s.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=s.nextInt();int t=s.nextInt();Arrays.sort(a);int l=0,r=n-1;Set<String> out=new LinkedHashSet<>();while(l<r){long sum=(long)a[l]+a[r];if(sum==t){out.add(a[l]+", "+a[r]);int x=a[l],y=a[r];while(l<r&&a[l]==x)l++;while(l<r&&a[r]==y)r--;}else if(sum<t)l++;else r--;}for(String p:out)System.out.println(p);}
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        int target = sc.nextInt();
+
+        Arrays.sort(numbers);
+
+        int left = 0;
+        int right = n - 1;
+
+        // Print each distinct value pair only once.
+        while (left < right) {
+
+            long sum = (long) numbers[left] + numbers[right];
+
+            if (sum == target) {
+
+                System.out.println(numbers[left] + " " + numbers[right]);
+
+                int leftValue = numbers[left];
+                int rightValue = numbers[right];
+
+                // Skip duplicate values so the same pair is not printed again.
+                while (left < right && numbers[left] == leftValue) {
+                    left++;
+                }
+
+                while (left < right && numbers[right] == rightValue) {
+                    right--;
+                }
+
+            } else if (sum < target) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        sc.close();
+    }
 }
