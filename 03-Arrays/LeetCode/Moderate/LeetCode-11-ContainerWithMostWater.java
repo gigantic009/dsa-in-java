@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class LeetCode11ContainerWithMostWater {
+class LeetCode11ContainerWithMostWater {
     public static long maxArea(int[] heights) {
         int left = 0;
         int right = heights.length - 1;
