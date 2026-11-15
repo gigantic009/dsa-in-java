@@ -8,19 +8,19 @@
 - [x] **Best time to Buy and Sell Stock** — Pattern: Array Fundamentals| Companies: Amazon D-E-Shaw Directi Flipkart Goldman Sachs Intuit MakeMyTrip Microsoft
 - [x] **Container With Most Water** — Pattern: Two Pointers / Palindrome| Companies: Flipkart, Dunzo
 - [x] **Contains Duplicate** — Pattern: Hashing / Frequency| Companies: Amazon
-- [ ] **Given Sum Pair** — Pattern: Array Fundamentals| Companies: Infosys, Amazon, Flipkart
+- [x] **Given Sum Pair** — Pattern: Array Fundamentals| Companies: Infosys, Amazon, Flipkart
 - [x] **Maximum and Minimum Element in an Array** — Pattern: Array Fundamentals| Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
 - [ ] **Mo's Algorithm** — Pattern: Array Fundamentals| Companies: Microsoft
 - [ ] **Print all Possible Combinations of r Elements in a Given Array of Size n** — Pattern: Array Fundamentals| Companies: Amazon
 - [x] **Product of Array Except Self** — Pattern: Array Fundamentals| Companies: Microsoft, Facebook
-- [ ] **Repeat and Missing Number Array** — Pattern: Array Fundamentals| Companies: Amazon Interview Qs
+- [x] **Repeat and Missing Number Array** — Pattern: Array Fundamentals| Companies: Amazon Interview Qs
 - [ ] **Space Optimization Using Bit Manipulations** — Pattern: Bit Manipulation| Companies: Amazon
 - [ ] **Given an Array of Numbers Arrange the Numbers to Form the Biggest Number** — Pattern: Array Fundamentals| Companies: Barclays
 - [x] **Reverse the Array** — Pattern: Array Fundamentals| Companies: Infosys Moonfrog Labs
 - [x] **Trapping Rain Water** — Pattern: Array Fundamentals| Companies: Samsung
 - [ ] **find all pairs on integer array whose sum is equal to given number** — Pattern: Array Fundamentals
 - [ ] **find common elements In 3 sorted arrays** — Pattern: Array Fundamentals
-- [ ] **find duplicate in an array of N+1 Integers** — Pattern: Hashing / Frequency
+- [x] **find duplicate in an array of N+1 Integers** — Pattern: Hashing / Frequency
 - [ ] **Find factorial of a large number** — Pattern: Array Fundamentals
 - [ ] **Find the maximum and minimum element in an array** — Pattern: Array Fundamentals
 - [ ] **Find the triplet that sum to a given value** — Pattern: Array Fundamentals
@@ -28,7 +28,7 @@
 - [ ] **Find whether an array is a subset of another array** — Pattern: Array Fundamentals
 - [ ] **Given an array of size n and a number k, fin all elements that appear more than " n/k " times.** — Pattern: Array Fundamentals
 - [ ] **Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo** — Pattern: Sorting
-- [ ] **Kadane's Algo [V.V.V.V.V IMP]** — Pattern: Kadane / Prefix Sum
+- [x] **Kadane's Algo [V.V.V.V.V IMP]** — Pattern: Kadane / Prefix Sum
 - [ ] **Maximum profit by buying and selling a share atmost twice** — Pattern: Array Fundamentals
 - [ ] **Median of 2 sorted arrays of different size** — Pattern: Array Fundamentals
 - [ ] **Median of 2 sorted arrays of equal size** — Pattern: Array Fundamentals
