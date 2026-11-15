@@ -1,33 +1,45 @@
-/**
- * Question:
- * Given an integer array, determine whether any value appears at least
- * twice. Read n and the n array elements from standard input.
- *
+/*
+ * Problem: Determine whether any value appears at least twice.
  * LeetCode: #217
- *
  * Companies: Amazon
+ * Time Complexity: O(n) average
+ * Space Complexity: O(n)
  */
+
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
 public class ContainsDuplicate {
-    public static boolean containsDuplicate(int[] values) {
-        Set<Integer> seen = new HashSet<>();
-        for (int value : values) {
-            if (!seen.add(value)) return true;
+
+    public static boolean containsDuplicate(int[] numbers) {
+
+        Set<Integer> seenNumbers = new HashSet<>();
+
+        for (int number : numbers) {
+
+            // add() returns false when the value is already in the set.
+            if (!seenNumbers.add(number)) {
+                return true;
+            }
         }
+
         return false;
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] values = new int[n];
 
-        for (int i = 0; i < n; i++) values[i] = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println(containsDuplicate(values));
-        scanner.close();
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        System.out.println(containsDuplicate(numbers));
+
+        sc.close();
     }
 }
