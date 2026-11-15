@@ -1,7 +1,7 @@
 /*
  * Problem: Find the minimum element in a sorted array that has been rotated.
  * LeetCode: #153
- * Companies: Not listed
+ * Companies: Adobe, Amazon, Microsoft, Morgan Stanley, Samsung, Snapdeal, Times Internet
  */
 import java.util.*;
 public class FindMinimumRotatedSortedArray {
