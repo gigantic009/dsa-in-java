@@ -1,9 +1,60 @@
 /*
- * Problem: Print all array elements that occur more than n/k times.
+ * Problem: Print all elements that occur more than n/k times.
  * LeetCode: Not available
  * Companies: Not listed
+ * Time Complexity: O(n + d log d), where d is the number of distinct values.
+ * Space Complexity: O(d)
  */
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
 public class MoreThanNByK {
-    public static void main(String[] args){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),k=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();if(k<=0){System.out.println("k must be positive");return;}Map<Integer,Integer> f=new HashMap<>();for(int x:a)f.merge(x,1,Integer::sum);List<Integer> out=new ArrayList<>();for(var e:f.entrySet())if(e.getValue()>n/k)out.add(e.getKey());Collections.sort(out);System.out.println(out);}
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        if (k <= 0) {
+            System.out.println("k must be positive");
+            sc.close();
+            return;
+        }
+
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        Map<Integer, Integer> frequency = new HashMap<>();
+
+        for (int number : numbers) {
+            int oldCount = frequency.getOrDefault(number, 0);
+            frequency.put(number, oldCount + 1);
+        }
+
+        List<Integer> answer = new ArrayList<>();
+
+        for (Map.Entry<Integer, Integer> entry : frequency.entrySet()) {
+
+            if (entry.getValue() > n / k) {
+                answer.add(entry.getKey());
+            }
+        }
+
+        // Print the result in sorted order for consistent output.
+        Collections.sort(answer);
+
+        System.out.println(answer);
+
+        sc.close();
+    }
 }
