@@ -6,6 +6,7 @@ Solutions use straightforward, readable Java, at the level of a student learning
 
 ## Start here
 1. Follow [ROADMAP.md](ROADMAP.md).
+2. Browse [SOLVED-PROBLEMS.md](SOLVED-PROBLEMS.md) for implemented questions, approaches and complexity.
 2. Open each topic README for its branches and question bank.
 3. Attempt each problem before opening its solution.
 4. Track your own progress; a listed question is not automatically a completed solution.
