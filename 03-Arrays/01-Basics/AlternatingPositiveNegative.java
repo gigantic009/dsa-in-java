@@ -1,52 +1,85 @@
 /*
- * Problem: Rearrange an array so positive and negative values alternate,
- * using constant extra space where possible.
+ * Problem: Rearrange an array so positive and negative values alternate.
+ * Start with a positive value. If one type has extra values, place them at the end.
  * LeetCode: Not available
  * Companies: Not listed
- * Time: O(n^2) worst case | Auxiliary space: O(1)
+ * Time Complexity: O(n)
+ * Space Complexity: O(n), for the positive and negative lists.
  */
-import java.util.Arrays;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class AlternatingPositiveNegative {
 
-    public static void rearrange(int[] arr) {
-        int misplaced = -1;
+    public static void rearrange(int[] numbers) {
 
-        for (int i = 0; i < arr.length; i++) {
-            boolean currentIsMisplaced =
-                    (i % 2 == 0 && arr[i] >= 0)
-                    || (i % 2 == 1 && arr[i] < 0);
+        List<Integer> positiveNumbers = new ArrayList<>();
+        List<Integer> negativeNumbers = new ArrayList<>();
 
-            if (misplaced != -1 && currentIsMisplaced
-                    && ((arr[misplaced] >= 0 && arr[i] < 0)
-                    || (arr[misplaced] < 0 && arr[i] >= 0))) {
+        // Separate the positive and negative values.
+        // Zero is treated as a non-negative value.
+        for (int number : numbers) {
 
-                int temp = arr[misplaced];
-                arr[misplaced] = arr[i];
-                arr[i] = temp;
-                misplaced = -1;
+            if (number >= 0) {
+                positiveNumbers.add(number);
+            } else {
+                negativeNumbers.add(number);
             }
+        }
 
-            if (misplaced == -1 && currentIsMisplaced) {
-                misplaced = i;
-            }
+        int index = 0;
+        int positiveIndex = 0;
+        int negativeIndex = 0;
+
+        // Place one positive value, then one negative value.
+        while (positiveIndex < positiveNumbers.size()
+                && negativeIndex < negativeNumbers.size()) {
+
+            numbers[index] = positiveNumbers.get(positiveIndex);
+            positiveIndex++;
+            index++;
+
+            numbers[index] = negativeNumbers.get(negativeIndex);
+            negativeIndex++;
+            index++;
+        }
+
+        // Add any remaining positive values.
+        while (positiveIndex < positiveNumbers.size()) {
+            numbers[index] = positiveNumbers.get(positiveIndex);
+            positiveIndex++;
+            index++;
+        }
+
+        // Add any remaining negative values.
+        while (negativeIndex < negativeNumbers.size()) {
+            numbers[index] = negativeNumbers.get(negativeIndex);
+            negativeIndex++;
+            index++;
         }
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        int[] arr = new int[n];
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
 
         for (int i = 0; i < n; i++) {
-            arr[i] = scanner.nextInt();
+            numbers[i] = sc.nextInt();
         }
 
-        rearrange(arr);
+        rearrange(numbers);
 
-        System.out.println(Arrays.toString(arr));
-        scanner.close();
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+
+        System.out.println();
+
+        sc.close();
     }
 }
