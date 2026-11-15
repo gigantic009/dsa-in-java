@@ -22,3 +22,8 @@ Every Java `main` method reads input from standard input; no hardcoded example a
 - Question-bank entries covered: **56 / 56**
 - Canonical Java source files under this folder: **54**
 - Repeated titles remain visible and link to shared implementations where the requirements are equivalent.
+
+
+## LeetCode-only collection
+
+The exact LeetCode-matched array problems are separately organized by difficulty in the [LeetCode folder](LeetCode/README.md): Easy, Moderate, and Advanced. Each solution file includes its LeetCode problem number, question, available company information, and Java implementation.
