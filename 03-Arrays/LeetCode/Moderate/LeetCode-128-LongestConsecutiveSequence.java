@@ -1,7 +1,8 @@
 /*
  * Problem: Find the length of the longest consecutive sequence
  * in an unsorted array.
- * LeetCode: #128nies: Not listed
+ * LeetCode: #128
+ * Companies: Not listed in the question bank
  * Time Complexity: O(n) average
  * Space Complexity: O(n)
  */
