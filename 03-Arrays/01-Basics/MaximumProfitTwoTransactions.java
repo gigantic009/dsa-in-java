@@ -1,9 +1,51 @@
 /*
- * Problem: Find the maximum profit from at most two buy-and-sell stock transactions.
+ * Problem: Find the maximum profit from at most two buy-and-sell transactions.
  * LeetCode: #123
  * Companies: Not listed
+ * Time: O(n) | Auxiliary space: O(n)
  */
-import java.util.*;
+import java.util.Scanner;
+
 public class MaximumProfitTwoTransactions {
-    public static void main(String[] args){Scanner sc=new Scanner(System.in);int n=sc.nextInt();int[] p=new int[n];for(int i=0;i<n;i++)p[i]=sc.nextInt();long[] left=new long[n],right=new long[n];long min=Long.MAX_VALUE,best=0;for(int i=0;i<n;i++){min=Math.min(min,p[i]);best=Math.max(best,p[i]-min);left[i]=best;}long max=Long.MIN_VALUE;best=0;for(int i=n-1;i>=0;i--){max=Math.max(max,p[i]);best=Math.max(best,max-p[i]);right[i]=best;}long ans=0;for(int i=0;i<n;i++)ans=Math.max(ans,left[i]+right[i]);System.out.println(ans);}
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int[] prices = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            prices[i] = scanner.nextInt();
+        }
+
+        long[] bestLeft = new long[n];
+        long[] bestRight = new long[n];
+
+        long minimumPrice = Long.MAX_VALUE;
+        long bestProfit = 0;
+
+        for (int i = 0; i < n; i++) {
+            minimumPrice = Math.min(minimumPrice, prices[i]);
+            bestProfit = Math.max(bestProfit, prices[i] - minimumPrice);
+            bestLeft[i] = bestProfit;
+        }
+
+        long maximumPrice = Long.MIN_VALUE;
+        bestProfit = 0;
+
+        for (int i = n - 1; i >= 0; i--) {
+            maximumPrice = Math.max(maximumPrice, prices[i]);
+            bestProfit = Math.max(bestProfit, maximumPrice - prices[i]);
+            bestRight[i] = bestProfit;
+        }
+
+        long answer = 0;
+
+        for (int i = 0; i < n; i++) {
+            answer = Math.max(answer, bestLeft[i] + bestRight[i]);
+        }
+
+        System.out.println(answer);
+        scanner.close();
+    }
 }
