@@ -1,3 +1,8 @@
+/**
+ * Question: Given an array, reverse its elements in place.
+ * Companies listed in the supplied Apna College sheet: Infosys, Moonfrog Labs.
+ * Note: These are source-reported associations, not independently verified interview claims.
+ */
 public class ReverseArray {
     public static void reverse(int[] arr) {
         int left = 0;
