@@ -2,6 +2,7 @@
  * Problem: Find the minimum adjacent swaps needed to rearrange an array into a palindrome, or report that it is impossible.
  * LeetCode: Not available
  * Companies: Not listed
+ * Assumption: The source title does not specify the operation; this implementation counts adjacent swaps.
  */
 import java.util.*;
 public class MinimumAdjacentSwapsToPalindrome {
