@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class LeetCode121BestTimeToBuyAndSellStock {
+class LeetCode121BestTimeToBuyAndSellStock {
     public static long maxProfit(int[] prices) {
         if (prices.length < 2) {
             return 0;
