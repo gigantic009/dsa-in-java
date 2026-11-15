@@ -1,13 +1,7 @@
 # Binary Trees
 
-## Part 1 — Fundamentals
-Node, root, leaf, height, depth, level, degree; construct tree; count/sum nodes; height and diameter.
+- [Part 1 — Fundamentals](01-Part-1-Fundamentals/README.md)
+- [Part 2 — Traversals](02-Part-2-Traversals/README.md)
+- [Part 3 — Advanced problems](03-Part-3-Advanced-Problems/README.md)
 
-## Part 2 — Traversals
-Preorder, inorder, postorder, level order, iterative traversals, zigzag, left/right view, boundary and vertical order.
-
-## Part 3 — Tree patterns
-Balanced/identical/subtree, lowest common ancestor, root-to-leaf path sum, build from traversals, serialize/deserialize and maximum path sum.
-
-## Practice
-Level order; maximum depth; diameter; invert tree; balanced tree; path sum; LCA; right-side view; build tree from traversals.
+Each part separates theory from its actual practice solutions. The solved examples are linked inside the relevant part.
