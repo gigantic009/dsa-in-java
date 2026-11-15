@@ -1,35 +1,57 @@
-/**
- * Question:
- * Given an array of non-negative heights, find the maximum water a pair
- * of vertical lines can contain. Read n followed by n heights.
- *
+/*
+ * Problem: Find the maximum water a pair of vertical lines can contain.
  * LeetCode: #11
- *
  * Companies: Flipkart, Dunzo
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
  */
+
 import java.util.Scanner;
 
 public class ContainerWithMostWater {
+
     public static long maxArea(int[] heights) {
-        int left = 0, right = heights.length - 1;
-        long best = 0;
+
+        int left = 0;
+        int right = heights.length - 1;
+
+        long maximumArea = 0;
 
         while (left < right) {
-            long area = (long) (right - left) * Math.min(heights[left], heights[right]);
-            best = Math.max(best, area);
-            if (heights[left] < heights[right]) left++;
-            else right--;
+
+            int width = right - left;
+            int smallerHeight = Math.min(heights[left], heights[right]);
+
+            long currentArea = (long) width * smallerHeight;
+
+            if (currentArea > maximumArea) {
+                maximumArea = currentArea;
+            }
+
+            // Move the pointer at the shorter line.
+            if (heights[left] < heights[right]) {
+                left++;
+            } else {
+                right--;
+            }
         }
-        return best;
+
+        return maximumArea;
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
         int[] heights = new int[n];
-        for (int i = 0; i < n; i++) heights[i] = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            heights[i] = sc.nextInt();
+        }
 
         System.out.println(maxArea(heights));
-        scanner.close();
+
+        sc.close();
     }
 }
