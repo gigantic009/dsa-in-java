@@ -1,6 +1,7 @@
 /*
  * Problem: Find the maximum sum of a non-empty contiguous subarray.
- * LeetCode: #53nies: Not listed
+ * LeetCode: #53
+ * Companies: Not listed in the question bank
  * Time Complexity: O(n)
  * Space Complexity: O(1), excluding the input array.
  */
