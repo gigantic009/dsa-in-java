@@ -10,17 +10,15 @@ The Arrays branch contains the complete 56-entry question bank, organised by pro
 4. [Subarrays and Prefix Sum](04-Subarrays-and-Prefix-Sum/README.md) — Kadane, prefix sums, products, inversion count and sequence problems.
 5. [Hashing and Frequency](05-Hashing-and-Frequency/README.md) — duplicates, subset checks and frequency tracking.
 
-## Completion rules
+## Reference and validation
 
-- Each question has a dedicated Java implementation or a documented canonical solution link for a genuine duplicate.
-- Every Java `main` method reads input from standard input; no hardcoded example arrays.
-- Each solution header states the problem, LeetCode match when confidently identified, and companies when listed.
-- Complexity is documented in the code or its companion explanation.
-- The original 56 question entries remain visible in [the question bank](../question-bank/QUESTION-BANK.md).
+- [Solution complexity, input assumptions and ambiguity notes](SOLUTION-REFERENCE.md)
+- [Complete 56-entry question bank](../question-bank/QUESTION-BANK.md)
+
+Every Java `main` method reads input from standard input; no hardcoded example arrays are used. Difficulty and company labels are taken from the supplied question bank, and LeetCode mappings are included only when sufficiently matched.
 
 ## Current status
 
 - Question-bank entries covered: **56 / 56**
-- Canonical Java solution files: **50+**
-- Repeated titles: retained and linked to shared implementations where equivalent.
-
+- Canonical Java source files under this folder: **55**
+- Repeated titles remain visible and link to shared implementations where the requirements are equivalent.
