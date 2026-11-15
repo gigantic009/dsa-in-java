@@ -1,19 +1,103 @@
 /*
- * Problem: Given an array and multiple range queries [L, R], answer the sum of each range.
+ * Problem: Answer range-sum queries using Mo's Algorithm.
  * LeetCode: Not available
  * Companies: Microsoft
+ * Time Complexity: O((n + q) * sqrt(n) * log q), approximately.
+ * Space Complexity: O(n + q)
  */
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class MosAlgorithm {
-    static class Query { int l,r,index,block; Query(int l,int r,int i,int b){this.l=l;this.r=r;index=i;block=b;} }
+
+    static class Query {
+        int left;
+        int right;
+        int index;
+        int block;
+
+        Query(int left, int right, int index, int block) {
+            this.left = left;
+            this.right = right;
+            this.index = index;
+            this.block = block;
+        }
+    }
+
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] a=new int[n];
-        for(int i=0;i<n;i++) a[i]=sc.nextInt();
-        int q=sc.nextInt(), block=Math.max(1,(int)Math.sqrt(n)); Query[] qs=new Query[q];
-        for(int i=0;i<q;i++){int l=sc.nextInt(),r=sc.nextInt();qs[i]=new Query(l,r,i,l/block);}
-        Arrays.sort(qs,(x,y)->x.block!=y.block?Integer.compare(x.block,y.block):(x.block%2==0?Integer.compare(x.r,y.r):Integer.compare(y.r,x.r)));
-        long[] ans=new long[q]; int left=0,right=-1; long sum=0;
-        for(Query qu:qs){while(left>qu.l)sum+=a[--left];while(right<qu.r)sum+=a[++right];while(left<qu.l)sum-=a[left++];while(right>qu.r)sum-=a[right--];ans[qu.index]=sum;}
-        for(long x:ans)System.out.println(x);
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        int q = sc.nextInt();
+        int blockSize = Math.max(1, (int) Math.sqrt(n));
+
+        Query[] queries = new Query[q];
+
+        for (int i = 0; i < q; i++) {
+            int left = sc.nextInt();
+            int right = sc.nextInt();
+
+            queries[i] = new Query(left, right, i, left / blockSize);
+        }
+
+        // Sort queries by block, then alternate the right-end order.
+        Arrays.sort(queries, (first, second) -> {
+
+            if (first.block != second.block) {
+                return Integer.compare(first.block, second.block);
+            }
+
+            if (first.block % 2 == 0) {
+                return Integer.compare(first.right, second.right);
+            }
+
+            return Integer.compare(second.right, first.right);
+        });
+
+        long[] answers = new long[q];
+
+        int currentLeft = 0;
+        int currentRight = -1;
+        long currentSum = 0;
+
+        for (Query query : queries) {
+
+            while (currentLeft > query.left) {
+                currentLeft--;
+                currentSum += numbers[currentLeft];
+            }
+
+            while (currentRight < query.right) {
+                currentRight++;
+                currentSum += numbers[currentRight];
+            }
+
+            while (currentLeft < query.left) {
+                currentSum -= numbers[currentLeft];
+                currentLeft++;
+            }
+
+            while (currentRight > query.right) {
+                currentSum -= numbers[currentRight];
+                currentRight--;
+            }
+
+            answers[query.index] = currentSum;
+        }
+
+        // Print answers in the original query order.
+        for (long answer : answers) {
+            System.out.println(answer);
+        }
+
+        sc.close();
     }
 }
