@@ -1,69 +1,52 @@
 # Data Structures & Algorithms in Java ☕
 
-A personal learning repository for practising Data Structures and Algorithms using Java.
+A structured DSA learning repository organised as **main topic → sub-branches → practice questions → Java solutions**.
 
-The goal is to build strong problem-solving fundamentals through consistent practice, clear implementations, and topic-wise revision.
+Solutions use straightforward, readable Java, at the level of a student learning and practising DSA. **There are no explanatory comments inside Java solution files.** Concepts, pseudocode, dry runs and complexity analysis belong in Markdown notes.
 
-## Learning goals
+## Start here
+1. Follow [ROADMAP.md](ROADMAP.md).
+2. Open each topic README for its branches and question bank.
+3. Attempt each problem before opening its solution.
+4. Track your own progress; a listed question is not automatically a completed solution.
 
-- Understand the intuition behind each data structure and algorithm.
-- Write readable Java implementations.
-- Analyse time and space complexity.
-- Practise common problem-solving patterns.
-- Revisit problems and improve solutions over time.
-
-## Suggested topic roadmap
-
-| Stage | Topics |
+## Topic map
+| Topic | Branch structure |
 |---|---|
-| 1. Foundations | Java basics, complexity analysis, arrays and strings |
-| 2. Core data structures | Linked lists, stacks, queues and hashing |
-| 3. Searching and sorting | Binary search, merge sort, quick sort |
-| 4. Recursion | Base cases, recursion trees, backtracking |
-| 5. Trees | Binary trees, BSTs, traversals and heaps |
-| 6. Graphs | BFS, DFS, shortest paths and spanning trees |
-| 7. Advanced patterns | Greedy algorithms, dynamic programming and tries |
+| [Flowcharts & pseudocode](00-Foundations/Flowcharts-and-Pseudocode/README.md) | Symbols, sequence, decisions, loops, tracing |
+| [Java basics](01-Java-Basics/README.md) | Variables/types, operators, conditions, loops, methods |
+| [Time & space complexity](02-Complexity/README.md) | Asymptotic notation, loop analysis, recursion space |
+| [Arrays](03-Arrays/README.md) | Fundamentals, prefix sums, two pointers, hashing |
+| [Searching & sorting](04-Searching-and-Sorting/README.md) | Search, elementary sorts, merge/quick sort |
+| [2D arrays](05-Two-D-Arrays/README.md) | Traversal, diagonals, transpose, spiral, matrix search |
+| [Strings](06-Strings/README.md) | Basics, frequency, palindrome, anagram, patterns |
+| [Bit manipulation](07-Bit-Manipulation/README.md) | Operators, masks, bit tricks, subsets |
+| [OOP](08-OOP/README.md) | Classes, constructors, inheritance, polymorphism, interfaces |
+| [Recursion](09-Recursion/README.md) | Part A: fundamentals; Part B: patterns/backtracking |
+| [Divide & conquer](10-Divide-and-Conquer/README.md) | Recurrences, binary search, merge/quick sort |
+| [Linked lists](11-Linked-Lists/README.md) | Part A: singly; Part B: doubly/circular/interview patterns |
+| [Stacks](12-Stacks/README.md) | Part A: fundamentals; Part B: monotonic stack |
+| [Queues](13-Queues/README.md) | Queue, circular queue, deque, priority queue |
+| [Binary trees](14-Binary-Trees/README.md) | Part 1: fundamentals; Part 2: traversals; Part 3: patterns |
+| [BST](15-Binary-Search-Trees/README.md) | Part A: operations; Part B: validation/advanced |
+| [Heaps & hashing](16-Heaps-and-Hashing/README.md) | Hash maps/sets, heaps, top-K |
+| [Graphs](17-Graphs/README.md) | 1: representation; 2: BFS/DFS; 3: cycles/topological; 4: shortest paths; 5: MST/DSU |
+| [Greedy](18-Greedy/README.md) | Greedy choice, intervals, scheduling |
+| [Backtracking](19-Backtracking/README.md) | Subsets, permutations, combinations, maze |
+| [Dynamic programming](20-Dynamic-Programming/README.md) | 1: foundations; 2: 1D; 3: grids; 4: knapsack/subsequences; 5: strings/interval |
+| [Tries](21-Tries/README.md) | Prefix tree, word search |
+| [Segment trees](22-Segment-Trees/README.md) | Build, range query, point update, lazy propagation |
+| [Interview patterns](23-Interview-Patterns/README.md) | Sliding window, two pointers, prefix sum, monotonic stack |
 
-## Repository structure
+## Practice sources
+The supplied Apna College DSA sheet contains 375 questions. Topic READMEs highlight representative questions; use the complete sheet and topic-wise tracker for the wider practice bank. Company names should only be shown when the source sheet lists them and are source-reported associations.
 
-Organise solutions by topic so that implementations are easy to find and revise.
+## Completed-solution format
+- Problem statement and examples.
+- Short intuition and approach.
+- Pseudocode or flowchart where useful.
+- Standalone Java solution (no comments inside code).
+- Time and auxiliary-space complexity.
+- Source attribution and edge cases.
 
-```text
-.
-├── Arrays/
-├── Strings/
-├── Searching-and-Sorting/
-├── Recursion/
-├── Backtracking/
-├── Linked-Lists/
-├── Stacks-and-Queues/
-├── Trees/
-├── Graphs/
-└── Dynamic-Programming/
-```
-
-*The folders above are a suggested organisation; the repository will reflect topics as they are added.*
-
-## Solution checklist
-
-For each problem, aim to include:
-
-1. Problem statement or source link.
-2. Approach and key intuition.
-3. Java implementation.
-4. Time and space complexity.
-5. Edge cases or a short dry run where useful.
-
-## Language and tools
-
-- **Language:** Java
-- **Editor:** Any Java-compatible IDE or editor
-- **Practice:** Topic-wise exercises and coding interview problems
-
-## Progress
-
-This repository is a work in progress. Solutions are added as topics are studied and practised.
-
----
-
-**Consistency over shortcuts. Understand the pattern, then write the code.**
+**A roadmap is not a claim of completion.** Only actual solution files count as implemented answers.
