@@ -11,22 +11,16 @@
 import java.util.Scanner;
 
 public class SpaceOptimizationBitManipulation {
-
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
         int n = sc.nextInt();
         int answer = 0;
-
         // Equal numbers cancel each other when XOR is applied.
         for (int i = 0; i < n; i++) {
             int currentNumber = sc.nextInt();
             answer = answer ^ currentNumber;
         }
-
         System.out.println(answer);
-
         sc.close();
     }
 }
