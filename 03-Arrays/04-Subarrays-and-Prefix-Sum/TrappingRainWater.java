@@ -1,39 +1,63 @@
 /*
- * Problem: Given non-negative bar heights, calculate how much rainwater can be trapped between the bars.
+ * Problem: Calculate how much rainwater can be trapped between bars.
  * LeetCode: #42
  * Companies: Samsung
- * Time: O(n) | Auxiliary space: O(1)
+ * Time Complexity: O(n)
+ * Space Complexity: O(1), excluding the input array.
  */
+
 import java.util.Scanner;
 
 public class TrappingRainWater {
-    public static long trap(int[] height) {
-        int left = 0, right = height.length - 1;
-        int leftMax = 0, rightMax = 0;
-        long water = 0;
+
+    public static long trap(int[] heights) {
+
+        int left = 0;
+        int right = heights.length - 1;
+
+        int leftMaximum = 0;
+        int rightMaximum = 0;
+
+        long totalWater = 0;
 
         while (left < right) {
-            if (height[left] <= height[right]) {
-                leftMax = Math.max(leftMax, height[left]);
-                water += leftMax - height[left];
+
+            if (heights[left] <= heights[right]) {
+
+                // The left side determines the water level at this position.
+                leftMaximum = Math.max(leftMaximum, heights[left]);
+
+                totalWater += leftMaximum - heights[left];
+
                 left++;
+
             } else {
-                rightMax = Math.max(rightMax, height[right]);
-                water += rightMax - height[right];
+
+                // The right side determines the water level at this position.
+                rightMaximum = Math.max(rightMaximum, heights[right]);
+
+                totalWater += rightMaximum - heights[right];
+
                 right--;
             }
         }
-        return water;
+
+        return totalWater;
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] height = new int[n];
 
-        for (int i = 0; i < n; i++) height[i] = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println(trap(height));
-        scanner.close();
+        int n = sc.nextInt();
+        int[] heights = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            heights[i] = sc.nextInt();
+        }
+
+        System.out.println(trap(heights));
+
+        sc.close();
     }
 }
