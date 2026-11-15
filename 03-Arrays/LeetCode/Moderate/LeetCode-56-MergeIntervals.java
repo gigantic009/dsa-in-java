@@ -1,6 +1,7 @@
 /*
  * Problem: Merge all overlapping intervals.
- * LeetCode: #56nies: Not listed
+ * LeetCode: #56
+ * Companies: Not listed in the question bank
  * Time: O(n log n) | Auxiliary space: O(n)
  */
 import java.util.ArrayList;
