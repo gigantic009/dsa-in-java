@@ -15,7 +15,14 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-      - name: Compile all Java solutions
+      - name: Compile each Java source independently
         run: |
-          mkdir -p out
-          find . -name '*.java' -print0 | xargs -0 javac -d out
+          set -e
+          count=0
+          while IFS= read -r -d '' file; do
+            out="$(mktemp -d)"
+            javac -Xlint:all -d "$out" "$file"
+            rm -rf "$out"
+            count=$((count + 1))
+          done < <(find . -name '*.java' -print0)
+          echo "Compiled $count Java source files independently."
