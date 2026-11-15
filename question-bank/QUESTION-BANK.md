@@ -34,7 +34,7 @@
 - [ ] **Median of 2 sorted arrays of equal size** — Pattern: Array Fundamentals
 - [ ] **Minimise the maximum difference between heights [V.IMP]** — Pattern: Array Fundamentals
 - [ ] **Minimum no. of Jumps to reach end of an array** — Pattern: Array Fundamentals
-- [ ] **Minimum no. of operations required to make an array palindrome** — Pattern: Two Pointers / Palindrome
+- [x] **Minimum no. of operations required to make an array palindrome** — Pattern: Two Pointers / Palindrome
 - [ ] **Minimum swaps required bring elements less equal K together** — Pattern: Array Fundamentals
 - [ ] **Move all the negative elements to one side of the array** — Pattern: Array Fundamentals
 - [ ] **Rearrange the array in alternating positive and negative items with O(1) extra space** — Pattern: Array Fundamentals
@@ -45,7 +45,7 @@
 
 - [ ] **Find Minimum in Rotated Sorted Array** — Pattern: Binary Search| Companies: Adobe Amazon Microsoft Morgan Stanley Samsung Snapdeal Times Internet
 - [ ] **Find Minimum Number of Merge Operations to Make an Array Palindrome** — Pattern: Two Pointers / Palindrome| Companies: Amazon
-- [ ] **Find Pair with Sum in Sorted & Rotated Array** — Pattern: Two Pointers / Palindrome| Companies: Microsoft, Google, Apple
+- [x] **Find Pair with Sum in Sorted & Rotated Array** — Pattern: Two Pointers / Palindrome| Companies: Microsoft, Google, Apple
 - [ ] **Kth - Smallest Element** — Pattern: Array Fundamentals| Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
 - [ ] **Kth-Largest Element in an Array** — Pattern: Array Fundamentals| Companies: Amazon Microsoft Walmart Adobe
 - [ ] **Maximum Product Subarray** — Pattern: Array Fundamentals| Companies: Amazon D-E-Shaw Microsoft Morgan Stanley OYO Rooms Google
@@ -61,5 +61,5 @@
 - [ ] **Find the "Kth" max and min element of an array** — Pattern: Array Fundamentals
 - [ ] **Merge 2 sorted arrays without using Extra space.** — Pattern: Array Fundamentals
 - [ ] **Merge Intervals** — Pattern: Array Fundamentals
-- [ ] **Smallest Subarray with sum greater than a given value** — Pattern: Array Fundamentals
+- [x] **Smallest Subarray with sum greater than a given value** — Pattern: Array Fundamentals
 - [ ] **Write a program to cyclically rotate an array by one.** — Pattern: Array Fundamentals
