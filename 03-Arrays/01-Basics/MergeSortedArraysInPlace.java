@@ -1,7 +1,7 @@
 /*
- * Problem: Merge two sorted arrays so that their combined sorted values
- * occupy the two arrays, without using an extra array.
- * LeetCode: #88 (related merge problem)
+ * Problem: Merge two sorted arrays in place so their combined values
+ * remain sorted across the two arrays.
+ * LeetCode: Not available (the usual LeetCode #88 problem uses a different interface).
  * Companies: Not listed
  * Time Complexity: O((n + m) * log(n + m))
  * Space Complexity: O(1), excluding the input arrays.
@@ -12,8 +12,8 @@ import java.util.Scanner;
 
 public class MergeSortedArraysInPlace {
 
-    // Get an element from the correct array using its combined index.
-    public static int getElement(int[] first, int[] second, int index) {
+    // Read a value using its position in the combined arrays.
+    public static int getValue(int[] first, int[] second, int index) {
 
         if (index < first.length) {
             return first[index];
@@ -22,23 +22,14 @@ public class MergeSortedArraysInPlace {
         return second[index - first.length];
     }
 
-    // Swap two elements using their combined-array indices.
-    public static void swapElements(
-            int[] first, int[] second, int firstIndex, int secondIndex) {
+    // Change a value using its position in the combined arrays.
+    public static void setValue(
+            int[] first, int[] second, int index, int value) {
 
-        int firstValue = getElement(first, second, firstIndex);
-        int secondValue = getElement(first, second, secondIndex);
-
-        if (firstIndex < first.length) {
-            first[firstIndex] = secondValue;
+        if (index < first.length) {
+            first[index] = value;
         } else {
-            second[firstIndex - first.length] = secondValue;
-        }
-
-        if (secondIndex < first.length) {
-            first[secondIndex] = firstValue;
-        } else {
-            second[secondIndex - first.length] = firstValue;
+            second[index - first.length] = value;
         }
     }
 
@@ -60,33 +51,36 @@ public class MergeSortedArraysInPlace {
             second[i] = sc.nextInt();
         }
 
-        // Start with a gap of approximately half the combined length.
-        int gap = (n + m + 1) / 2;
+        // Begin with a gap of half the total number of elements.
+        int totalLength = n + m;
+        int gap = (totalLength + 1) / 2;
 
         while (gap > 0) {
 
             int left = 0;
             int right = gap;
 
-            // Compare elements that are 'gap' positions apart.
-            while (right < n + m) {
+            // Compare values that are 'gap' positions apart.
+            while (right < totalLength) {
 
-                int leftValue = getElement(first, second, left);
-                int rightValue = getElement(first, second, right);
+                int leftValue = getValue(first, second, left);
+                int rightValue = getValue(first, second, right);
 
                 if (leftValue > rightValue) {
-                    swapElements(first, second, left, right);
+
+                    setValue(first, second, left, rightValue);
+                    setValue(first, second, right, leftValue);
                 }
 
                 left++;
                 right++;
             }
 
-            // Reduce the gap for the next pass.
             if (gap == 1) {
                 break;
             }
 
+            // Reduce the gap for the next pass.
             gap = (gap + 1) / 2;
         }
 
