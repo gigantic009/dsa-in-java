@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class LeetCode4MedianOfTwoSortedArrays {
+class LeetCode4MedianOfTwoSortedArrays {
     public static double findMedian(int[] first, int[] second) {
         // Binary search must be performed on the smaller array.
         if (first.length > second.length) {
