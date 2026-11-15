@@ -1,0 +1,49 @@
+# LeetCode Array Problems
+
+This collection contains only questions from the Arrays branch that map to a specific LeetCode problem number. Each Java file includes the problem description, LeetCode number, company information when it was present in the repository's question bank, complexity, and a complete beginner-readable Java solution.
+
+Company names are reproduced from the existing question-bank entries. They are not independently verified as historical interview reports. "Not listed" means no company names were supplied in that question bank.
+
+## Easy
+
+| LeetCode | Problem | Solution |
+|---|---|---|
+| #53 | Maximum Subarray | [LeetCode-53-MaximumSubarray.java](Easy/LeetCode-53-MaximumSubarray.java) |
+| #121 | Best Time to Buy and Sell Stock | [LeetCode-121-BestTimeToBuyAndSellStock.java](Easy/LeetCode-121-BestTimeToBuyAndSellStock.java) |
+| #136 | Single Number | [LeetCode-136-SingleNumber.java](Easy/LeetCode-136-SingleNumber.java) |
+| #217 | Contains Duplicate | [LeetCode-217-ContainsDuplicate.java](Easy/LeetCode-217-ContainsDuplicate.java) |
+
+## Moderate
+
+| LeetCode | Problem | Solution |
+|---|---|---|
+| #11 | Container With Most Water | [LeetCode-11-ContainerWithMostWater.java](Moderate/LeetCode-11-ContainerWithMostWater.java) |
+| #15 | 3Sum | [LeetCode-15-ThreeSum.java](Moderate/LeetCode-15-ThreeSum.java) |
+| #31 | Next Permutation | [LeetCode-31-NextPermutation.java](Moderate/LeetCode-31-NextPermutation.java) |
+| #33 | Search in Rotated Sorted Array | [LeetCode-33-SearchInRotatedSortedArray.java](Moderate/LeetCode-33-SearchInRotatedSortedArray.java) |
+| #45 | Jump Game II | [LeetCode-45-JumpGameII.java](Moderate/LeetCode-45-JumpGameII.java) |
+| #56 | Merge Intervals | [LeetCode-56-MergeIntervals.java](Moderate/LeetCode-56-MergeIntervals.java) |
+| #75 | Sort Colors | [LeetCode-75-SortColors.java](Moderate/LeetCode-75-SortColors.java) |
+| #128 | Longest Consecutive Sequence | [LeetCode-128-LongestConsecutiveSequence.java](Moderate/LeetCode-128-LongestConsecutiveSequence.java) |
+| #152 | Maximum Product Subarray | [LeetCode-152-MaximumProductSubarray.java](Moderate/LeetCode-152-MaximumProductSubarray.java) |
+| #154 | Find Minimum in Rotated Sorted Array II | [LeetCode-154-FindMinimumInRotatedSortedArrayII.java](Moderate/LeetCode-154-FindMinimumInRotatedSortedArrayII.java) |
+| #179 | Largest Number | [LeetCode-179-LargestNumber.java](Moderate/LeetCode-179-LargestNumber.java) |
+| #215 | Kth Largest Element in an Array | [LeetCode-215-KthLargestElementInAnArray.java](Moderate/LeetCode-215-KthLargestElementInAnArray.java) |
+| #238 | Product of Array Except Self | [LeetCode-238-ProductOfArrayExceptSelf.java](Moderate/LeetCode-238-ProductOfArrayExceptSelf.java) |
+| #287 | Find the Duplicate Number | [LeetCode-287-FindTheDuplicateNumber.java](Moderate/LeetCode-287-FindTheDuplicateNumber.java) |
+| #974 | Subarray Sums Divisible by K | [LeetCode-974-SubarraySumsDivisibleByK.java](Moderate/LeetCode-974-SubarraySumsDivisibleByK.java) |
+
+## Advanced
+
+| LeetCode | Problem | Solution |
+|---|---|---|
+| #4 | Median of Two Sorted Arrays | [LeetCode-4-MedianOfTwoSortedArrays.java](Advanced/LeetCode-4-MedianOfTwoSortedArrays.java) |
+| #42 | Trapping Rain Water | [LeetCode-42-TrappingRainWater.java](Advanced/LeetCode-42-TrappingRainWater.java) |
+| #123 | Best Time to Buy and Sell Stock III | [LeetCode-123-BestTimeToBuyAndSellStockIII.java](Advanced/LeetCode-123-BestTimeToBuyAndSellStockIII.java) |
+
+## Notes
+
+- Difficulty labels follow LeetCode's Easy / Medium / Hard levels; this repository uses **Moderate** for Medium and **Advanced** for Hard.
+- Only exact LeetCode problem matches are included. Similar-looking questions with different requirements remain in the main Arrays question bank and are not incorrectly assigned a LeetCode number.
+- Each file is independently runnable and reads input from the console. Class names are prefixed with the LeetCode number to keep Java filenames and public class names aligned.
+- Solutions follow the compact spacing and indentation style used throughout the Arrays branch.
