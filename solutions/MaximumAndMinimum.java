@@ -1,3 +1,9 @@
+/*
+ * Problem: Find the minimum and maximum values in a non-empty integer array.
+ * LeetCode: Not available
+ * Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
+ * Time: O(n) | Auxiliary space: O(1)
+ */
 import java.util.Scanner;
 
 public class MaximumAndMinimum {
