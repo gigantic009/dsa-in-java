@@ -1,6 +1,7 @@
 /*
  * Problem: Find the maximum water a pair of vertical lines can contain.
- * LeetCode: #11nies: Flipkart, Dunzo
+ * LeetCode: #11
+ * Companies: Flipkart, Dunzo
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  */
