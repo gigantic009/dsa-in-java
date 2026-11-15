@@ -6,7 +6,7 @@
  */
 import java.util.Scanner;
 
-public class LeetCode152MaximumProductSubarray {
+class LeetCode152MaximumProductSubarray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
