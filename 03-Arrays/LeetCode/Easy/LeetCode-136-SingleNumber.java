@@ -1,8 +1,8 @@
 /*
  * Problem: Find the element that occurs once when every other element
  * occurs exactly twice, using XOR.
- * LeetCode: #136nies: Amazon
- * Assumption: This solves the single-number XOR version.
+ * LeetCode: #136
+ * Companies: Amazon
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  */
