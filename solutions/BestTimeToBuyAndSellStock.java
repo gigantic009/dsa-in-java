@@ -1,11 +1,54 @@
 /*
- * Problem: Given daily stock prices, find the maximum profit from one buy followed by one sell.
+ * Problem: Find the maximum profit from one stock purchase and one later sale.
  * LeetCode: #121
- * Companies: Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs, Intuit, MakeMyTrip, Microsoft
- * Time: O(n) | Auxiliary space: O(1)
+ * Companies: Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs,
+ *            Intuit, MakeMyTrip, Microsoft
+ * Time Complexity: O(n)
+ * Space Complexity: O(1), excluding the input array.
  */
+
 import java.util.Scanner;
+
 public class BestTimeToBuyAndSellStock {
- public static long maxProfit(int[] prices){if(prices.length<2)return 0;int min=prices[0];long best=0;for(int i=1;i<prices.length;i++){best=Math.max(best,(long)prices[i]-min);min=Math.min(min,prices[i]);}return best;}
- public static void main(String[] args){Scanner sc=new Scanner(System.in);int n=sc.nextInt();int[] p=new int[n];for(int i=0;i<n;i++)p[i]=sc.nextInt();System.out.println(maxProfit(p));}
+
+    public static long maxProfit(int[] prices) {
+
+        if (prices.length < 2) {
+            return 0;
+        }
+
+        int minimumPrice = prices[0];
+        long maximumProfit = 0;
+
+        for (int i = 1; i < prices.length; i++) {
+
+            long currentProfit = (long) prices[i] - minimumPrice;
+
+            if (currentProfit > maximumProfit) {
+                maximumProfit = currentProfit;
+            }
+
+            if (prices[i] < minimumPrice) {
+                minimumPrice = prices[i];
+            }
+        }
+
+        return maximumProfit;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] prices = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            prices[i] = sc.nextInt();
+        }
+
+        System.out.println(maxProfit(prices));
+
+        sc.close();
+    }
 }
