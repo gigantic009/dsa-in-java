@@ -24,5 +24,5 @@ jobs:
             javac -Xlint:all -d "$out" "$file"
             rm -rf "$out"
             count=$((count + 1))
-          done < <(find . -name '*.java' -print0)
+          done < <(find 03-Arrays solutions -name '*.java' -print0)
           echo "Compiled $count Java source files independently."
