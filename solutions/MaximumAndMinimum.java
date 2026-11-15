@@ -1,38 +1,58 @@
 /*
  * Problem: Find the minimum and maximum values in a non-empty integer array.
  * LeetCode: Not available
- * Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
- * Time: O(n) | Auxiliary space: O(1)
+ * Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft,
+ *            Snapdeal, VMWare, Google, Adobe
+ * Time Complexity: O(n)
+ * Space Complexity: O(1), excluding the input array.
  */
+
 import java.util.Scanner;
 
 public class MaximumAndMinimum {
-    public static int[] findMinMax(int[] arr) {
-        int min = arr[0], max = arr[0];
 
-        for (int i = 1; i < arr.length; i++) {
-            min = Math.min(min, arr[i]);
-            max = Math.max(max, arr[i]);
+    public static int[] findMinMax(int[] numbers) {
+
+        int minimum = numbers[0];
+        int maximum = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+
+            if (numbers[i] < minimum) {
+                minimum = numbers[i];
+            }
+
+            if (numbers[i] > maximum) {
+                maximum = numbers[i];
+            }
         }
-        return new int[]{min, max};
+
+        return new int[]{minimum, maximum};
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
 
         if (n <= 0) {
             System.out.println("Array must contain at least one element.");
-            scanner.close();
+            sc.close();
             return;
         }
 
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) arr[i] = scanner.nextInt();
+        int[] numbers = new int[n];
 
-        int[] result = findMinMax(arr);
-        System.out.println("Minimum: " + result[0]);
-        System.out.println("Maximum: " + result[1]);
-        scanner.close();
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        int[] answer = findMinMax(numbers);
+
+        System.out.println("Minimum: " + answer[0]);
+        System.out.println("Maximum: " + answer[1]);
+
+        sc.close();
     }
 }
