@@ -1,12 +1,16 @@
 # Flowcharts and Pseudocode
 
-## Learn
-- Break the statement into inputs, outputs and constraints.
-- Flowchart symbols: terminator, process, input/output, decision and arrows.
-- Sequence, selection and iteration.
-- Pseudocode indentation, variable naming and dry-run tables.
+**Theory-only foundation.** This folder teaches how to plan a solution before coding.
 
-## Example flow
+## Learn
+- Read the statement; identify input, output, constraints and edge cases.
+- Flowchart symbols: start/end, input/output, process, decision and arrows.
+- Sequence, selection and iteration.
+- Pseudocode conventions, indentation and meaningful variable names.
+- Dry-run tables and tracing variables.
+- Translate a plan into Java only after the logic is clear.
+
+## Example: even or odd
 ```mermaid
 flowchart TD
  A([Start]) --> B[/Read n/]
@@ -17,5 +21,11 @@ flowchart TD
  E --> F
 ```
 
-## Practice
-Add two numbers; largest of three; even/odd; multiplication table; factorial; prime check. Write pseudocode and draw the flow before coding.
+```text
+READ n
+IF n is divisible by 2
+    PRINT Even
+ELSE
+    PRINT Odd
+END IF
+```
