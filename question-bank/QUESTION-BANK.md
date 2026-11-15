@@ -6,7 +6,7 @@
 
 - [x] **3Sum** — Pattern: Two Pointers / Palindrome| Companies: Adobe Amazon Microsoft Morgan Stanley Samsung Snapdeal Times Internet
 - [x] **Best time to Buy and Sell Stock** — Pattern: Array Fundamentals| Companies: Amazon D-E-Shaw Directi Flipkart Goldman Sachs Intuit MakeMyTrip Microsoft
-- [ ] **Container With Most Water** — Pattern: Two Pointers / Palindrome| Companies: Flipkart, Dunzo
+- [x] **Container With Most Water** — Pattern: Two Pointers / Palindrome| Companies: Flipkart, Dunzo
 - [x] **Contains Duplicate** — Pattern: Hashing / Frequency| Companies: Amazon
 - [ ] **Given Sum Pair** — Pattern: Array Fundamentals| Companies: Infosys, Amazon, Flipkart
 - [x] **Maximum and Minimum Element in an Array** — Pattern: Array Fundamentals| Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
@@ -17,7 +17,7 @@
 - [ ] **Space Optimization Using Bit Manipulations** — Pattern: Bit Manipulation| Companies: Amazon
 - [ ] **Given an Array of Numbers Arrange the Numbers to Form the Biggest Number** — Pattern: Array Fundamentals| Companies: Barclays
 - [x] **Reverse the Array** — Pattern: Array Fundamentals| Companies: Infosys Moonfrog Labs
-- [ ] **Trapping Rain Water** — Pattern: Array Fundamentals| Companies: Samsung
+- [x] **Trapping Rain Water** — Pattern: Array Fundamentals| Companies: Samsung
 - [ ] **find all pairs on integer array whose sum is equal to given number** — Pattern: Array Fundamentals
 - [ ] **find common elements In 3 sorted arrays** — Pattern: Array Fundamentals
 - [ ] **find duplicate in an array of N+1 Integers** — Pattern: Hashing / Frequency
