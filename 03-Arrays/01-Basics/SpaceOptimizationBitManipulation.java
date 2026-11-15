@@ -1,7 +1,8 @@
 /*
  * Problem: Demonstrate constant-extra-space identification of the element occurring once when every other value occurs exactly twice.
  * LeetCode: #136
- * Companies: Not listed
+ * Companies: Amazon
+ * Assumption: The source title is underspecified; this implementation solves the single-number XOR variant.
  */
 import java.util.*;
 public class SpaceOptimizationBitManipulation {
