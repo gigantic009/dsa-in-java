@@ -11,22 +11,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MergeIntervals {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         int n = scanner.nextInt();
         int[][] intervals = new int[n][2];
-
         for (int i = 0; i < n; i++) {
             intervals[i][0] = scanner.nextInt();
             intervals[i][1] = scanner.nextInt();
         }
-
         Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
-
         List<int[]> merged = new ArrayList<>();
-
         for (int[] interval : intervals) {
             if (merged.isEmpty()
                     || merged.get(merged.size() - 1)[1] < interval[0]) {
@@ -36,11 +30,9 @@ public class MergeIntervals {
                 last[1] = Math.max(last[1], interval[1]);
             }
         }
-
         for (int[] interval : merged) {
             System.out.println(interval[0] + " " + interval[1]);
         }
-
         scanner.close();
     }
 }
