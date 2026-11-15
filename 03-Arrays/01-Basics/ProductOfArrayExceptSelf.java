@@ -1,40 +1,34 @@
-/**
- * Question:
- * Given an integer array nums, return an array answer such that answer[i]
- * is equal to the product of all the elements of nums except nums[i].
- * The solution must run in O(n) time and must not use division.
- *
- * LeetCode: #238
- *
- * Companies:
- * Microsoft, Facebook
- */
+import java.util.Scanner;
+
 public class ProductOfArrayExceptSelf {
-    public static int[] productExceptSelf(int[] nums) {
+    public static long[] productExceptSelf(int[] nums) {
         int n = nums.length;
-        int[] answer = new int[n];
+        long[] answer = new long[n];
+        long prefix = 1;
 
-        int prefixProduct = 1;
         for (int i = 0; i < n; i++) {
-            answer[i] = prefixProduct;
-            prefixProduct *= nums[i];
+            answer[i] = prefix;
+            prefix *= nums[i];
         }
 
-        int suffixProduct = 1;
+        long suffix = 1;
         for (int i = n - 1; i >= 0; i--) {
-            answer[i] *= suffixProduct;
-            suffixProduct *= nums[i];
+            answer[i] *= suffix;
+            suffix *= nums[i];
         }
-
         return answer;
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4};
-        int[] result = productExceptSelf(nums);
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] nums = new int[n];
 
-        for (int value : result) {
-            System.out.print(value + " ");
-        }
+        for (int i = 0; i < n; i++) nums[i] = scanner.nextInt();
+
+        long[] result = productExceptSelf(nums);
+        for (long value : result) System.out.print(value + " ");
+        System.out.println();
+        scanner.close();
     }
 }
