@@ -1,7 +1,7 @@
 /*
  * Problem: Rearrange the array into the next lexicographically greater permutation; if none exists, return the smallest permutation.
  * LeetCode: #31
- * Companies: Not listed
+ * Companies: Uber, Goldman Sachs, Adobe
  */
 import java.util.*;
 public class NextPermutation {
