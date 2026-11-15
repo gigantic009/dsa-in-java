@@ -1,12 +1,6 @@
 # Strings
 
-## Sub-branches
-- Basics: immutability, length, charAt, substring, equals, compareTo.
-- Mutable strings: StringBuilder append/insert/delete/reverse.
-- Character processing: ASCII, frequency array, case conversion.
-- Patterns: reverse, palindrome, anagram, duplicates and rotation.
-- Interview patterns: longest common prefix, substring search, sliding window.
-- Advanced: KMP, Rabin-Karp and Z algorithm.
+1. [String fundamentals](01-String-Fundamentals/README.md) — theory only.
+2. [String problem patterns](02-String-Problem-Patterns/README.md) — practice questions.
 
-## Practice
-Reverse string, palindrome, anagram, first non-repeating character, remove duplicates, longest substring without repeating characters, longest palindromic substring.
+Learn immutability and StringBuilder before attempting character-frequency, palindrome, anagram and sliding-window questions.
