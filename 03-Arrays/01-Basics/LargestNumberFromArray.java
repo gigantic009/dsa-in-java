@@ -8,43 +8,32 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class LargestNumberFromArray {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         int n = scanner.nextInt();
         String[] numbers = new String[n];
-
         for (int i = 0; i < n; i++) {
             long value = scanner.nextLong();
-
             if (value < 0) {
                 System.out.println("Inputs must be non-negative");
                 return;
             }
-
             numbers[i] = String.valueOf(value);
         }
-
         Arrays.sort(numbers, (first, second) ->
                 (second + first).compareTo(first + second));
-
         if (n == 0) {
             System.out.println("");
             return;
         }
-
         if (numbers[0].equals("0")) {
             System.out.println("0");
             return;
         }
-
         StringBuilder result = new StringBuilder();
-
         for (String number : numbers) {
             result.append(number);
         }
-
         System.out.println(result);
         scanner.close();
     }
