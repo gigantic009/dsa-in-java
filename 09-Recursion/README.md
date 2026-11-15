@@ -1,32 +1,8 @@
 # Recursion
 
-Recursion is divided into two learning parts.
+Recursion is divided into two parts:
 
-## Part A — Core recursion
-- Base case, recursive case and progress toward termination.
-- Call stack, stack frames, return flow and recursion tree.
-- Print numbers, factorial, sum, Fibonacci and power.
-- Array traversal, sorted check, first/last occurrence and reverse.
-- Time complexity and recursion-stack space.
+1. [Part A — Fundamentals](01-Part-A-Fundamentals/README.md): base cases, recursive calls, call stack and simple recursion problems.
+2. [Part B — Patterns](02-Part-B-Patterns/README.md): subsequences, subsets, permutations, tiling, grid paths and backtracking.
 
-## Part B — Recursion patterns
-- Subsequences, subsets, permutations and combinations.
-- Tiling and friends-pairing recurrence.
-- Grid paths and maze problems.
-- Choose / explore / unchoose, pruning and backtracking.
-
-## Solved questions
-- [Factorial using recursion](FactorialRecursion.java)
-- [Power in O(log n)](FastPower.java)
-- [First occurrence in an array](FirstOccurrence.java)
-- [Binary strings without consecutive 1s](BinaryStrings.java)
-
-## Call flow
-```mermaid
-flowchart TD
- A([Function call]) --> B{Base case?}
- B -- Yes --> C[Return answer]
- B -- No --> D[Call smaller problem]
- D --> E[Use returned value]
- E --> F([Return to caller])
-```
+Read the concept notes first, then attempt the questions. Each implemented problem has its own Java file.
