@@ -20,5 +20,5 @@ Every Java `main` method reads input from standard input; no hardcoded example a
 ## Current status
 
 - Question-bank entries covered: **56 / 56**
-- Canonical Java source files under this folder: **55**
+- Canonical Java source files under this folder: **54**
 - Repeated titles remain visible and link to shared implementations where the requirements are equivalent.
