@@ -1,7 +1,7 @@
 /*
  * Problem: Find the kth largest element in an unsorted array.
  * LeetCode: #215
- * Companies: Not listed
+ * Companies: Amazon, Microsoft, Walmart, Adobe
  */
 import java.util.*;
 public class KthLargestElement {
