@@ -46,7 +46,7 @@
 - [x] **Find Minimum in Rotated Sorted Array** — [FindMinimumRotatedSortedArray.java](../03-Arrays/02-Searching/FindMinimumRotatedSortedArray.java) — LeetCode #153 — Companies: Adobe, Amazon, Microsoft, Morgan Stanley, Samsung, Snapdeal, Times Internet
 - [x] **Find Minimum Number of Merge Operations to Make an Array Palindrome** — [MinimumMergeOperationsForPalindrome.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/MinimumMergeOperationsForPalindrome.java) — LeetCode: Not available — Companies: Amazon
 - [x] **Find Pair with Sum in Sorted & Rotated Array** — [PairSumSortedRotatedArray.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/PairSumSortedRotatedArray.java) — LeetCode: Not assigned — Companies: Microsoft, Google, Apple
-- [x] **Kth - Smallest Element** — [KthSmallestElement.java](../03-Arrays/01-Basics/KthSmallestElement.java) — LeetCode #215 (related order-statistic problem) — Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
+- [x] **Kth - Smallest Element** — [KthSmallestElement.java](../03-Arrays/01-Basics/KthSmallestElement.java) — LeetCode: Not available — Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
 - [x] **Kth-Largest Element in an Array** — [KthLargestElement.java](../03-Arrays/01-Basics/KthLargestElement.java) — LeetCode #215 — Companies: Amazon, Microsoft, Walmart, Adobe
 - [x] **Maximum Product Subarray** — [MaximumProductSubarray.java](../03-Arrays/01-Basics/MaximumProductSubarray.java) — LeetCode #152 — Companies: Amazon, D-E-Shaw, Microsoft, Morgan Stanley, OYO Rooms, Google
 - [x] **Maximum-Subarray** — same implementation as [KadaneAlgorithm.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/KadaneAlgorithm.java) — LeetCode #53 — Companies: Microsoft, Facebook
@@ -59,7 +59,7 @@
 - [x] **Find longest consecutive subsequence** — [LongestConsecutiveSequence.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/LongestConsecutiveSequence.java) — LeetCode #128 — Companies: Not listed
 - [x] **find maximum product subarray** — same implementation as [MaximumProductSubarray.java](../03-Arrays/01-Basics/MaximumProductSubarray.java) — LeetCode #152 — Companies: Not listed
 - [x] **Find the Kth max and min element of an array** — [FindKthMinMax.java](../03-Arrays/01-Basics/FindKthMinMax.java) — LeetCode #215 (related order-statistic problem) — Companies: Not listed
-- [x] **Merge 2 sorted arrays without using Extra space** — [MergeSortedArraysInPlace.java](../03-Arrays/01-Basics/MergeSortedArraysInPlace.java) — LeetCode #88 (related merge problem) — Companies: Not listed
+- [x] **Merge 2 sorted arrays without using Extra space** — [MergeSortedArraysInPlace.java](../03-Arrays/01-Basics/MergeSortedArraysInPlace.java) — LeetCode: Not available — Companies: Not listed
 - [x] **Merge Intervals** — [MergeIntervals.java](../03-Arrays/01-Basics/MergeIntervals.java) — LeetCode #56 — Companies: Not listed
 - [x] **Smallest Subarray with sum greater than a given value** — [SmallestSubarraySumGreaterThanValue.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/SmallestSubarraySumGreaterThanValue.java) — LeetCode: Not available — Companies: Not listed
 - [x] **Write a program to cyclically rotate an array by one** — [CyclicallyRotateArrayByOne.java](../03-Arrays/01-Basics/CyclicallyRotateArrayByOne.java) — LeetCode: Not available — Companies: Not listed
