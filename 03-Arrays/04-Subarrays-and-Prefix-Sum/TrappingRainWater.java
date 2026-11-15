@@ -1,3 +1,9 @@
+/*
+ * Problem: Given non-negative bar heights, calculate how much rainwater can be trapped between the bars.
+ * LeetCode: #42
+ * Companies: Samsung
+ * Time: O(n) | Auxiliary space: O(1)
+ */
 import java.util.Scanner;
 
 public class TrappingRainWater {
