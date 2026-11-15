@@ -1,6 +1,6 @@
 /*
  * Problem: Find the median of two sorted arrays of equal size.
- * LeetCode: #4 (generalized version)
+ * LeetCode: Not available
  * Companies: Not listed
  * Time Complexity: O(n)
  * Space Complexity: O(1)
@@ -39,7 +39,7 @@ public class MedianOfEqualSortedArrays {
         int previous = 0;
         int current = 0;
 
-        // We need the two middle values from the combined sorted arrays.
+        // Find the two middle values of the combined sorted arrays.
         for (int count = 0; count <= n; count++) {
 
             previous = current;
