@@ -1,40 +1,63 @@
-/**
- * Question:
- * Given an array of positive integers and a target value x, find the
- * minimum length of a contiguous subarray whose sum is strictly greater
- * than x. Print 0 if no such subarray exists. Read n, the array, then x.
- *
- * LeetCode: Not available — no exact problem number verified.
- *
+/*
+ * Problem: Find the minimum length of a contiguous subarray
+ * whose sum is greater than the target.
+ * LeetCode: Not available
  * Companies: Not listed
+ * Assumption: All array values are positive integers.
+ * Time Complexity: O(n)
+ * Space Complexity: O(1), excluding the input array.
  */
+
 import java.util.Scanner;
 
 public class SmallestSubarraySumGreaterThanValue {
-    public static int minLength(int[] values, long target) {
+
+    public static int minLength(int[] numbers, long target) {
+
         int left = 0;
-        int best = values.length + 1;
-        long sum = 0;
+        int minimumLength = numbers.length + 1;
 
-        for (int right = 0; right < values.length; right++) {
-            sum += values[right];
+        long currentSum = 0;
 
-            while (sum > target) {
-                best = Math.min(best, right - left + 1);
-                sum -= values[left++];
+        // Expand the window by moving the right pointer.
+        for (int right = 0; right < numbers.length; right++) {
+
+            currentSum += numbers[right];
+
+            // Shrink the window while its sum is still greater than target.
+            while (currentSum > target) {
+
+                int currentLength = right - left + 1;
+
+                minimumLength = Math.min(minimumLength, currentLength);
+
+                currentSum -= numbers[left];
+                left++;
             }
         }
-        return best == values.length + 1 ? 0 : best;
+
+        if (minimumLength == numbers.length + 1) {
+            return 0;
+        }
+
+        return minimumLength;
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] values = new int[n];
-        for (int i = 0; i < n; i++) values[i] = scanner.nextInt();
-        long target = scanner.nextLong();
 
-        System.out.println(minLength(values, target));
-        scanner.close();
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        long target = sc.nextLong();
+
+        System.out.println(minLength(numbers, target));
+
+        sc.close();
     }
 }
