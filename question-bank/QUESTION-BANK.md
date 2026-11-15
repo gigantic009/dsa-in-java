@@ -1,65 +1,65 @@
 # Arrays — Unified Question Bank
 
-**56 questions.** Difficulty and pattern labels are estimates. Company names are retained where supplied with a question; they are not independently verified.
+**56 entries covered.** Difficulty and pattern labels are estimates. Company names are retained only where supplied with a question; they are not independently verified. Repeated titles are retained and point to the same canonical implementation when their requirements are equivalent.
 
 ## Easy / Foundation
 
-- [x] **3Sum** — Pattern: Two Pointers / Palindrome | Companies: Adobe Amazon Microsoft Morgan Stanley Samsung Snapdeal Times Internet
-- [x] **Best time to Buy and Sell Stock** — Pattern: Array Fundamentals | Companies: Amazon D-E-Shaw Directi Flipkart Goldman Sachs Intuit MakeMyTrip Microsoft
-- [x] **Container With Most Water** — Pattern: Two Pointers / Palindrome | Companies: Flipkart, Dunzo
-- [x] **Contains Duplicate** — Pattern: Hashing / Frequency | Companies: Amazon
-- [x] **Given Sum Pair** — Pattern: Array Fundamentals | Companies: Infosys, Amazon, Flipkart
-- [x] **Maximum and Minimum Element in an Array** — Pattern: Array Fundamentals | Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
-- [ ] **Mo's Algorithm** — Pattern: Array Fundamentals | Companies: Microsoft
-- [ ] **Print all Possible Combinations of r Elements in a Given Array of Size n** — Pattern: Array Fundamentals | Companies: Amazon
-- [x] **Product of Array Except Self** — Pattern: Array Fundamentals | Companies: Microsoft, Facebook
-- [x] **Repeat and Missing Number Array** — Pattern: Array Fundamentals | Companies: Amazon Interview Qs
-- [ ] **Space Optimization Using Bit Manipulations** — Pattern: Bit Manipulation | Companies: Amazon
-- [ ] **Given an Array of Numbers Arrange the Numbers to Form the Biggest Number** — Pattern: Array Fundamentals | Companies: Barclays
-- [x] **Reverse the Array** — Pattern: Array Fundamentals | Companies: Infosys Moonfrog Labs
-- [x] **Trapping Rain Water** — Pattern: Array Fundamentals | Companies: Samsung
-- [ ] **find all pairs on integer array whose sum is equal to given number** — Pattern: Array Fundamentals
-- [ ] **find common elements In 3 sorted arrays** — Pattern: Array Fundamentals
-- [x] **find duplicate in an array of N+1 Integers** — Pattern: Hashing / Frequency
-- [ ] **Find factorial of a large number** — Pattern: Array Fundamentals
-- [ ] **Find the maximum and minimum element in an array** — Pattern: Array Fundamentals
-- [ ] **Find the triplet that sum to a given value** — Pattern: Array Fundamentals
-- [ ] **Find the Union and Intersection of the two sorted arrays.** — Pattern: Linked List Pointers
-- [ ] **Find whether an array is a subset of another array** — Pattern: Array Fundamentals
-- [ ] **Given an array of size n and a number k, fin all elements that appear more than " n/k " times.** — Pattern: Array Fundamentals
-- [ ] **Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo** — Pattern: Sorting
-- [x] **Kadane's Algo [V.V.V.V.V IMP]** — Pattern: Kadane / Prefix Sum
-- [ ] **Maximum profit by buying and selling a share atmost twice** — Pattern: Array Fundamentals
-- [ ] **Median of 2 sorted arrays of different size** — Pattern: Array Fundamentals
-- [ ] **Median of 2 sorted arrays of equal size** — Pattern: Array Fundamentals
-- [ ] **Minimise the maximum difference between heights [V.IMP]** — Pattern: Array Fundamentals
-- [ ] **Minimum no. of Jumps to reach end of an array** — Pattern: Array Fundamentals
-- [x] **Minimum no. of operations required to make an array palindrome** — Pattern: Two Pointers / Palindrome
-- [ ] **Minimum swaps required bring elements less equal K together** — Pattern: Array Fundamentals
-- [ ] **Move all the negative elements to one side of the array** — Pattern: Array Fundamentals
-- [ ] **Rearrange the array in alternating positive and negative items with O(1) extra space** — Pattern: Array Fundamentals
-- [ ] **Three way partitioning of an array around a given value** — Pattern: Array Fundamentals
-- [ ] **Trapping Rain water problem** — Pattern: Array Fundamentals
+- [x] **3Sum** — [ThreeSum.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/ThreeSum.java) — LeetCode #15 — Companies: Adobe, Amazon, Microsoft, Morgan Stanley, Samsung, Snapdeal, Times Internet
+- [x] **Best time to Buy and Sell Stock** — [BestTimeToBuyAndSellStock.java](../solutions/BestTimeToBuyAndSellStock.java) — LeetCode #121 — Companies: Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs, Intuit, MakeMyTrip, Microsoft
+- [x] **Container With Most Water** — [ContainerWithMostWater.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/ContainerWithMostWater.java) — LeetCode #11 — Companies: Flipkart, Dunzo
+- [x] **Contains Duplicate** — [ContainsDuplicate.java](../03-Arrays/05-Hashing-and-Frequency/ContainsDuplicate.java) — LeetCode #217 — Companies: Amazon
+- [x] **Given Sum Pair** — [GivenSumPair.java](../03-Arrays/05-Hashing-and-Frequency/GivenSumPair.java) — LeetCode: Not assigned — Companies: Infosys, Amazon, Flipkart
+- [x] **Maximum and Minimum Element in an Array** — [MaximumAndMinimum.java](../solutions/MaximumAndMinimum.java) — LeetCode: Not available — Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
+- [x] **Mo's Algorithm** — [MosAlgorithm.java](../03-Arrays/01-Basics/MosAlgorithm.java) — LeetCode: Not available — Companies: Microsoft
+- [x] **Print all Possible Combinations of r Elements in a Given Array of Size n** — [CombinationsOfR.java](../03-Arrays/01-Basics/CombinationsOfR.java) — LeetCode: Not available — Companies: Amazon
+- [x] **Product of Array Except Self** — [ProductOfArrayExceptSelf.java](../03-Arrays/01-Basics/ProductOfArrayExceptSelf.java) — LeetCode #238 — Companies: Microsoft, Facebook
+- [x] **Repeat and Missing Number Array** — [RepeatAndMissingNumber.java](../03-Arrays/05-Hashing-and-Frequency/RepeatAndMissingNumber.java) — LeetCode: Not available — Companies: Amazon
+- [x] **Space Optimization Using Bit Manipulations** — [SpaceOptimizationBitManipulation.java](../03-Arrays/01-Basics/SpaceOptimizationBitManipulation.java) — LeetCode #136 (single-number variant) — Companies: Amazon
+- [x] **Given an Array of Numbers Arrange the Numbers to Form the Biggest Number** — [LargestNumberFromArray.java](../03-Arrays/01-Basics/LargestNumberFromArray.java) — LeetCode #179 — Companies: Barclays
+- [x] **Reverse the Array** — [ReverseArray.java](../solutions/ReverseArray.java) — LeetCode: Not available — Companies: Infosys, Moonfrog Labs
+- [x] **Trapping Rain Water** — [TrappingRainWater.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/TrappingRainWater.java) — LeetCode #42 — Companies: Samsung
+- [x] **find all pairs on integer array whose sum is equal to given number** — [AllPairsWithGivenSum.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/AllPairsWithGivenSum.java) — LeetCode: Not assigned — Companies: Not listed
+- [x] **find common elements In 3 sorted arrays** — [CommonElementsThreeSortedArrays.java](../03-Arrays/02-Searching/CommonElementsThreeSortedArrays.java) — LeetCode: Not available — Companies: Not listed
+- [x] **find duplicate in an array of N+1 Integers** — [FindDuplicateNPlusOne.java](../03-Arrays/05-Hashing-and-Frequency/FindDuplicateNPlusOne.java) — LeetCode #287 — Companies: Not listed
+- [x] **Find factorial of a large number** — [FactorialLargeNumber.java](../03-Arrays/01-Basics/FactorialLargeNumber.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Find the maximum and minimum element in an array** — [FindMaximumMinimum.java](../03-Arrays/01-Basics/FindMaximumMinimum.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Find the triplet that sum to a given value** — [TripletSum.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/TripletSum.java) — LeetCode #15 (related variant) — Companies: Not listed
+- [x] **Find the Union and Intersection of the two sorted arrays.** — [UnionIntersectionSortedArrays.java](../03-Arrays/01-Basics/UnionIntersectionSortedArrays.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Find whether an array is a subset of another array** — [ArraySubsetCheck.java](../03-Arrays/05-Hashing-and-Frequency/ArraySubsetCheck.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Given an array of size n and a number k, find all elements that appear more than n/k times.** — [MoreThanNByK.java](../03-Arrays/05-Hashing-and-Frequency/MoreThanNByK.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo** — [Sort012.java](../03-Arrays/02-Searching/Sort012.java) — LeetCode #75 — Companies: Not listed
+- [x] **Kadane's Algo** — [KadaneAlgorithm.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/KadaneAlgorithm.java) — LeetCode #53 — Companies: Not listed
+- [x] **Maximum profit by buying and selling a share at most twice** — [MaximumProfitTwoTransactions.java](../03-Arrays/01-Basics/MaximumProfitTwoTransactions.java) — LeetCode #123 — Companies: Not listed
+- [x] **Median of 2 sorted arrays of different size** — [MedianOfTwoSortedArrays.java](../03-Arrays/02-Searching/MedianOfTwoSortedArrays.java) — LeetCode #4 — Companies: Not listed
+- [x] **Median of 2 sorted arrays of equal size** — [MedianOfEqualSortedArrays.java](../03-Arrays/02-Searching/MedianOfEqualSortedArrays.java) — LeetCode #4 (generalized) — Companies: Not listed
+- [x] **Minimise the maximum difference between heights** — [MinimizeMaximumHeightDifference.java](../03-Arrays/01-Basics/MinimizeMaximumHeightDifference.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Minimum no. of Jumps to reach end of an array** — [MinimumJumpsToEnd.java](../03-Arrays/01-Basics/MinimumJumpsToEnd.java) — LeetCode #45 — Companies: Not listed
+- [x] **Minimum no. of operations required to make an array palindrome** — [MinimumAdjacentSwapsToPalindrome.java](../03-Arrays/01-Basics/MinimumAdjacentSwapsToPalindrome.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Minimum swaps required bring elements less than or equal to K together** — [MinimumSwapsToGroupK.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/MinimumSwapsToGroupK.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Move all the negative elements to one side of the array** — [MoveNegativesToOneSide.java](../03-Arrays/01-Basics/MoveNegativesToOneSide.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Rearrange the array in alternating positive and negative items with O(1) extra space** — [AlternatingPositiveNegative.java](../03-Arrays/01-Basics/AlternatingPositiveNegative.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Three way partitioning of an array around a given value** — [ThreeWayPartition.java](../03-Arrays/01-Basics/ThreeWayPartition.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Trapping Rain water problem** — same implementation as [TrappingRainWater.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/TrappingRainWater.java) — LeetCode #42 — Companies: Not listed
 
 ## Medium / Intermediate
 
-- [ ] **Find Minimum in Rotated Sorted Array** — Pattern: Binary Search | Companies: Adobe Amazon Microsoft Morgan Stanley Samsung Snapdeal Times Internet
-- [ ] **Find Minimum Number of Merge Operations to Make an Array Palindrome** — Pattern: Two Pointers / Palindrome | Companies: Amazon
-- [x] **Find Pair with Sum in Sorted & Rotated Array** — Pattern: Two Pointers / Palindrome | Companies: Microsoft, Google, Apple
-- [ ] **Kth - Smallest Element** — Pattern: Array Fundamentals | Companies: ABCO Accolite Amazon Cisco Hike Microsoft Snapdeal VMWare Google Adobe
-- [ ] **Kth-Largest Element in an Array** — Pattern: Array Fundamentals | Companies: Amazon Microsoft Walmart Adobe
-- [ ] **Maximum Product Subarray** — Pattern: Array Fundamentals | Companies: Amazon D-E-Shaw Microsoft Morgan Stanley OYO Rooms Google
-- [ ] **Maximum-Subarray** — Pattern: Array Fundamentals | Companies: Microsoft + Facebook Interview Qs
-- [ ] **Next Permutation** — Pattern: Backtracking | Companies: Uber, Goldman Sachs, Adobe
-- [ ] **Search in Rotated Sorted Array** — Pattern: Binary Search | Companies: Microsoft Google Adobe Amazon D-E-Shaw Flipkart Hike Intuit MakeMyTrip Pay
-- [ ] **Subarray Sum Divisible K** — Pattern: Prefix Sum / Hashing | Companies: Snapdeal Microsoft
-- [ ] **Count Inversion** — Pattern: Sorting
-- [ ] **Find if there is any subarray with sum equal to 0** — Pattern: Array Fundamentals
-- [ ] **find Largest sum contiguous Subarray [V. IMP]** — Pattern: Array Fundamentals
-- [ ] **Find longest coinsecutive subsequence** — Pattern: Dynamic Programming
-- [ ] **find maximum product subarray** — Pattern: Array Fundamentals
-- [ ] **Find the "Kth" max and min element of an array** — Pattern: Array Fundamentals
-- [ ] **Merge 2 sorted arrays without using Extra space.** — Pattern: Array Fundamentals
-- [ ] **Merge Intervals** — Pattern: Array Fundamentals
-- [x] **Smallest Subarray with sum greater than a given value** — Pattern: Array Fundamentals
-- [ ] **Write a program to cyclically rotate an array by one.** — Pattern: Array Fundamentals
+- [x] **Find Minimum in Rotated Sorted Array** — [FindMinimumRotatedSortedArray.java](../03-Arrays/02-Searching/FindMinimumRotatedSortedArray.java) — LeetCode #153 — Companies: Adobe, Amazon, Microsoft, Morgan Stanley, Samsung, Snapdeal, Times Internet
+- [x] **Find Minimum Number of Merge Operations to Make an Array Palindrome** — [MinimumMergeOperationsForPalindrome.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/MinimumMergeOperationsForPalindrome.java) — LeetCode: Not available — Companies: Amazon
+- [x] **Find Pair with Sum in Sorted & Rotated Array** — [PairSumSortedRotatedArray.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/PairSumSortedRotatedArray.java) — LeetCode: Not assigned — Companies: Microsoft, Google, Apple
+- [x] **Kth - Smallest Element** — [KthSmallestElement.java](../03-Arrays/01-Basics/KthSmallestElement.java) — LeetCode #215 (related order-statistic problem) — Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
+- [x] **Kth-Largest Element in an Array** — [KthLargestElement.java](../03-Arrays/01-Basics/KthLargestElement.java) — LeetCode #215 — Companies: Amazon, Microsoft, Walmart, Adobe
+- [x] **Maximum Product Subarray** — [MaximumProductSubarray.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/MaximumProductSubarray.java) — LeetCode #152 — Companies: Amazon, D-E-Shaw, Microsoft, Morgan Stanley, OYO Rooms, Google
+- [x] **Maximum-Subarray** — same implementation as [KadaneAlgorithm.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/KadaneAlgorithm.java) — LeetCode #53 — Companies: Microsoft, Facebook
+- [x] **Next Permutation** — [NextPermutation.java](../03-Arrays/02-Searching/NextPermutation.java) — LeetCode #31 — Companies: Uber, Goldman Sachs, Adobe
+- [x] **Search in Rotated Sorted Array** — [SearchRotatedSortedArray.java](../03-Arrays/02-Searching/SearchRotatedSortedArray.java) — LeetCode #33 — Companies: Microsoft, Google, Adobe, Amazon, D-E-Shaw, Flipkart, Hike, Intuit, MakeMyTrip, Pay
+- [x] **Subarray Sum Divisible K** — [SubarraySumDivisibleByK.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/SubarraySumDivisibleByK.java) — LeetCode #974 — Companies: Snapdeal, Microsoft
+- [x] **Count Inversion** — [CountInversions.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/CountInversions.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Find if there is any subarray with sum equal to 0** — [ZeroSumSubarray.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/ZeroSumSubarray.java) — LeetCode: Not available — Companies: Not listed
+- [x] **find Largest sum contiguous Subarray** — same implementation as [KadaneAlgorithm.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/KadaneAlgorithm.java) — LeetCode #53 — Companies: Not listed
+- [x] **Find longest consecutive subsequence** — [LongestConsecutiveSequence.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/LongestConsecutiveSequence.java) — LeetCode #128 — Companies: Not listed
+- [x] **find maximum product subarray** — same implementation as [MaximumProductSubarray.java](../03-Arrays/04-Subarrays-and-Prefix-Sum/MaximumProductSubarray.java) — LeetCode #152 — Companies: Not listed
+- [x] **Find the Kth max and min element of an array** — [FindKthMinMax.java](../03-Arrays/01-Basics/FindKthMinMax.java) — LeetCode #215 (related order-statistic problem) — Companies: Not listed
+- [x] **Merge 2 sorted arrays without using Extra space** — [MergeSortedArraysInPlace.java](../03-Arrays/01-Basics/MergeSortedArraysInPlace.java) — LeetCode #88 (related merge problem) — Companies: Not listed
+- [x] **Merge Intervals** — [MergeIntervals.java](../03-Arrays/01-Basics/MergeIntervals.java) — LeetCode #56 — Companies: Not listed
+- [x] **Smallest Subarray with sum greater than a given value** — [SmallestSubarraySumGreaterThanValue.java](../03-Arrays/03-Two-Pointers-and-Sliding-Window/SmallestSubarraySumGreaterThanValue.java) — LeetCode: Not available — Companies: Not listed
+- [x] **Write a program to cyclically rotate an array by one** — [CyclicallyRotateArrayByOne.java](../03-Arrays/01-Basics/CyclicallyRotateArrayByOne.java) — LeetCode: Not available — Companies: Not listed
