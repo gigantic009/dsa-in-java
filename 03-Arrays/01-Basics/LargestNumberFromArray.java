@@ -1,7 +1,7 @@
 /*
  * Problem: Arrange the given non-negative integers so that they form the largest possible number.
  * LeetCode: #179
- * Companies: Not listed
+ * Companies: Barclays
  */
 import java.util.*;
 public class LargestNumberFromArray {
