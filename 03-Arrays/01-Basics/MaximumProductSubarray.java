@@ -1,7 +1,7 @@
 /*
  * Problem: Find the contiguous subarray with the largest product and print that product.
  * LeetCode: #152
- * Companies: Not listed
+ * Companies: Amazon, D-E-Shaw, Microsoft, Morgan Stanley, OYO Rooms, Google
  */
 import java.util.*;
 public class MaximumProductSubarray {
