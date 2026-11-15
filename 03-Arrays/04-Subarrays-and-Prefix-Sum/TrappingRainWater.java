@@ -1,20 +1,10 @@
-/**
- * Question:
- * Given n non-negative integers representing an elevation map where the
- * width of each bar is 1, compute how much water can be trapped after rain.
- *
- * LeetCode: #42
- *
- * Companies:
- * Samsung
- */
+import java.util.Scanner;
+
 public class TrappingRainWater {
-    public static int trap(int[] height) {
-        int left = 0;
-        int right = height.length - 1;
-        int leftMax = 0;
-        int rightMax = 0;
-        int water = 0;
+    public static long trap(int[] height) {
+        int left = 0, right = height.length - 1;
+        int leftMax = 0, rightMax = 0;
+        long water = 0;
 
         while (left < right) {
             if (height[left] <= height[right]) {
@@ -27,12 +17,17 @@ public class TrappingRainWater {
                 right--;
             }
         }
-
         return water;
     }
 
     public static void main(String[] args) {
-        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        System.out.println(trap(height)); // 6
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] height = new int[n];
+
+        for (int i = 0; i < n; i++) height[i] = scanner.nextInt();
+
+        System.out.println(trap(height));
+        scanner.close();
     }
 }
