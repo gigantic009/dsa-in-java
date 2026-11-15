@@ -1,6 +1,6 @@
 /*
  * Problem: Find the kth smallest and kth largest elements in an array.
- * LeetCode: #215 (related order-statistic problem)
+ * LeetCode: Not available
  * Companies: Not listed
  * Time Complexity: O(n log n), due to sorting.
  * Space Complexity: Depends on the sorting implementation.
@@ -30,7 +30,6 @@ public class FindKthMinMax {
             return;
         }
 
-        // Sorting places the smallest element at index 0.
         Arrays.sort(numbers);
 
         System.out.println("Kth smallest: " + numbers[k - 1]);
