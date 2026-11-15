@@ -12,6 +12,7 @@ This is one repository. Topics and subtopics are normal folders inside it, not s
 3. If a subtopic is fundamental and theory-only, study its README—there will be no artificial coding questions.
 4. In problem-solving subtopics, attempt the listed question and then open its individual Java file.
 5. Use [SOLVED-PROBLEMS.md](SOLVED-PROBLEMS.md) for implemented solutions, approaches and complexity.
+6. Use [INTERVIEW-PROBLEMS.md](INTERVIEW-PROBLEMS.md) for company-tagged practice questions.
 6. Use [INTERVIEW-PROBLEMS.md](INTERVIEW-PROBLEMS.md) for selected company-tagged questions from the supplied Apna College sheet.
 
 ## Main topic map
