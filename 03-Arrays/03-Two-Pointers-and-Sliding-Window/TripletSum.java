@@ -11,39 +11,26 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class TripletSum {
-
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
         int n = sc.nextInt();
         int[] numbers = new int[n];
-
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
         }
-
         long target = sc.nextLong();
-
         Arrays.sort(numbers);
-
         boolean found = false;
-
         // Fix one element and search for the other two.
         for (int i = 0; i < n - 2 && !found; i++) {
-
             int left = i + 1;
             int right = n - 1;
-
             while (left < right) {
-
                 long sum = (long) numbers[i] + numbers[left] + numbers[right];
-
                 if (sum == target) {
                     found = true;
                     break;
                 }
-
                 if (sum < target) {
                     left++;
                 } else {
@@ -51,9 +38,7 @@ public class TripletSum {
                 }
             }
         }
-
         System.out.println(found ? "Yes" : "No");
-
         sc.close();
     }
 }
