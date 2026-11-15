@@ -1,7 +1,7 @@
 /*
  * Problem: Find the maximum profit from one stock purchase and one later sale.
- * LeetCode: #121nies: Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs,
- *            Intuit, MakeMyTrip, Microsoft
+ * LeetCode: #121
+ * Companies: Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs, Intuit, MakeMyTrip, Microsoft
  * Time Complexity: O(n)
  * Space Complexity: O(1), excluding the input array.
  */
