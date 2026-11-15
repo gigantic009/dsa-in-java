@@ -1,9 +1,52 @@
 /*
- * Problem: Given non-negative values where each value is the maximum jump length from that position, find the minimum jumps to reach the last index.
+ * Problem: Find the minimum jumps to reach the last index.
+ * Each element gives the maximum jump length from that position.
  * LeetCode: #45
  * Companies: Not listed
+ * Time: O(n) | Auxiliary space: O(1)
  */
-import java.util.*;
+import java.util.Scanner;
+
 public class MinimumJumpsToEnd {
-    public static void main(String[] args){Scanner sc=new Scanner(System.in);int n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();if(n<=1){System.out.println(0);return;}int jumps=0,end=0,far=0;for(int i=0;i<n-1;i++){far=Math.max(far,i+a[i]);if(i==end){if(far==end){System.out.println(-1);return;}jumps++;end=far;if(end>=n-1)break;}}System.out.println(jumps);}
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int[] jumps = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            jumps[i] = scanner.nextInt();
+        }
+
+        if (n <= 1) {
+            System.out.println(0);
+            return;
+        }
+
+        int jumpCount = 0;
+        int currentEnd = 0;
+        int farthestReach = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            farthestReach = Math.max(farthestReach, i + jumps[i]);
+
+            if (i == currentEnd) {
+                if (farthestReach == currentEnd) {
+                    System.out.println(-1);
+                    return;
+                }
+
+                jumpCount++;
+                currentEnd = farthestReach;
+
+                if (currentEnd >= n - 1) {
+                    break;
+                }
+            }
+        }
+
+        System.out.println(jumpCount);
+        scanner.close();
+    }
 }
