@@ -1,3 +1,8 @@
+/**
+ * Question: Given daily stock prices, choose one day to buy and a later day to sell to maximise profit. Return 0 if no profit is possible.
+ * Companies listed in the supplied Apna College sheet: Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs, Intuit, MakeMyTrip, Microsoft.
+ * Note: These are source-reported associations, not independently verified interview claims.
+ */
 public class BestTimeToBuyAndSellStock {
     public static int maxProfit(int[] prices) {
         int minPrice = prices[0];
