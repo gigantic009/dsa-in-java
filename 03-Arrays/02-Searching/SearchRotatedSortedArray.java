@@ -1,7 +1,7 @@
 /*
  * Problem: Search for a target in a rotated sorted array with distinct values; print its index or -1.
  * LeetCode: #33
- * Companies: Not listed
+ * Companies: Microsoft, Google, Adobe, Amazon, D-E-Shaw, Flipkart, Hike, Intuit, MakeMyTrip, Pay
  */
 import java.util.*;
 public class SearchRotatedSortedArray {
