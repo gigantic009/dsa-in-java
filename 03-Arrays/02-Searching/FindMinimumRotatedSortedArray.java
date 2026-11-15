@@ -1,9 +1,8 @@
 /*
- * Problem: Find the minimum element in a sorted array that has been rotated.
- * LeetCode: #153
+ * Problem: Find the minimum element in a rotated sorted array.
+ * LeetCode: #154 (this implementation also handles duplicate values).
  * Companies: Adobe, Amazon, Microsoft, Morgan Stanley, Samsung,
  *            Snapdeal, Times Internet
- * Note: This version also handles duplicate values.
  * Time Complexity: O(log n) normally; O(n) in the worst case with duplicates.
  * Space Complexity: O(1)
  */
