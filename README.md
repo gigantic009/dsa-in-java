@@ -1,60 +1,75 @@
 # Data Structures & Algorithms in Java ☕
 
-A student-built Java DSA repository organised as a course tree:
+A single Java DSA repository organised with **one Git branch per main topic**.
 
-**Main topic → subtopic folder → theory / practice questions → individual Java solution files.**
+**Repository → topic branch → subtopic folders → difficulty groups → individual Java solutions.**
 
-This is one repository. Topics and subtopics are normal folders inside it, not separate Git branches.
+The topic branches are the canonical working areas. The default `main` branch is the landing page, branch directory and overall progress index.
 
-## How to use the repository
-1. Follow [ROADMAP.md](ROADMAP.md) in course order.
-2. Open a main topic folder, then choose its numbered subtopic folder.
-3. If a subtopic is fundamental and theory-only, study its README—there will be no artificial coding questions.
-4. In problem-solving subtopics, attempt the listed question and then open its individual Java file.
-5. Use [SOLVED-PROBLEMS.md](SOLVED-PROBLEMS.md) for implemented solutions, approaches and complexity.
-6. Use [INTERVIEW-PROBLEMS.md](INTERVIEW-PROBLEMS.md) for company-tagged practice questions.
-6. Use [INTERVIEW-PROBLEMS.md](INTERVIEW-PROBLEMS.md) for selected company-tagged questions from the supplied Apna College sheet.
+## Topic branches
 
-## Main topic map
+| Topic | Git branch | Questions in supplied merged bank |
+|---|---|---:|
+| Arrays | `arrays` | 56 |
+| Strings | `strings` | 54 |
+| 2D Arrays / Matrix | `2d-arrays-matrix` | 20 |
+| Searching & Sorting | `searching-sorting` | 56 |
+| Backtracking | `backtracking` | 29 |
+| Linked Lists | `linked-lists` | 58 |
+| Stacks & Queues | `stacks-queues` | 59 |
+| Greedy | `greedy` | 51 |
+| Binary Trees | `binary-trees` | 66 |
+| Binary Search Trees | `binary-search-trees` | 41 |
+| Heaps & Hashing | `heaps-hashing` | 46 |
+| Graphs | `graphs` | 74 |
+| Tries | `tries` | 6 |
+| Dynamic Programming | `dynamic-programming` | 99 |
+| Bit Manipulation | `bit-manipulation` | 10 |
+| Segment Trees | `segment-trees` | 6 |
+| **Total** | **16 topic branches** | **731** |
 
-| Main topic | Subtopic structure |
-|---|---|
-| [Flowcharts & pseudocode](00-Foundations/Flowcharts-and-Pseudocode/README.md) | Theory and planning only |
-| [Java basics](01-Java-Basics/README.md) | Variables/types, operators, conditions, loops, functions |
-| [Complexity](02-Complexity/README.md) | Time, space and asymptotic analysis |
-| [Arrays](03-Arrays/README.md) | Basics, searching, two pointers, prefix sums, hashing |
-| [Searching & sorting](04-Searching-and-Sorting/README.md) | Searching, elementary sorting, divide-and-conquer sorting |
-| [2D arrays](05-Two-D-Arrays/README.md) | Traversal, matrix operations and search |
-| [Strings](06-Strings/README.md) | Fundamentals and problem patterns |
-| [Bit manipulation](07-Bit-Manipulation/README.md) | Operators, bit tricks and masks |
-| [OOP](08-OOP/README.md) | Classes, objects, constructors, inheritance, polymorphism and interfaces |
-| [Recursion](09-Recursion/README.md) | Part A: fundamentals; Part B: patterns |
-| [Divide & conquer](10-Divide-and-Conquer/README.md) | Recurrences and divide/combine algorithms |
-| [Linked lists](11-Linked-Lists/README.md) | Part A: singly; Part B: doubly/circular/advanced |
-| [Stacks](12-Stacks/README.md) | Part A: fundamentals; Part B: monotonic stack |
-| [Queues](13-Queues/README.md) | Queue, circular queue, deque and priority queue |
-| [Binary trees](14-Binary-Trees/README.md) | Part 1: fundamentals; Part 2: traversals; Part 3: advanced |
-| [BST](15-Binary-Search-Trees/README.md) | Part A: operations; Part B: validation/advanced |
-| [Heaps & hashing](16-Heaps-and-Hashing/README.md) | Hash maps/sets, heaps and top-K |
-| [Graphs](17-Graphs/README.md) | Five parts: representation, traversal, cycles, shortest paths, MST/DSU |
-| [Greedy](18-Greedy/README.md) | Greedy choice, intervals and scheduling |
-| [Backtracking](19-Backtracking/README.md) | Subsets, permutations, combinations and pruning |
-| [Dynamic programming](20-Dynamic-Programming/README.md) | Five parts: foundations, 1D, grids, knapsack/subsequences, advanced |
-| [Tries](21-Tries/README.md) | Prefix trees and word problems |
-| [Segment trees](22-Segment-Trees/README.md) | Build, range query, updates and lazy propagation |
-| [Interview patterns](23-Interview-Patterns/README.md) | Sliding window, two pointers, prefix sum and more |
+Open a branch from the [Branches page](https://github.com/gigantic009/dsa-in-java/branches/all).
 
-## Learning and solution conventions
+## Inside each topic branch
 
-- **Theory-only subtopics:** concepts, definitions, diagrams, syntax and worked examples; no forced question files.
-- **Problem subtopics:** questions ordered by Easy/Foundation, Medium/Intermediate and Hard/Advanced where relevant.
-- **One problem, one Java file:** solutions are kept separate and named clearly.
-- **Code style:** readable, straightforward Java with no explanatory comments inside solution code.
-- **Explanations:** intuition, pseudocode, dry runs and time/space complexity belong in Markdown.
-- **Company labels:** copied from the supplied Apna College question sheet. They are source-reported associations, not independently verified interview reports.
+Use a consistent hierarchy:
 
-## Source material
+```text
+topic-branch/
+├── README.md
+├── topics/
+│   ├── 01-topic-fundamentals/
+│   │   └── README.md
+│   ├── 02-problem-pattern/
+│   │   ├── README.md
+│   │   ├── Easy/
+│   │   ├── Medium/
+│   │   └── Hard/
+│   └── ...
+├── question-bank/
+│   └── QUESTION-BANK.md
+└── solutions/
+    └── ProblemName.java
+```
 
-The course sequence follows the user's Apna College Java + DSA learning path. The supplied topic-wise question workbook contains 731 unique problem titles across 16 topic sheets, with difficulty estimates, patterns, priority, company tags and links. Only selected representative questions are highlighted in the interview index; a question being listed does not mean its Java solution is already implemented.
+- Theory-only fundamentals contain explanations, examples and diagrams—not artificial coding tasks.
+- Coding questions are grouped by actual topic and pattern, not by the sheet they came from.
+- Questions are ordered by the difficulty labels in the supplied workbook. Those labels are estimates, not universal difficulty ratings.
+- Java solutions use straightforward, readable code. Explanations, dry runs and complexity analysis belong in Markdown rather than comments inside solution code.
 
-**Understand the concept. Trace the logic. Solve the problem. Analyse the complexity.**
+## Source handling
+
+The merged topic-wise workbook contains **731 unique problem titles** across 16 topics. Its source column records whether a question appears in the Apna College 375 sheet, Love Babbar 450 sheet, or both. The Apna sheet's company names are retained with the corresponding questions. Love Babbar questions without supplied company labels remain untagged.
+
+Company associations are transcribed source claims, not independently verified interview records. Similar-but-not-identical titles are not silently merged; original wording is preserved so that variants can be reviewed.
+
+The uploaded *Ultimate DSA Preparation Sheet* is a resource-link page (NeetCode 150, Striver A2Z, DSA patterns and a top-LeetCode list), not a further complete question bank. Those linked resources should be imported only when their actual question lists are supplied or accessible.
+
+## Completion policy
+
+A question is not considered solved merely because it appears in the bank. Mark it solved only after:
+1. a Java implementation is written;
+2. edge cases are checked;
+3. the approach and time/space complexity are documented.
+
+**Understand the pattern. Trace the code. Test edge cases. Analyse complexity.**
