@@ -1,6 +1,7 @@
 /*
  * Problem: Count the subarrays whose sum is divisible by k.
- * LeetCode: #974nies: Not listed
+ * LeetCode: #974
+ * Companies: Snapdeal, Microsoft
  * Time Complexity: O(n)
  * Space Complexity: O(min(n, |k|)) for the frequency map.
  */
