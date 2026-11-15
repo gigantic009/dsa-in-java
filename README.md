@@ -12,8 +12,8 @@ This branch is the Arrays collection for the unified DSA repository.
 - `topics/07-Permutation-and-Backtracking/`
 - `solutions/`
 
-## Source and company-label policy
-Questions are merged by topic from the uploaded Apna College 375 and Love Babbar 450 sheets. Company names are retained only when present in the Apna College company column. Love Babbar's sheet does not provide company tags. Company associations are source-reported, not independently verified. Difficulty labels in the merged workbook are estimates.
+## Question and company-label policy
+Problem statements are written above each Java solution. Exact LeetCode numbers are included only when verified. Company names are shown when available with the question; no source names are included in the repository documentation. Company associations are not independently verified.
 
 ## Progress
 - [x] Create Arrays topic branch and initial folder structure
