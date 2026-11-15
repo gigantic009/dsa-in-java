@@ -2,8 +2,85 @@
  * Problem: Print the common elements present in three sorted arrays.
  * LeetCode: Not available
  * Companies: Not listed
+ * Time Complexity: O(n + m + k)
+ * Space Complexity: O(c), where c is the number of common elements.
  */
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class CommonElementsThreeSortedArrays {
- public static void main(String[] z){Scanner s=new Scanner(System.in);int n=s.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=s.nextInt();int m=s.nextInt();int[] b=new int[m];for(int i=0;i<m;i++)b[i]=s.nextInt();int k=s.nextInt();int[] c=new int[k];for(int i=0;i<k;i++)c[i]=s.nextInt();int i=0,j=0,h=0;List<Integer> out=new ArrayList<>();while(i<n&&j<m&&h<k){if(a[i]==b[j]&&b[j]==c[h]){if(out.isEmpty()||out.get(out.size()-1)!=a[i])out.add(a[i]);i++;j++;h++;}else{int v=Math.min(a[i],Math.min(b[j],c[h]));while(i<n&&a[i]==v)i++;while(j<m&&b[j]==v)j++;while(h<k&&c[h]==v)h++;}}System.out.println(out);}
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] first = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            first[i] = sc.nextInt();
+        }
+
+        int m = sc.nextInt();
+        int[] second = new int[m];
+
+        for (int i = 0; i < m; i++) {
+            second[i] = sc.nextInt();
+        }
+
+        int k = sc.nextInt();
+        int[] third = new int[k];
+
+        for (int i = 0; i < k; i++) {
+            third[i] = sc.nextInt();
+        }
+
+        int i = 0;
+        int j = 0;
+        int p = 0;
+
+        List<Integer> common = new ArrayList<>();
+
+        while (i < n && j < m && p < k) {
+
+            if (first[i] == second[j] && second[j] == third[p]) {
+
+                int value = first[i];
+
+                if (common.isEmpty()
+                        || common.get(common.size() - 1) != value) {
+                    common.add(value);
+                }
+
+                i++;
+                j++;
+                p++;
+
+            } else {
+
+                int smallest = Math.min(
+                        first[i],
+                        Math.min(second[j], third[p])
+                );
+
+                while (i < n && first[i] == smallest) {
+                    i++;
+                }
+
+                while (j < m && second[j] == smallest) {
+                    j++;
+                }
+
+                while (p < k && third[p] == smallest) {
+                    p++;
+                }
+            }
+        }
+
+        System.out.println(common);
+
+        sc.close();
+    }
 }
