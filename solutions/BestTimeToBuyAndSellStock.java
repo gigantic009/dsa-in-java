@@ -2,7 +2,7 @@
  * Question:
  * Given daily stock prices, choose one day to buy and a later day to sell to maximise profit. Return 0 if no profit is possible.
  *
- * LeetCode: Not available (no exact problem number verified).
+ * LeetCode: #121
  *
  * Companies:
  * Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs, Intuit, MakeMyTrip, Microsoft
