@@ -2,33 +2,49 @@
  * Problem: Reverse an integer array in place.
  * LeetCode: Not available
  * Companies: Infosys, Moonfrog Labs
- * Time: O(n) | Auxiliary space: O(1)
+ * Time Complexity: O(n)
+ * Space Complexity: O(1), excluding the input array.
  */
+
 import java.util.Scanner;
 
 public class ReverseArray {
-    public static void reverse(int[] arr) {
-        int left = 0, right = arr.length - 1;
+
+    public static void reverse(int[] numbers) {
+
+        int left = 0;
+        int right = numbers.length - 1;
 
         while (left < right) {
-            int temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
+
+            int temp = numbers[left];
+            numbers[left] = numbers[right];
+            numbers[right] = temp;
+
             left++;
             right--;
         }
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] arr = new int[n];
 
-        for (int i = 0; i < n; i++) arr[i] = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        reverse(arr);
-        for (int value : arr) System.out.print(value + " ");
+        int n = sc.nextInt();
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        reverse(numbers);
+
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+
         System.out.println();
-        scanner.close();
+
+        sc.close();
     }
 }
