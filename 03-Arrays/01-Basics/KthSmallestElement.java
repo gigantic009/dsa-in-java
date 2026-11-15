@@ -1,7 +1,7 @@
 /*
  * Problem: Find the kth smallest element in an unsorted array.
  * LeetCode: #215
- * Companies: Not listed
+ * Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
  */
 import java.util.*;
 public class KthSmallestElement {
