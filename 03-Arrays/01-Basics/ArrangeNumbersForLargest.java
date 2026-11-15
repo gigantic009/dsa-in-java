@@ -1,7 +1,7 @@
 /*
  * Problem: Arrange non-negative integers to form the largest possible concatenated number.
  * LeetCode: #179
- * Companies: Not listed
+ * Companies: Barclays
  */
 import java.util.*;
 public class ArrangeNumbersForLargest {
