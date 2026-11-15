@@ -1,9 +1,52 @@
 /*
- * Problem: Rearrange an array so positive and negative values alternate, using constant extra space where possible.
+ * Problem: Rearrange an array so positive and negative values alternate,
+ * using constant extra space where possible.
  * LeetCode: Not available
  * Companies: Not listed
+ * Time: O(n^2) worst case | Auxiliary space: O(1)
  */
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class AlternatingPositiveNegative {
- public static void main(String[] z){Scanner s=new Scanner(System.in);int n=s.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=s.nextInt();int wrong=-1;for(int i=0;i<n;i++){if(wrong!=-1&&((a[wrong]>=0&&a[i]<0)||(a[wrong]<0&&a[i]>=0))){int t=a[wrong];a[wrong]=a[i];a[i]=t;wrong=-1;}if(wrong==-1&&((i%2==0&&a[i]>=0)||(i%2==1&&a[i]<0)))wrong=i;}System.out.println(Arrays.toString(a));}
+
+    public static void rearrange(int[] arr) {
+        int misplaced = -1;
+
+        for (int i = 0; i < arr.length; i++) {
+            boolean currentIsMisplaced =
+                    (i % 2 == 0 && arr[i] >= 0)
+                    || (i % 2 == 1 && arr[i] < 0);
+
+            if (misplaced != -1 && currentIsMisplaced
+                    && ((arr[misplaced] >= 0 && arr[i] < 0)
+                    || (arr[misplaced] < 0 && arr[i] >= 0))) {
+
+                int temp = arr[misplaced];
+                arr[misplaced] = arr[i];
+                arr[i] = temp;
+                misplaced = -1;
+            }
+
+            if (misplaced == -1 && currentIsMisplaced) {
+                misplaced = i;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        rearrange(arr);
+
+        System.out.println(Arrays.toString(arr));
+        scanner.close();
+    }
 }
