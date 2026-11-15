@@ -9,7 +9,7 @@
 
 import java.util.Scanner;
 
-public class LeetCode287FindTheDuplicateNumber {
+class LeetCode287FindTheDuplicateNumber {
     public static int findDuplicate(int[] numbers) {
         // Step 1: Find a meeting point using slow and fast pointers.
         int slow = numbers[0];
