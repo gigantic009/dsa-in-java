@@ -1,16 +1,11 @@
 # Java Basics
 
-## A. Program and data
-JDK/JRE/JVM, main method, identifiers, variables, constants, scope, primitive types (byte, short, int, long, float, double, char, boolean), reference types, String, arrays, casting, type conversion, overflow and Scanner input.
+Java fundamentals are organised into five subfolders:
 
-## B. Operators and decisions
-Arithmetic, relational, logical, assignment, unary and bitwise operators; precedence and associativity; if, if-else, else-if, nested if, switch and ternary.
+1. [Variables and data types](01-Variables-and-Data-Types/README.md) — theory only.
+2. [Operators](02-Operators/README.md) — theory only.
+3. [Conditional statements](03-Conditional-Statements/README.md) — theory and selected practice.
+4. [Loops](04-Loops/README.md) — theory and selected practice.
+5. [Functions and methods](05-Functions-and-Methods/README.md) — theory and selected practice.
 
-## C. Loops
-for, while, do-while, nested loops, break, continue, pattern printing and loop tracing.
-
-## D. Methods
-Declaration, parameters, return values, scope, pass-by-value, overloading and call stack.
-
-## Solved starter problems
-[EvenOrOdd.java](EvenOrOdd.java), [LargestOfThree.java](LargestOfThree.java), [Factorial.java](Factorial.java), [PrimeCheck.java](PrimeCheck.java), [SumOfTwo.java](SumOfTwo.java).
+Start with the theory folders before attempting the code exercises. Every Java solution is kept in its relevant subfolder and has no explanatory comments inside the code.
