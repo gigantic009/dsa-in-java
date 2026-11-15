@@ -1,3 +1,12 @@
+/**
+ * Question:
+ * Given an integer array, find the maximum possible sum of a non-empty
+ * contiguous subarray. Read n and the n array elements from standard input.
+ *
+ * LeetCode: #53
+ *
+ * Companies: Not listed
+ */
 import java.util.Scanner;
 
 public class KadaneAlgorithm {
