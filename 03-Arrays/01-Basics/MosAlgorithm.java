@@ -1,7 +1,7 @@
 /*
  * Problem: Given an array and multiple range queries [L, R], answer the sum of each range.
  * LeetCode: Not available
- * Companies: Not listed
+ * Companies: Microsoft
  */
 import java.util.*;
 public class MosAlgorithm {
