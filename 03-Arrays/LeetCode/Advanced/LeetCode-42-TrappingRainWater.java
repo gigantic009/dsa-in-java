@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class LeetCode42TrappingRainWater {
+class LeetCode42TrappingRainWater {
     public static long trap(int[] heights) {
         int left = 0;
         int right = heights.length - 1;
