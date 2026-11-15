@@ -1,6 +1,7 @@
 /*
  * Problem: Calculate how much rainwater can be trapped between bars.
- * LeetCode: #42nies: Samsung
+ * LeetCode: #42
+ * Companies: Samsung
  * Time Complexity: O(n)
  * Space Complexity: O(1), excluding the input array.
  */
