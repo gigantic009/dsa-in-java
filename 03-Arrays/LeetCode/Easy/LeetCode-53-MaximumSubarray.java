@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class LeetCode53MaximumSubarray {
+class LeetCode53MaximumSubarray {
     public static long maxSubarraySum(int[] numbers) {
         // Start with the first element so all-negative arrays work correctly.
         long currentSum = numbers[0];
