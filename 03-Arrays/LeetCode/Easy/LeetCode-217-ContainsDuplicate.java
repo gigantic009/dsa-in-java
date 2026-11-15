@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class LeetCode217ContainsDuplicate {
+class LeetCode217ContainsDuplicate {
     public static boolean containsDuplicate(int[] numbers) {
         Set<Integer> seenNumbers = new HashSet<>();
         for (int number : numbers) {
