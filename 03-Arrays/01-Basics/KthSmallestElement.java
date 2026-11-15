@@ -1,6 +1,6 @@
 /*
  * Problem: Find the kth smallest element in an unsorted array.
- * LeetCode: #215 (related order-statistic problem)
+ * LeetCode: Not available
  * Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft,
  *            Snapdeal, VMWare, Google, Adobe
  * Time Complexity: O(n log n), due to sorting.
@@ -31,10 +31,8 @@ public class KthSmallestElement {
             return;
         }
 
-        // Sort in ascending order.
         Arrays.sort(numbers);
 
-        // The kth smallest element is at index k - 1.
         System.out.println(numbers[k - 1]);
 
         sc.close();
