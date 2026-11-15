@@ -1,12 +1,8 @@
 # Segment Trees
 
-## Sub-branches
-- Why range-query data structures are useful.
-- Build tree for sum/min/max.
-- Range query and merging child results.
-- Point update.
-- Lazy propagation for range updates.
+## Subtopics
+- [Range queries](02-Range-Queries/README.md): build, query and combine.
+- Point updates and lazy propagation.
 - Fenwick tree comparison and coordinate compression.
 
-## Practice
-Range Sum Query - Mutable; range minimum query; point update and range sum; range add with lazy propagation; count of smaller numbers after self.
+The [range sum segment tree](02-Range-Queries/RangeSumSegmentTree.java) is an implemented example.
