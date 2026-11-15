@@ -9,7 +9,7 @@
 
 import java.util.Scanner;
 
-public class LeetCode238ProductOfArrayExceptSelf {
+class LeetCode238ProductOfArrayExceptSelf {
     public static long[] productExceptSelf(int[] numbers) {
         int n = numbers.length;
         long[] answer = new long[n];
