@@ -9,7 +9,7 @@
 
 import java.util.Scanner;
 
-public class LeetCode136SingleNumber {
+class LeetCode136SingleNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
