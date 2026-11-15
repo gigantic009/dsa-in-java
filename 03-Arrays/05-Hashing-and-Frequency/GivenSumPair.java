@@ -8,37 +8,12 @@
  * indices or the pair itself must be returned.
  *
  * Companies: Infosys, Amazon, Flipkart
+ * Time: O(n) average | Auxiliary space: O(n)
  */
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
-
 public class GivenSumPair {
-    public static boolean hasPair(int[] values, int target) {
-        Set<Integer> seen = new HashSet<>();
-
-        for (int value : values) {
-            if (seen.contains(target - value)) {
-                return true;
-            }
-            seen.add(value);
-        }
-
-        return false;
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        int n = scanner.nextInt();
-        int[] values = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            values[i] = scanner.nextInt();
-        }
-
-        int target = scanner.nextInt();
-        System.out.println(hasPair(values, target) ? "YES" : "NO");
-        scanner.close();
-    }
+ public static boolean hasPair(int[] values,long target){Set<Long> seen=new HashSet<>();for(int value:values){long need=target-value;if(seen.contains(need))return true;seen.add((long)value);}return false;}
+ public static void main(String[] args){Scanner sc=new Scanner(System.in);int n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();long target=sc.nextLong();System.out.println(hasPair(a,target)?"YES":"NO");}
 }
