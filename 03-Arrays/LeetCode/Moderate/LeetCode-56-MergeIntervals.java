@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-public class LeetCode56MergeIntervals {
+class LeetCode56MergeIntervals {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
