@@ -1,35 +1,32 @@
-/**
- * Question:
- * Given an array of integers, find the minimum and maximum elements.
- *
- * LeetCode: Not available (no exact problem number verified).
- *
- * Companies:
- * ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe
- */
+import java.util.Scanner;
+
 public class MaximumAndMinimum {
     public static int[] findMinMax(int[] arr) {
-        int min = arr[0];
-        int max = arr[0];
+        int min = arr[0], max = arr[0];
 
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-            }
-
-            if (arr[i] > max) {
-                max = arr[i];
-            }
+            min = Math.min(min, arr[i]);
+            max = Math.max(max, arr[i]);
         }
-
         return new int[]{min, max};
     }
 
     public static void main(String[] args) {
-        int[] arr = {7, 2, 9, 4, 1, 6};
-        int[] result = findMinMax(arr);
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
 
+        if (n <= 0) {
+            System.out.println("Array must contain at least one element.");
+            scanner.close();
+            return;
+        }
+
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = scanner.nextInt();
+
+        int[] result = findMinMax(arr);
         System.out.println("Minimum: " + result[0]);
         System.out.println("Maximum: " + result[1]);
+        scanner.close();
     }
 }
