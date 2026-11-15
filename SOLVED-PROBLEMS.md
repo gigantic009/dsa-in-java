@@ -4,30 +4,30 @@ The following are implemented Java examples in this repository. Each source file
 
 | Topic | Question | Solution | Time | Auxiliary space |
 |---|---|---|---:|---:|
-| Java basics | Check even or odd | [EvenOrOdd.java](01-Java-Basics/EvenOrOdd.java) | O(1) | O(1) |
-| Java basics | Largest of three numbers | [LargestOfThree.java](01-Java-Basics/LargestOfThree.java) | O(1) | O(1) |
-| Java basics | Factorial using a loop | [Factorial.java](01-Java-Basics/Factorial.java) | O(n) | O(1) |
-| Java basics | Check prime number | [PrimeCheck.java](01-Java-Basics/PrimeCheck.java) | O(√n) | O(1) |
-| Java basics | Sum using a method | [SumOfTwo.java](01-Java-Basics/SumOfTwo.java) | O(1) | O(1) |
-| Arrays | Find minimum and maximum | [ArrayMinMax.java](03-Arrays/ArrayMinMax.java) | O(n) | O(1) |
-| Arrays | Reverse an array in place | [ReverseArray.java](03-Arrays/ReverseArray.java) | O(n) | O(1) |
-| Arrays | Contains duplicate values | [ContainsDuplicate.java](03-Arrays/ContainsDuplicate.java) | O(n) average | O(n) |
-| Arrays | Binary search in sorted array | [BinarySearch.java](03-Arrays/BinarySearch.java) | O(log n) | O(1) |
-| Arrays | Maximum subarray sum (Kadane) | [KadaneAlgorithm.java](03-Arrays/KadaneAlgorithm.java) | O(n) | O(1) |
-| Sorting | Merge sort | [MergeSort.java](04-Searching-and-Sorting/MergeSort.java) | O(n log n) | O(n) |
-| Recursion | Factorial | [FactorialRecursion.java](09-Recursion/FactorialRecursion.java) | O(n) | O(n) |
-| Recursion | Fast power | [FastPower.java](09-Recursion/FastPower.java) | O(log n) | O(log n) |
-| Recursion | First occurrence in array | [FirstOccurrence.java](09-Recursion/FirstOccurrence.java) | O(n) | O(n) |
-| Recursion | Binary strings without adjacent 1s | [BinaryStrings.java](09-Recursion/BinaryStrings.java) | O(2ⁿ) upper bound | O(n) stack, excluding output |
-| Linked list | Reverse a singly linked list | [ReverseLinkedList.java](11-Linked-Lists/ReverseLinkedList.java) | O(n) | O(1) |
-| Linked list | Find middle node | [MiddleOfLinkedList.java](11-Linked-Lists/MiddleOfLinkedList.java) | O(n) | O(1) |
-| Stack | Valid parentheses | [ValidParentheses.java](12-Stacks/ValidParentheses.java) | O(n) | O(n) |
-| Stack | Next greater element | [NextGreaterElement.java](12-Stacks/NextGreaterElement.java) | O(n) | O(n) |
-| Binary tree | Maximum depth | [MaximumDepth.java](14-Binary-Trees/MaximumDepth.java) | O(n) | O(h) recursion |
-| BST | Search a key | [SearchInBST.java](15-Binary-Search-Trees/SearchInBST.java) | O(h) | O(h) recursion |
-| Graph | Breadth-first traversal | [BFS.java](17-Graphs/BFS.java) | O(V + E) | O(V) |
-| Dynamic programming | Climbing stairs, space optimised | [ClimbingStairs.java](20-Dynamic-Programming/ClimbingStairs.java) | O(n) | O(1) |
-| Segment tree | Range sum query | [RangeSumSegmentTree.java](22-Segment-Trees/RangeSumSegmentTree.java) | Build O(n), query O(log n) | O(n) |
+| Java basics | Check even or odd | [EvenOrOdd.java](01-Java-Basics/03-Conditional-Statements/EvenOrOdd.java) | O(1) | O(1) |
+| Java basics | Largest of three numbers | [LargestOfThree.java](01-Java-Basics/03-Conditional-Statements/LargestOfThree.java) | O(1) | O(1) |
+| Java basics | Factorial using a loop | [Factorial.java](01-Java-Basics/04-Loops/Factorial.java) | O(n) | O(1) |
+| Java basics | Check prime number | [PrimeCheck.java](01-Java-Basics/04-Loops/PrimeCheck.java) | O(√n) | O(1) |
+| Java basics | Sum using a method | [SumOfTwo.java](01-Java-Basics/05-Functions-and-Methods/SumOfTwo.java) | O(1) | O(1) |
+| Arrays | Find minimum and maximum | [ArrayMinMax.java](03-Arrays/01-Basics/ArrayMinMax.java) | O(n) | O(1) |
+| Arrays | Reverse an array in place | [ReverseArray.java](03-Arrays/01-Basics/ReverseArray.java) | O(n) | O(1) |
+| Arrays | Contains duplicate values | [ContainsDuplicate.java](03-Arrays/05-Hashing-and-Frequency/ContainsDuplicate.java) | O(n) average | O(n) |
+| Arrays | Binary search in sorted array | [BinarySearch.java](03-Arrays/02-Searching/BinarySearch.java) | O(log n) | O(1) |
+| Arrays | Maximum subarray sum (Kadane) | [KadaneAlgorithm.java](03-Arrays/04-Subarrays-and-Prefix-Sum/KadaneAlgorithm.java) | O(n) | O(1) |
+| Sorting | Merge sort | [MergeSort.java](04-Searching-and-Sorting/03-Divide-and-Conquer-Sorting/MergeSort.java) | O(n log n) | O(n) |
+| Recursion | Factorial | [FactorialRecursion.java](09-Recursion/01-Part-A-Fundamentals/FactorialRecursion.java) | O(n) | O(n) |
+| Recursion | Fast power | [FastPower.java](09-Recursion/01-Part-A-Fundamentals/FastPower.java) | O(log n) | O(log n) |
+| Recursion | First occurrence in array | [FirstOccurrence.java](09-Recursion/01-Part-A-Fundamentals/FirstOccurrence.java) | O(n) | O(n) |
+| Recursion | Binary strings without adjacent 1s | [BinaryStrings.java](09-Recursion/02-Part-B-Patterns/BinaryStrings.java) | O(2ⁿ) upper bound | O(n) stack, excluding output |
+| Linked list | Reverse a singly linked list | [ReverseLinkedList.java](11-Linked-Lists/01-Part-A-Singly-Linked-List/ReverseLinkedList.java) | O(n) | O(1) |
+| Linked list | Find middle node | [MiddleOfLinkedList.java](11-Linked-Lists/01-Part-A-Singly-Linked-List/MiddleOfLinkedList.java) | O(n) | O(1) |
+| Stack | Valid parentheses | [ValidParentheses.java](12-Stacks/01-Part-A-Fundamentals/ValidParentheses.java) | O(n) | O(n) |
+| Stack | Next greater element | [NextGreaterElement.java](12-Stacks/02-Part-B-Monotonic-Stack/NextGreaterElement.java) | O(n) | O(n) |
+| Binary tree | Maximum depth | [MaximumDepth.java](14-Binary-Trees/01-Part-1-Fundamentals/MaximumDepth.java) | O(n) | O(h) recursion |
+| BST | Search a key | [SearchInBST.java](15-Binary-Search-Trees/01-Part-A-Operations/SearchInBST.java) | O(h) | O(h) recursion |
+| Graph | Breadth-first traversal | [BFS.java](17-Graphs/02-Part-2-Traversal/BFS.java) | O(V + E) | O(V) |
+| Dynamic programming | Climbing stairs, space optimised | [ClimbingStairs.java](20-Dynamic-Programming/02-Part-2-1D-DP/ClimbingStairs.java) | O(n) | O(1) |
+| Segment tree | Range sum query | [RangeSumSegmentTree.java](22-Segment-Trees/02-Range-Queries/RangeSumSegmentTree.java) | Build O(n), query O(log n) | O(n) |
 
 ## A few worked approaches
 
