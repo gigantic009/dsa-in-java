@@ -1,0 +1,2 @@
+/* Reverse character array in-place. LeetCode 344. O(n) time, O(1) space. https://leetcode.com/problems/reverse-string/ */
+import java.util.Arrays;public class ReverseString{static void reverse(char[]a){for(int l=0,r=a.length-1;l<r;l++,r--){char t=a[l];a[l]=a[r];a[r]=t;}}public static void main(String[]x){char[]a={'h','e','l','l','o'};reverse(a);System.out.println(Arrays.toString(a));}}
