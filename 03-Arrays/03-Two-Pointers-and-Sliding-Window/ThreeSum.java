@@ -13,10 +13,12 @@ import java.util.Scanner;
 public class ThreeSum {
     public static List<List<Integer>> threeSum(int[] numbers) {
         List<List<Integer>> answer = new ArrayList<>();
+        // Sorting makes the two-pointer search possible and groups duplicates.
         Arrays.sort(numbers);
-        // Fix one number and find two numbers that complete the sum.
+
+        // Fix one value; the remaining problem is a two-sum search for its negation.
         for (int i = 0; i < numbers.length - 2; i++) {
-            // Skip the same first number to avoid duplicate triplets.
+            // Skip duplicate fixed values so the same triplet is not generated again.
             if (i > 0 && numbers[i] == numbers[i - 1]) {
                 continue;
             }
@@ -25,10 +27,13 @@ public class ThreeSum {
             while (left < right) {
                 long sum = (long) numbers[i] + numbers[left] + numbers[right];
                 if (sum < 0) {
+                    // Sorted order: increase the sum by advancing left.
                     left++;
                 } else if (sum > 0) {
+                    // Sorted order: decrease the sum by retreating right.
                     right--;
                 } else {
+                    // Record the triplet, then move both pointers past this pair.
                     List<Integer> triplet = new ArrayList<>();
                     triplet.add(numbers[i]);
                     triplet.add(numbers[left]);
@@ -36,7 +41,7 @@ public class ThreeSum {
                     answer.add(triplet);
                     left++;
                     right--;
-                    // Skip duplicate values at both pointers.
+                    // Skip repeated left/right values to avoid duplicate triplets.
                     while (left < right && numbers[left] == numbers[left - 1]) {
                         left++;
                     }
@@ -48,6 +53,7 @@ public class ThreeSum {
         }
         return answer;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
