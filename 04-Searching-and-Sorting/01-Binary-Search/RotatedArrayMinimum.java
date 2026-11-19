@@ -1,3 +1,8 @@
+// EDUCATIONAL NOTES:
+// A rotation still contains two sorted portions. Comparing mid with high
+// tells which portion contains the minimum. Keep mid when it may be the answer;
+// otherwise discard the left portion. This implementation assumes no duplicates.
+
 // LeetCode 153: Find the minimum in a rotated sorted array.
 // Time: O(log n), Space: O(1).
 public class RotatedArrayMinimum {
