@@ -36,6 +36,11 @@ public class TrappingRainWater {
         int[] heights = new int[n];
         for (int i = 0; i < n; i++) {
             heights[i] = sc.nextInt();
+            if (heights[i] < 0) {
+                System.out.println("Heights must be non-negative");
+                sc.close();
+                return;
+            }
         }
         System.out.println(trap(heights));
         sc.close();
