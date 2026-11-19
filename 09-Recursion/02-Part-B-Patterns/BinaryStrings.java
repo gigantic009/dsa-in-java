@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class BinaryStrings {
     public static void generate(int n, int last, String ans) {
+        if (n < 0 || (last != 0 && last != 1) || ans == null) {
+            throw new IllegalArgumentException("Invalid generation arguments.");
+        }
         if (n == 0) {
             System.out.println(ans);
             return;
