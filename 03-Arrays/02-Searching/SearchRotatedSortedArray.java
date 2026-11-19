@@ -2,8 +2,6 @@
  * Problem: Search for a target in a rotated sorted array with distinct values.
  * Print its index, or -1 if it is absent.
  * LeetCode: #33
- * Companies: Microsoft, Google, Adobe, Amazon, D-E-Shaw, Flipkart,
- *            Hike, Intuit, MakeMyTrip, Pay
  * Time Complexity: O(log n)
  * Space Complexity: O(1)
  */
