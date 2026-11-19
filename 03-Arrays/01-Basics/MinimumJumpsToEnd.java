@@ -2,7 +2,6 @@
  * Problem: Find the minimum jumps to reach the last index.
  * Each element gives the maximum jump length from that position.
  * LeetCode: #45
- * Companies: Not listed
  * Time: O(n) | Auxiliary space: O(1)
  */
 import java.util.Scanner;
