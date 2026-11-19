@@ -22,16 +22,31 @@ public class MosAlgorithm {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Invalid array size");
+            sc.close();
+            return;
+        }
         int[] numbers = new int[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
         }
         int q = sc.nextInt();
+        if (q < 0) {
+            System.out.println("Invalid query count");
+            sc.close();
+            return;
+        }
         int blockSize = Math.max(1, (int) Math.sqrt(n));
         Query[] queries = new Query[q];
         for (int i = 0; i < q; i++) {
             int left = sc.nextInt();
             int right = sc.nextInt();
+            if (left < 0 || right < left || right >= n) {
+                System.out.println("Invalid query range");
+                sc.close();
+                return;
+            }
             queries[i] = new Query(left, right, i, left / blockSize);
         }
         // Sort queries by block, then alternate the right-end order.
