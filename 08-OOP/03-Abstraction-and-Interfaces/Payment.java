@@ -26,7 +26,7 @@ public class Payment {
         System.out.print("Amount to pay: ");
         double amount = sc.nextDouble();
 
-        if (amount <= 0) {
+        if (!Double.isFinite(amount) || amount <= 0) {
             System.out.println("Amount must be positive.");
             sc.close();
             return;
