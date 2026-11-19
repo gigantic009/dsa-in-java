@@ -1,8 +1,8 @@
 # Heaps & Priority Queues
 ## Easy
-- [ ] Kth largest
+- [x] Kth largest (KthLargestElement.java)
 ## Medium
-- [ ] Top k frequent
+- [x] Top k frequent (TopKFrequent.java)
 - [ ] K closest points
 - [ ] Merge k sorted arrays
 - [ ] Median from data stream
