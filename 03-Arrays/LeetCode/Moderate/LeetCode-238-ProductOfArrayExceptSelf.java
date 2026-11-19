@@ -2,9 +2,6 @@
  * Problem: For each index, find the product of all array elements
  * except the element at that index. Do not use division.
  * LeetCode: #238
- * Companies: Microsoft, Facebook
- * Time Complexity: O(n)
- * Space Complexity: O(1) extra space, excluding the output array.
  */
 
 import java.util.Scanner;
