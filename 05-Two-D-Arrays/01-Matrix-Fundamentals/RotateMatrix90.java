@@ -1,2 +1,25 @@
-/* LeetCode 48: Rotate Image, clockwise in-place for square matrix. Transpose then reverse rows. O(n^2), O(1). https://leetcode.com/problems/rotate-image/ */
-import java.util.Arrays;public class RotateMatrix90{static void rotate(int[][]a){int n=a.length;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++){int t=a[i][j];a[i][j]=a[j][i];a[j][i]=t;}for(int[]r:a)for(int l=0,h=n-1;l<h;l++,h--){int t=r[l];r[l]=r[h];r[h]=t;}}public static void main(String[]x){int[][]a={{1,2,3},{4,5,6},{7,8,9}};rotate(a);System.out.println(Arrays.deepToString(a));}}
+/** LeetCode 48: rotate square matrix clockwise in-place. O(n^2), O(1). */
+import java.util.Arrays;
+public class RotateMatrix90 {
+    static void rotate(int[][] matrix) {
+        int n=matrix.length;
+        // Transpose the matrix.
+        for(int row=0;row<n;row++)
+            for(int col=row+1;col<n;col++) {
+                int temp=matrix[row][col];
+                matrix[row][col]=matrix[col][row];
+                matrix[col][row]=temp;
+            }
+        // Reverse every row.
+        for(int[] row:matrix) {
+            for(int left=0,right=n-1;left<right;left++,right--) {
+                int temp=row[left]; row[left]=row[right]; row[right]=temp;
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int[][] matrix={{1,2,3},{4,5,6},{7,8,9}};
+        rotate(matrix);
+        System.out.println(Arrays.deepToString(matrix));
+    }
+}
