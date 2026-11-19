@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class FirstOccurrence {
     public static int find(int[] a, int key, int i) {
-        if (a == null || i < 0) {
+        if (a == null || i < 0 || i > a.length) {
             throw new IllegalArgumentException("Array must be non-null and start index non-negative.");
         }
         // Stop when the search reaches the end of the array.
