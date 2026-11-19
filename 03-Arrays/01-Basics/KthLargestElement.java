@@ -25,9 +25,10 @@ public class KthLargestElement {
             sc.close();
             return;
         }
-        // Sort in ascending order.
+
+        // Sorting in ascending order puts the largest value at the last index.
         Arrays.sort(numbers);
-        // The kth largest element is at index n - k.
+        // Count k positions from the right; convert to a zero-based index.
         System.out.println(numbers[n - k]);
         sc.close();
     }
