@@ -1,14 +1,3 @@
-/** Merge two sorted arrays. Time O(n+m), extra space O(n+m). */
-import java.util.Arrays;
-public class MergeSortedArrays {
-    static int[] merge(int[] a, int[] b) {
-        int[] result = new int[a.length + b.length]; int i=0,j=0,k=0;
-        while (i<a.length && j<b.length) result[k++]=a[i]<=b[j]?a[i++]:b[j++];
-        while (i<a.length) result[k++]=a[i++];
-        while (j<b.length) result[k++]=b[j++];
-        return result;
-    }
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(merge(new int[]{1,3,5}, new int[]{2,4,6})));
-    }
-}
+/** Merge two sorted arrays in O(n+m) time. */
+import java.util.*;
+public class MergeSortedArrays {static int[]merge(int[]a,int[]b){int[]out=new int[a.length+b.length];int i=0,j=0,k=0;while(i<a.length&&j<b.length)out[k++]=a[i]<=b[j]?a[i++]:b[j++];while(i<a.length)out[k++]=a[i++];while(j<b.length)out[k++]=b[j++];return out;}static int[]read(Scanner sc,String name){System.out.print(name+" array size: ");int n=sc.nextInt();if(n<0)throw new IllegalArgumentException("Invalid size");int[]a=new int[n];System.out.println("Enter "+name+" sorted values:");for(int i=0;i<n;i++)a[i]=sc.nextInt();return a;}public static void main(String[]args){Scanner sc=new Scanner(System.in);int[]a=read(sc,"First"),b=read(sc,"Second");System.out.println(Arrays.toString(merge(a,b)));sc.close();}}
