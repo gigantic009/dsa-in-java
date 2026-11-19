@@ -4,6 +4,8 @@
 
 ## Start here
 
+- [Course quality benchmark and self-sufficiency standards](COURSE-QUALITY-BENCHMARK.md)
+
 **New to programming? Begin at [00 — Foundations](./00-Foundations/README.md).** Do not jump directly into advanced problem solutions.
 
 ### The course sequence
