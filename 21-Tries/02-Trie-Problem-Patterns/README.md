@@ -1,4 +1,8 @@
-# Trie Problem Patterns
-
-## Practice
-Construct a trie; phone directory; word dictionary; word break; shortest unique prefix; maximum XOR trie.
+# Trie Patterns
+## Medium
+- [ ] Maximum XOR pair
+- [ ] Word dictionary wildcard
+- [ ] Search suggestions
+## Hard
+- [ ] Maximum XOR queries
+- [ ] Word squares
