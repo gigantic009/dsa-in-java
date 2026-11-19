@@ -27,14 +27,14 @@ Each call keeps its local state until its child returns. Calls unwind in reverse
 ### Fundamentals
 1. Understand the call stack and base case.
 2. Print numbers decreasing and increasing (`PrintNumbersRecursion.java`).
-3. Return values and recursive computation: sum and factorial.
+3. Sum of natural numbers (`SumNaturalNumbers.java`), then factorial (`FactorialRecursion.java).
 4. Fibonacci and repeated work.
 5. Array/string recursion and search.
 6. Recursive binary search.
 
 ### Existing and next topics
 - Print numbers in both directions (see `PrintNumbersRecursion.java` for call-stack order)
-- Factorial and sum
+- Factorial and sum (`SumNaturalNumbers.java` and `FactorialRecursion.java`)
 - Fibonacci (understand why naïve recursion repeats work)
 - Recursive palindrome and string reversal
 - First/last occurrence in arrays
@@ -65,6 +65,6 @@ Draw the call stack for factorial and fast power. Implement two array recursion 
 
 
 ## Complexity notes
-- Factorial recursion: O(n) time and O(n) call-stack space; the demo restricts n to 20 for long.
+- Sum of natural numbers: O(n) time and O(n) recursive stack space; the demo accepts non-negative values, though very large inputs can exhaust the call stack.\n- Factorial recursion: O(n) time and O(n) call-stack space; the demo restricts n to 20 for long.
 - First occurrence: O(n) worst-case time and O(n) stack space; start index must be valid and non-negative.
 - Fast power: O(log n) recursive calls and O(log n) stack space. The long result can overflow for large bases/exponents.
