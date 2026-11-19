@@ -1,9 +1,6 @@
 /*
  * Problem: Rotate an array to the right by one position.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(1), excluding the input array.
  */
 
 import java.util.Arrays;
