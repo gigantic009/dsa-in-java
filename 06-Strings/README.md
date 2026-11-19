@@ -27,7 +27,11 @@ A `String` represents text and is immutable: operations that appear to modify it
 - Pattern matching: naive, KMP, Rabin–Karp and Z algorithm
 
 ## 4. Unicode caution
-Java `char` represents a UTF-16 code unit, not always a complete Unicode code point. Many beginner algorithm problems constrain input to ASCII/lowercase English; make that assumption explicit when using a 26-element frequency array.
+Java `char` represents a UTF-16 code unit, not always a complete Unicode code point. Reversing a `char[]` may split surrogate pairs. Many beginner algorithm problems constrain input to ASCII/lowercase English; make that assumption explicit when using a 26-element frequency array. For code-point-aware work, use `String.codePoints()`.
+
+## Implemented examples
+- [Reverse String](ReverseString.java) — two-pointer character-array reversal.
+- [Valid Palindrome](ValidPalindrome.java) — skips non-alphanumeric characters and compares without case sensitivity.
 
 ## Practice ladder
 **Easy:** reverse, palindrome, count characters, toggle case (only when the input domain is defined), remove character, anagram.
@@ -43,10 +47,7 @@ Java `char` represents a UTF-16 code unit, not always a complete Unicode code po
 - [ ] Choose between char array, frequency array, map and StringBuilder.
 - [ ] Distinguish substring from subsequence.
 - [ ] Implement two-pointer and sliding-window string patterns.
+- [ ] Explain the UTF-16 limitation of basic char-based algorithms.
 
-
-## Sprint teaching expansion
-
-Strings are immutable; Java indexes UTF-16 units. Clarify alphabet/Unicode; StringBuilder for repeated edits. Patterns: frequency, two pointers, windows, palindrome. Test empty, repeated, case, punctuation and Unicode.
-
-Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
+## Self-check
+Explain the approach, trace it, justify pointer movement, implement it, test boundaries and analyze complexity.
