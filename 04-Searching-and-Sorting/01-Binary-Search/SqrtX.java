@@ -1,3 +1,8 @@
+// EDUCATIONAL NOTES:
+// Search for the greatest integer whose square is <= x. Using long for the
+// midpoint and its square prevents overflow during comparisons. At termination,
+// high is the valid floor and low is the first invalid candidate.
+
 /** LeetCode 69: floor square root using binary search. O(log x) time, O(1) space. */
 public class SqrtX {
     static int mySqrt(int x) {
