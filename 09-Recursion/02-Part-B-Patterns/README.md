@@ -1,10 +1,17 @@
-# Recursion — Part B: Patterns
+# Recursion Patterns — Question Bank
 
-## Theory
-Multiple recursive calls; include/exclude choices; subsequences and subsets; permutations; choose-explore-unchoose; pruning; recursion tree; backtracking.
-
-## Solved problem
-- [Binary strings without consecutive 1s](BinaryStrings.java)
-
-## Practice
-Print all subsets; print all permutations; tiling problem; friends pairing; grid paths; rat in a maze.
+### Easy
+- [ ] Generate binary strings
+- [ ] Subsequence generation
+### Medium
+- [ ] Subsets
+- [ ] Subsets with duplicates
+- [ ] Permutations
+- [ ] Combination sum
+- [ ] Letter combinations of phone number
+- [ ] Palindrome partitioning
+- [ ] Rat in a maze
+### Hard
+- [ ] N-Queens
+- [ ] Sudoku solver
+- [ ] Word search using backtracking
