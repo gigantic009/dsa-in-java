@@ -1,2 +1,27 @@
 import java.util.Scanner;
-public class ClearBit {public static int clear(int n,int b){return n&~(1<<b);}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Number: ");int n=sc.nextInt();System.out.print("Bit index (0-based): ");int b=sc.nextInt();if(b<0||b>31)System.out.println("Bit index must be 0..31");else System.out.println(clear(n,b));sc.close();}}
+
+public class ClearBit {
+    // Turns the selected bit off without changing other bit positions.
+    public static int clear(int number, int bit) {
+        int mask = 1 << bit; // Identify the bit that must be cleared.
+        return number & ~mask; // NOT makes that mask bit 0; AND clears it.
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int number = sc.nextInt();
+
+        System.out.print("Enter bit position (0-31): ");
+        int bit = sc.nextInt();
+
+        if (bit < 0 || bit > 31) {
+            System.out.println("Bit position must be between 0 and 31.");
+        } else {
+            System.out.println("Result after clearing bit: " + clear(number, bit));
+        }
+
+        sc.close();
+    }
+}
