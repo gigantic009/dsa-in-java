@@ -1,9 +1,25 @@
-# Recursion — Part A: Fundamentals
+# Recursion Fundamentals — Question Bank
 
-## Theory
-Base case, recursive case, progress toward termination, call stack, stack frames, return flow, recursion tree, time and stack-space analysis.
+### Easy
+- [ ] Print numbers ascending and descending
+- [ ] Factorial
+- [ ] Sum of first n numbers
+- [ ] Fibonacci
+- [ ] Check palindrome recursively
+- [ ] Reverse a string recursively
+- [ ] First occurrence in array
+- [ ] Last occurrence in array
+- [ ] Check array sorted
+- [ ] Recursive binary search
+- [ ] Fast power
+### Medium
+- [ ] Tiling problem
+- [ ] Remove duplicates from string
+- [ ] Friends pairing
+- [ ] Tower of Hanoi
+- [ ] Generate binary strings without consecutive 1s
+- [ ] Subsets / power set
+### Hard
+- [ ] Recursive combinations and permutations with constraints
 
-## Solved problems
-- [Factorial](FactorialRecursion.java)
-- [Fast power](FastPower.java)
-- [First occurrence in an array](FirstOccurrence.java)
+See sibling pattern folder for additional recursive backtracking patterns.
