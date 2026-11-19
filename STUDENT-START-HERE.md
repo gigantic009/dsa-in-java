@@ -44,7 +44,7 @@ Use [PROGRESS.md](./PROGRESS.md) to track your own learning. Check a box only af
 
 ## Course status and transparency
 
-This is a growing open course. The overall topic map is broader than the currently fully developed teaching lessons. Some code is still under review; automated compilation and selected regression tests do not prove every solution correct. The [repository audit](./REPOSITORY-AUDIT.md) records known verification work. Please report broken links, unclear explanations or bugs using a GitHub issue.
+This is a growing open course. The overall topic map is broader than the currently fully developed teaching lessons. Some code is still under review; automated compilation and selected regression tests do not prove every solution correct. Known verification status is stated in individual files and GitHub Actions; report discrepancies using a GitHub issue. Please report broken links, unclear explanations or bugs using a GitHub issue.
 
 ## Suggested weekly plan for a beginner
 
