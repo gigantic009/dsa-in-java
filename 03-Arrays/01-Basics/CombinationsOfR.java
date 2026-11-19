@@ -1,9 +1,6 @@
 /*
  * Problem: Print every combination of r elements selected from an array of n elements.
  * LeetCode: Not available
- * Companies: Amazon
- * Time Complexity: O(C(n, r) * r)
- * Space Complexity: O(r) for the current combination and recursion.
  */
 
 import java.util.Scanner;
