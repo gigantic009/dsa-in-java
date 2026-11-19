@@ -1,7 +1,17 @@
-# Binary Trees — Part 1: Fundamentals
-
-## Theory
-Node structure, root/leaf, height/depth/level, count/sum nodes, height, diameter and recursive construction.
-
-## Solved problem
-- [Maximum depth](MaximumDepth.java)
+# Binary Tree Fundamentals
+## Easy
+- [ ] Build tree
+- [ ] Preorder/inorder/postorder
+- [ ] Level order
+- [ ] Maximum depth
+- [ ] Count nodes/leaves
+## Medium
+- [ ] Diameter
+- [ ] Balanced tree
+- [ ] Zigzag
+- [ ] Boundary traversal
+- [ ] Vertical traversal
+- [ ] LCA
+## Hard
+- [ ] Serialize/deserialize
+- [ ] Maximum path sum
