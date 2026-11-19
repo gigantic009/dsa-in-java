@@ -9,6 +9,11 @@ public class MedianOfEqualSortedArrays {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n <= 0) {
+            System.out.println("Arrays must be non-empty");
+            sc.close();
+            return;
+        }
         int[] first = new int[n];
         int[] second = new int[n];
         for (int i = 0; i < n; i++) {
@@ -16,11 +21,6 @@ public class MedianOfEqualSortedArrays {
         }
         for (int i = 0; i < n; i++) {
             second[i] = sc.nextInt();
-        }
-        if (n == 0) {
-            System.out.println("Arrays must be non-empty");
-            sc.close();
-            return;
         }
         int firstIndex = 0;
         int secondIndex = 0;
