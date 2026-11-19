@@ -122,3 +122,8 @@ Status values: `Not reviewed`, `Reviewed`, `Tested`, `Verified`. Update only wit
 | `22-Segment-Trees/02-Range-Queries/RangeMinimumSegmentTree.java` | Not reviewed | Pending edge-case review and tests |
 | `22-Segment-Trees/02-Range-Queries/RangeSumSegmentTree.java` | Not reviewed | Pending edge-case review and tests |
 | `23-Interview-Patterns/01-Core-Patterns/TwoSumSorted.java` | Not reviewed | Pending edge-case review and tests |
+
+
+## Sprint migration annotation
+
+Additional source files imported from the arrays branch during the sprint are listed in [the branch migration register](../BRANCH-MIGRATION/ARRAYS.md). They remain **Not reviewed** unless explicitly changed to Reviewed/Tested/Verified in the row above. Importing and compiling are not correctness verification.
