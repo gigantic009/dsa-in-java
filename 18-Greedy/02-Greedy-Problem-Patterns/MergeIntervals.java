@@ -1,7 +1,31 @@
-// Merge overlapping intervals; input arrays are sorted in-place.
-// Time O(n log n); output space O(n).
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+/** Merges overlapping intervals. The input is not modified. */
 public class MergeIntervals {
- static int[][]merge(int[][]a){if(a==null)throw new IllegalArgumentException();if(a.length==0)return new int[0][2];Arrays.sort(a,Comparator.comparingInt(x->x[0]));List<int[]>out=new ArrayList<>();int[]cur=a[0].clone();for(int i=1;i<a.length;i++){if(a[i][0]<=cur[1])cur[1]=Math.max(cur[1],a[i][1]);else{out.add(cur);cur=a[i].clone();}}out.add(cur);return out.toArray(new int[out.size()][]);}
- public static void main(String[]args){System.out.println(Arrays.deepToString(merge(new int[][]{{1,3},{2,6},{8,10},{15,18}})));}
+    public static int[][] merge(int[][] intervals) {
+        if (intervals == null) throw new IllegalArgumentException("Intervals cannot be null");
+        if (intervals.length == 0) return new int[0][2];
+        int[][] copy = new int[intervals.length][];
+        for (int i = 0; i < intervals.length; i++) {
+            if (intervals[i] == null || intervals[i].length != 2 || intervals[i][0] > intervals[i][1])
+                throw new IllegalArgumentException("Invalid interval");
+            copy[i] = intervals[i].clone();
+        }
+        Arrays.sort(copy, Comparator.comparingInt(a -> a[0]));
+        List<int[]> merged = new ArrayList<>();
+        int[] current = copy[0];
+        for (int i = 1; i < copy.length; i++) {
+            if (copy[i][0] <= current[1]) current[1] = Math.max(current[1], copy[i][1]);
+            else { merged.add(current); current = copy[i]; }
+        }
+        merged.add(current);
+        return merged.toArray(new int[merged.size()][]);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.deepToString(merge(new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}})));
+    }
 }
