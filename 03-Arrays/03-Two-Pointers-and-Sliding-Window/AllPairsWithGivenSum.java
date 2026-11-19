@@ -1,9 +1,6 @@
 /*
  * Problem: Print all distinct value pairs whose sum equals the target.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n log n), due to sorting.
- * Space Complexity: O(n), for storing the input and distinct pairs.
  */
 
 import java.util.Arrays;
