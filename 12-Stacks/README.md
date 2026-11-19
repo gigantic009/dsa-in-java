@@ -20,3 +20,10 @@ When a problem asks for the next element that is greater/smaller, or for a bound
 
 ## Checkpoint
 Implement a stack using an array, solve valid parentheses and one next-greater problem. Explain the invariant and amortized behavior where relevant.
+
+
+## Sprint teaching expansion
+
+LIFO; push/pop/peek and guard empty. Java Deque is preferred. Patterns delimiter matching, parsing, monotonic stack, next greater/histogram; specify equal-value handling.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
