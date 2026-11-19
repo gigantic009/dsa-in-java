@@ -33,3 +33,10 @@ These concepts should be developed as lessons and practice rather than assumed. 
 - [ ] I can solve 25 small exercises independently.
 
 **Don't rush this module.** Strong Java fundamentals make every later algorithm easier.
+
+
+## Sprint teaching expansion
+
+Typed variables, control flow, methods and objects. Distinguish primitives/references; integer division truncates; bounds are strict. Scanner token behavior/performance. Diagnose compile/runtime/logical errors; test boundaries and overflow.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
