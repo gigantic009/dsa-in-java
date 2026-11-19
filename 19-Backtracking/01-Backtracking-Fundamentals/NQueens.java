@@ -1,8 +1,18 @@
-// Backtracking placement of n queens with column and diagonal conflict checks.
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
+/**
+ * Places n queens on an n-by-n chessboard so that no two queens attack.
+ * LeetCode 51: N-Queens.
+ */
 public class NQueens {
+
     public static List<List<String>> solve(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("n must be non-negative.");
+        }
+
         List<List<String>> result = new ArrayList<>();
         char[][] board = new char[n][n];
 
@@ -15,33 +25,43 @@ public class NQueens {
     }
 
     private static void place(int row, char[][] board, List<List<String>> result) {
+        // All rows have been filled: save a snapshot of the board.
         if (row == board.length) {
             List<String> solution = new ArrayList<>();
-            for (char[] r : board) {
-                solution.add(new String(r));
+            for (char[] boardRow : board) {
+                solution.add(new String(boardRow));
             }
             result.add(solution);
             return;
         }
 
+        // Try placing a queen in each column of this row.
         for (int col = 0; col < board.length; col++) {
-            if (safe(row, col, board)) {
+            if (isSafe(row, col, board)) {
                 board[row][col] = 'Q';
                 place(row + 1, board, result);
-                board[row][col] = '.'; // Undo the placement before trying the next column.
+                board[row][col] = '.'; // Undo before testing the next column.
             }
         }
     }
 
-    private static boolean safe(int row, int col, char[][] board) {
-        for (int i = 0; i < row; i++) {
-            if (board[i][col] == 'Q'
-                    || (col - (row - i) >= 0 && board[i][col - (row - i)] == 'Q')
-                    || (col + (row - i) < board.length && board[i][col + (row - i)] == 'Q')) {
+    // Only previous rows need checking because rows are filled top to bottom.
+    private static boolean isSafe(int row, int col, char[][] board) {
+        for (int previousRow = 0; previousRow < row; previousRow++) {
+            int distance = row - previousRow;
+
+            if (board[previousRow][col] == 'Q'
+                    || (col - distance >= 0
+                        && board[previousRow][col - distance] == 'Q')
+                    || (col + distance < board.length
+                        && board[previousRow][col + distance] == 'Q')) {
                 return false;
             }
         }
-
         return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("4-Queens solutions: " + solve(4).size()); // 2
     }
 }
