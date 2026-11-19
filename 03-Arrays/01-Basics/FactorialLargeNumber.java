@@ -2,9 +2,6 @@
  * Problem: Compute the factorial of a non-negative integer
  * whose result may exceed primitive numeric types.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n) multiplications.
- * Space Complexity: Depends on the number of digits in the result.
  */
 
 import java.math.BigInteger;
