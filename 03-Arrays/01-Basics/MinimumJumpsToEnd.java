@@ -15,6 +15,12 @@ public class MinimumJumpsToEnd {
         for (int i = 0; i < n; i++) {
             jumps[i] = scanner.nextInt();
         }
+        for (int jump : jumps) {
+            if (jump < 0) {
+                System.out.println("Jump lengths must be non-negative");
+                return;
+            }
+        }
         if (n <= 1) {
             System.out.println(0);
             return;
@@ -23,7 +29,9 @@ public class MinimumJumpsToEnd {
         int currentEnd = 0;
         int farthestReach = 0;
         for (int i = 0; i < n - 1; i++) {
-            farthestReach = Math.max(farthestReach, i + jumps[i]);
+            long candidate = (long) i + jumps[i];
+            farthestReach = Math.max(farthestReach,
+                    (int) Math.min(candidate, n - 1L));
             if (i == currentEnd) {
                 if (farthestReach == currentEnd) {
                     System.out.println(-1);
