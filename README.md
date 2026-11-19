@@ -67,7 +67,13 @@
 - Don't copy a solution until you have made a genuine attempt.
 - Include tests for empty, smallest, largest relevant, duplicate, negative and boundary cases as applicable.
 
-## Roadmap and quality standards
+## Roadmap, study tools and quality standards
+
+- [Problem-solving guide and stuck protocol](./PROBLEM-SOLVING-GUIDE.md)
+- [Revision system and mastery tracker](./REVISION-SYSTEM.md)
+- [DSA glossary](./DSA-GLOSSARY.md)
+- [Java coding standards](./JAVA-CODING-STANDARDS.md)
+
 
 - [Complete course map](./COURSE-ROADMAP.md)
 - [How to study DSA effectively](./HOW-TO-STUDY.md)
