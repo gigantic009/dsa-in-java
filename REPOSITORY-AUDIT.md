@@ -71,3 +71,8 @@ This audit consolidates recoverable instructions from prior conversations about 
 ## Course transformation — 19 November 2026
 
 The learning-first entrypoint and course scaffold were committed: README.md, COURSE-ROADMAP.md, HOW-TO-STUDY.md, PROGRESS.md and CONTRIBUTING.md. Added beginner-oriented 00-Foundations/README.md and expanded Java Basics, Complexity and Arrays topic READMEs. This is scaffolding and initial instructional content—not a claim that every topic has complete lessons or that all Java files have been audited/tested. Continue module-by-module, branch-by-branch.
+
+
+## Course content expansion — 19 November 2026 (continued)
+
+Expanded main-branch teaching READMEs into instructional modules: 2D arrays, strings, recursion, linked lists, graphs, dynamic programming, tries, segment trees, interview patterns, searching/sorting, stacks, queues, binary trees, BSTs, heaps and hashing. Each includes prerequisites or concepts, learning progression, patterns, common traps or checkpoint guidance. These are module introductions, not yet complete chapter-by-chapter textbook lessons or a verified solution/test audit. Java checks workflow is triggered and currently queued on latest commit at the time of inspection; do not mark as passed until completed.
