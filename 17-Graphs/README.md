@@ -29,3 +29,10 @@ A grid can be treated as a graph implicitly: a cell is a vertex and legal neighb
 - [ ] Explain topological sort's DAG precondition.
 - [ ] Choose a shortest-path algorithm based on edge weights.
 - [ ] Implement DSU and one MST algorithm.
+
+
+## Sprint teaching expansion
+
+Define directed/undirected, weighted, V/E. Adjacency list O(V+E), matrix O(V²). BFS unweighted shortest paths; Dijkstra nonnegative; Bellman-Ford negative edges and reachable negative-cycle detection; MST undirected. Test disconnected and isolated.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
