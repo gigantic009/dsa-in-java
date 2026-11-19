@@ -1,7 +1,6 @@
 # 3Sum
 
 **LeetCode:** [#15 — 3Sum](https://leetcode.com/problems/3sum/)  
-**Companies:** Adobe, Amazon, Microsoft, Morgan Stanley, Samsung, Snapdeal, Times Internet
 
 ## Intuition
 Sort the array. Fix one value, then use two pointers to find pairs that make the total zero. Skip repeated values so each triplet appears once.
