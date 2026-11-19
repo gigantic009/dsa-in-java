@@ -118,3 +118,6 @@ This repository aims to provide the explanations, examples, practice, revision, 
 - [DSA Project Lab](./PROJECTS/DSA-PROJECT-LAB.md) — nine progressive project briefs and acceptance criteria.
 - [Arrays branch migration](./BRANCH-MIGRATION/ARRAYS.md) — partial migration notes.
 - [Arrays question-bank snapshot](./BRANCH-MIGRATION/ARRAYS-QUESTION-BANK-SNAPSHOT.md) — preserved supplemental question list with metadata caveats.
+
+- [Cumulative Exam Plan](./ASSESSMENTS/CUMULATIVE-EXAM-PLAN.md) — topic-cluster tests and monthly reflection.
+- [Branch Reconciliation Register](./BRANCH-RECONCILIATION.md) — path-level findings and migration status.
