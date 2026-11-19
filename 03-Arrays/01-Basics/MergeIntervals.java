@@ -28,13 +28,18 @@ public class MergeIntervals {
                 return;
             }
         }
+
+        // Sorting by start time means any overlap must be with the last merged interval.
         Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
         List<int[]> merged = new ArrayList<>();
         for (int[] interval : intervals) {
+            // If the list is empty or this interval starts after the last one ends,
+            // it cannot overlap; add a separate interval.
             if (merged.isEmpty()
                     || merged.get(merged.size() - 1)[1] < interval[0]) {
                 merged.add(interval.clone());
             } else {
+                // Otherwise, extend the last interval to cover the farther endpoint.
                 int[] last = merged.get(merged.size() - 1);
                 last[1] = Math.max(last[1], interval[1]);
             }
