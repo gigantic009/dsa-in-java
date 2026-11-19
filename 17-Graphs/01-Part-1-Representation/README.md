@@ -1,4 +1,8 @@
-# Graphs — Part 1: Representation
-
-## Theory
-Vertices, edges, directed/undirected, weighted/unweighted, degree, path, adjacency matrix/list and edge list. This is a theory and implementation-foundation section.
+# Graph Representation
+## Easy
+- [ ] Adjacency matrix/list
+- [ ] Directed/undirected representations
+- [ ] Weighted graph representation
+## Medium
+- [ ] Edge list conversion
+- [ ] Degrees and components
