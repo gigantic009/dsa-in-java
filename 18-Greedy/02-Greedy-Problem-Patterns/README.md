@@ -1,10 +1,10 @@
 # Greedy Patterns
 ## Easy
-- [ ] Lemonade change
+- [x] Lemonade change (LemonadeChange.java)
 ## Medium
 - [ ] Jump game II
 - [ ] Partition labels
-- [ ] Merge intervals
+- [x] Merge intervals (MergeIntervals.java)
 - [ ] Meeting rooms
 - [ ] Min arrows
 ## Hard
