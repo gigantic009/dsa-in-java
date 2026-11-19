@@ -175,3 +175,13 @@ These migrations preserve useful content, but each implementation still needs a 
 - Topic README presence must not be interpreted as a fully developed lesson; lesson depth varies.
 
 - Added a self-assessment checkpoint for beginner foundations, Java, arrays and complexity with tracing exercises, implementation tasks, an answer key and mastery gate; linked from the homepage.
+
+
+### Duplicate-name review (inventory only)
+
+- A current main-branch filename scan found repeated `BinarySearch.java` across Arrays, Searching & Sorting and Divide & Conquer, and repeated `MergeSort.java` across Searching & Sorting and Divide & Conquer.
+- These are topic-context copies with differing code/interface and are not deleted as exact duplicates. This filename-only scan is not a full content/hash audit of all branches.
+
+### Latest CI evidence
+
+- Workflow run for commit `437ad8215fdd1313942b021b1d39798d24ffb722` completed successfully: individual Java compilation, focused regression tests and internal Markdown navigation all passed.
