@@ -2,11 +2,13 @@
  * Problem: Find the minimum length of a contiguous subarray
  * whose sum is greater than the target.
  * Requires non-negative elements for this sliding-window strategy.
+ * Time: O(n) | Auxiliary space: O(1)
  */
 import java.util.Scanner;
 
 public class SmallestSubarraySumGreaterThanValue {
     public static int minLength(int[] numbers, long target) {
+        // Negative values invalidate the monotonic sliding-window reasoning.
         for (int number : numbers) {
             if (number < 0) {
                 throw new IllegalArgumentException(
@@ -14,6 +16,12 @@ public class SmallestSubarraySumGreaterThanValue {
                 );
             }
         }
+
+        /*
+         * Expand the window by moving right and adding values.
+         * Whenever its sum exceeds target, shrink from the left while recording
+         * each valid length; shrinking may produce a shorter qualifying window.
+         */
         int left = 0;
         int minimumLength = numbers.length + 1;
         long currentSum = 0;
@@ -24,6 +32,7 @@ public class SmallestSubarraySumGreaterThanValue {
                 currentSum -= numbers[left++];
             }
         }
+        // Zero indicates that no contiguous subarray exceeded the target.
         return minimumLength == numbers.length + 1 ? 0 : minimumLength;
     }
 
