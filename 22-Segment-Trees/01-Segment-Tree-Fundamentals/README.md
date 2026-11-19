@@ -1,32 +1,34 @@
 # Segment Tree Fundamentals
 
-A segment tree stores information about intervals of an array. It supports selected range queries and updates efficiently when the stored operation can be combined.
+A segment tree stores summaries for intervals of an array. It is useful when repeated range queries and point updates are needed.
 
-## Concept
-Each node represents an interval. Leaves represent individual array elements; internal nodes combine their children. For sum queries, the combine operation is addition.
+## Structure
+- Each node represents an interval.
+- Leaves store individual array values.
+- Internal nodes combine their children (addition for sums).
+- The implementation uses inclusive index intervals.
 
-## Core operations
-- Build: construct tree from the input array.
-- Query: return the result for a requested interval by combining covered nodes.
-- Point update: update a leaf and recompute ancestors.
+## Operations in SegmentTree.java
+- Build: recursively construct the tree.
+- Sum query: combine covered nodes for [left, right].
+- Point update: replace one array element and recompute ancestors.
 
-For a typical segment tree, build is O(n), point update O(log n), and range query O(log n). Storage is commonly allocated as about 4n entries for a recursive implementation.
+## Complexity
+- Build: O(n)
+- Query: O(log n)
+- Point update: O(log n)
+- Space: O(n), conventionally allocated as about 4n nodes.
 
-## Variations
-Range minimum/maximum, sum, and lazy propagation for certain range updates.
+## Assumptions and edge cases
+Null arrays are rejected. Empty arrays can be constructed, but queries and updates on them are invalid. Range endpoints must be valid and left <= right. Integer sums can overflow if the values or range totals exceed the int range.
 
 ## Learning order
-1. Understand interval splitting and recursion.
-2. Build a sum tree.
+1. Understand interval splitting.
+2. Build a tree.
 3. Query intervals.
-4. Update one element.
-5. Learn lazy propagation only after the above works.
-
-## Common mistakes
-- Incorrect interval boundaries.
-- Treating a partial overlap as full coverage.
-- Updating only a leaf, not its ancestors.
-- Using a combine operation that does not match the query.
+4. Update a point.
+5. Compare with prefix sums and Fenwick trees.
+6. Study lazy propagation later.
 
 ## Checkpoint
-Draw a tree for 8 elements. Trace a query spanning both child intervals and a point update.
+Draw the tree for a small array, trace a query and update, and explain how the parent summaries are recalculated.
