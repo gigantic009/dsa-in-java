@@ -1,47 +1,73 @@
 import java.util.Arrays;
 
+/**
+ * Merge Sort sorts an array by dividing it into halves, sorting each half,
+ * and merging the sorted halves back together.
+ *
+ * Time Complexity: O(n log n)
+ * Auxiliary Space: O(n)
+ */
 public class MergeSort {
-    public static void sort(int[] arr, int left, int right) {
+
+    /**
+     * Sorts the portion of the array from left to right (inclusive).
+     */
+    public static void sort(int[] array, int left, int right) {
+        // A range containing at most one element is already sorted.
         if (left >= right) {
             return;
         }
 
-        int mid = left + (right - left) / 2;
-        sort(arr, left, mid);
-        sort(arr, mid + 1, right);
-        merge(arr, left, mid, right);
+        // Find the midpoint without risking integer overflow.
+        int middle = left + (right - left) / 2;
+
+        // Recursively sort both halves.
+        sort(array, left, middle);
+        sort(array, middle + 1, right);
+
+        // Merge the two sorted halves.
+        merge(array, left, middle, right);
     }
 
-    private static void merge(int[] arr, int left, int mid, int right) {
-        int[] temp = new int[right - left + 1];
-        int i = left;
-        int j = mid + 1;
-        int k = 0;
+    /**
+     * Merges two sorted ranges: left..middle and middle+1..right.
+     */
+    private static void merge(int[] array, int left, int middle, int right) {
+        int[] temporary = new int[right - left + 1];
+        int firstPointer = left;
+        int secondPointer = middle + 1;
+        int tempPointer = 0;
 
-        while (i <= mid && j <= right) {
-            if (arr[i] <= arr[j]) {
-                temp[k++] = arr[i++];
+        // Compare elements from both halves and take the smaller one.
+        while (firstPointer <= middle && secondPointer <= right) {
+            if (array[firstPointer] <= array[secondPointer]) {
+                temporary[tempPointer++] = array[firstPointer++];
             } else {
-                temp[k++] = arr[j++];
+                temporary[tempPointer++] = array[secondPointer++];
             }
         }
 
-        while (i <= mid) {
-            temp[k++] = arr[i++];
+        // Copy any remaining elements from the left half.
+        while (firstPointer <= middle) {
+            temporary[tempPointer++] = array[firstPointer++];
         }
 
-        while (j <= right) {
-            temp[k++] = arr[j++];
+        // Copy any remaining elements from the right half.
+        while (secondPointer <= right) {
+            temporary[tempPointer++] = array[secondPointer++];
         }
 
-        for (int p = 0; p < temp.length; p++) {
-            arr[left + p] = temp[p];
+        // Copy the merged elements back into the original array range.
+        for (int i = 0; i < temporary.length; i++) {
+            array[left + i] = temporary[i];
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = {8, 3, 5, 1, 9, 2};
-        sort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(arr));
+        int[] array = {8, 3, 5, 1, 9, 2};
+
+        sort(array, 0, array.length - 1);
+
+        System.out.println(Arrays.toString(array));
     }
 }
