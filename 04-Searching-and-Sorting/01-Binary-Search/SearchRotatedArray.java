@@ -1,3 +1,8 @@
+// EDUCATIONAL NOTES:
+// At least one side of the midpoint is sorted (assuming distinct values).
+// Check whether target belongs to that sorted interval, then discard the other
+// half. This preserves O(log n) time despite the rotation.
+
 /** LeetCode 33: search a rotated sorted array.
  * Time: O(log n), Space: O(1). */
 public class SearchRotatedArray {
