@@ -1,11 +1,11 @@
 # Queue Patterns
 ## Easy
-- [ ] Generate binary numbers
+- [x] Generate binary numbers (`GenerateBinaryNumbers.java`)
 ## Medium
 - [ ] Rotten oranges
 - [ ] Flood fill
-- [ ] Sliding window maximum
-- [ ] First negative in window
+- [x] Sliding window maximum (`SlidingWindowMaximum.java`)
+- [x] First negative in window (`FirstNegativeInWindow.java`)
 - [ ] Gas station circuit
 ## Hard
 - [ ] Grid shortest path BFS
