@@ -24,3 +24,10 @@ Build insertion and search from scratch, then prefix search, a dictionary with w
 
 ## Checkpoint
 Draw trie paths for several words with shared prefixes. Explain why a prefix match is not necessarily a complete-word match and implement all basic operations.
+
+
+## Sprint teaching expansion
+
+Trie stores prefixes; terminal marker distinguishes words from prefixes. Complexity depends on word length and representation. Test empty word, prefix relationships, duplicate insertion, missing paths and alphabet assumptions.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
