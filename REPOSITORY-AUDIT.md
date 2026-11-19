@@ -76,3 +76,13 @@ The learning-first entrypoint and course scaffold were committed: README.md, COU
 ## Course content expansion — 19 November 2026 (continued)
 
 Expanded main-branch teaching READMEs into instructional modules: 2D arrays, strings, recursion, linked lists, graphs, dynamic programming, tries, segment trees, interview patterns, searching/sorting, stacks, queues, binary trees, BSTs, heaps and hashing. Each includes prerequisites or concepts, learning progression, patterns, common traps or checkpoint guidance. These are module introductions, not yet complete chapter-by-chapter textbook lessons or a verified solution/test audit. Java checks workflow is triggered and currently queued on latest commit at the time of inspection; do not mark as passed until completed.
+
+
+## Continuing audit update — 19 November 2026
+
+- Latest Java compilation workflow run checked: successful (individual-file compilation plus the shared Kruskal/Union-Find dependency pair).
+- Added root-level learner references: problem-solving guide, revision system, glossary, and coding standards; navigation updated.
+- Expanded instructional subtopic READMEs: two pointers/sliding windows, prefix sums/subarrays, hashing, recursion fundamentals, divide-and-conquer, backtracking fundamentals, DP fundamentals, graph representation, matrix patterns, bitwise fundamentals, linked-list fundamentals, stack, queue, binary tree, BST, greedy, trie and segment tree fundamentals.
+- These are improved chapter introductions and practice guidance; the repo still requires deeper chapter materials, algorithm output tests, solution-by-solution review and branch reconciliation.
+- Latest compile-only CI passed; it is not an algorithmic correctness test suite.
+
