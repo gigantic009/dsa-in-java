@@ -1,51 +1,36 @@
-# Searching & Sorting — Question Bank
-
-Track problems Easy → Medium → Hard. Implement each question in its own Java file in the relevant subfolder.
-
-## Searching
-### Easy
-- [ ] Linear Search
-- [ ] Binary Search (iterative)
-- [ ] Binary Search (recursive)
-- [ ] Search Insert Position
-- [ ] First and Last Position of Element in Sorted Array
-- [ ] Floor and Ceiling in Sorted Array
-- [ ] Count occurrences in sorted array
-- [ ] Search in rotated sorted array
-### Medium
-- [ ] Find minimum in rotated sorted array
-- [ ] Single element in a sorted array
+# Searching & Sorting Question Bank
+## Searching — Easy
+- [ ] Linear search
+- [ ] Binary search (iterative/recursive)
+- [ ] Search insert position
+- [ ] First and last position
+- [ ] Floor and ceiling
+- [ ] Count occurrences
+## Searching — Medium
+- [ ] Search rotated array
+- [ ] Find rotation minimum
 - [ ] Peak element
-- [ ] Square root using binary search
-- [ ] Kth missing positive number
-- [ ] Search in a 2D matrix
-- [ ] Search in a row/column sorted matrix
-- [ ] Allocate minimum pages / book allocation
-- [ ] Aggressive cows (binary search on answer)
-### Hard
+- [ ] Square root by binary search
+- [ ] Kth missing positive
+- [ ] Search 2D matrix
+- [ ] Book allocation / minimum pages
+- [ ] Aggressive cows
+## Searching — Hard
 - [ ] Median of two sorted arrays
-- [ ] Kth element of two sorted arrays
-
-## Sorting
-### Easy
-- [ ] Bubble Sort
-- [ ] Selection Sort
-- [ ] Insertion Sort
-- [ ] Counting sort (bounded integers)
-### Medium
-- [ ] Merge Sort
-- [ ] Quick Sort
-- [ ] Sort array of 0s, 1s and 2s
-- [ ] Merge two sorted arrays
+- [ ] Kth element of sorted arrays
+## Sorting — Easy
+- [ ] Bubble sort
+- [ ] Selection sort
+- [ ] Insertion sort
+- [ ] Counting sort
+## Sorting — Medium
+- [ ] Merge sort
+- [ ] Quick sort
+- [ ] Sort 0/1/2
+- [ ] Merge sorted arrays
 - [ ] Merge intervals
-- [ ] Non-overlapping intervals
-### Hard
+## Sorting — Hard
 - [ ] Count inversions
 - [ ] Reverse pairs
-- [ ] Largest number formed from array
-
-## Solution status
-A checkbox indicates inclusion in this plan, not a completed solution. Completed solutions will be linked here.
-
-## LeetCode references
-Use exact IDs only after verification; see [LeetCode tracker](../LEETCODE.md).
+- [ ] Largest number from array
+Solutions are linked when implemented. Planned checkbox items are not implemented yet. See [LeetCode tracker](../LEETCODE.md).
