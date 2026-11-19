@@ -15,16 +15,23 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-      - name: Compile each solution in isolation
+      - name: Compile each solution in isolation (with known shared dependency)
         run: |
           set -euo pipefail
           mkdir -p out
           count=0
+          # Compile the Kruskal/Union-Find pair together because they depend on each other.
+          mkdir -p out/graph-mst
+          javac -d out/graph-mst 17-Graphs/05-Part-5-MST-and-Disjoint-Set/UnionFind.java 17-Graphs/05-Part-5-MST-and-Disjoint-Set/KruskalMST.java
+          count=$((count + 2))
           while IFS= read -r -d '' file; do
+            case "$file" in
+              *17-Graphs/05-Part-5-MST-and-Disjoint-Set/UnionFind.java|*17-Graphs/05-Part-5-MST-and-Disjoint-Set/KruskalMST.java) continue ;;
+            esac
             count=$((count + 1))
             dir="out/$count"
             mkdir -p "$dir"
             echo "Compiling: $file"
             javac -d "$dir" "$file"
           done < <(find . -name '*.java' -not -path './out/*' -print0)
-          echo "Successfully compiled $count Java source files individually."
+          echo "Successfully compiled $count Java source files (dependency pair compiled together)."
