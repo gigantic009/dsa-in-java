@@ -9,12 +9,10 @@ A greedy algorithm makes a locally preferred choice at each step. Greedy is a st
 - Compare with counterexamples to alternative choices.
 
 ## Starter examples
-- Activity selection: sort by finishing time and select compatible activities.
-- Fractional knapsack: sort by value/weight ratio; fractions are allowed.
-- Assign cookies: sort both arrays and match greedily.
-- Jump Game: track the farthest reachable position.
-
-## Practice
+- Activity selection: sort by finishing time and select compatible activities (ActivitySelection.java).
+- Fractional knapsack: sort by value/weight ratio; fractions are allowed (FractionalKnapsack.java).
+- Assign cookies: sort both arrays and match greedily (AssignCookies.java).
+- Jump Game: track the farthest reachable position (JumpGame.java).
 Easy: Activity Selection, Fractional Knapsack, Assign Cookies.
 Core: Jump Game, Gas Station, Job Sequencing, Minimum Platforms, Non-overlapping Intervals.
 Challenge: Candy Distribution.
