@@ -4,6 +4,9 @@ import java.util.List;
 
 public class PermutationsRecursion {
     public static List<List<Integer>> generate(int[] nums) {
+        if (nums == null) {
+            throw new IllegalArgumentException("Input array must not be null.");
+        }
         List<List<Integer>> result = new ArrayList<>();
         permute(nums, 0, result);
         return result;
