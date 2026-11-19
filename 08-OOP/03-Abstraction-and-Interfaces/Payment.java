@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
+/** Demonstrates abstraction by using a payment interface. */
 interface PaymentMethod {
-    void pay(double amount); // Interface describes the operation without its implementation.
+    void pay(double amount);
 }
 
 class UpiPayment implements PaymentMethod {
@@ -21,19 +22,22 @@ class CardPayment implements PaymentMethod {
 public class Payment {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Amount to pay: ");
         double amount = sc.nextDouble();
+
         if (amount <= 0) {
             System.out.println("Amount must be positive.");
             sc.close();
             return;
         }
 
-        sc.nextLine(); // Consume the newline before reading the method as text.
+        sc.nextLine(); // Consume the newline before reading the next line.
         System.out.print("Payment method (upi/card): ");
         String choice = sc.nextLine().trim().toLowerCase();
 
-        PaymentMethod payment; // Abstraction lets this variable refer to either implementation.
+        // The interface reference can hold either payment implementation.
+        PaymentMethod payment;
         if (choice.equals("upi")) {
             payment = new UpiPayment();
         } else if (choice.equals("card")) {
@@ -44,7 +48,7 @@ public class Payment {
             return;
         }
 
-        payment.pay(amount); // Caller depends on the interface, not a concrete payment class.
+        payment.pay(amount);
         sc.close();
     }
 }
