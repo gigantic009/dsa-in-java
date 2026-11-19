@@ -2,9 +2,6 @@
  * Problem: Find the length of the longest consecutive sequence
  * in an unsorted array.
  * LeetCode: #128
- * Companies: Not listed
- * Time Complexity: O(n) average
- * Space Complexity: O(n)
  */
 
 import java.util.HashSet;
