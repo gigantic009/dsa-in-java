@@ -1,3 +1,8 @@
+// EDUCATIONAL NOTES:
+// Lomuto partition places pivot at its final index and groups <= pivot before it.
+// Recursively sort both sides. Last-element pivot can yield O(n^2) on sorted or
+// duplicate-heavy input; average time is O(n log n).
+
 // Quick Sort: O(n log n) average, O(n^2) worst-case time.
 // LeetCode: 912 - Sort an Array
 import java.util.Arrays;
