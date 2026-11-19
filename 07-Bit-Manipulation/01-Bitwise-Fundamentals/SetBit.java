@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
+/** Sets a selected bit to 1 in an integer. */
 public class SetBit {
-    // Turns the requested bit on while leaving all other bits unchanged.
+
+    // OR sets the target bit without changing the other bit positions.
     public static int set(int number, int bit) {
-        int mask = 1 << bit; // Build a mask with only the target bit set.
-        return number | mask; // OR forces that bit to 1.
+        int mask = 1 << bit;
+        return number | mask;
     }
 
     public static void main(String[] args) {
