@@ -2,9 +2,6 @@
  * Problem: Rearrange an array so positive and negative values alternate.
  * Start with a positive value. If one type has extra values, place them at the end.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(n), for the positive and negative lists.
  */
 
 import java.util.ArrayList;
