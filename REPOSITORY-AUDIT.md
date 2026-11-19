@@ -36,13 +36,21 @@ This audit consolidates recoverable instructions from prior conversations about 
 - Prior batches were corrected for readable formatting and input in several Searching/Sorting, matrix, String, Bit Manipulation, OOP, Recursion, Linked List, Stack and Binary Tree files. Those batches are not a substitute for a full audit.
 - Central `LEETCODE.md` exists but previously had placeholder/partial content; audit and update its accuracy.
 
+## Branch inventory discovery
+
+- The repository has 18 branches including main (17 topic/feature branches plus main).
+- Main has 107 Java files in its current tree.
+- The `arrays` branch has a larger historical/alternate tree (98 Java files), so branch-only solutions must not be silently ignored or overwritten.
+- Several other topic branches appear to be smaller snapshot trees (25 Java files observed on multiple branches). Compare their content and commits before deciding whether they need individual edits or can be synchronized safely.
+- Main and arrays branch are distinct audit scopes; arrays samples reviewed so far are generally readable and input-driven, but still need full file-level review and correctness checks.
+
 ## Audit tracking
 
 | Scope | Status |
 |---|---|
 | Consolidated instruction record | Written here |
-| Main branch Java file inventory | 107 files previously enumerated; re-enumerate during audit |
-| Branch inventory | Must compare each branch tree and audit differences |
+| Main branch Java file inventory | 107 files enumerated |
+| Branch inventory | 18 branches discovered; compare trees and audit differences |
 | Readability sweep | In progress; several batches corrected, not repository-wide |
 | Runtime input sweep | In progress; standalone applicability must be evaluated per file |
 | Problem completeness/README/LeetCode index | In progress |
