@@ -82,3 +82,10 @@ Model a library, course-registration system or shopping cart using focused class
 
 ## Practice files
 Use the Java programs in the subfolders as runnable demonstrations. Their main() methods should collect demonstration data from the user when input is meaningful; reusable methods should continue to accept arguments so they can also be used by tests or coding platforms.
+
+
+## Sprint teaching expansion
+
+Encapsulation protects invariants; constructors establish valid state; interfaces contracts; composition often beats inheritance. Pair equals/hashCode. Design a small system with polymorphism, validation and separation.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
