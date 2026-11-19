@@ -2,6 +2,7 @@
  * Problem: Partition an array into values below a, from a through b,
  * and values above b.
  * LeetCode: Not available
+ * Time: O(n) | Auxiliary space: O(1)
  */
 
 import java.util.Arrays;
@@ -27,23 +28,31 @@ public class ThreeWayPartition {
             sc.close();
             return;
         }
+
+        /*
+         * Three-region invariant: [0,left) is below low, [left,middle) is
+         * in the allowed range, and (right,n) is above high.
+         * middle..right is the unclassified region.
+         */
         int left = 0;
         int middle = 0;
         int right = n - 1;
-        // Keep values below low on the left and above high on the right.
         while (middle <= right) {
             if (numbers[middle] < low) {
+                // Move a small value into the left region; both pointers advance.
                 int temp = numbers[left];
                 numbers[left] = numbers[middle];
                 numbers[middle] = temp;
                 left++;
                 middle++;
             } else if (numbers[middle] > high) {
+                // Move a large value into the right region; recheck the swapped value.
                 int temp = numbers[middle];
                 numbers[middle] = numbers[right];
                 numbers[right] = temp;
                 right--;
             } else {
+                // The value belongs in the middle region, so classify it and advance.
                 middle++;
             }
         }
