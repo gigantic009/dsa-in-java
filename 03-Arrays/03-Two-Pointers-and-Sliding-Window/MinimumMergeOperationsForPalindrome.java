@@ -7,7 +7,7 @@
 import java.util.Scanner;
 
 public class MinimumMergeOperationsForPalindrome {
-    public static int minOperations(int[] numbers) {
+    public static long minOperations(long[] numbers) {
         int left = 0;
         int right = numbers.length - 1;
         long operations = 0;
@@ -38,9 +38,9 @@ public class MinimumMergeOperationsForPalindrome {
             sc.close();
             return;
         }
-        int[] numbers = new int[n];
+        long[] numbers = new long[n];
         for (int i = 0; i < n; i++) {
-            numbers[i] = sc.nextInt();
+            numbers[i] = sc.nextLong();
             if (numbers[i] < 0) {
                 System.out.println("Values must be non-negative for this algorithm");
                 sc.close();
