@@ -1,3 +1,7 @@
+// EDUCATIONAL NOTES:
+// After each outer pass, the largest element among the unsorted suffix has
+// bubbled into its final position. swapped enables early exit on sorted input.
+
 // Bubble Sort: O(n^2) time, O(1) space.
 // Repeatedly swaps adjacent elements that are in the wrong order.
 import java.util.Arrays;
