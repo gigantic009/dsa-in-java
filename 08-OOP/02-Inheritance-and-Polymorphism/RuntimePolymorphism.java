@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+/** Demonstrates overriding and runtime polymorphism (dynamic dispatch). */
 class Animal {
     public void sound() {
         System.out.println("Animal makes a sound.");
@@ -9,7 +10,7 @@ class Animal {
 class Dog extends Animal {
     @Override
     public void sound() {
-        System.out.println("Dog barks."); // Runtime dispatch selects this overridden method.
+        System.out.println("Dog barks.");
     }
 }
 
@@ -23,10 +24,12 @@ class Cat extends Animal {
 public class RuntimePolymorphism {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Choose an animal (dog/cat): ");
         String choice = sc.nextLine().trim().toLowerCase();
 
-        Animal animal; // The reference type is Animal; the object type varies.
+        // The Animal reference can point to different subclass objects.
+        Animal animal;
         if (choice.equals("dog")) {
             animal = new Dog();
         } else if (choice.equals("cat")) {
@@ -37,7 +40,8 @@ public class RuntimePolymorphism {
             return;
         }
 
-        animal.sound(); // Dynamic method dispatch uses the actual object implementation.
+        // Java selects the overridden method based on the object's actual type.
+        animal.sound();
         sc.close();
     }
 }
