@@ -1,15 +1,19 @@
 // Largest rectangle area in a histogram using a monotonic stack.
 import java.util.*;
 public class LargestRectangleHistogram {
- public static int largest(int[] h){
-  Stack<Integer> s=new Stack<>();int best=0;
-  for(int i=0;i<=h.length;i++){
-   int height=i==h.length?0:h[i]; // Sentinel height flushes remaining bars.
-   while(!s.empty()&&h[s.peek()]>height){
-    int bar=h[s.pop()];int left=s.empty()?0:s.peek()+1; // Stack top is previous smaller bar.
-    best=Math.max(best,bar*(i-left)); // Width extends to current smaller bar.
-   }
-   s.push(i);
-  }return best;
- }
+    public static long largest(int[] heights) {
+        Stack<Integer> stack = new Stack<>();
+        long best = 0;
+        for (int i = 0; i <= heights.length; i++) {
+            int height = i == heights.length ? 0 : heights[i];
+            if (height < 0) throw new IllegalArgumentException("Heights must be nonnegative");
+            while (!stack.empty() && heights[stack.peek()] > height) {
+                int bar = heights[stack.pop()];
+                int left = stack.empty() ? 0 : stack.peek() + 1;
+                best = Math.max(best, (long) bar * (i - left));
+            }
+            stack.push(i);
+        }
+        return best;
+    }
 }
