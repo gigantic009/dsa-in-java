@@ -4,6 +4,9 @@
 
 ## Start here
 
+**For juniors sharing this repository:** begin with the [Student Start Here guide](./STUDENT-START-HERE.md). It explains setup, the learning loop, practice, revision and how to report bugs.
+
+
 - [Course quality benchmark and self-sufficiency standards](COURSE-QUALITY-BENCHMARK.md)
 
 **New to programming? Begin at [00 — Foundations](./00-Foundations/README.md).** Do not jump directly into advanced problem solutions.
@@ -83,6 +86,10 @@
 - [Repository audit](./REPOSITORY-AUDIT.md)
 - [LeetCode problem index](./LEETCODE.md)
 - [Practice and testing standards](./CONTRIBUTING.md)
+
+## Course status
+
+This repository has a complete topic roadmap and learning framework, but not every lesson has reached textbook-level depth and not every solution has been individually tested. CI checks compilation, selected regression tests and internal Markdown links; these checks are useful but are not a guarantee of correctness. See [Repository Audit](./REPOSITORY-AUDIT.md) for the current scope and known limitations.
 
 ## Topic branches and question bank
 
