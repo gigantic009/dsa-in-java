@@ -15,20 +15,20 @@
 | 2 | Time/space complexity and analysis | [Complexity](./02-Complexity/README.md) |
 | 3 | Arrays, searching, two pointers, prefix sums, hashing | [Arrays](./03-Arrays/README.md) |
 | 4 | Searching and sorting patterns | [Searching & Sorting](./04-Searching-and-Sorting/README.md) |
-| 5 | Strings and string patterns | [Strings](./05-Strings/README.md) |
-| 6 | Matrices and 2D arrays | [2D Arrays](./06-2D-Arrays/README.md) |
+| 5 | Strings and string patterns | [Strings](./06-Strings/README.md) |
+| 6 | Matrices and 2D arrays | [2D Arrays](./05-Two-D-Arrays/README.md) |
 | 7 | Bit operations and bit patterns | [Bit Manipulation](./07-Bit-Manipulation/README.md) |
 | 8 | Recursion and divide-and-conquer | [Recursion](./09-Recursion/README.md) / [Divide & Conquer](./10-Divide-and-Conquer/README.md) |
 | 9 | Linked lists | [Linked Lists](./11-Linked-Lists/README.md) |
-| 10 | Stacks and queues | [Stacks](./12-Stacks/README.md) / Queues |
-| 11 | Backtracking | [Backtracking](./13-Backtracking/README.md) |
+| 10 | Stacks and queues | [Stacks](./12-Stacks/README.md) / [Queues](./13-Queues/README.md) |
+| 11 | Backtracking | [Backtracking](./19-Backtracking/README.md) |
 | 12 | Trees, binary trees, BSTs | [Binary Trees](./14-Binary-Trees/README.md) / [BST](./15-Binary-Search-Trees/README.md) |
 | 13 | Heaps and hashing | [Heaps & Hashing](./16-Heaps-and-Hashing/README.md) |
-| 14 | Greedy algorithms | [Greedy](./17-Greedy/README.md) |
-| 15 | Graphs | [Graphs](./18-Graphs/README.md) |
-| 16 | Tries | [Tries](./19-Tries/README.md) |
+| 14 | Greedy algorithms | [Greedy](./18-Greedy/README.md) |
+| 15 | Graphs | [Graphs](./17-Graphs/README.md) |
+| 16 | Tries | [Tries](./21-Tries/README.md) |
 | 17 | Dynamic programming | [DP](./20-Dynamic-Programming/README.md) |
-| 18 | Segment trees and range queries | [Segment Trees](./21-Segment-Trees/README.md) |
+| 18 | Segment trees and range queries | [Segment Trees](./22-Segment-Trees/README.md) |
 | 19 | Interview practice, mixed revision and timed assessments | [LeetCode index](./LEETCODE.md) |
 
 > Folder links above are intended navigation targets; topic availability and lesson depth will be progressively audited and expanded. Check the branch/topic directory if a path isn't present yet.
