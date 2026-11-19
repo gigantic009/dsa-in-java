@@ -1,2 +1,15 @@
-/* Matrix transpose. Example [[1,2,3],[4,5,6]] -> [[1,4],[2,5],[3,6]]. O(mn) time and output space. */
-import java.util.Arrays;public class TransposeMatrix{static int[][]transpose(int[][]a){int[][]t=new int[a[0].length][a.length];for(int i=0;i<a.length;i++)for(int j=0;j<a[0].length;j++)t[j][i]=a[i][j];return t;}public static void main(String[]x){System.out.println(Arrays.deepToString(transpose(new int[][]{{1,2,3},{4,5,6}})));}}
+/** Transpose rectangular matrix. O(rows*columns) time and output space. */
+import java.util.Arrays;
+public class TransposeMatrix {
+    static int[][] transpose(int[][] matrix) {
+        int[][] result=new int[matrix[0].length][matrix.length];
+        for(int row=0;row<matrix.length;row++)
+            for(int col=0;col<matrix[0].length;col++)
+                result[col][row]=matrix[row][col];
+        return result;
+    }
+    public static void main(String[] args) {
+        int[][] matrix={{1,2,3},{4,5,6}};
+        System.out.println(Arrays.deepToString(transpose(matrix)));
+    }
+}
