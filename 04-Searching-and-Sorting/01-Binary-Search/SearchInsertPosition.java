@@ -1,3 +1,8 @@
+// EDUCATIONAL NOTES:
+// This is a lower-bound search over [low, high), a half-open interval.
+// Values before low are smaller than target; values at/after high are
+// candidates. The converged low is the first index >= target, or array length.
+
 /** LeetCode 35: return target's index, or its insertion position.
  * Time: O(log n), Space: O(1). */
 public class SearchInsertPosition {
