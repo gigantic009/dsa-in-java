@@ -13,6 +13,11 @@ public class SubarraySumDivisibleByK {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Array size must be non-negative");
+            sc.close();
+            return;
+        }
         if (k == 0) {
             System.out.println("k must be non-zero");
             sc.close();
@@ -20,6 +25,7 @@ public class SubarraySumDivisibleByK {
         }
 
         /*
+         * The absolute divisor is computed in long to safely handle Integer.MIN_VALUE.
          * If two prefix sums have the same remainder modulo k, their difference
          * (the subarray between them) is divisible by k. Store how often each
          * remainder has appeared to count all such endings in constant average time.
