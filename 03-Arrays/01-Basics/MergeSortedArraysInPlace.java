@@ -2,9 +2,6 @@
  * Problem: Merge two sorted arrays in place so their combined values
  * remain sorted across the two arrays.
  * LeetCode: Not available (the usual LeetCode #88 problem uses a different interface).
- * Companies: Not listed
- * Time Complexity: O((n + m) * log(n + m))
- * Space Complexity: O(1), excluding the input arrays.
  */
 
 import java.util.Arrays;
