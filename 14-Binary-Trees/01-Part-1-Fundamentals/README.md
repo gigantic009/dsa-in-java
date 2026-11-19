@@ -12,7 +12,7 @@ Root, parent, child, sibling, leaf, depth, height, subtree.
 - Level order: visit by levels, typically with a queue.
 
 ## Common problems
-Maximum depth, node count, leaf count, diameter, balance, level-order variants, lowest common ancestor, path sums.
+Maximum depth, node count and leaf count (CountTreeNodes.java), diameter, balance, level-order variants, lowest common ancestor, path sums.
 
 ## Recursive pattern
 Define precisely what the helper returns for a subtree. Base case for null, recursively solve left/right, and combine results. Avoid repeatedly computing the same subtree metric.
