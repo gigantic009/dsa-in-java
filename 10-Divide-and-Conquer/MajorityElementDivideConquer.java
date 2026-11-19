@@ -1,4 +1,6 @@
 // Find a majority element using divide-and-conquer.
+// Time Complexity: O(n log n) — candidate comparison/counting across recursive levels.
+// Space Complexity: O(log n) recursion stack.
 public class MajorityElementDivideConquer {
     private static int candidate(int[] a, int left, int right) {
         if (left == right) {
