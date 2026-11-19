@@ -1,4 +1,6 @@
 // Quickselect finds the kth largest element without fully sorting.
+// Time Complexity: Average O(n), worst O(n^2), depending on pivot placement.
+// Space Complexity: Average O(log n), worst O(n) recursion stack.
 import java.util.Scanner;
 
 public class QuickSelect {
