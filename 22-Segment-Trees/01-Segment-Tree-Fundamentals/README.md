@@ -1,4 +1,8 @@
 # Segment Tree Fundamentals
-
-## Theory
-Why range-query data structures are useful; tree representation; build; query; merge function; point update; lazy propagation; Fenwick tree comparison.
+## Medium
+- [ ] Build tree
+- [ ] Range sum query
+- [ ] Point update
+- [ ] Range minimum
+## Hard
+- [ ] Lazy propagation
