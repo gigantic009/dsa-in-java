@@ -1,9 +1,6 @@
 /*
  * Problem: Print the common elements present in three sorted arrays.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n + m + k)
- * Space Complexity: O(c), where c is the number of common elements.
  */
 
 import java.util.ArrayList;
