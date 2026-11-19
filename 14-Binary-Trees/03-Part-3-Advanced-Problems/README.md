@@ -1,7 +1,11 @@
-# Binary Trees — Part 3: Advanced Problems
-
-## Theory
-Balanced tree, subtree, lowest common ancestor, path sum, tree construction from traversals, serialize/deserialize and maximum path sum.
-
-## Practice
-Diameter; LCA; kth ancestor; sum tree; distance between nodes; maximum path sum.
+# Advanced Binary Trees
+## Medium
+- [ ] Diameter
+- [ ] LCA
+- [ ] Maximum width
+- [ ] Path sum variants
+- [ ] Nodes at distance K
+## Hard
+- [ ] Maximum path sum
+- [ ] Serialize/deserialize
+- [ ] Reconstruct from traversal sequences
