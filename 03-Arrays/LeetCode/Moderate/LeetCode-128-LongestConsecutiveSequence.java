@@ -2,6 +2,7 @@
  * Problem: Find the length of the longest consecutive sequence
  * in an unsorted array.
  * LeetCode: #128
+ * Time: O(n) average | Auxiliary space: O(n)
  */
 
 import java.util.HashSet;
@@ -16,11 +17,14 @@ class LeetCode128LongestConsecutiveSequence {
         for (int i = 0; i < n; i++) {
             numbers.add(sc.nextInt());
         }
+
+        // Iterate over distinct values and start only at sequence boundaries.
         int longestLength = 0;
         for (int number : numbers) {
-            // Start counting only when this is the first number in a sequence.
+            // If number - 1 exists, this sequence was already counted from earlier.
             if (number == Integer.MIN_VALUE || !numbers.contains(number - 1)) {
                 int currentLength = 1;
+                // Use long to safely test the next value beyond int boundaries.
                 long nextNumber = (long) number + 1;
                 while (nextNumber <= Integer.MAX_VALUE
                         && numbers.contains((int) nextNumber)) {
