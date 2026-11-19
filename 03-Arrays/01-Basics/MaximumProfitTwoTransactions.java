@@ -20,6 +20,8 @@ public class MaximumProfitTwoTransactions {
         }
         long[] bestLeft = new long[n];
         long[] bestRight = new long[n];
+
+        // bestLeft[i] stores the best single-transaction profit ending on or before i.
         long minimumPrice = Long.MAX_VALUE;
         long bestProfit = 0;
         for (int i = 0; i < n; i++) {
@@ -27,6 +29,8 @@ public class MaximumProfitTwoTransactions {
             bestProfit = Math.max(bestProfit, prices[i] - minimumPrice);
             bestLeft[i] = bestProfit;
         }
+
+        // bestRight[i] stores the best single-transaction profit starting on or after i.
         long maximumPrice = Long.MIN_VALUE;
         bestProfit = 0;
         for (int i = n - 1; i >= 0; i--) {
@@ -34,6 +38,9 @@ public class MaximumProfitTwoTransactions {
             bestProfit = Math.max(bestProfit, maximumPrice - prices[i]);
             bestRight[i] = bestProfit;
         }
+
+        // Try every split: one transaction on the left, another on the right.
+        // A zero profit is allowed, so the result also covers fewer than two trades.
         long answer = 0;
         for (int i = 0; i < n; i++) {
             answer = Math.max(answer, bestLeft[i] + bestRight[i]);
