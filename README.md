@@ -72,6 +72,10 @@
 - Don't copy a solution until you have made a genuine attempt.
 - Include tests for empty, smallest, largest relevant, duplicate, negative and boundary cases as applicable.
 
+## Assessments
+
+- [Beginner Checkpoint 1](./ASSESSMENTS/BEGINNER-CHECKPOINT-1.md) — foundations, Java, arrays and complexity.
+
 ## Roadmap, study tools and quality standards
 
 - [Problem-solving guide and stuck protocol](./PROBLEM-SOLVING-GUIDE.md)
