@@ -1,4 +1,2 @@
-// Interface specifies behavior; implementations supply concrete payment logic.
-interface Payment {void pay(double amount);}
-class UpiPayment implements Payment {public void pay(double amount){System.out.println("Paid via UPI: "+amount);}}
-public class PaymentDemo {public static void main(String[]args){Payment p=new UpiPayment();p.pay(500);}}
+import java.util.Scanner;
+interface PaymentMethod {void pay(double amount);}class UpiPayment implements PaymentMethod {public void pay(double amount){System.out.println("Paid via UPI: "+amount);}}class CardPayment implements PaymentMethod {public void pay(double amount){System.out.println("Paid via card: "+amount);}}public class Payment {public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Payment amount: ");double amount=sc.nextDouble();if(amount<=0){System.out.println("Amount must be positive");sc.close();return;}sc.nextLine();System.out.print("Method (upi/card): ");String choice=sc.nextLine().trim().toLowerCase();PaymentMethod p;if(choice.equals("upi"))p=new UpiPayment();else if(choice.equals("card"))p=new CardPayment();else{System.out.println("Unknown payment method");sc.close();return;}p.pay(amount);sc.close();}}
