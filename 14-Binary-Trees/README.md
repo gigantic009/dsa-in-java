@@ -1,25 +1,24 @@
 # Binary Trees — Build a Strong Foundation
 
 ## Prerequisites
-Recursion, references, stacks, queues and complexity.
+Recursion, references, stacks, queues and complexity analysis.
 
 ## Vocabulary
-Root, parent, child, sibling, leaf, depth, height, subtree, path, complete, full and balanced. Define height conventions consistently (edge count or node count).
+Root, parent, child, sibling, leaf, depth, height, subtree, path, complete, full and balanced. In this folder, maximum depth/height is measured in **nodes**; diameter is measured in **edges**.
 
 ## Learning sequence
-- [Part 1: Fundamentals](01-Part-1-Fundamentals/README.md): tree construction, node structure, height, count, sum and basic recursion.
-- [Part 2: Traversals](02-Part-2-Traversals/README.md): preorder, inorder, postorder, level-order, iterative traversal and views.
-- [Part 3: Advanced problems](03-Part-3-Advanced-Problems/README.md): diameter, path sum, balanced tree, LCA, construction and other patterns.
+- [Part 1: Fundamentals](01-Part-1-Fundamentals/README.md): node structure, counting nodes/leaves and maximum depth.
+- [Part 2: Traversals](02-Part-2-Traversals/README.md): iterative inorder, preorder, postorder and level-order traversal.
+- [Part 3: Advanced problems](03-Part-3-Advanced-Problems/README.md): invert tree, diameter, path sum and LCA.
 
 ## DFS vs BFS
-DFS traversals use recursion or an explicit stack. Level order uses a queue. Learn to choose the traversal based on the information the problem requires.
+DFS explores depth first, using recursion or a stack. BFS explores level by level using a queue. Choose the approach according to the information the problem requires.
+
+## Code library coverage
+Every implemented problem in the three subfolders is linked in its respective README. Topics listed as future practice are clearly marked as not yet implemented.
 
 ## Checkpoint
-Construct a small tree, perform all four basic traversals, calculate height and count, then solve an unseen path problem.
+Build a small tree, perform all four basic traversals, calculate its depth and node count, invert it, and solve a root-to-leaf path sum problem.
 
-
-## Sprint teaching expansion
-
-Trees need not be BST. Preorder/inorder/postorder/level order. Traversal O(n), recursion O(height), worst O(n). Test empty, singleton, balanced and skewed.
-
-Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
+## Complexity
+A traversal that visits every node takes O(n) time. Recursive traversal uses O(h) stack space, where h is the tree height; in a skewed tree h can be n.
