@@ -4,6 +4,9 @@ import java.util.List;
 
 public class SubsetGeneration {
     public static List<List<Integer>> generate(int[] nums) {
+        if (nums == null) {
+            throw new IllegalArgumentException("Input array must not be null.");
+        }
         List<List<Integer>> result = new ArrayList<>();
         walk(nums, 0, new ArrayList<>(), result);
         return result;
