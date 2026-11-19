@@ -23,3 +23,10 @@ First In, First Out (FIFO): enqueue adds at the back and dequeue removes from th
 
 ## Checkpoint
 Implement a circular queue and use a queue for BFS. Explain the invariant for head, tail and occupancy.
+
+
+## Sprint teaching expansion
+
+FIFO; circular buffers wrap and distinguish full/empty. Deque supports both ends. Patterns BFS, level traversal, sliding maximum. Test wrap-around and capacity one.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
