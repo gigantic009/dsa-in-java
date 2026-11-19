@@ -2,9 +2,6 @@
  * Problem: Find the union and intersection of two sorted arrays.
  * Repeated values are printed only once.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n + m)
- * Space Complexity: O(n + m) for the result lists.
  */
 
 import java.util.ArrayList;
