@@ -74,6 +74,41 @@ public class AuditRegressionTests {
                 }
             }
         }
-        System.out.println("Audit regression tests passed.");
+
+        // Differential checks for migrated LeetCode-style array solutions.
+        check(LeetCode121BestTimeToBuyAndSellStock.maxProfit(new int[]{7,1,5,3,6,4}) == 5, "Stock #121");
+        check(LeetCode121BestTimeToBuyAndSellStock.maxProfit(new int[]{7,6,4,3,1}) == 0, "Stock no profit");
+        check(LeetCode53MaximumSubarray.maxSubarraySum(new int[]{-2,1,-3,4,-1,2,1,-5,4}) == 6, "Kadane #53");
+        check(LeetCode53MaximumSubarray.maxSubarraySum(new int[]{-5,-2,-8}) == -2, "Kadane all negative");
+        check(LeetCode217ContainsDuplicate.containsDuplicate(new int[]{1,2,3,1}), "Duplicate positive");
+        check(!LeetCode217ContainsDuplicate.containsDuplicate(new int[]{1,2,3,4}), "No duplicate");
+        check(Arrays.equals(LeetCode238ProductOfArrayExceptSelf.productExceptSelf(new int[]{1,2,3,4}), new long[]{24,12,8,6}), "Product except self");
+        check(Arrays.equals(LeetCode238ProductOfArrayExceptSelf.productExceptSelf(new int[]{0,2,0}), new long[]{0,0,0}), "Product except self zeros");
+        check(LeetCode42TrappingRainWater.trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1}) == 6, "Trapping rainwater");
+        check(LeetCode287FindTheDuplicateNumber.findDuplicate(new int[]{1,3,4,2,2}) == 2, "Duplicate cycle method");
+
+        Random arrayRng = new Random(8122026L);
+        for (int trial = 0; trial < 500; trial++) {
+            int n = 1 + arrayRng.nextInt(12);
+            int[] a = new int[n];
+            for (int i = 0; i < n; i++) a[i] = arrayRng.nextInt(21) - 10;
+            // Brute-force maximum subarray.
+            long bruteMax = Long.MIN_VALUE;
+            for (int l = 0; l < n; l++) for (int r = l; r < n; r++) {
+                long s = 0; for (int k = l; k <= r; k++) s += a[k];
+                bruteMax = Math.max(bruteMax, s);
+            }
+            check(LeetCode53MaximumSubarray.maxSubarraySum(a) == bruteMax, "Random maximum subarray");
+            // Brute-force single-transaction stock profit.
+            long bruteProfit = 0;
+            for (int buy = 0; buy < n; buy++) for (int sell = buy + 1; sell < n; sell++)
+                bruteProfit = Math.max(bruteProfit, (long)a[sell] - a[buy]);
+            check(LeetCode121BestTimeToBuyAndSellStock.maxProfit(a) == bruteProfit, "Random stock profit");
+            // Product-except-self oracle, bounded inputs keep oracle arithmetic safe.
+            long[] oracle = new long[n];
+            for (int i = 0; i < n; i++) { long product = 1; for (int j = 0; j < n; j++) if (i != j) product *= a[j]; oracle[i] = product; }
+            check(Arrays.equals(LeetCode238ProductOfArrayExceptSelf.productExceptSelf(a), oracle), "Random product except self");
+        }
+\n        System.out.println("Audit regression tests passed.");
     }
 }
