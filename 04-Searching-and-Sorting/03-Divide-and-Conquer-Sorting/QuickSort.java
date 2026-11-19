@@ -1,0 +1,2 @@
+/* Quick sort using last-element pivot; average O(n log n), worst O(n^2), recursion space average O(log n). */
+import java.util.Arrays;public class QuickSort{static void sort(int[]a,int l,int r){if(l>=r)return;int p=partition(a,l,r);sort(a,l,p-1);sort(a,p+1,r);}static int partition(int[]a,int l,int r){int pivot=a[r],i=l;for(int j=l;j<r;j++)if(a[j]<=pivot){int t=a[i];a[i++]=a[j];a[j]=t;}int t=a[i];a[i]=a[r];a[r]=t;return i;}public static void main(String[]x){int[]a={9,3,7,1,5};sort(a,0,a.length-1);System.out.println(Arrays.toString(a));}}
