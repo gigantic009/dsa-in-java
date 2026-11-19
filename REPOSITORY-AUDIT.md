@@ -108,3 +108,19 @@ The repository currently has 18 branches: main, 2d-arrays-matrix, arrays, backtr
 
 ### Scope caveat
 Targeted source inspection and regression coverage do not imply all 107 Java files have been audited. Full per-file correctness review, branch reconciliation, and navigation review remain in progress. CI's automated link check is a useful first pass, not proof of every external link or every Markdown anchor.
+
+
+## Branch inventory audit — 19 November 2026
+
+### Branches inspected against main tree
+- arrays: contains a substantial set of additional array exercises, LeetCode solutions, Markdown walkthroughs, question-bank and solution-reference assets. This branch is the principal content source requiring selective migration and content review.
+- 2d-arrays-matrix: tree comparison shows only a duplicate root-level `03-Arrays/ReverseArray.java` and question-bank assets as path additions; matrix curriculum material is already represented in main. The question-bank assets are not assumed audited.
+- backtracking, binary-search-trees, binary-trees, dynamic-programming, graphs, greedy, heaps-hashing, linked-lists, searching-sorting, stacks-queues: tree comparison showed no substantive unique path additions beyond duplicate root-level array reverse file (content/commit similarity should be confirmed before archiving).
+- bit-manipulation, segment-trees, strings, tries: comparison similarly surfaced question-bank assets in some branches, plus the redundant root-level array reverse copy. Main contains the topic directories and implementations, but the branch question banks remain candidates for review rather than automatically discarded.
+- feature/topic-wise-dsa-course: topic-wise curriculum branch was compared; no substantive unique path additions surfaced beyond the duplicate root-level reverse-array file.
+
+### Duplicate removal
+- Removed `03-Arrays/ReverseArray.java` from main because it duplicated the implementation in `03-Arrays/01-Basics/ReverseArray.java` byte-for-byte.
+
+### Branch audit caveat
+Tree/path comparison is not a complete semantic audit of every file on every branch. The arrays branch's additional source files and branch question-bank content require individual content review before selectively migrating or deleting. Branches are retained; no wholesale destructive branch deletion has occurred.
