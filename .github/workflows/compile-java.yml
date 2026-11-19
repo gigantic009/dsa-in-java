@@ -25,7 +25,15 @@ jobs:
             count=$((count + 1))
             out="compile-results/$count"
             mkdir -p "$out"
-            if [[ "$file" == *"KruskalMST.java" ]]; then\n              if javac -d "$out" "$(dirname "$file")/UnionFind.java" "$file" 2> "$out/error.txt"; then\n                echo "PASS: $file (with dependency)"\n              else\n                failures=$((failures + 1))\n                echo "FAIL: $file"\n                cat "$out/error.txt"\n              fi\n            elif javac -d "$out" "$file" 2> "$out/error.txt"; then
+            if [[ "$file" == *"KruskalMST.java" ]]; then
+              if javac -d "$out" "$(dirname "$file")/UnionFind.java" "$file" 2> "$out/error.txt"; then
+                echo "PASS: $file (with dependency)"
+              else
+                failures=$((failures + 1))
+                echo "FAIL: $file"
+                cat "$out/error.txt"
+              fi
+            elif javac -d "$out" "$file" 2> "$out/error.txt"; then
               echo "PASS: $file"
             else
               failures=$((failures + 1))
