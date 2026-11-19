@@ -11,7 +11,7 @@ public class FindMinimumRotatedSortedArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        if (n == 0) {
+        if (n <= 0) {
             System.out.println("Array is empty");
             sc.close();
             return;
@@ -20,10 +20,18 @@ public class FindMinimumRotatedSortedArray {
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
         }
+
+        // The minimum lies within this search interval.
         int left = 0;
         int right = n - 1;
         while (left < right) {
             int middle = left + (right - left) / 2;
+            /*
+             * Compare with the rightmost value:
+             * - middle > rightmost: the rotation pivot/minimum is to the right.
+             * - middle < rightmost: middle or a value to its left is the minimum.
+             * - equality: duplicates prevent choosing a side safely, so shrink right.
+             */
             if (numbers[middle] > numbers[right]) {
                 left = middle + 1;
             } else if (numbers[middle] < numbers[right]) {
@@ -33,6 +41,7 @@ public class FindMinimumRotatedSortedArray {
                 right--;
             }
         }
+        // The search converges on the minimum's index.
         System.out.println(numbers[left]);
         sc.close();
     }
