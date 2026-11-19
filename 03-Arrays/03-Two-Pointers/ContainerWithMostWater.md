@@ -1,7 +1,6 @@
 # Container With Most Water
 
-**LeetCode:** [#11 — Container With Most Water](https://leetcode.com/problems/container-with-most-water/)  
-**Companies:** Flipkart, Dunzo
+**LeetCode:** [#11 — Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 ## Intuition
 Start with the widest container. The shorter side limits the water level, so move that pointer inward; moving the taller side cannot improve the limiting height while width shrinks.
