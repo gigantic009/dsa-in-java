@@ -1,3 +1,8 @@
+// EDUCATIONAL NOTES:
+// The array must be sorted in ascending order. Each comparison eliminates
+// roughly half of the remaining candidates. low/high describe the inclusive
+// search interval; the loop ends when that interval becomes empty.
+
 /** Binary Search (LeetCode 704): find a target in a sorted array.
  * Time: O(log n), Space: O(1). */
 public class BinarySearch {
