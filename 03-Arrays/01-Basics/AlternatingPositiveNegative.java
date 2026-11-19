@@ -2,6 +2,7 @@
  * Problem: Rearrange an array so positive and negative values alternate.
  * Start with a positive value. If one type has extra values, place them at the end.
  * LeetCode: Not available
+ * Time: O(n) | Auxiliary space: O(n)
  */
 
 import java.util.ArrayList;
@@ -10,10 +11,10 @@ import java.util.Scanner;
 
 public class AlternatingPositiveNegative {
     public static void rearrange(int[] numbers) {
+        // Separate values so alternating placement does not lose either group.
         List<Integer> positiveNumbers = new ArrayList<>();
         List<Integer> negativeNumbers = new ArrayList<>();
-        // Separate the positive and negative values.
-        // Zero is treated as a non-negative value.
+        // Zero is treated as non-negative in this implementation.
         for (int number : numbers) {
             if (number >= 0) {
                 positiveNumbers.add(number);
@@ -21,10 +22,12 @@ public class AlternatingPositiveNegative {
                 negativeNumbers.add(number);
             }
         }
+
+        // Read each separated list with its own pointer and write into the original array.
         int index = 0;
         int positiveIndex = 0;
         int negativeIndex = 0;
-        // Place one positive value, then one negative value.
+        // Place non-negative then negative values while both groups have values.
         while (positiveIndex < positiveNumbers.size()
                 && negativeIndex < negativeNumbers.size()) {
             numbers[index] = positiveNumbers.get(positiveIndex);
@@ -34,19 +37,19 @@ public class AlternatingPositiveNegative {
             negativeIndex++;
             index++;
         }
-        // Add any remaining positive values.
+        // If one group is larger, its remaining values are placed at the end.
         while (positiveIndex < positiveNumbers.size()) {
             numbers[index] = positiveNumbers.get(positiveIndex);
             positiveIndex++;
             index++;
         }
-        // Add any remaining negative values.
         while (negativeIndex < negativeNumbers.size()) {
             numbers[index] = negativeNumbers.get(negativeIndex);
             negativeIndex++;
             index++;
         }
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
