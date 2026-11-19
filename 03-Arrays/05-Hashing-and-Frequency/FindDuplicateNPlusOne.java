@@ -2,9 +2,6 @@
  * Problem: An array contains n + 1 values from 1 to n.
  * Exactly one value is repeated. Find that value without changing the array.
  * LeetCode: #287
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(1), excluding the input array.
  */
 
 import java.util.Scanner;
