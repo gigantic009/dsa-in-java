@@ -1,3 +1,8 @@
+// EDUCATIONAL NOTES:
+// A normal binary search may stop at any matching duplicate. Instead, this
+// helper records a match and continues in the direction of the desired edge.
+// Run it twice to find the first and last positions in logarithmic time.
+
 /** LeetCode 34: find first and last occurrences of a target.
  * Two binary searches; Time O(log n), Space O(1). */
 import java.util.Arrays;
