@@ -10,6 +10,9 @@ import java.util.Scanner;
 
 public class MedianOfTwoSortedArrays {
     public static double findMedian(int[] first, int[] second) {
+        if (first.length == 0 && second.length == 0) {
+            throw new IllegalArgumentException("At least one array must be non-empty");
+        }
         // Binary search must be performed on the smaller array.
         if (first.length > second.length) {
             return findMedian(second, first);
