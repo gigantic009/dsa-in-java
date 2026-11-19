@@ -1,15 +1,2 @@
-public class FactorialRecursion {
-    public static long factorial(int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("n must be non-negative");
-        }
-        if (n <= 1) {
-            return 1;
-        }
-        return n * factorial(n - 1);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(factorial(5));
-    }
-}
+import java.util.Scanner;
+public class FactorialRecursion {public static long factorial(int n){if(n<0)throw new IllegalArgumentException("n must be non-negative");if(n<=1)return 1;return n*factorial(n-1);}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("n: ");int n=sc.nextInt();if(n<0||n>20){System.out.println("Enter n from 0 to 20 for long factorial");sc.close();return;}System.out.println(factorial(n));sc.close();}}
