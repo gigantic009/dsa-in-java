@@ -1,9 +1,9 @@
 # Shortest Paths
 ## Easy
-- [ ] Unweighted BFS distance
+- [x] Unweighted BFS distance (UnweightedShortestPath.java)
 ## Medium
-- [ ] Dijkstra
-- [ ] Bellman-Ford
+- [x] Dijkstra (Dijkstra.java)
+- [x] Bellman-Ford (BellmanFord.java)
 - [ ] Floyd-Warshall
 - [ ] DAG shortest path
 - [ ] Cheapest flights k stops
