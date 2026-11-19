@@ -104,3 +104,9 @@ The repository contains topic branches and a question bank drawn from supplied l
 This repository aims to provide the explanations, examples, practice, revision, and assessments needed to learn DSA without paying for a course. Mastery still comes from actively solving problems, debugging, and reviewing—not from reading answers passively.
 
 **Start at Foundations. Be consistent. Write code every day.**
+
+
+## Full completion and audit trackers
+
+- [Completion Program](./COMPLETION-PROGRAM.md) — evidence-based criteria for all 23 topics, testing, branch reconciliation, assessments and LeetCode mapping.
+- [Java Source Audit Register](./AUDIT/JAVA-SOURCE-REGISTER.md) — individual source-file review queue; entries are not marked verified without evidence.
