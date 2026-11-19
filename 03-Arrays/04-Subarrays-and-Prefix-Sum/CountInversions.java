@@ -1,9 +1,6 @@
 /*
  * Problem: Count pairs (i, j) where i < j and numbers[i] > numbers[j].
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n log n)
- * Space Complexity: O(n), for the temporary array.
  */
 
 import java.util.Scanner;
