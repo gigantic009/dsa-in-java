@@ -2,9 +2,6 @@
  * Problem: Check whether the second array is a subset of the first array.
  * Repeated values must also have enough matching occurrences.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n + m) average
- * Space Complexity: O(n)
  */
 
 import java.util.HashMap;
