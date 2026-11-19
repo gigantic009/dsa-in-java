@@ -1,7 +1,6 @@
 /*
  * Problem: Rearrange an array so all negative elements appear on one side.
  * LeetCode: Not available
- * Companies: Not listed
  * Time: O(n) | Auxiliary space: O(1)
  * Note: The relative order of elements is not preserved.
  */
