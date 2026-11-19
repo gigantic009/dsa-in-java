@@ -1,6 +1,6 @@
 # Advanced Binary Trees
 ## Medium
-- [ ] Diameter
+- [x] Diameter (TreeDiameter.java)
 - [ ] LCA
 - [ ] Maximum width
 - [ ] Path sum variants
