@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
+/** Counts the number of 1-bits in an integer using Brian Kernighan's algorithm. */
 public class CountSetBits {
-    // Brian Kernighan's algorithm counts set bits in O(number of set bits).
+
+    // Each iteration removes the rightmost set bit; runs once per set bit.
     public static int count(int number) {
         int total = 0;
 
         while (number != 0) {
-            number &= number - 1; // Remove the rightmost 1-bit on each iteration.
+            number &= number - 1;
             total++;
         }
 
