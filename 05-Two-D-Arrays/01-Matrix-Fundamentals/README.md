@@ -1,19 +1,13 @@
 # Matrix Fundamentals
-## Easy
-- [ ] Matrix traversal (row/column)
-- [ ] Sum all elements
-- [ ] Row and column sums
-- [ ] Diagonal sums
-- [ ] Transpose
-- [ ] Linear matrix search
-## Medium
-- [ ] Rotate 90 degrees
-- [ ] Spiral traversal
+## Implemented Java solutions
+- [Transpose](TransposeMatrix.java)
+- [Spiral Matrix (LeetCode 54)](SpiralMatrix.java)
+- [Rotate Image (LeetCode 48)](RotateMatrix90.java)
+
+## Planned
+- [ ] Matrix traversal and sums
+- [ ] Row/column and diagonal sums
+- [ ] Search matrix
 - [ ] Set matrix zeroes
-- [ ] Reshape matrix
-- [ ] Toeplitz matrix
-- [ ] Diagonal traversal
-## Hard
+- [ ] Reshape / Toeplitz / diagonal traversal
 - [ ] Maximum sum rectangle
-- [ ] Spiral matrix generation
-Each completed problem should have an individual Java file.
