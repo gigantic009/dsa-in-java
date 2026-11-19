@@ -109,6 +109,6 @@ public class AuditRegressionTests {
             for (int i = 0; i < n; i++) { long product = 1; for (int j = 0; j < n; j++) if (i != j) product *= a[j]; oracle[i] = product; }
             check(Arrays.equals(LeetCode238ProductOfArrayExceptSelf.productExceptSelf(a), oracle), "Random product except self");
         }
-\n        System.out.println("Audit regression tests passed.");
+        System.out.println("Audit regression tests passed.");
     }
 }
