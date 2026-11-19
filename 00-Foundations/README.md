@@ -43,3 +43,10 @@ Try to make each step precise enough that someone else could follow it without a
 
 ## Read next
 [Java Basics](../01-Java-Basics/README.md) → [Complexity](../02-Complexity/README.md).
+
+
+## Sprint teaching expansion
+
+An algorithm is a finite process. Restate task, input/output/constraints, examples; devise brute force then improve. Trace; use invariant or induction. Practice search, counting, min/max, digit processing and simulation.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
