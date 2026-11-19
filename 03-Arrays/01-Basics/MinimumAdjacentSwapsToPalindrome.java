@@ -2,10 +2,6 @@
  * Problem: Find the minimum adjacent swaps needed to rearrange an array
  * into a palindrome, or report that it is impossible.
  * LeetCode: Not available
- * Companies: Not listed
- * Assumption: This solution counts adjacent swaps.
- * Time Complexity: O(n^2)
- * Space Complexity: O(n), for the frequency map.
  */
 
 import java.util.HashMap;
