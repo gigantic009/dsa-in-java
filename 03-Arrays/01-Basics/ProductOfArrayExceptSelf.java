@@ -2,7 +2,6 @@
  * Problem: For each index, find the product of all array elements
  * except the element at that index. Do not use division.
  * LeetCode: #238
- * Companies: Microsoft, Facebook
  * Time Complexity: O(n)
  * Space Complexity: O(1) extra space, excluding the output array.
  */
@@ -14,19 +13,28 @@ public class ProductOfArrayExceptSelf {
         int n = numbers.length;
         long[] answer = new long[n];
         long prefixProduct = 1;
-        // Store the product of all elements to the left of each index.
+        /*
+         * At each index, save the product of values strictly to its left.
+         * The prefix is updated only after storing it, so numbers[i] is excluded.
+         */
         for (int i = 0; i < n; i++) {
             answer[i] = prefixProduct;
             prefixProduct = prefixProduct * numbers[i];
         }
+
+        /*
+         * Walk backward with a suffix product (values strictly to the right).
+         * Multiply it into the saved prefix to get the product excluding index i.
+         * No division is needed, and zero values are handled naturally.
+         */
         long suffixProduct = 1;
-        // Multiply by the product of all elements to the right.
         for (int i = n - 1; i >= 0; i--) {
             answer[i] = answer[i] * suffixProduct;
             suffixProduct = suffixProduct * numbers[i];
         }
         return answer;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
