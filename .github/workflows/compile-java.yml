@@ -14,7 +14,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Compile every Java source independently
+      - name: Compile every Java source independently with source discovery
         shell: bash
         run: |
           set -e
@@ -25,21 +25,13 @@ jobs:
             count=$((count + 1))
             out="compile-results/$count"
             mkdir -p "$out"
-            if [[ "$file" == *"KruskalMST.java" ]]; then
-              if javac -d "$out" "$(dirname "$file")/UnionFind.java" "$file" 2> "$out/error.txt"; then
-                echo "PASS: $file (with dependency)"
-              else
-                failures=$((failures + 1))
-                echo "FAIL: $file"
-                cat "$out/error.txt"
-              fi
-            elif javac -d "$out" "$file" 2> "$out/error.txt"; then
+            if javac -sourcepath . -d "$out" "$file" 2> "$out/error.txt"; then
               echo "PASS: $file"
             else
               failures=$((failures + 1))
               echo "FAIL: $file"
               cat "$out/error.txt"
             fi
-          done < <(find . -name '*.java' -print0)
+          done < <(find . -name '*.java' -not -path './compile-results/*' -print0)
           echo "Checked $count Java files; failures: $failures"
           if [ "$failures" -gt 0 ]; then exit 1; fi
