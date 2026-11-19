@@ -1,16 +1,2 @@
-/** LeetCode 344: reverse character array in place. O(n) time, O(1) space. */
-import java.util.Arrays;
-public class ReverseString {
-    static void reverse(char[] chars) {
-        int left=0, right=chars.length-1; // Start from opposite ends.
-        while(left<right) {
-            char temp=chars[left]; chars[left]=chars[right]; chars[right]=temp; // Swap.
-            left++; right--; // Move inward after swapping.
-        }
-    }
-    public static void main(String[] args) {
-        char[] chars={'h','e','l','l','o'};
-        reverse(chars);
-        System.out.println(Arrays.toString(chars));
-    }
-}
+import java.util.*;
+public class ReverseString {static void reverse(char[]a){int l=0,r=a.length-1;while(l<r){char t=a[l];a[l]=a[r];a[r]=t;l++;r--;}}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Enter text to reverse: ");char[]a=sc.nextLine().toCharArray();reverse(a);System.out.println(new String(a));sc.close();}}
