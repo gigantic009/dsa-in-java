@@ -1,7 +1,6 @@
 /*
  * Problem: Find the maximum product of a contiguous subarray.
  * LeetCode: #152
- * Companies: Amazon, D-E-Shaw, Microsoft, Morgan Stanley, OYO Rooms, Google
  * Time: O(n) | Auxiliary space: O(1)
  */
 import java.util.Scanner;
