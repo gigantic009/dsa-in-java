@@ -1,7 +1,6 @@
 /*
  * Problem: Arrange non-negative integers to form the largest possible number.
  * LeetCode: #179
- * Companies: Barclays
  * Time: O(n log n * k) | Space: O(n * k), where k is max token length
  */
 import java.util.Arrays;
