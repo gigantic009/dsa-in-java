@@ -54,3 +54,9 @@ Each call keeps its local state until its child returns. Calls unwind in reverse
 
 ## Checkpoint
 Draw the call stack for factorial and fast power. Implement two array recursion problems without looking at code.
+
+
+## Complexity notes
+- Factorial recursion: O(n) time and O(n) call-stack space; the demo restricts n to 20 for long.
+- First occurrence: O(n) worst-case time and O(n) stack space; start index must be valid and non-negative.
+- Fast power: O(log n) recursive calls and O(log n) stack space. The long result can overflow for large bases/exponents.
