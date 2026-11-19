@@ -37,3 +37,10 @@ First write the recursive relation. Add memoization to avoid recomputing states.
 
 ## Checkpoint
 Derive and implement Fibonacci, stairs, house robber, grid paths, subset sum and one string DP problem from a blank editor, explaining the state and transition.
+
+
+## Sprint teaching expansion
+
+Define state, recurrence, base, dependency order; memoize/tabulate then optimize space. Families: 1D, grid, subsequence, knapsack, interval, string. Test small dimensions, unreachable states and overflow.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
