@@ -1,8 +1,6 @@
 /*
  * Problem: Print every unique triplet whose sum is zero.
  * LeetCode: #15
- * Companies: Adobe, Amazon, Microsoft, Morgan Stanley, Samsung,
- *            Snapdeal, Times Internet
  * Time Complexity: O(n^2)
  * Space Complexity: Depends on sorting and the result list.
  */
