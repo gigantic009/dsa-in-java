@@ -1,9 +1,6 @@
 /*
  * Problem: Arrange non-negative integers to form the largest possible number.
  * LeetCode: #179
- * Companies: Barclays
- * Time Complexity: O(n log n * k), where k is the average number length.
- * Space Complexity: O(n * k) for storing the numbers and result.
  */
 
 import java.util.Arrays;
