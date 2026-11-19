@@ -2,6 +2,7 @@
  * Problem: Compute the factorial of a non-negative integer
  * whose result may exceed primitive numeric types.
  * LeetCode: Not available
+ * Time: O(n) multiplications (digit complexity grows with the result)
  */
 
 import java.math.BigInteger;
@@ -16,9 +17,12 @@ public class FactorialLargeNumber {
             sc.close();
             return;
         }
-        // BigInteger can store numbers larger than long.
+
+        // BigInteger avoids overflow when the factorial exceeds long's range.
         BigInteger factorial = BigInteger.ONE;
+        // Start at 2 because 0! and 1! are both 1.
         for (int i = 2; i <= n; i++) {
+            // Multiply the running result by each integer through n.
             factorial = factorial.multiply(BigInteger.valueOf(i));
         }
         System.out.println(factorial);
