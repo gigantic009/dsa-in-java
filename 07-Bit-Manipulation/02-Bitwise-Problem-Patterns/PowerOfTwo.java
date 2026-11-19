@@ -1,7 +1,2 @@
-// Determine whether a positive integer is a power of two.
-public class PowerOfTwo {
-    public static boolean check(int n) {
-        return n > 0 && (n & (n - 1)) == 0; // Powers of two contain exactly one set bit.
-    }
-    public static void main(String[] args) { System.out.println(check(16)); }
-}
+import java.util.Scanner;
+public class PowerOfTwo {public static boolean check(int n){return n>0&&(n&(n-1))==0;}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Integer: ");int n=sc.nextInt();System.out.println(check(n));sc.close();}}
