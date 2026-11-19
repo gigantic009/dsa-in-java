@@ -1,12 +1,24 @@
-# Linked Lists — Part A: Singly Linked List
+# Singly Linked Lists — Question Bank
 
-## Theory
-Node, head, tail, traversal, insertion/deletion, search, length, iterative/recursive reversal, slow-fast pointers and Floyd cycle detection.
-
-## Solved problems
-- [Reverse a singly linked list](ReverseLinkedList.java)
-- [Find the middle node](MiddleOfLinkedList.java)
-
-## Company-tagged practice from the Apna source
-- Detect and remove loop in a linked list — Accolite, Amazon, D-E-Shaw, Hike, Lybrate, Mahindra Comviva, MakeMyTrip and MAQ Software.
-- Delete without head node — Amazon, Goldman Sachs, Microsoft, Samsung and Visa.
+### Easy
+- [ ] Create, traverse and print list
+- [ ] Insert at head / tail / index
+- [ ] Delete head / tail / given value
+- [ ] Search in list
+- [ ] Find length
+- [ ] Reverse linked list (iterative)
+- [ ] Reverse linked list (recursive)
+- [ ] Middle of linked list
+- [ ] Remove duplicates from sorted list
+### Medium
+- [ ] Detect cycle
+- [ ] Find cycle start
+- [ ] Merge two sorted lists
+- [ ] Remove nth node from end
+- [ ] Palindrome linked list
+- [ ] Intersection of two linked lists
+- [ ] Add two numbers
+- [ ] Reverse nodes in k-group
+### Hard
+- [ ] Merge k sorted lists
+- [ ] Flatten multilevel list
