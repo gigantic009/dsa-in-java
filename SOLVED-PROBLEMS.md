@@ -1,6 +1,6 @@
 # Solved Problem Index
 
-The following are implemented Java examples in this repository. Each source file is standalone and contains no explanatory comments.
+The following are implemented Java examples in this repository. Source files vary in format: some are standalone demonstrations and others are focused method examples; many include explanatory comments.
 
 | Topic | Question | Solution | Time | Auxiliary space |
 |---|---|---|---:|---:|
