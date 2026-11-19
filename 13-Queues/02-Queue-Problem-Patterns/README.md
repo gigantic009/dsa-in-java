@@ -1,4 +1,11 @@
-# Queue Problem Patterns
-
-## Practice
-Queue using stacks; stack using queues; reverse first K elements; first non-repeating character in a stream; sliding-window maximum; rotten oranges.
+# Queue Patterns
+## Easy
+- [ ] Generate binary numbers
+## Medium
+- [ ] Rotten oranges
+- [ ] Flood fill
+- [ ] Sliding window maximum
+- [ ] First negative in window
+- [ ] Gas station circuit
+## Hard
+- [ ] Grid shortest path BFS
