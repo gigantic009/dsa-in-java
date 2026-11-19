@@ -2,9 +2,6 @@
  * Problem: Partition an array into values below a, from a through b,
  * and values above b.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(1), excluding the input array.
  */
 
 import java.util.Arrays;
