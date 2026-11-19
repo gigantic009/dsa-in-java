@@ -121,3 +121,5 @@ This repository aims to provide the explanations, examples, practice, revision, 
 
 - [Cumulative Exam Plan](./ASSESSMENTS/CUMULATIVE-EXAM-PLAN.md) — topic-cluster tests and monthly reflection.
 - [Branch Reconciliation Register](./BRANCH-RECONCILIATION.md) — path-level findings and migration status.
+
+- [Repository cleanup policy](./REPOSITORY-CLEANUP.md) — what is retained and how redundant files are safely removed.
