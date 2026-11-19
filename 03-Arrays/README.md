@@ -13,8 +13,10 @@ Java variables, loops, methods, basic input/output and complexity fundamentals.
 5. [Hashing and frequency](05-Hashing-and-Frequency/README.md): lookup, counting, duplicate detection and frequency maps.
 
 ## Additional problems migrated from the legacy arrays branch
+Preserved implementations include [Maximum Product Subarray](01-Basics/MaximumProductSubarray.java), [Product Except Self](01-Basics/ProductOfArrayExceptSelf.java), [Maximum Profit — Two Transactions](01-Basics/MaximumProfitTwoTransactions.java), [Minimum Jumps](01-Basics/MinimumJumpsToEnd.java), [Merge Intervals](01-Basics/MergeIntervals.java), and [Move Negatives to One Side](01-Basics/MoveNegativesToOneSide.java).
 
-The following implementations were preserved from the topic branch and are now in the canonical course tree: [Maximum Product Subarray](01-Basics/MaximumProductSubarray.java), [Product Except Self](01-Basics/ProductOfArrayExceptSelf.java), [Maximum Profit — Two Transactions](01-Basics/MaximumProfitTwoTransactions.java), [Minimum Jumps](01-Basics/MinimumJumpsToEnd.java), [Merge Intervals](01-Basics/MergeIntervals.java), and [Move Negatives to One Side](01-Basics/MoveNegativesToOneSide.java). These are being individually tested and their explanation material will be expanded as audit progresses.
+## Additional reference material
+The repository also contains supplementary problem notes in [03-Two-Pointers](03-Two-Pointers/) and [06-Hashing](06-Hashing/). These folders contain reference markdown, not the primary chapter sequence.
 
 ## Essential concepts
 - Array length vs valid indices (0 through length−1)
@@ -42,9 +44,7 @@ Write the brute-force solution first when appropriate, explain why it works, imp
 - [ ] Explain prefix sum and sliding window.
 - [ ] Solve 10 unseen array problems and explain complexity.
 
-Company-tagged material: [Interview problem index](../INTERVIEW-PROBLEMS.md). Company associations are not guarantees of what a company will ask.
-
+Interview associations are not guarantees of what a company will ask; see the [Interview problem index](../INTERVIEW-PROBLEMS.md).
 
 ## Additional masterclass
-
 - [Arrays Masterclass](./ARRAYS-MASTERCLASS.md) — pattern comparison, prefix sums, pointers, sliding-window assumptions, Kadane trace, correctness reasoning, edge-case checklist and mastery exercises.
