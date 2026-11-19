@@ -2,9 +2,6 @@
  * Problem: Given tower heights and a positive integer k, add or subtract
  * k from each height to minimize the difference between maximum and minimum.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n log n), due to sorting.
- * Space Complexity: Depends on the sorting implementation.
  */
 
 import java.util.Arrays;
