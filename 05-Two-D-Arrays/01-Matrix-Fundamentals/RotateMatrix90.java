@@ -1,26 +1,2 @@
-/** LeetCode 48: clockwise rotation of square matrix in place. O(n^2), O(1). */
-import java.util.Arrays;
-public class RotateMatrix90 {
-    static void rotate(int[][] matrix) {
-        int n = matrix.length;
-        // Step 1: transpose; swap across the main diagonal only once.
-        for (int row=0; row<n; row++) {
-            for (int col=row+1; col<n; col++) {
-                int temp=matrix[row][col];
-                matrix[row][col]=matrix[col][row];
-                matrix[col][row]=temp;
-            }
-        }
-        // Step 2: reverse each row to complete clockwise rotation.
-        for (int[] row : matrix) {
-            for (int left=0, right=n-1; left<right; left++, right--) {
-                int temp=row[left]; row[left]=row[right]; row[right]=temp;
-            }
-        }
-    }
-    public static void main(String[] args) {
-        int[][] matrix={{1,2,3},{4,5,6},{7,8,9}};
-        rotate(matrix);
-        System.out.println(Arrays.deepToString(matrix));
-    }
-}
+import java.util.*;
+public class RotateMatrix90 {static void rotate(int[][]m){int n=m.length;for(int r=0;r<n;r++)for(int c=r+1;c<n;c++){int t=m[r][c];m[r][c]=m[c][r];m[c][r]=t;}for(int[]row:m)for(int l=0,h=n-1;l<h;l++,h--){int t=row[l];row[l]=row[h];row[h]=t;}}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Square matrix size n: ");int n=sc.nextInt();if(n<=0){System.out.println("Size must be positive");sc.close();return;}int[][]m=new int[n][n];System.out.println("Enter matrix elements row-wise:");for(int i=0;i<n;i++)for(int j=0;j<n;j++)m[i][j]=sc.nextInt();rotate(m);System.out.println(Arrays.deepToString(m));sc.close();}}
