@@ -1,27 +1,29 @@
 # Interview Patterns — Recognize the Structure, Prove the Invariant
 
-Patterns are shortcuts for recognizing repeated algorithmic structures. They are not replacements for reasoning: every pattern needs a valid precondition and invariant.
+Algorithmic patterns help recognize recurring problem structures. A pattern is only valid when its preconditions hold and its invariant is understood.
 
 ## Core patterns
-- **Two pointers:** maintain two indices and move them according to a property (often sorted arrays or opposite ends).
+- **Two pointers:** maintain two indices and move them according to a property (often a sorted array or opposite ends).
 - **Sliding window:** maintain a contiguous range; define exactly when it can expand or shrink.
-- **Fast/slow pointers:** exploit different movement speeds for linked-list or sequence structure.
-- **Prefix sum + hash map:** count/find subarray properties by relating prefix states.
+- **Fast/slow pointers:** exploit different movement speeds in linked-list or sequence structures.
+- **Prefix sum + hash map:** count or find subarray properties by relating prefix states.
 - **Binary search on answer:** feasibility is monotonic; define and prove the predicate.
-- **Monotonic stack/queue:** retain candidates in an order useful for next-greater, extrema or range problems.
-- **Top-K:** use a heap or selection method based on required ordering and size.
+- **Monotonic stack/queue:** retain candidates in an order useful for next-greater elements or range extrema.
+- **Top-K:** use a heap or selection method based on the required ordering and size.
 - **Intervals:** sort and reason about overlap, endpoints and merge rules.
 - **DSU:** maintain connectivity under union operations.
 
 ## Pattern journal
-For every problem, record: the signal that suggested the pattern; brute force; invariant; why pointer/state updates are valid; complexity; boundary cases; and one similar problem.
+For every problem, record the signal that suggested the pattern, brute force, invariant, why state updates are valid, complexity, boundary cases, and one related problem.
 
-## Practice
-Do not simply tag a problem. After solving, explain why a tempting alternate pattern fails or is less efficient.
+## Implemented example
+- [Two pointers — pair sum in a sorted array](01-Core-Patterns/TwoSumSorted.java): O(n) time, O(1) auxiliary space. The input must be sorted in non-decreasing order.
 
+## Practice roadmap
+See [Core Patterns practice list](01-Core-Patterns/README.md) for the problem roadmap.
 
-## Sprint teaching expansion
+## Sprint teaching approach
+Clarify constraints, derive brute force, identify the bottleneck, establish an invariant, implement, test, and analyze. Build pattern fluency across hashing, pointers, windows, binary search, prefix sums, stacks, BFS/DFS, heaps, backtracking and dynamic programming.
 
-Clarify constraints, brute force, bottleneck, invariant, implementation, tests and complexity. Patterns hashing, pointers, window, binary search, prefix, stack, BFS/DFS, heap, backtracking, DP. Mixed practice.
-
-Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
+## Self-check
+Can you explain the pattern, trace it, justify each update, implement it without hints, test boundary cases, and analyze complexity?
