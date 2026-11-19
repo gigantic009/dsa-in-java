@@ -1,7 +1,7 @@
 # Traversal Patterns
 ## Easy
-- [ ] Iterative preorder/inorder/postorder
-- [ ] Level order
+- [x] Iterative preorder/inorder/postorder (IterativeTraversals.java)
+- [x] Level order (LevelOrderTraversal.java)
 ## Medium
 - [ ] Morris traversals
 - [ ] Right-side view
