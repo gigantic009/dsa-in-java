@@ -47,3 +47,7 @@ Start with subsets and permutations. Predict the number of outputs for small inp
 
 ## Checkpoint
 Write the template from memory. Solve subsets and permutations, and explain why every branch restores its state.
+
+## Complexity notes
+- Generate Parentheses: Catalan-number output count; generating and storing the strings costs O(n * C_n) time and space for the output (recursive working depth O(n)).
+- N-Queens: worst-case search is exponential (often bounded loosely by O(n! * n) with board scans); output storage depends on the number of solutions and board size.
