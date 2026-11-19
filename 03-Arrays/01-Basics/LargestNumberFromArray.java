@@ -15,20 +15,33 @@ public class LargestNumberFromArray {
             long value = scanner.nextLong();
             if (value < 0) {
                 System.out.println("Inputs must be non-negative");
+                scanner.close();
                 return;
             }
+            // Strings allow us to compare concatenated orders without numeric overflow.
             numbers[i] = String.valueOf(value);
         }
+
+        /*
+         * For two strings a and b, compare ab with ba.
+         * If ba is larger, b should come before a; this pairwise rule
+         * produces the arrangement that maximizes the final concatenation.
+         */
         Arrays.sort(numbers, (first, second) ->
                 (second + first).compareTo(first + second));
+
         if (n == 0) {
             System.out.println("");
+            scanner.close();
             return;
         }
+        // If the largest sorted token is zero, every input was zero.
         if (numbers[0].equals("0")) {
             System.out.println("0");
+            scanner.close();
             return;
         }
+        // Join the tokens in their sorted order to form the result.
         StringBuilder result = new StringBuilder();
         for (String number : numbers) {
             result.append(number);
