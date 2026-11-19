@@ -1,2 +1,44 @@
 import java.util.*;
-public class SpiralMatrix {static List<Integer>spiral(int[][]m){List<Integer>out=new ArrayList<>();int top=0,bottom=m.length-1,left=0,right=m[0].length-1;while(top<=bottom&&left<=right){for(int c=left;c<=right;c++)out.add(m[top][c]);top++;for(int r=top;r<=bottom;r++)out.add(m[r][right]);right--;if(top<=bottom){for(int c=right;c>=left;c--)out.add(m[bottom][c]);bottom--;}if(left<=right){for(int r=bottom;r>=top;r--)out.add(m[r][left]);left++;}}return out;}static int[][]read(Scanner sc){System.out.print("Rows: ");int r=sc.nextInt();System.out.print("Columns: ");int c=sc.nextInt();if(r<=0||c<=0)throw new IllegalArgumentException("Dimensions must be positive");int[][]m=new int[r][c];System.out.println("Enter matrix elements row-wise:");for(int i=0;i<r;i++)for(int j=0;j<c;j++)m[i][j]=sc.nextInt();return m;}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.println(spiral(read(sc)));sc.close();}}
+
+public class SpiralMatrix {
+    // Traverse layer by layer, shrinking the four boundaries.
+    static List<Integer> spiral(int[][] matrix) {
+        List<Integer> result = new ArrayList<>();
+        int top = 0, bottom = matrix.length - 1;
+        int left = 0, right = matrix[0].length - 1;
+
+        while (top <= bottom && left <= right) {
+            // Traverse the top boundary.
+            for (int col = left; col <= right; col++) result.add(matrix[top][col]);
+            top++;
+
+            // Traverse the right boundary.
+            for (int row = top; row <= bottom; row++) result.add(matrix[row][right]);
+            right--;
+
+            // Traverse the bottom boundary only if it still exists.
+            if (top <= bottom) {
+                for (int col = right; col >= left; col--) result.add(matrix[bottom][col]);
+                bottom--;
+            }
+
+            // Traverse the left boundary only if it still exists.
+            if (left <= right) {
+                for (int row = bottom; row >= top; row--) result.add(matrix[row][left]);
+                left++;
+            }
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        System.out.println(spiral(matrix));
+    }
+}
