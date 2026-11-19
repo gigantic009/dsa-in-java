@@ -1,9 +1,9 @@
 # Cycles & Topological Sort
 ## Medium
-- [ ] Undirected cycle detection
-- [ ] Directed cycle detection
+- [x] Undirected cycle detection (CycleDetectionUndirected.java)
+- [x] Directed cycle detection (DirectedCycleDetection.java)
 - [ ] DFS topological sort
-- [ ] Kahn topological sort
+- [x] Kahn topological sort (KahnTopologicalSort.java)
 - [ ] Course schedule
 - [ ] Course schedule II
 - [ ] Alien dictionary
