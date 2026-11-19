@@ -28,7 +28,7 @@ Maintain `prev`, `curr`, and `next`. Save next before changing curr.next. Redire
 Create/traverse, length, search, insertion/deletion, reverse, middle node, remove duplicates.
 
 ### Medium
-Cycle detection, merge sorted lists, remove nth from end, palindrome, intersection, add two numbers, reverse k groups.
+Cycle detection, merge sorted lists (`MergeSortedLists.java`), remove nth from end, palindrome, intersection, add two numbers, reverse k groups.
 
 ### Challenge
 Merge k sorted lists and copy a list with random pointers.
