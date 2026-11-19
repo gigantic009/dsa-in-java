@@ -1,7 +1,15 @@
 # Hashing
-
-## Theory
-Hash function, collisions, HashMap, HashSet, frequency maps, lookup complexity and prefix-frequency patterns.
-
-## Practice
-Two Sum; group anagrams; contains duplicate; top K frequent elements.
+## Easy
+- [ ] Frequency map
+- [ ] Two sum
+- [ ] Contains duplicate
+- [ ] Array intersection
+- [ ] Valid anagram
+## Medium
+- [ ] Group anagrams
+- [ ] Longest consecutive sequence
+- [ ] Subarray sum k
+- [ ] Distinct window counts
+- [ ] Four sum
+## Hard
+- [ ] Subarray XOR k
