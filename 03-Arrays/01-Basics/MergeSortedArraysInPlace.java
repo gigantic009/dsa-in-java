@@ -2,20 +2,22 @@
  * Problem: Merge two sorted arrays in place so their combined values
  * remain sorted across the two arrays.
  * LeetCode: Not available (the usual LeetCode #88 problem uses a different interface).
+ * Time: O((n + m) log(n + m)) | Auxiliary space: O(1)
  */
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class MergeSortedArraysInPlace {
-    // Read a value using its position in the combined arrays.
+    // Treat both arrays as one virtual array, without physically joining them.
     public static int getValue(int[] first, int[] second, int index) {
         if (index < first.length) {
             return first[index];
         }
         return second[index - first.length];
     }
-    // Change a value using its position in the combined arrays.
+
+    // Write to the corresponding physical array using the virtual index.
     public static void setValue(
             int[] first, int[] second, int index, int value) {
         if (index < first.length) {
@@ -24,6 +26,7 @@ public class MergeSortedArraysInPlace {
             second[index - first.length] = value;
         }
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -46,13 +49,18 @@ public class MergeSortedArraysInPlace {
         for (int i = 0; i < m; i++) {
             second[i] = sc.nextInt();
         }
-        // Begin with a gap of half the total number of elements.
+
+        /*
+         * Shell-sort-style gap merging: compare virtual positions separated by a gap.
+         * A large initial gap moves out-of-order values across arrays efficiently;
+         * progressively smaller gaps refine the order until gap 1 sorts adjacent pairs.
+         */
         int totalLength = n + m;
         int gap = (totalLength + 1) / 2;
         while (gap > 0) {
             int left = 0;
             int right = gap;
-            // Compare values that are 'gap' positions apart.
+            // Compare and swap each pair of virtual positions gap apart.
             while (right < totalLength) {
                 int leftValue = getValue(first, second, left);
                 int rightValue = getValue(first, second, right);
@@ -66,7 +74,7 @@ public class MergeSortedArraysInPlace {
             if (gap == 1) {
                 break;
             }
-            // Reduce the gap for the next pass.
+            // Halve the gap (rounding up) to keep shrinking toward adjacent comparisons.
             gap = (gap + 1) / 2;
         }
         System.out.println(Arrays.toString(first));
