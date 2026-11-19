@@ -1,4 +1,11 @@
 # Queue Fundamentals
-
-## Theory
-FIFO, enqueue/dequeue/peek, array and linked-list implementations, circular queue, deque, Java Queue and ArrayDeque.
+## Easy
+- [ ] Array queue
+- [ ] Linked queue
+- [ ] Circular queue
+- [ ] Deque
+## Medium
+- [ ] Queue using stacks
+- [ ] Stack using queues
+- [ ] First non-repeating stream
+- [ ] Sliding window maximum
