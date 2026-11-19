@@ -37,3 +37,10 @@ Traversal/search: O(n). Access by index: O(n). Insert/delete at a known node/ref
 - [ ] Find middle and nth-from-end.
 - [ ] Detect a cycle using Floyd's algorithm.
 - [ ] Explain complexity of access vs insertion.
+
+
+## Sprint teaching expansion
+
+Nodes are references, not contiguous. Maintain links/head/tail; operations often require predecessor. Test empty, singleton, head/tail changes, duplicates, cycles; trace pointer changes.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
