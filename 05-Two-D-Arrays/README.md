@@ -4,7 +4,7 @@
 Understand 1D arrays, loops, nested loops and array indexing.
 
 ## 1. What is a 2D array?
-A Java 2D array is an array whose elements are references to row arrays. Rows may have different lengths (a jagged array), so `matrix.length` counts rows while `matrix[r].length` counts columns in row r.
+A Java 2D array is an array whose elements are references to row arrays. Rows may have different lengths (a jagged array). `matrix.length` counts rows while `matrix[row].length` counts the cells in that row.
 
 ```java
 int[][] matrix = {
@@ -43,7 +43,7 @@ For a square matrix, swapping `matrix[i][j]` with `matrix[j][i]` only above the 
 A common square-matrix 90-degree clockwise rotation strategy is transpose followed by reversing each row. Trace a 3×3 example before coding.
 
 ## 6. Search in sorted matrix
-Do not assume every matrix is sorted in the same way. Row-sorted and globally sorted matrices have different search approaches. State the precondition before choosing an algorithm.
+Do not assume every matrix is sorted in the same way. A globally sorted matrix supports flattened binary search; a row/column sorted matrix can use staircase search. State the precondition before choosing an algorithm.
 
 ## Practice ladder
 1. Print all cells.
@@ -65,9 +65,5 @@ Do not assume every matrix is sorted in the same way. Row-sorted and globally so
 - [ ] Explain the preconditions for each search technique.
 - [ ] Solve three unseen matrix problems.
 
-
-## Sprint teaching expansion
-
-Java int[][] rows may be jagged/null. State assumptions. Traversal O(rows*columns). Patterns transpose, spiral, rotation, boundary, matrix search. Test empty, single row/column, non-square and jagged.
-
-Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
+## Self-check
+Explain the approach, trace it by hand, justify each boundary or marker, implement it, test edge cases and analyze complexity.
