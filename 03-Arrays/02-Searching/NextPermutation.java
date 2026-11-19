@@ -2,6 +2,7 @@
  * Problem: Find the next lexicographically greater permutation.
  * If no greater permutation exists, rearrange the array into ascending order.
  * LeetCode: #31
+ * Time: O(n) | Auxiliary space: O(1)
  */
 
 import java.util.Arrays;
@@ -20,24 +21,37 @@ public class NextPermutation {
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
         }
-        // Step 1: Find the first number from the right that is smaller
-        // than the number immediately after it.
+
+        /*
+         * Step 1: Find the pivot in the descending suffix.
+         * This is the rightmost index whose value is smaller than its successor.
+         * Everything after it is already in non-increasing order.
+         */
         int pivot = n - 2;
         while (pivot >= 0 && numbers[pivot] >= numbers[pivot + 1]) {
             pivot--;
         }
-        // Step 2: If a pivot exists, find the next larger number from the right.
+
+        /*
+         * Step 2: If the pivot exists, swap it with the smallest value in the suffix
+         * that is still greater than it (found by scanning from the right).
+         * This makes the increase as small as possible.
+         */
         if (pivot >= 0) {
             int nextLarger = n - 1;
             while (numbers[nextLarger] <= numbers[pivot]) {
                 nextLarger--;
             }
-            // Step 3: Swap the pivot and the next larger number.
             int temp = numbers[pivot];
             numbers[pivot] = numbers[nextLarger];
             numbers[nextLarger] = temp;
         }
-        // Step 4: Reverse the part after the pivot.
+
+        /*
+         * Step 3: Reverse the suffix after the pivot. It was descending, and reversal
+         * makes it ascending, yielding the smallest suffix for the next permutation.
+         * If no pivot exists, pivot is -1 and this reverses the whole array to ascending.
+         */
         int left = pivot + 1;
         int right = n - 1;
         while (left < right) {
