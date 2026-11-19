@@ -13,7 +13,7 @@ public class BankAccount {
 
     // Deposits only finite, positive amounts. Invalid values leave state unchanged.
     public void deposit(double amount) {
-        if (Double.isFinite(amount) && amount > 0) {
+        if (Double.isFinite(amount) && amount > 0 && amount <= Double.MAX_VALUE - balance) {
             balance += amount;
         }
     }
