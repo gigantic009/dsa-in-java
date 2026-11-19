@@ -1,14 +1,11 @@
-# Doubly, Circular & Advanced Linked Lists
-
-### Easy
-- [ ] Doubly linked list traversal and insertion
-- [ ] Delete node in doubly linked list
-- [ ] Circular linked list traversal
-### Medium
-- [ ] Reverse doubly linked list
-- [ ] Detect loop in circular list
-- [ ] Rotate linked list
-- [ ] LRU cache (list + map)
-### Hard
-- [ ] Copy list with random pointer
-- [ ] Design LFU cache (extension)
+# Doubly, Circular & Advanced Lists
+## Easy
+- [ ] Doubly traversal/insertion
+- [ ] Delete doubly node
+- [ ] Circular traversal
+## Medium
+- [ ] Reverse doubly list
+- [ ] Rotate list
+- [ ] LRU cache
+## Hard
+- [ ] Copy random-pointer list
