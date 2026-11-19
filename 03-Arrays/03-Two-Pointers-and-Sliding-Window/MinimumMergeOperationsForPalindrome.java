@@ -2,27 +2,32 @@
  * Problem: Find the minimum merge operations needed to make an array a palindrome.
  * One operation merges two adjacent elements by replacing them with their sum.
  * LeetCode: Not available
+ * Time: O(n) | Auxiliary space: O(1)
  */
 
 import java.util.Scanner;
 
 public class MinimumMergeOperationsForPalindrome {
     public static long minOperations(long[] numbers) {
+        // Work from the outside inward, comparing the two current segment sums.
         int left = 0;
         int right = numbers.length - 1;
         long operations = 0;
         while (left < right) {
             if (numbers[left] == numbers[right]) {
-                // Both sides already match.
+                // Matching sums already form a mirrored pair; move inward.
                 left++;
                 right--;
             } else if (numbers[left] < numbers[right]) {
-                // Merge the left value into its neighbour.
+                /*
+                 * The left segment is smaller, so it must absorb its next neighbor
+                 * to increase its sum. Moving left inward preserves the merged segment.
+                 */
                 numbers[left + 1] = numbers[left + 1] + numbers[left];
                 left++;
                 operations++;
             } else {
-                // Merge the right value into its neighbour.
+                // Symmetrically, merge the smaller right segment into its left neighbor.
                 numbers[right - 1] = numbers[right - 1] + numbers[right];
                 right--;
                 operations++;
@@ -30,6 +35,7 @@ public class MinimumMergeOperationsForPalindrome {
         }
         return operations;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
