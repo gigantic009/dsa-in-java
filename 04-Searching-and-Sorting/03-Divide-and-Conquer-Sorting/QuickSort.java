@@ -1,2 +1,26 @@
-/* Quick sort using last-element pivot; average O(n log n), worst O(n^2), recursion space average O(log n). */
-import java.util.Arrays;public class QuickSort{static void sort(int[]a,int l,int r){if(l>=r)return;int p=partition(a,l,r);sort(a,l,p-1);sort(a,p+1,r);}static int partition(int[]a,int l,int r){int pivot=a[r],i=l;for(int j=l;j<r;j++)if(a[j]<=pivot){int t=a[i];a[i++]=a[j];a[j]=t;}int t=a[i];a[i]=a[r];a[r]=t;return i;}public static void main(String[]x){int[]a={9,3,7,1,5};sort(a,0,a.length-1);System.out.println(Arrays.toString(a));}}
+/** Quick sort using partition. Average O(n log n), worst O(n^2). */
+import java.util.Arrays;
+public class QuickSort {
+    static void sort(int[] nums,int low,int high) {
+        if(low>=high) return;
+        int pivotIndex=partition(nums,low,high);
+        sort(nums,low,pivotIndex-1);
+        sort(nums,pivotIndex+1,high);
+    }
+    private static int partition(int[] nums,int low,int high) {
+        int pivot=nums[high],index=low;
+        for(int j=low;j<high;j++) {
+            if(nums[j]<=pivot) swap(nums,index++,j);
+        }
+        swap(nums,index,high);
+        return index;
+    }
+    private static void swap(int[] nums,int i,int j) {
+        int temp=nums[i]; nums[i]=nums[j]; nums[j]=temp;
+    }
+    public static void main(String[] args) {
+        int[] nums={9,3,7,1,5};
+        sort(nums,0,nums.length-1);
+        System.out.println(Arrays.toString(nums));
+    }
+}
