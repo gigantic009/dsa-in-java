@@ -1,7 +1,2 @@
-// Set a selected bit without changing the other bits.
-public class SetBit {
-    public static int set(int number, int bit) {
-        return number | (1 << bit); // OR turns the masked bit on.
-    }
-    public static void main(String[] args) { System.out.println(set(8, 1)); }
-}
+import java.util.Scanner;
+public class SetBit {public static int set(int n,int b){return n|(1<<b);}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Number: ");int n=sc.nextInt();System.out.print("Bit index (0-based): ");int b=sc.nextInt();if(b<0||b>31)System.out.println("Bit index must be 0..31");else System.out.println(set(n,b));sc.close();}}
