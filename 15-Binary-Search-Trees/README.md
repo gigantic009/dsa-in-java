@@ -14,3 +14,10 @@ Operations are O(h), where h is tree height. A balanced BST has logarithmic heig
 
 ## Checkpoint
 Implement search, insert, delete and validation. Explain why checking only each node's immediate children is insufficient for validation.
+
+
+## Sprint teaching expansion
+
+BST ordering applies across descendants and requires duplicate policy. Inorder is sorted. Validate with propagated bounds. Test duplicates, extreme values and skew.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
