@@ -13,6 +13,11 @@ public class LongestConsecutiveSequence {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Array size must be non-negative");
+            sc.close();
+            return;
+        }
         Set<Integer> numbers = new HashSet<>();
         for (int i = 0; i < n; i++) {
             // A set removes duplicate values and supports average O(1) membership checks.
