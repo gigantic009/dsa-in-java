@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class FactorialRecursion {
     public static long factorial(int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("n must be non-negative");
+        if (n < 0 || n > 20) {
+            throw new IllegalArgumentException("n must be between 0 and 20 for long factorial");
         }
 
         // Base case: 0! and 1! are both 1.
