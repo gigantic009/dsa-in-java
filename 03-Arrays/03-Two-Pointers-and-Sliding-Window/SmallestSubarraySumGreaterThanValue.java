@@ -8,6 +8,13 @@ import java.util.Scanner;
 
 public class SmallestSubarraySumGreaterThanValue {
     public static int minLength(int[] numbers, long target) {
+        for (int number : numbers) {
+            if (number < 0) {
+                throw new IllegalArgumentException(
+                        "Sliding window solution requires non-negative elements"
+                );
+            }
+        }
         int left = 0;
         int minimumLength = numbers.length + 1;
         long currentSum = 0;
