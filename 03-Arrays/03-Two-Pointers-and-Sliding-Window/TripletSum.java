@@ -2,9 +2,6 @@
  * Problem: Determine whether an array contains three elements
  * whose sum equals a given target.
  * LeetCode: #15 is the zero-target 3Sum variant, not an exact match.
- * Companies: Not listed
- * Time Complexity: O(n^2), after sorting.
- * Space Complexity: Depends on the sorting implementation.
  */
 
 import java.util.Arrays;
