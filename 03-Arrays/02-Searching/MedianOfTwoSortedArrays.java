@@ -1,9 +1,6 @@
 /*
  * Problem: Find the median of two sorted arrays of possibly different lengths.
  * LeetCode: #4
- * Companies: Not listed
- * Time Complexity: O(log(min(n, m)))
- * Space Complexity: O(1)
  */
 
 import java.util.Scanner;
