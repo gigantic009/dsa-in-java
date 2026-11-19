@@ -5,22 +5,22 @@ public class BankAccount {
     private double balance; // The balance can only be changed through account methods.
 
     public BankAccount(double initialBalance) {
-        if (initialBalance < 0) {
+        if (!Double.isFinite(initialBalance) || initialBalance < 0) {
             throw new IllegalArgumentException("Initial balance cannot be negative.");
         }
         balance = initialBalance;
     }
 
-    // Deposits only positive amounts.
+    // Deposits only finite, positive amounts. Invalid values leave state unchanged.
     public void deposit(double amount) {
-        if (amount > 0) {
+        if (Double.isFinite(amount) && amount > 0) {
             balance += amount;
         }
     }
 
-    // Returns false if the amount is invalid or exceeds the current balance.
+    // Returns false for non-finite, non-positive or unaffordable withdrawals.
     public boolean withdraw(double amount) {
-        if (amount <= 0 || amount > balance) {
+        if (!Double.isFinite(amount) || amount <= 0 || amount > balance) {
             return false;
         }
 
@@ -39,7 +39,7 @@ public class BankAccount {
         System.out.print("Initial balance: ");
         double initialBalance = sc.nextDouble();
 
-        if (initialBalance < 0) {
+        if (!Double.isFinite(initialBalance) || initialBalance < 0) {
             System.out.println("Initial balance cannot be negative.");
             sc.close();
             return;
