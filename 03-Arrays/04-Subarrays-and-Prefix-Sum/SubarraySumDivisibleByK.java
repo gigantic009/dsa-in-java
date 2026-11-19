@@ -1,9 +1,6 @@
 /*
  * Problem: Count the subarrays whose sum is divisible by k.
  * LeetCode: #974
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(min(n, |k|)) for the frequency map.
  */
 
 import java.util.HashMap;
