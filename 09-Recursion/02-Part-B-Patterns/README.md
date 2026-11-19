@@ -1,17 +1,15 @@
-# Recursion Patterns — Question Bank
-
-### Easy
-- [ ] Generate binary strings
-- [ ] Subsequence generation
-### Medium
-- [ ] Subsets
-- [ ] Subsets with duplicates
+# Recursion Patterns
+## Easy
+- [ ] Binary string generation
+- [ ] Subsequences
+## Medium
+- [ ] Subsets / subsets with duplicates
 - [ ] Permutations
 - [ ] Combination sum
-- [ ] Letter combinations of phone number
+- [ ] Phone keypad combinations
 - [ ] Palindrome partitioning
 - [ ] Rat in a maze
-### Hard
+## Hard
 - [ ] N-Queens
 - [ ] Sudoku solver
-- [ ] Word search using backtracking
+- [ ] Word search
