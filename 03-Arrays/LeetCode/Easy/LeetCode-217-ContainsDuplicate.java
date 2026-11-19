@@ -1,6 +1,7 @@
 /*
  * Problem: Determine whether any value appears at least twice.
  * LeetCode: #217
+ * Time: O(n) average | Auxiliary space: O(n)
  */
 
 import java.util.HashSet;
@@ -9,6 +10,7 @@ import java.util.Set;
 
 class LeetCode217ContainsDuplicate {
     public static boolean containsDuplicate(int[] numbers) {
+        // A set tracks the distinct values encountered so far.
         Set<Integer> seenNumbers = new HashSet<>();
         for (int number : numbers) {
             // add() returns false when the value is already in the set.
@@ -18,6 +20,7 @@ class LeetCode217ContainsDuplicate {
         }
         return false;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
