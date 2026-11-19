@@ -30,3 +30,10 @@ Range sum, range minimum, point update, multiple query types, lazy range update 
 
 ## Checkpoint
 Draw the interval tree for 8 elements, trace a query, trace an update and implement both from scratch.
+
+
+## Sprint teaching expansion
+
+Segment tree summaries combine intervals; build O(n), updates/range queries O(log n), storage O(n). Associative combine; consistent interval convention. Test singleton, bounds, updates, non-power-of-two.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
