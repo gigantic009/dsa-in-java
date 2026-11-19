@@ -2,12 +2,9 @@ import java.util.Scanner;
 
 /**
  * Determines whether n is prime using trial division up to sqrt(n).
+ * Values below 2 are not prime. Using n / i avoids overflow in i * i.
  *
- * Values below 2 are not prime. A composite number must have a divisor
- * no greater than its square root; n / i avoids i * i overflow.
- *
- * Time complexity: O(sqrt(n)) for n >= 2.
- * Auxiliary space: O(1).
+ * Time: O(sqrt(n)) for n >= 2. Auxiliary space: O(1).
  */
 public class PrimeCheck {
     public static void main(String[] args) {
@@ -18,7 +15,7 @@ public class PrimeCheck {
 
         boolean prime = n >= 2;
 
-        // If n has a factor larger than sqrt(n), its paired factor is smaller.
+        // A composite number has a factor at most its square root.
         for (int i = 2; i <= n / i && prime; i++) {
             if (n % i == 0) {
                 prime = false;
