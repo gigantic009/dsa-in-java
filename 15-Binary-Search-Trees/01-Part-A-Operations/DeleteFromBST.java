@@ -1,8 +1,79 @@
-// Delete a key from a BST (duplicates are ignored during insertion).
-// Time: O(h); recursive stack: O(h).
+/*
+ * Problem: Delete a Node from a Binary Search Tree
+ * Difficulty: Medium
+ * Interview practice: Common BST operation.
+ * Duplicate keys are ignored by this repository's insertion convention.
+ *
+ * Time: O(h); recursive stack: O(h).
+ */
+
 public class DeleteFromBST {
- static class Node{int v;Node l,r;Node(int v){this.v=v;}}
- static Node delete(Node n,int x){if(n==null)return null;if(x<n.v)n.l=delete(n.l,x);else if(x>n.v)n.r=delete(n.r,x);else{if(n.l==null)return n.r;if(n.r==null)return n.l;Node s=n.r;while(s.l!=null)s=s.l;n.v=s.v;n.r=delete(n.r,s.v);}return n;}
- static void inorder(Node n){if(n==null)return;inorder(n.l);System.out.print(n.v+" ");inorder(n.r);}
- public static void main(String[]args){Node r=new Node(5);r.l=new Node(3);r.r=new Node(7);r.l.l=new Node(2);r.l.r=new Node(4);r.r.l=new Node(6);r.r.r=new Node(8);r=delete(r,5);inorder(r);System.out.println();}
+
+    static class Node {
+        int value;
+        Node left;
+        Node right;
+
+        Node(int value) {
+            this.value = value;
+        }
+    }
+
+    public static Node delete(Node root, int key) {
+        if (root == null) {
+            return null;
+        }
+
+        // Search for the key using the BST ordering rule.
+        if (key < root.value) {
+            root.left = delete(root.left, key);
+        } else if (key > root.value) {
+            root.right = delete(root.right, key);
+        } else {
+            // Case 1 and 2: zero or one child.
+            if (root.left == null) {
+                return root.right;
+            }
+            if (root.right == null) {
+                return root.left;
+            }
+
+            // Case 3: two children. Find the smallest node in right subtree.
+            Node successor = root.right;
+            while (successor.left != null) {
+                successor = successor.left;
+            }
+
+            // Copy the successor value and remove its old occurrence.
+            root.value = successor.value;
+            root.right = delete(root.right, successor.value);
+        }
+
+        return root;
+    }
+
+    // Inorder traversal prints values in sorted order for a valid BST.
+    static void inorder(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        inorder(root.left);
+        System.out.print(root.value + " ");
+        inorder(root.right);
+    }
+
+    public static void main(String[] args) {
+        Node root = new Node(5);
+        root.left = new Node(3);
+        root.right = new Node(7);
+        root.left.left = new Node(2);
+        root.left.right = new Node(4);
+        root.right.left = new Node(6);
+        root.right.right = new Node(8);
+
+        root = delete(root, 5); // Delete a node with two children.
+        inorder(root);          // Expected: 2 3 4 6 7 8
+        System.out.println();
+    }
 }
