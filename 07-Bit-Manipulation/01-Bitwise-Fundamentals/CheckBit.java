@@ -1,9 +1,2 @@
-// Check whether the ith bit (0-based) is set.
-public class CheckBit {
-    public static boolean isSet(int number, int bit) {
-        return (number & (1 << bit)) != 0; // Mask isolates the requested bit.
-    }
-    public static void main(String[] args) {
-        System.out.println(isSet(10, 1)); // 10 is binary 1010; bit 1 is set.
-    }
-}
+import java.util.Scanner;
+public class CheckBit {public static boolean isSet(int n,int bit){return bit>=0&&bit<32&&(n&(1<<bit))!=0;}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Number: ");int n=sc.nextInt();System.out.print("Bit index (0-based): ");int b=sc.nextInt();if(b<0||b>31)System.out.println("Bit index must be 0..31");else System.out.println("Set: "+isSet(n,b));sc.close();}}
