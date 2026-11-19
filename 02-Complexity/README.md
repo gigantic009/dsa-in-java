@@ -69,3 +69,10 @@ Distinguish total space from auxiliary space. Auxiliary space is additional memo
 7. Explain why two recursive calls per level may lead to exponential work.
 
 **Mastery check:** Given unfamiliar code, define n, count operations, state the bound, and explain your reasoning.
+
+
+## Sprint teaching expansion
+
+Count dominant operations; simplify growth; distinguish cases. Auxiliary space includes temporary allocations/recursion stack. Recognize O(1), log n, n, n log n, n² and exponential. Sequential adds; nested multiplies.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
