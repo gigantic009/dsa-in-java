@@ -41,6 +41,11 @@ public class MinimumMergeOperationsForPalindrome {
         int[] numbers = new int[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
+            if (numbers[i] < 0) {
+                System.out.println("Values must be non-negative for this algorithm");
+                sc.close();
+                return;
+            }
         }
         System.out.println(minOperations(numbers));
         sc.close();
