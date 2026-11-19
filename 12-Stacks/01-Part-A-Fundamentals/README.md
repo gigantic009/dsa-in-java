@@ -1,17 +1,14 @@
-# Stack Fundamentals — Question Bank
-
-### Easy
-- [ ] Stack using array
-- [ ] Stack using linked list
-- [ ] Implement stack using Java collections
+# Stack Fundamentals
+## Easy
+- [ ] Array stack
+- [ ] Linked stack
+- [ ] Java collections stack
 - [ ] Valid parentheses
 - [ ] Reverse stack
-### Medium
+## Medium
 - [ ] Min stack
-- [ ] Evaluate postfix expression
-- [ ] Infix to postfix
-- [ ] Infix to prefix
-- [ ] Evaluate prefix expression
-- [ ] Implement queue using stacks
-### Hard
+- [ ] Postfix evaluation
+- [ ] Infix to postfix/prefix
+- [ ] Queue using stacks
+## Hard
 - [ ] Basic calculator
