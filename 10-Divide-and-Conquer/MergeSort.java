@@ -5,6 +5,9 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void sort(int[] a) {
+        if (a == null) {
+            throw new IllegalArgumentException("Array must not be null");
+        }
         if (a.length < 2) {
             return;
         }
