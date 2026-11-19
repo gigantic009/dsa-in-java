@@ -43,3 +43,8 @@ Write the brute-force solution first when appropriate, explain why it works, imp
 - [ ] Solve 10 unseen array problems and explain complexity.
 
 Company-tagged material: [Interview problem index](../INTERVIEW-PROBLEMS.md). Company associations are not guarantees of what a company will ask.
+
+
+## Additional masterclass
+
+- [Arrays Masterclass](./ARRAYS-MASTERCLASS.md) — pattern comparison, prefix sums, pointers, sliding-window assumptions, Kadane trace, correctness reasoning, edge-case checklist and mastery exercises.
