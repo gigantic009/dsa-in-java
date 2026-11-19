@@ -1,2 +1,27 @@
 import java.util.Scanner;
-public class SetBit {public static int set(int n,int b){return n|(1<<b);}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Number: ");int n=sc.nextInt();System.out.print("Bit index (0-based): ");int b=sc.nextInt();if(b<0||b>31)System.out.println("Bit index must be 0..31");else System.out.println(set(n,b));sc.close();}}
+
+public class SetBit {
+    // Turns the requested bit on while leaving all other bits unchanged.
+    public static int set(int number, int bit) {
+        int mask = 1 << bit; // Build a mask with only the target bit set.
+        return number | mask; // OR forces that bit to 1.
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int number = sc.nextInt();
+
+        System.out.print("Enter bit position (0-31): ");
+        int bit = sc.nextInt();
+
+        if (bit < 0 || bit > 31) {
+            System.out.println("Bit position must be between 0 and 31.");
+        } else {
+            System.out.println("Result after setting bit: " + set(number, bit));
+        }
+
+        sc.close();
+    }
+}
