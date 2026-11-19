@@ -1,9 +1,22 @@
-// Kahn's algorithm: topologically order a directed acyclic graph.
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+
+/** Topological ordering for a DAG using Kahn's algorithm. */
 public class TopologicalSort {
- public static List<Integer> sort(int n,int[][]edges){List<List<Integer>>g=new ArrayList<>();int[]indegree=new int[n];for(int i=0;i<n;i++)g.add(new ArrayList<>());
-  for(int[]e:edges){g.get(e[0]).add(e[1]);indegree[e[1]]++;}Queue<Integer>q=new ArrayDeque<>();for(int i=0;i<n;i++)if(indegree[i]==0)q.add(i);List<Integer>order=new ArrayList<>();
-  while(!q.isEmpty()){int u=q.remove();order.add(u);for(int v:g.get(u))if(--indegree[v]==0)q.add(v);} // A vertex becomes ready once all prerequisites are removed.
-  if(order.size()!=n)throw new IllegalArgumentException("Cycle detected");return order;
- }
+    public static List<Integer> sort(int vertices,int[][] edges) {
+        if(vertices<0)throw new IllegalArgumentException("Invalid vertex count");
+        List<List<Integer>> graph=new ArrayList<>();int[] indegree=new int[vertices];
+        for(int i=0;i<vertices;i++)graph.add(new ArrayList<>());
+        for(int[] edge:edges){
+            if(edge==null||edge.length<2||edge[0]<0||edge[0]>=vertices||edge[1]<0||edge[1]>=vertices)throw new IllegalArgumentException("Invalid edge");
+            graph.get(edge[0]).add(edge[1]);indegree[edge[1]]++;
+        }
+        Queue<Integer> queue=new ArrayDeque<>();for(int i=0;i<vertices;i++)if(indegree[i]==0)queue.add(i);
+        List<Integer> order=new ArrayList<>();
+        while(!queue.isEmpty()){int u=queue.remove();order.add(u);for(int v:graph.get(u))if(--indegree[v]==0)queue.add(v);}
+        if(order.size()!=vertices)throw new IllegalArgumentException("Graph contains a cycle");
+        return order;
+    }
 }
