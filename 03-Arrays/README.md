@@ -12,6 +12,10 @@ Java variables, loops, methods, basic input/output and complexity fundamentals.
 4. [Subarrays and prefix sum](04-Subarrays-and-Prefix-Sum/README.md): contiguous ranges, cumulative sums and Kadane's algorithm.
 5. [Hashing and frequency](05-Hashing-and-Frequency/README.md): lookup, counting, duplicate detection and frequency maps.
 
+## Additional problems migrated from the legacy arrays branch
+
+The following implementations were preserved from the topic branch and are now in the canonical course tree: [Maximum Product Subarray](01-Basics/MaximumProductSubarray.java), [Product Except Self](01-Basics/ProductOfArrayExceptSelf.java), [Maximum Profit — Two Transactions](01-Basics/MaximumProfitTwoTransactions.java), [Minimum Jumps](01-Basics/MinimumJumpsToEnd.java), [Merge Intervals](01-Basics/MergeIntervals.java), and [Move Negatives to One Side](01-Basics/MoveNegativesToOneSide.java). These are being individually tested and their explanation material will be expanded as audit progresses.
+
 ## Essential concepts
 - Array length vs valid indices (0 through length−1)
 - Traversal and updating
