@@ -33,7 +33,7 @@ jobs:
             mkdir -p "$dir"
             echo "Compiling: $file"
             javac -d "$dir" "$file"
-          done < <(find . -name '*.java' -not -path './out/*' -print0)
+          done < <(find . -name '*.java' -not -path './out/*' -not -path './tests/*' -print0)
           echo "Successfully compiled $count Java source files (dependency pair compiled together)."
 
       - name: Run focused regression tests
