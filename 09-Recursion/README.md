@@ -45,3 +45,7 @@ Trace 5 recursive methods by hand, write 5 from scratch, explain stack space and
 Calls must progress toward base case. Define contract and combine smaller results. Track stack/depth. Trace frames. Test base, smallest non-base, typical and deep input.
 
 Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
+
+
+## Complexity and testing
+Always distinguish recursion depth from total work and from output size. For branching problems, output can dominate memory. Test empty input, smallest input, typical input and cases with duplicate values where applicable. FastPower's long arithmetic is not overflow-checked.
