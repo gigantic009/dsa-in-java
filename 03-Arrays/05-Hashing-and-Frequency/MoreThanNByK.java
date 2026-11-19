@@ -1,9 +1,6 @@
 /*
  * Problem: Print all elements that occur more than n/k times.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n + d log d), where d is the number of distinct values.
- * Space Complexity: O(d)
  */
 
 import java.util.ArrayList;
