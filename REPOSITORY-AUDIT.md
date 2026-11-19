@@ -203,3 +203,11 @@ These migrations preserve useful content, but each implementation still needs a 
 - Partially migrated supplementary arrays-branch solutions (32 source files) and preserved the branch question-bank snapshot with a warning about unverified company tags and links.
 - Expanded focused regression testing with deterministic randomized differential checks for segment-tree range sums.
 - Recent commits are triggering CI concurrently; migration code has not yet all been validated by final completed runs.
+
+
+### Sprint CI evidence (19 November)
+
+- Run `44489806341` for commit `b3b27630206dc1cfeb5eb0d8b897317867574935`: **success** — compilation, regression tests and Markdown navigation passed.
+- Run `44489839258` for commit `4462515b8bb9cbec961fec43e5cbc0b04035f6ad`: **success** — compilation, regression tests and Markdown navigation passed.
+- A later commit `5de03d2bfead81e44a9391155e90f7579a11b8d8` compiled 152 Java sources and passed regression tests, but its Markdown check failed due stale relative links in the then-unconverted branch snapshot. Those links were subsequently converted to plain source-path text. The success of later runs confirms the snapshot fix and migration up to the tested commit.
+- The latest main commit still has CI in progress; do not extrapolate the completed runs to untested latest changes.
