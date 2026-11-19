@@ -1,19 +1,2 @@
-public class FastPower {
-    public static long power(long x, int n) {
-        if (n == 0) {
-            return 1;
-        }
-
-        long half = power(x, n / 2);
-
-        if (n % 2 == 0) {
-            return half * half;
-        }
-
-        return x * half * half;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(power(2, 10));
-    }
-}
+import java.util.Scanner;
+public class FastPower {public static long power(long x,int n){if(n<0)throw new IllegalArgumentException("Exponent must be non-negative");if(n==0)return 1;long half=power(x,n/2);return n%2==0?half*half:x*half*half;}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Base: ");long x=sc.nextLong();System.out.print("Non-negative exponent: ");int n=sc.nextInt();if(n<0){System.out.println("Exponent must be non-negative");sc.close();return;}System.out.println(power(x,n));sc.close();}}
