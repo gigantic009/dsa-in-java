@@ -14,6 +14,11 @@ public class MergeIntervals {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
+        if (n < 0) {
+            System.out.println("Interval count must be non-negative");
+            scanner.close();
+            return;
+        }
         int[][] intervals = new int[n][2];
         for (int i = 0; i < n; i++) {
             intervals[i][0] = scanner.nextInt();
