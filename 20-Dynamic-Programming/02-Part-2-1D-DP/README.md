@@ -1,7 +1,11 @@
-# Dynamic Programming — Part 2: 1D DP
-
-## Solved problem
-- [Climbing stairs](ClimbingStairs.java)
-
-## Practice
-Fibonacci; minimum cost climbing stairs; house robber; house robber II; decode ways.
+# 1D Dynamic Programming
+## Easy
+- [ ] Climbing stairs
+- [ ] Min cost climbing stairs
+## Medium
+- [ ] House robber I/II
+- [ ] Decode ways
+- [ ] LIS
+- [ ] Coin change
+## Hard
+- [ ] LIS optimized
