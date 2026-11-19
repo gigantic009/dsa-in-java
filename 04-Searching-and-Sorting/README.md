@@ -1,36 +1,16 @@
-# Searching & Sorting Question Bank
-## Searching — Easy
-- [ ] Linear search
-- [ ] Binary search (iterative/recursive)
-- [ ] Search insert position
-- [ ] First and last position
-- [ ] Floor and ceiling
-- [ ] Count occurrences
-## Searching — Medium
-- [ ] Search rotated array
-- [ ] Find rotation minimum
-- [ ] Peak element
-- [ ] Square root by binary search
-- [ ] Kth missing positive
-- [ ] Search 2D matrix
-- [ ] Book allocation / minimum pages
-- [ ] Aggressive cows
-## Searching — Hard
-- [ ] Median of two sorted arrays
-- [ ] Kth element of sorted arrays
-## Sorting — Easy
-- [ ] Bubble sort
-- [ ] Selection sort
-- [ ] Insertion sort
-- [ ] Counting sort
-## Sorting — Medium
-- [ ] Merge sort
-- [ ] Quick sort
-- [ ] Sort 0/1/2
-- [ ] Merge sorted arrays
-- [ ] Merge intervals
-## Sorting — Hard
-- [ ] Count inversions
-- [ ] Reverse pairs
-- [ ] Largest number from array
-Solutions are linked when implemented. Planned checkbox items are not implemented yet. See [LeetCode tracker](../LEETCODE.md).
+# Searching & Sorting — Question Bank
+Implemented Java solutions so far:
+- [Binary Search (704)](01-Binary-Search/BinarySearch.java)
+- [Search Insert Position (35)](01-Binary-Search/SearchInsertPosition.java)
+- [First & Last Position (34)](01-Binary-Search/FirstLastPosition.java)
+- [Search Rotated Array (33)](01-Binary-Search/SearchRotatedArray.java)
+- [Rotated Array Minimum (153)](01-Binary-Search/RotatedArrayMinimum.java)
+- [Sqrt(x) (69)](01-Binary-Search/SqrtX.java)
+- [Bubble sort](02-Sorting/BubbleSort.java)
+- [Selection sort](02-Sorting/SelectionSort.java)
+- [Insertion sort](02-Sorting/InsertionSort.java)
+- [Sort Colors (75)](02-Sorting/Sort012.java)
+- [Merge sorted arrays](02-Sorting/MergeSortedArrays.java)
+- [Quick sort](03-Divide-and-Conquer-Sorting/QuickSort.java)
+
+Other questions from the prior checklist remain planned. Do not infer company tags; add verified IDs to [LeetCode tracker](../LEETCODE.md).
