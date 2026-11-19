@@ -86,3 +86,25 @@ Expanded main-branch teaching READMEs into instructional modules: 2D arrays, str
 - These are improved chapter introductions and practice guidance; the repo still requires deeper chapter materials, algorithm output tests, solution-by-solution review and branch reconciliation.
 - Latest compile-only CI passed; it is not an algorithmic correctness test suite.
 
+
+
+## Audit update — 19 November 2026 (source inspection)
+
+### Targeted source corrections
+- `Dijkstra.java`: distance arithmetic changed to long, negative edge weights rejected, source index validated.
+- `KruskalMST.java`: long total, edge input validation, empty graph handling.
+- `SegmentTree.java`: query validation and point update added.
+- `RangeMinimumSegmentTree.java`: query range validation added.
+- `LargestRectangleHistogram.java`: long area arithmetic, empty/equal-bar coverage targeted.
+
+### Regression suite and automation
+- Added `tests/java/AuditRegressionTests.java` to test the five targeted algorithms with representative and boundary cases.
+- GitHub Actions now compiles/runs that test suite after compilation.
+- Added `scripts/check_markdown_links.py` and CI step to check local Markdown targets.
+- Run #783 (previous compile pipeline) was queued/in progress at inspection; run #783 status should be checked before declaring this new test/link-check pipeline successful. The current latest run after these changes is #783 / run ID 44485006183.
+
+### Branch inventory
+The repository currently has 18 branches: main, 2d-arrays-matrix, arrays, backtracking, binary-search-trees, binary-trees, bit-manipulation, dynamic-programming, feature/topic-wise-dsa-course, graphs, greedy, heaps-hashing, linked-lists, searching-sorting, segment-trees, stacks-queues, strings, tries. Branch-by-branch source and content reconciliation is not yet complete.
+
+### Scope caveat
+Targeted source inspection and regression coverage do not imply all 107 Java files have been audited. Full per-file correctness review, branch reconciliation, and navigation review remain in progress. CI's automated link check is a useful first pass, not proof of every external link or every Markdown anchor.
