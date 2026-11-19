@@ -2,9 +2,6 @@
  * Problem: Find the element that occurs once when every other element
  * occurs exactly twice, using XOR.
  * LeetCode: #136
- * Companies: Amazon
- * Time Complexity: O(n)
- * Space Complexity: O(1)
  */
 
 import java.util.Scanner;
