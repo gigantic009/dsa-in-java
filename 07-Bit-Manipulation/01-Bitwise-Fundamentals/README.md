@@ -42,3 +42,13 @@ A mask `1 << i` selects bit i for int-sized indices. To check bit i: `(n & (1 <<
 
 ## Checkpoint
 Write bit-check/set/clear/toggle functions and explain the mask using a binary trace.
+
+
+## Example: selecting bit 2
+For `n = 10` (binary `1010`), the mask `1 << 2` is `0100`. Then:
+- Check: `n & mask` is zero, so bit 2 is unset.
+- Set: `n | mask` gives `1110` (14).
+- Clear: `n & ~mask` keeps every other bit unchanged.
+- Toggle: `n ^ mask` flips only bit 2.
+
+The reusable methods validate positions from 0 through 31. Java masks int shift distances, so validation prevents accidental wraparound for invalid inputs.
