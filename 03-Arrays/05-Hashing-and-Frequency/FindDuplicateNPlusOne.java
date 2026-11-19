@@ -2,28 +2,38 @@
  * Problem: An array contains n + 1 values from 1 to n.
  * Exactly one value is repeated. Find that value without changing the array.
  * LeetCode: #287
+ * Time: O(n) | Auxiliary space: O(1)
  */
 
 import java.util.Scanner;
 
 public class FindDuplicateNPlusOne {
     public static int findDuplicate(int[] numbers) {
-        // Step 1: Find a meeting point using slow and fast pointers.
+        /*
+         * Treat each value as the next index, creating a linked traversal.
+         * Because there are n + 1 values restricted to indices 1..n,
+         * a cycle must exist. Floyd's algorithm finds its entry.
+         */
+        // Phase 1: advance slow by one link and fast by two until they meet in the cycle.
         int slow = numbers[0];
         int fast = numbers[0];
         do {
             slow = numbers[slow];
             fast = numbers[numbers[fast]];
         } while (slow != fast);
-        // Step 2: Move one pointer to the beginning.
+
+        /*
+         * Phase 2: reset one pointer to the start. Advancing both by one
+         * makes them meet at the cycle entry, which corresponds to the duplicate.
+         */
         slow = numbers[0];
-        // Step 3: Move both pointers one step at a time.
         while (slow != fast) {
             slow = numbers[slow];
             fast = numbers[fast];
         }
         return slow;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
