@@ -38,6 +38,14 @@ public class AuditRegressionTests {
         try { min.query(0,5); } catch (IllegalArgumentException e) { invalidMin = true; }
         check(invalidMin, "RMQ bounds");
 
+        // Median of two sorted arrays, including one-empty and both-empty cases.
+        check(MedianOfTwoSortedArrays.findMedian(new int[]{1,3}, new int[]{2}) == 2.0, "Median odd");
+        check(MedianOfTwoSortedArrays.findMedian(new int[]{1,2}, new int[]{3,4}) == 2.5, "Median even");
+        check(MedianOfTwoSortedArrays.findMedian(new int[]{}, new int[]{7}) == 7.0, "Median one empty");
+        boolean bothEmptyRejected = false;
+        try { MedianOfTwoSortedArrays.findMedian(new int[]{}, new int[]{}); } catch (IllegalArgumentException e) { bothEmptyRejected = true; }
+        check(bothEmptyRejected, "Median rejects both empty");
+
         // Histogram includes empty, equal bars, and large area.
         check(LargestRectangleHistogram.largest(new int[]{2,1,5,6,2,3}) == 10, "Histogram classic");
         check(LargestRectangleHistogram.largest(new int[]{4,4,4}) == 12, "Histogram equal");
