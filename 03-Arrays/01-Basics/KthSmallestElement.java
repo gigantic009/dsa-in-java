@@ -27,7 +27,10 @@ public class KthSmallestElement {
             sc.close();
             return;
         }
+
+        // Sorting places the values in ascending order.
         Arrays.sort(numbers);
+        // The kth smallest value is at index k - 1 (zero-based indexing).
         System.out.println(numbers[k - 1]);
         sc.close();
     }
