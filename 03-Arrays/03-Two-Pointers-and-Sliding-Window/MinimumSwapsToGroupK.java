@@ -1,6 +1,7 @@
 /*
  * Problem: Find the minimum swaps needed to bring all elements <= k together.
  * LeetCode: Not available
+ * Time: O(n) | Auxiliary space: O(1)
  */
 
 import java.util.Scanner;
@@ -19,7 +20,8 @@ public class MinimumSwapsToGroupK {
             numbers[i] = sc.nextInt();
         }
         int k = sc.nextInt();
-        // Count how many elements should be in the final group.
+
+        // The final group must have exactly as many slots as qualifying values.
         int goodElements = 0;
         for (int number : numbers) {
             if (number <= k) {
@@ -31,7 +33,12 @@ public class MinimumSwapsToGroupK {
             sc.close();
             return;
         }
-        // Count elements greater than k in the first window.
+
+        /*
+         * Any window of this size can hold all qualifying elements.
+         * The number of non-qualifying ("bad") values in a window is the swaps
+         * needed to replace them with qualifying values from outside that window.
+         */
         int badElements = 0;
         for (int i = 0; i < goodElements; i++) {
             if (numbers[i] > k) {
@@ -39,7 +46,8 @@ public class MinimumSwapsToGroupK {
             }
         }
         int minimumSwaps = badElements;
-        // Slide the window and keep track of the bad elements.
+
+        // Slide one position: remove the outgoing value and add the incoming value.
         for (int right = goodElements; right < n; right++) {
             int left = right - goodElements;
             if (numbers[left] > k) {
@@ -48,6 +56,7 @@ public class MinimumSwapsToGroupK {
             if (numbers[right] > k) {
                 badElements++;
             }
+            // The window with the fewest bad values gives the fewest required swaps.
             minimumSwaps = Math.min(minimumSwaps, badElements);
         }
         System.out.println(minimumSwaps);
