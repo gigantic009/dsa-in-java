@@ -1,9 +1,6 @@
 /*
  * Problem: Find the maximum and minimum values in an array in one traversal.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(1), excluding the input array.
  */
 
 import java.util.Scanner;
