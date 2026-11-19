@@ -1,0 +1,37 @@
+name: Compile Java DSA Files
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Compile every Java source independently
+        shell: bash
+        run: |
+          set -e
+          count=0
+          failures=0
+          mkdir -p compile-results
+          while IFS= read -r -d '' file; do
+            count=$((count + 1))
+            out="compile-results/$count"
+            mkdir -p "$out"
+            if javac -d "$out" "$file" 2> "$out/error.txt"; then
+              echo "PASS: $file"
+            else
+              failures=$((failures + 1))
+              echo "FAIL: $file"
+              cat "$out/error.txt"
+            fi
+          done < <(find . -name '*.java' -print0)
+          echo "Checked $count Java files; failures: $failures"
+          if [ "$failures" -gt 0 ]; then exit 1; fi
