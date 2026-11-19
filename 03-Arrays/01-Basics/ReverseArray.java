@@ -20,9 +20,11 @@ public class ReverseArray {
             arr[i] = sc.nextInt();
         }
 
+        // Use two pointers: one at the start and one at the end.
         int left = 0;
         int right = n - 1;
 
+        // Swap the outer pair and move both pointers toward the center.
         while (left < right) {
             int temp = arr[left];
             arr[left] = arr[right];
@@ -32,6 +34,7 @@ public class ReverseArray {
             right--;
         }
 
+        // The array is reversed in place, so no second array was needed.
         System.out.println(Arrays.toString(arr));
         sc.close();
     }
