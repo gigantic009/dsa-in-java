@@ -1,4 +1,11 @@
-# Greedy Problem Patterns
-
-## Practice
-Activity selection; interval scheduling; fractional knapsack; job sequencing; minimum platforms; gas station; merge intervals.
+# Greedy Patterns
+## Easy
+- [ ] Lemonade change
+## Medium
+- [ ] Jump game II
+- [ ] Partition labels
+- [ ] Merge intervals
+- [ ] Meeting rooms
+- [ ] Min arrows
+## Hard
+- [ ] Huffman coding
