@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
+/** Demonstrates encapsulation through a simple bank account. */
 public class BankAccount {
-    private double balance; // Private balance prevents uncontrolled direct modification.
+    private double balance; // The balance can only be changed through account methods.
 
     public BankAccount(double initialBalance) {
         if (initialBalance < 0) {
@@ -10,28 +11,34 @@ public class BankAccount {
         balance = initialBalance;
     }
 
+    // Deposits only positive amounts.
     public void deposit(double amount) {
         if (amount > 0) {
-            balance += amount; // Only accept positive deposits.
+            balance += amount;
         }
     }
 
+    // Returns false if the amount is invalid or exceeds the current balance.
     public boolean withdraw(double amount) {
         if (amount <= 0 || amount > balance) {
-            return false; // Reject invalid amounts and withdrawals beyond the balance.
+            return false;
         }
+
         balance -= amount;
         return true;
     }
 
+    // Provides access to the balance without exposing the field itself.
     public double getBalance() {
-        return balance; // Return the current balance without exposing the field.
+        return balance;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Initial balance: ");
         double initialBalance = sc.nextDouble();
+
         if (initialBalance < 0) {
             System.out.println("Initial balance cannot be negative.");
             sc.close();
@@ -39,8 +46,10 @@ public class BankAccount {
         }
 
         BankAccount account = new BankAccount(initialBalance);
+
         System.out.print("Deposit amount: ");
         account.deposit(sc.nextDouble());
+
         System.out.print("Withdrawal amount: ");
         double withdrawal = sc.nextDouble();
 
