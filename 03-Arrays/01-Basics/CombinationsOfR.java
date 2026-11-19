@@ -16,26 +16,36 @@ public class CombinationsOfR {
             System.out.println();
             return;
         }
+
         // Select each possible element and continue recursively.
         for (int i = start; i <= numbers.length - (r - depth); i++) {
             current[depth] = numbers[i];
-            generateCombinations(
-                    numbers, r, i + 1, depth + 1, current);
+            generateCombinations(numbers, r, i + 1, depth + 1, current);
         }
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+
+        if (n < 0) {
+            System.out.println("Invalid array size");
+            sc.close();
+            return;
+        }
+
         int[] numbers = new int[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
         }
+
         int r = sc.nextInt();
         if (r < 0 || r > n) {
             System.out.println("Invalid r");
             sc.close();
             return;
         }
+
         int[] current = new int[r];
         generateCombinations(numbers, r, 0, 0, current);
         sc.close();
