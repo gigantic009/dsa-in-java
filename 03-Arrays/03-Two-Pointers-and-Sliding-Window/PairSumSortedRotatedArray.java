@@ -2,9 +2,6 @@
  * Problem: Check whether a sorted and rotated array contains a pair
  * whose sum equals the target.
  * LeetCode: Not available
- * Companies: Microsoft, Google, Apple
- * Time Complexity: O(n)
- * Space Complexity: O(1)
  */
 
 import java.util.Scanner;
