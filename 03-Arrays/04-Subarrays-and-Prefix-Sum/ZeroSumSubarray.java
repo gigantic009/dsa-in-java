@@ -2,9 +2,6 @@
  * Problem: Determine whether the array contains a non-empty subarray
  * whose sum is zero.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n) average
- * Space Complexity: O(n)
  */
 
 import java.util.HashSet;
