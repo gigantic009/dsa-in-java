@@ -35,3 +35,10 @@ jobs:
             javac -d "$dir" "$file"
           done < <(find . -name '*.java' -not -path './out/*' -print0)
           echo "Successfully compiled $count Java source files (dependency pair compiled together)."
+
+      - name: Run focused regression tests
+        run: |
+          set -euo pipefail
+          mkdir -p out/regression
+          javac -d out/regression tests/java/AuditRegressionTests.java 17-Graphs/04-Part-4-Shortest-Paths/Dijkstra.java 17-Graphs/05-Part-5-MST-and-Disjoint-Set/UnionFind.java 17-Graphs/05-Part-5-MST-and-Disjoint-Set/KruskalMST.java 22-Segment-Trees/01-Segment-Tree-Fundamentals/SegmentTree.java 22-Segment-Trees/02-Range-Queries/RangeMinimumSegmentTree.java 12-Stacks/02-Part-B-Monotonic-Stack/LargestRectangleHistogram.java
+          java -cp out/regression AuditRegressionTests
