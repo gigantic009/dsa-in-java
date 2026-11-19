@@ -1,23 +1,22 @@
 # BST Operations
 
-A binary search tree follows an ordering invariant: values in the left subtree are smaller than the node and values in the right subtree are larger, according to the convention chosen for duplicates.
+A binary search tree follows an ordering rule: every value in the left subtree is smaller than its node, and every value in the right subtree is larger. These implementations ignore duplicates.
 
-## Search and insert
-Compare at each node and follow the appropriate subtree. This is O(h), where h is tree height. Balanced trees have logarithmic height; an unbalanced tree can have height O(n). Insert example: InsertIntoBST.java.
+## Implemented
+- [x] Search — [SearchInBST.java](SearchInBST.java)
+- [x] Insert — [InsertIntoBST.java](InsertIntoBST.java)
+- [x] Delete — [DeleteFromBST.java)
 
-## Minimum and maximum
-Follow left references for the minimum and right references for the maximum.
-
-## Delete
-Three cases:
+## Deletion: three cases
 1. Leaf: remove it.
-2. One child: replace the node with that child.
-3. Two children: replace with the inorder successor (or predecessor), then remove that replacement from its original location.
+2. One child: replace the node with its child.
+3. Two children: copy the inorder successor (the smallest value in the right subtree) and remove the successor from its original position.
 
-Implementation: DeleteFromBST.java.
+## Future practice (not implemented here)
+Minimum/maximum, floor/ceiling, BST LCA, kth largest, iterator, recover BST and largest BST subtree.
 
-## Practice
-Search, insert, traversal, min/max, deletion, floor/ceiling, LCA, kth smallest/largest, iterator, recover BST, largest BST subtree.
+## Complexity
+Each operation is O(h), where h is tree height. Worst-case h is n; a balanced BST has logarithmic height.
 
 ## Checkpoint
-Trace deletion for all three cases. Explain why an inorder traversal of a valid BST produces sorted values.
+Trace deletion for all three cases and explain why inorder traversal of a valid BST is sorted.
