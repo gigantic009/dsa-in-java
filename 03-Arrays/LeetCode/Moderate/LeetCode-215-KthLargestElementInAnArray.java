@@ -1,9 +1,6 @@
 /*
  * Problem: Find the kth largest element in an unsorted array.
  * LeetCode: #215
- * Companies: Amazon, Microsoft, Walmart, Adobe
- * Time Complexity: O(n log n), due to sorting.
- * Space Complexity: Depends on the sorting implementation.
  */
 
 import java.util.Arrays;
