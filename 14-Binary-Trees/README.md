@@ -16,3 +16,10 @@ DFS traversals use recursion or an explicit stack. Level order uses a queue. Lea
 
 ## Checkpoint
 Construct a small tree, perform all four basic traversals, calculate height and count, then solve an unseen path problem.
+
+
+## Sprint teaching expansion
+
+Trees need not be BST. Preorder/inorder/postorder/level order. Traversal O(n), recursion O(height), worst O(n). Test empty, singleton, balanced and skewed.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
