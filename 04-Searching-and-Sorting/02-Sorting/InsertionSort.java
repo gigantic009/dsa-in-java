@@ -1,0 +1,2 @@
+/* Insertion sort: insert each item into sorted prefix. Sample [4,3,1]->[1,3,4]. O(n^2), best O(n), space O(1). */
+import java.util.Arrays; public class InsertionSort{static void sort(int[]a){for(int i=1;i<a.length;i++){int v=a[i],j=i-1;while(j>=0&&a[j]>v){a[j+1]=a[j];j--;}a[j+1]=v;}}public static void main(String[]x){int[]a={4,3,1};sort(a);System.out.println(Arrays.toString(a));}}
