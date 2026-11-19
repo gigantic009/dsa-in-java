@@ -1,6 +1,6 @@
 # Arrays Branch Migration Notes
 
-The `arrays` branch contained a large supplementary question bank and additional solution files. Six distinct source files have been migrated into the main topic tree during this sprint:
+The `arrays` branch contained a large supplementary question bank and additional solution files. 38 distinct source files have been migrated into the main topic tree during this sprint:
 
 - AlternatingPositiveNegative.java
 - CyclicallyRotateArrayByOne.java
