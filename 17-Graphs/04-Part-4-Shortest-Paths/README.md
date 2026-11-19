@@ -1,7 +1,12 @@
-# Graphs — Part 4: Shortest Paths
-
-## Theory
-BFS shortest path for unweighted graphs, Dijkstra for non-negative weights, Bellman-Ford for negative edges, Floyd-Warshall for all-pairs paths and path reconstruction.
-
-## Company-tagged practice
-- Cheapest Flights Within K Stops — Uber, PayPal.
+# Shortest Paths
+## Easy
+- [ ] Unweighted BFS distance
+## Medium
+- [ ] Dijkstra
+- [ ] Bellman-Ford
+- [ ] Floyd-Warshall
+- [ ] DAG shortest path
+- [ ] Cheapest flights k stops
+## Hard
+- [ ] Network delay
+- [ ] Minimum effort path
