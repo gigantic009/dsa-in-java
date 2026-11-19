@@ -1,4 +1,6 @@
 // Divide-and-conquer binary search on a sorted array.
+// Time Complexity: O(log n) because each iteration halves the search interval.
+// Space Complexity: O(1) auxiliary space (iterative implementation).
 import java.util.Scanner;
 
 public class BinarySearch {
