@@ -1,7 +1,24 @@
 // Recursively generate subsets by making include/exclude choices.
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class SubsetGeneration {
- public static List<List<Integer>>generate(int[]a){List<List<Integer>>out=new ArrayList<>();walk(a,0,new ArrayList<>(),out);return out;}
- private static void walk(int[]a,int i,List<Integer>path,List<List<Integer>>out){if(i==a.length){out.add(new ArrayList<>(path));return;}walk(a,i+1,path,out);path.add(a[i]);walk(a,i+1,path,out);path.remove(path.size()-1); // Undo inclusion before returning to caller.
- }
+    public static List<List<Integer>> generate(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        walk(nums, 0, new ArrayList<>(), result);
+        return result;
+    }
+
+    private static void walk(int[] nums, int index, List<Integer> path,
+                             List<List<Integer>> result) {
+        if (index == nums.length) {
+            result.add(new ArrayList<>(path)); // Save a copy, not the changing path.
+            return;
+        }
+
+        walk(nums, index + 1, path, result); // Choice 1: exclude current element.
+        path.add(nums[index]);
+        walk(nums, index + 1, path, result); // Choice 2: include current element.
+        path.remove(path.size() - 1); // Backtrack to restore the previous state.
+    }
 }
