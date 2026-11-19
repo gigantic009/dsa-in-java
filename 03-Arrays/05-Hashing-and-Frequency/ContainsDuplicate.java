@@ -1,11 +1,17 @@
+/*
+ * Problem: Determine whether an array contains any duplicate value.
+ * Time: O(n) average | Auxiliary space: O(n)
+ */
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
 public class ContainsDuplicate {
     public static boolean containsDuplicate(int[] numbers) {
+        // A set keeps only distinct values and supports average constant-time insertion.
         Set<Integer> values = new HashSet<>();
         for (int number : numbers) {
+            // add() returns false when this value was already present.
             if (!values.add(number)) {
                 return true;
             }
