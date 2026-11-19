@@ -1,9 +1,6 @@
 /*
  * Problem: Answer range-sum queries using Mo's Algorithm.
  * LeetCode: Not available
- * Companies: Microsoft
- * Time Complexity: O((n + q) * sqrt(n) * log q), approximately.
- * Space Complexity: O(n + q)
  */
 
 import java.util.Arrays;
