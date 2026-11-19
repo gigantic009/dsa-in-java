@@ -139,3 +139,11 @@ Preserved additional array implementations from the arrays branch into the main 
 - MedianOfTwoSortedArrays.java
 
 These migrations preserve useful content, but each implementation still needs a dedicated correctness review and robust tests before marking verified. The Arrays README now links the first six migrated implementations. The main branch is becoming the canonical student path; topic branches are retained as archival sources until migration and audit are complete.
+
+
+## Navigation repair — 19 November 2026
+
+- CI's Markdown checker exposed five broken Java Basics links caused by legacy folder names versus the canonical chapter paths.
+- Restored the five beginner solution files at the chapter paths referenced by the course READMEs and `SOLVED-PROBLEMS.md`.
+- Removed the five redundant legacy-path copies after verifying their source contents were preserved at the canonical locations.
+- The new CI run is pending; link-check success remains unverified until its result is available.
