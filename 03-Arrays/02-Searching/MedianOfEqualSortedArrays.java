@@ -1,9 +1,6 @@
 /*
  * Problem: Find the median of two sorted arrays of equal size.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(1)
  */
 
 import java.util.Scanner;
