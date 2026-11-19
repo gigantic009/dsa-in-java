@@ -10,6 +10,11 @@ public class MaximumProfitTwoTransactions {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
+        if (n < 0) {
+            System.out.println("Price count must be non-negative");
+            scanner.close();
+            return;
+        }
         int[] prices = new int[n];
         for (int i = 0; i < n; i++) {
             prices[i] = scanner.nextInt();
