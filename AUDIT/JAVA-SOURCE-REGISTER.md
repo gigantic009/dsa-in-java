@@ -14,16 +14,16 @@ Status values: `Not reviewed`, `Reviewed`, `Tested`, `Verified`. Update only wit
 | `01-Java-Basics/04-Loops/PrimeCheck.java` | Not reviewed | Pending edge-case review and tests |
 | `01-Java-Basics/05-Functions-and-Methods/SumOfTwo.java` | Not reviewed | Pending edge-case review and tests |
 | `03-Arrays/01-Basics/ArrayMinMax.java` | Not reviewed | Pending edge-case review and tests |
-| `03-Arrays/01-Basics/MaximumProductSubarray.java` | Not reviewed | Pending edge-case review and tests |
-| `03-Arrays/01-Basics/MaximumProfitTwoTransactions.java` | Not reviewed | Pending edge-case review and tests |
-| `03-Arrays/01-Basics/MergeIntervals.java` | Not reviewed | Pending edge-case review and tests |
-| `03-Arrays/01-Basics/MinimumJumpsToEnd.java` | Not reviewed | Pending edge-case review and tests |
-| `03-Arrays/01-Basics/MoveNegativesToOneSide.java` | Not reviewed | Pending edge-case review and tests |
-| `03-Arrays/01-Basics/ProductOfArrayExceptSelf.java` | Not reviewed | Pending edge-case review and tests |
+| `03-Arrays/01-Basics/MaximumProductSubarray.java` | Reviewed | Source inspection and limited defensive edits; systematic test suite still pending |
+| `03-Arrays/01-Basics/MaximumProfitTwoTransactions.java` | Reviewed | Source inspection and limited defensive edits; systematic test suite still pending |
+| `03-Arrays/01-Basics/MergeIntervals.java` | Reviewed | Source inspection and limited defensive edits; systematic test suite still pending |
+| `03-Arrays/01-Basics/MinimumJumpsToEnd.java` | Reviewed | Source inspection and limited defensive edits; systematic test suite still pending |
+| `03-Arrays/01-Basics/MoveNegativesToOneSide.java` | Reviewed | Source inspection and limited defensive edits; systematic test suite still pending |
+| `03-Arrays/01-Basics/ProductOfArrayExceptSelf.java` | Reviewed | Source inspection and limited defensive edits; systematic test suite still pending |
 | `03-Arrays/01-Basics/ReverseArray.java` | Not reviewed | Pending edge-case review and tests |
 | `03-Arrays/02-Searching/BinarySearch.java` | Not reviewed | Pending edge-case review and tests |
-| `03-Arrays/02-Searching/MedianOfTwoSortedArrays.java` | Not reviewed | Pending edge-case review and tests |
-| `03-Arrays/02-Searching/NextPermutation.java` | Not reviewed | Pending edge-case review and tests |
+| `03-Arrays/02-Searching/MedianOfTwoSortedArrays.java` | Reviewed | Source inspection and limited defensive edits; systematic test suite still pending |
+| `03-Arrays/02-Searching/NextPermutation.java` | Reviewed | Source inspection and limited defensive edits; systematic test suite still pending |
 | `03-Arrays/04-Subarrays-and-Prefix-Sum/KadaneAlgorithm.java` | Not reviewed | Pending edge-case review and tests |
 | `03-Arrays/05-Hashing-and-Frequency/ContainsDuplicate.java` | Not reviewed | Pending edge-case review and tests |
 | `04-Searching-and-Sorting/01-Binary-Search/BinarySearch.java` | Not reviewed | Pending edge-case review and tests |
