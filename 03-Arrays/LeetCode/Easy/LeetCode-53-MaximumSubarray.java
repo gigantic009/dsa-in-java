@@ -1,6 +1,7 @@
 /*
  * Problem: Find the maximum sum of a non-empty contiguous subarray.
  * LeetCode: #53
+ * Time: O(n) | Auxiliary space: O(1)
  */
 
 import java.util.Scanner;
@@ -11,14 +12,16 @@ class LeetCode53MaximumSubarray {
         long currentSum = numbers[0];
         long maximumSum = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
-            // Either extend the current subarray or start a new one.
+            // Either extend the current subarray or start a new one at this index.
             currentSum = Math.max(numbers[i], currentSum + numbers[i]);
+            // Track the best subarray sum seen across all ending positions.
             if (currentSum > maximumSum) {
                 maximumSum = currentSum;
             }
         }
         return maximumSum;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
