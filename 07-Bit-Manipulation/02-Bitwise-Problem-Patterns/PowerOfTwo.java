@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
+/** Checks whether a positive integer is a power of two. */
 public class PowerOfTwo {
-    // Positive powers of two have exactly one set bit in binary.
+
+    // A power of two has one set bit; n & (n - 1) removes that bit.
     public static boolean check(int number) {
         return number > 0 && (number & (number - 1)) == 0;
     }
