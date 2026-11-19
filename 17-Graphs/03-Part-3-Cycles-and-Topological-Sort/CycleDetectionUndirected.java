@@ -1,6 +1,24 @@
-// Detect an undirected graph cycle with DFS parent tracking.
-import java.util.*;
+import java.util.List;
+
+/** Detects an undirected graph cycle using DFS and parent tracking. */
 public class CycleDetectionUndirected {
- public static boolean hasCycle(List<List<Integer>>g){boolean[]seen=new boolean[g.size()];for(int i=0;i<g.size();i++)if(!seen[i]&&dfs(g,i,-1,seen))return true;return false;}
- private static boolean dfs(List<List<Integer>>g,int u,int parent,boolean[]seen){seen[u]=true;for(int v:g.get(u)){if(!seen[v]){if(dfs(g,v,u,seen))return true;}else if(v!=parent)return true;}return false;}
+    public static boolean hasCycle(List<List<Integer>> graph) {
+        if (graph == null) throw new IllegalArgumentException("Graph cannot be null");
+        for (int i=0;i<graph.size();i++) BFS.validateGraphAndStart(graph,i);
+        boolean[] visited = new boolean[graph.size()];
+        for (int i=0;i<graph.size();i++) if (!visited[i] && dfs(graph,i,-1,visited)) return true;
+        return false;
+    }
+    private static boolean dfs(List<List<Integer>> graph,int vertex,int parent,boolean[] visited) {
+        visited[vertex]=true;
+        for(int neighbor:graph.get(vertex)){
+            if(!visited[neighbor]) { if(dfs(graph,neighbor,vertex,visited)) return true; }
+            else if(neighbor!=parent) return true;
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        List<List<Integer>> graph=AdjacencyList.build(3,new int[][]{{0,1},{1,2},{2,0}});
+        System.out.println(hasCycle(graph));
+    }
 }
