@@ -15,8 +15,8 @@
 | 2 | Time and space complexity | [Complexity](./02-Complexity/README.md) |
 | 3 | Arrays, searching, two pointers, prefix sums and hashing | [Arrays](./03-Arrays/README.md) |
 | 4 | Searching and sorting | [Searching & Sorting](./04-Searching-and-Sorting/README.md) |
-| 5 | Strings | [Strings](./06-Strings/README.md) |
-| 6 | Matrices and 2D arrays | [2D Arrays](./05-Two-D-Arrays/README.md) |
+| 5 | Matrices and 2D arrays | [2D Arrays](./05-Two-D-Arrays/README.md) |
+| 6 | Strings | [Strings](./06-Strings/README.md) |
 | 7 | Bit manipulation | [Bit Manipulation](./07-Bit-Manipulation/README.md) |
 | 8 | Recursion and divide-and-conquer | [Recursion](./09-Recursion/README.md) / [Divide & Conquer](./10-Divide-and-Conquer/README.md) |
 | 9 | Linked lists | [Linked Lists](./11-Linked-Lists/README.md) |
