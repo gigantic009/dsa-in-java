@@ -1,7 +1,6 @@
 /*
  * Problem: Find the maximum profit from at most two buy-and-sell transactions.
  * LeetCode: #123
- * Companies: Not listed in the question bank
  * Time: O(n) | Auxiliary space: O(n)
  */
 import java.util.Scanner;
