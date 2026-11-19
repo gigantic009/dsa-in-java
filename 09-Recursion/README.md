@@ -13,19 +13,16 @@ A method solves a problem by calling itself on a smaller instance. Every correct
 ## 3. Call stack
 Each invocation has its own parameters and local variables. Calls wait for the child call to return. Draw the call stack and return sequence rather than treating recursion as magic.
 
-## 4. Trace example: factorial
-`factorial(n) = n × factorial(n−1)`, with `factorial(0)=1`. This is a mathematical illustration; use a suitable numeric type and consider overflow in code.
+## Fundamentals
+See the [fundamentals roadmap](01-Part-A-Fundamentals/README.md) and the corresponding runnable examples for number recursion, Fibonacci, string reversal and palindrome, array recursion, search and fast power.
 
-## Part A — Fundamentals
-[Fundamentals lesson](01-Part-A-Fundamentals/README.md): trace calls, return values, recursion on numbers, arrays and strings; first/last occurrence; sorted check; power.
+## Patterns
+See [pattern lessons](02-Part-B-Patterns/README.md) for binary strings, subsets and permutations. The README's remaining listed challenges (subsequences, duplicate-aware subsets, combination sum, keypad combinations, palindrome partitioning, maze paths, N-Queens, Sudoku and word search) are aspirational practice prompts unless linked to implemented code.
 
-## Part B — Patterns
-[Pattern lesson](02-Part-B-Patterns/README.md): choose/explore/unchoose, subsequences, subsets, permutations, combinations, grid paths, tiling and backtracking.
-
-## 5. Recursion vs backtracking
+## Recursion vs backtracking
 Backtracking explores choices, then restores state so another choice can be tried. This often follows a choose → recurse → undo structure. Avoid mutation unless state restoration is clear.
 
-## 6. Complexity
+## Complexity
 Count calls and depth separately. A single chain of n calls may have O(n) stack space; branching recursion may have much more time. State assumptions and recurrence.
 
 ## Common mistakes
@@ -37,15 +34,4 @@ Count calls and depth separately. A single chain of n calls may have O(n) stack 
 - Using recursion where depth may overflow the stack
 
 ## Checkpoint
-Trace 5 recursive methods by hand, write 5 from scratch, explain stack space and solve 3 new recursion-pattern problems.
-
-
-## Sprint teaching expansion
-
-Calls must progress toward base case. Define contract and combine smaller results. Track stack/depth. Trace frames. Test base, smallest non-base, typical and deep input.
-
-Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
-
-
-## Complexity and testing
-Always distinguish recursion depth from total work and from output size. For branching problems, output can dominate memory. Test empty input, smallest input, typical input and cases with duplicate values where applicable. FastPower's long arithmetic is not overflow-checked.
+Trace five recursive methods by hand, write five from scratch, explain stack space and solve pattern problems.
