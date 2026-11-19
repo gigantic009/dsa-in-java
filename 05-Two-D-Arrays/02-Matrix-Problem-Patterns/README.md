@@ -1,6 +1,6 @@
 # Matrix Problem Patterns
 
-Matrices are arrays of arrays. For Java, remember that a two-dimensional array is an array whose rows may have different lengths; do not assume a rectangular shape unless the input guarantees it.
+A matrix is commonly represented as a two-dimensional array in Java. Rows can be jagged, so algorithms that require a rectangular matrix should state that assumption.
 
 ## Traversal patterns
 - Row-wise and column-wise traversal
@@ -10,17 +10,17 @@ Matrices are arrays of arrays. For Java, remember that a two-dimensional array i
 
 ## Search patterns
 - Binary search within a row when rows are independently sorted.
-- Treat a matrix as a flattened array when rows and columns jointly guarantee sorted order and indexing maps cleanly.
-- For row/column sorted matrices, start at a corner where each move eliminates a row or column.
+- Flattened binary search when rows and columns jointly guarantee one globally sorted sequence.
+- Staircase search from a corner in a matrix sorted independently across rows and columns.
 
 ## Transformations
 - Transpose: exchange row and column coordinates.
-- Rotate 90° clockwise (square matrix): transpose, then reverse each row, or use a boundary rotation approach.
-- Set Matrix Zeroes: mark affected rows and columns, then apply the marks; learn the in-place marker variant after understanding the extra-space approach.
+- Rotate a square matrix clockwise: transpose, then reverse each row.
+- Set Matrix Zeroes: mark affected rows and columns, then apply marks. The first row/column marker technique avoids allocating another matrix.
 
-## Practice
+## Practice ladder
 ### Easy
-- Search in a row-wise sorted matrix
+- Search in a globally sorted matrix
 - Row with maximum ones
 
 ### Core
@@ -30,10 +30,10 @@ Matrices are arrays of arrays. For Java, remember that a two-dimensional array i
 - Spiral Matrix
 
 ### Challenge
-- Number of Islands (connectivity introduces DFS/BFS)
+- Number of Islands (DFS/BFS connectivity)
 - Maximal Rectangle
 - Shortest Path in Binary Matrix
 - Word Search (backtracking)
 
 ## Checkpoint
-Implement a matrix traversal and rotation. Trace boundaries carefully for 1-row, 1-column and square/non-square cases.
+Trace algorithms on a single row, single column, rectangular matrix, and square matrix. Carefully check when boundaries cross.
