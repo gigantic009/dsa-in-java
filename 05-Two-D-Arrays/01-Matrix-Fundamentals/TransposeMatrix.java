@@ -1,27 +1,2 @@
 import java.util.*;
-
-public class TransposeMatrix {
-    // Transpose: rows become columns and columns become rows.
-    // A new matrix allows this to work for rectangular matrices too.
-    static int[][] transpose(int[][] matrix) {
-        int rows = matrix.length, cols = matrix[0].length;
-        int[][] result = new int[cols][rows];
-
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < cols; col++) {
-                result[col][row] = matrix[row][col];
-            }
-        }
-
-        return result;
-    }
-
-    public static void main(String[] args) {
-        int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6}
-        };
-
-        System.out.println(Arrays.deepToString(transpose(matrix)));
-    }
-}
+public class TransposeMatrix {static int[][]transpose(int[][]m){int[][]out=new int[m[0].length][m.length];for(int r=0;r<m.length;r++)for(int c=0;c<m[0].length;c++)out[c][r]=m[r][c];return out;}static int[][]read(Scanner sc){System.out.print("Rows: ");int r=sc.nextInt();System.out.print("Columns: ");int c=sc.nextInt();if(r<=0||c<=0)throw new IllegalArgumentException("Dimensions must be positive");int[][]m=new int[r][c];System.out.println("Enter matrix elements row-wise:");for(int i=0;i<r;i++)for(int j=0;j<c;j++)m[i][j]=sc.nextInt();return m;}public static void main(String[]args){Scanner sc=new Scanner(System.in);int[][]m=read(sc);System.out.println(Arrays.deepToString(transpose(m)));sc.close();}}
