@@ -12,6 +12,7 @@ public class FastPower {
         }
 
         // Compute x^(n/2) once, then reuse it to reduce recursive calls.
+        // long arithmetic may overflow for large powers; Java does not detect it.
         long half = power(x, n / 2);
 
         // Square the half-power; multiply by x once more for odd exponents.
