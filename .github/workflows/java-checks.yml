@@ -2,7 +2,6 @@ name: Java DSA checks
 
 on:
   push:
-    branches: [main, feature/topic-wise-dsa-course]
   pull_request:
     branches: [main]
 
