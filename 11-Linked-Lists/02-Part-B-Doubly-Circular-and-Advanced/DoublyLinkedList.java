@@ -1,7 +1,24 @@
-// Basic doubly linked list with insertion at the tail.
+// Doubly linked list demo with tail insertion and forward/backward traversal.
+// addLast: O(1); traversal: O(n); space: O(n) for nodes.
 public class DoublyLinkedList {
- static class Node{int value;Node prev,next;Node(int v){value=v;}}
- private Node head,tail;
- public void addLast(int v){Node n=new Node(v);if(tail==null)head=tail=n;else{tail.next=n;n.prev=tail;tail=n;}}
- public void printForward(){for(Node n=head;n!=null;n=n.next)System.out.print(n.value+" ");}
+    static class Node { int value; Node prev, next; Node(int value) { this.value = value; } }
+    private Node head, tail;
+    public void addLast(int value) {
+        Node node = new Node(value);
+        if (tail == null) head = tail = node;
+        else { tail.next = node; node.prev = tail; tail = node; }
+    }
+    public void printForward() {
+        for (Node node = head; node != null; node = node.next) System.out.print(node.value + " ");
+        System.out.println();
+    }
+    public void printBackward() {
+        for (Node node = tail; node != null; node = node.prev) System.out.print(node.value + " ");
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.addLast(10); list.addLast(20); list.addLast(30);
+        list.printForward(); list.printBackward();
+    }
 }
