@@ -1,9 +1,6 @@
 /*
  * Problem: Print the minimum and maximum elements of the input array.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(1), excluding the input array.
  */
 
 import java.util.Scanner;
