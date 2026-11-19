@@ -211,3 +211,12 @@ These migrations preserve useful content, but each implementation still needs a 
 - Run `44489839258` for commit `4462515b8bb9cbec961fec43e5cbc0b04035f6ad`: **success** — compilation, regression tests and Markdown navigation passed.
 - A later commit `5de03d2bfead81e44a9391155e90f7579a11b8d8` compiled 152 Java sources and passed regression tests, but its Markdown check failed due stale relative links in the then-unconverted branch snapshot. Those links were subsequently converted to plain source-path text. The success of later runs confirms the snapshot fix and migration up to the tested commit.
 - The latest main commit still has CI in progress; do not extrapolate the completed runs to untested latest changes.
+
+
+## Follow-up audit sprint — 19 November
+
+- Preserved the full set of additional LeetCode array solution files identified in the legacy arrays branch and migrated the supplemental array lesson documents.
+- Preserved question-bank snapshots from the `2d-arrays-matrix`, `bit-manipulation`, `segment-trees`, `strings`, and `tries` branches, with explicit caveats that company tags/source links are not verified.
+- Expanded regression harness coverage for selected migrated array algorithms: stock-profit and maximum-subarray randomized differential tests (500 deterministic trials), product-except-self randomized differential tests (500 trials), and example checks for duplicate detection, trapping rainwater, and duplicate-number detection.
+- Updated CI to compile the test dependencies. A literal-newline syntax issue in the test harness was discovered from workflow logs and repaired in commit `bbf1cf3a`; the repair run is pending.
+- Created GitHub issue #2 as the durable completion checklist. The task remains open and the audit is not declared finished.
