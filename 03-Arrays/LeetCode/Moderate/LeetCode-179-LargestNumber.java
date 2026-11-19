@@ -15,20 +15,31 @@ class LeetCode179LargestNumber {
             long value = scanner.nextLong();
             if (value < 0) {
                 System.out.println("Inputs must be non-negative");
+                scanner.close();
                 return;
             }
+            // Strings let the comparator test concatenated orders without overflow.
             numbers[i] = String.valueOf(value);
         }
+
+        /*
+         * Compare a+b against b+a. If b+a is larger, b should precede a.
+         * This pairwise ordering maximizes the full concatenated result.
+         */
         Arrays.sort(numbers, (first, second) ->
                 (second + first).compareTo(first + second));
         if (n == 0) {
             System.out.println("");
+            scanner.close();
             return;
         }
+        // If the leading token is zero, all tokens must be zero.
         if (numbers[0].equals("0")) {
             System.out.println("0");
+            scanner.close();
             return;
         }
+        // Concatenate the sorted tokens to form the final number.
         StringBuilder result = new StringBuilder();
         for (String number : numbers) {
             result.append(number);
