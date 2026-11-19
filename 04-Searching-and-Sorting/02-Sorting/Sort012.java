@@ -1,3 +1,8 @@
+// EDUCATIONAL NOTES:
+// Dutch National Flag invariant: [0, low) zeroes, [low, mid) ones, (high, n) twos;
+// [mid, high] is unknown. After swapping a 2 with high, mid stays put because
+// the incoming value is unclassified and must be examined.
+
 // Sort an array of 0, 1 and 2: O(n) time, O(1) space.
 // Dutch National Flag algorithm.
 import java.util.Arrays;
