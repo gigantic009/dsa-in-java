@@ -95,11 +95,3 @@ return -1
 
 ## Adding the next solutions
 The topic READMEs contain the next practice targets. As a question is implemented, add its Java file and update this index with its complexity. Do not mark an exercise solved just because it appears in a topic list.
-
-## Company tags from the Apna College sheet
-- **Maximum and Minimum Element in an Array:** ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google and Adobe.
-- **Reverse the Array:** Infosys and Moonfrog Labs.
-- **Maximum-Subarray:** Microsoft and Facebook.
-- **Contains Duplicate:** Amazon.
-
-These labels are copied from the uploaded Apna College question sheet. They describe the sheet's company column and are not independently verified interview reports. For other examples in this repository, no company label is shown unless the source sheet explicitly supports it.
