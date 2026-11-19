@@ -4,30 +4,23 @@
 Trees, references, arrays/maps, strings and recursion.
 
 ## 1. What is a trie?
-A trie stores strings through shared prefix paths. Each node represents a prefix; a marker or field indicates whether a complete word ends there. A trie can provide prefix-oriented lookup without comparing every stored word from the beginning.
+A trie stores strings through shared prefix paths. Each node represents a prefix; a terminal marker distinguishes complete words from prefixes. Tries are useful for dictionaries, autocomplete, prefix queries and some bitwise problems.
 
 ## 2. Node design
-A node may contain children (often 26 children for lowercase English letters) and a boolean end-of-word marker. That 26-way design assumes the alphabet is restricted; maps or other representations support broader character sets.
+Nodes can store child references and metadata. A 26-child array is efficient for lowercase English letters but restricts the alphabet; maps can support more flexible character sets.
 
 ## 3. Operations
 - Insert a word
 - Search for a complete word
 - Check whether a prefix exists
 - Remove a word (requires careful cleanup)
-- Extend to autocomplete, wildcard search and XOR tries
+- Extend to autocomplete, wildcard search, grid word search and XOR tries
 
 ## 4. Complexity
-For a string of length L, operations typically take O(L), with memory depending on the number of created nodes and representation.
+For a string of length L, insert, search and prefix lookup typically take O(L) time. Memory depends on the nodes created and the child representation.
 
 ## Practice
-Build insertion and search from scratch, then prefix search, a dictionary with wildcard handling and a maximum-XOR trie.
+Implement basic insertion and search, then prefix queries, wildcard search, autocomplete, grid word search and maximum-XOR patterns.
 
 ## Checkpoint
-Draw trie paths for several words with shared prefixes. Explain why a prefix match is not necessarily a complete-word match and implement all basic operations.
-
-
-## Sprint teaching expansion
-
-Trie stores prefixes; terminal marker distinguishes words from prefixes. Complexity depends on word length and representation. Test empty word, prefix relationships, duplicate insertion, missing paths and alphabet assumptions.
-
-Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
+Draw trie paths for words sharing prefixes. Explain why a prefix match is not necessarily a complete-word match. Trace empty strings and invalid characters, and analyze complexity.
