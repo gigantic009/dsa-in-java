@@ -1,14 +1,17 @@
 import java.util.Scanner;
 
+/** Checks whether a chosen bit in an integer is set (1). */
 public class CheckBit {
-    // Returns true if the requested (zero-based) bit is 1.
+
+    // Bit positions are zero-based: position 0 is the rightmost bit.
     public static boolean isSet(int number, int bit) {
         if (bit < 0 || bit > 31) {
-            return false; // Java int values have 32 bit positions.
+            return false;
         }
 
-        int mask = 1 << bit; // Move 1 into the bit position we want to inspect.
-        return (number & mask) != 0; // AND keeps only the selected bit.
+        // Shift 1 into the requested position, then use AND to inspect it.
+        int mask = 1 << bit;
+        return (number & mask) != 0;
     }
 
     public static void main(String[] args) {
