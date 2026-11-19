@@ -124,3 +124,18 @@ Targeted source inspection and regression coverage do not imply all 107 Java fil
 
 ### Branch audit caveat
 Tree/path comparison is not a complete semantic audit of every file on every branch. The arrays branch's additional source files and branch question-bank content require individual content review before selectively migrating or deleting. Branches are retained; no wholesale destructive branch deletion has occurred.
+
+
+### Arrays branch consolidation — ongoing
+
+Preserved additional array implementations from the arrays branch into the main course tree:
+- MaximumProductSubarray.java
+- ProductOfArrayExceptSelf.java
+- MaximumProfitTwoTransactions.java
+- MinimumJumpsToEnd.java
+- MergeIntervals.java
+- MoveNegativesToOneSide.java
+- NextPermutation.java
+- MedianOfTwoSortedArrays.java
+
+These migrations preserve useful content, but each implementation still needs a dedicated correctness review and robust tests before marking verified. The Arrays README now links the first six migrated implementations. The main branch is becoming the canonical student path; topic branches are retained as archival sources until migration and audit are complete.
