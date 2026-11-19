@@ -17,3 +17,7 @@
 
 ## Pattern reminder
 For each choice, update the state, recurse, and undo the update. Be clear about whether duplicate values should produce duplicate answers.
+
+## Complexity notes
+- Permutations: O(n * n!) time to build/copy all results; O(n) auxiliary recursion/state space, excluding output.
+- SubsetSum: O(2^n * n) time in the worst case including copying result paths; O(n) auxiliary recursion/path space, excluding output.
