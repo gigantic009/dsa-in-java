@@ -1,4 +1,6 @@
 // Count inversions while merging halves in sorted order.
+// Time Complexity: O(n log n) — merge sort plus counting during each merge.
+// Space Complexity: O(n) auxiliary space for temporary merge arrays (plus O(log n) recursion stack).
 public class CountInversions {
     public static long count(int[] a) {
         return sort(a, 0, a.length - 1);
