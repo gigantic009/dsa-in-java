@@ -1,12 +1,12 @@
 # Hashing
 ## Easy
 - [ ] Frequency map
-- [ ] Two sum
-- [ ] Contains duplicate
+- [x] Two sum (TwoSum.java)
+- [x] Contains duplicate (ContainsDuplicate.java)
 - [ ] Array intersection
 - [ ] Valid anagram
 ## Medium
-- [ ] Group anagrams
+- [x] Group anagrams (GroupAnagrams.java)
 - [ ] Longest consecutive sequence
 - [ ] Subarray sum k
 - [ ] Distinct window counts
