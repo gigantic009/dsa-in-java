@@ -1,6 +1,7 @@
 /*
  * Problem: Rotate an array to the right by one position.
  * LeetCode: Not available
+ * Time: O(n) | Auxiliary space: O(1)
  */
 
 import java.util.Arrays;
@@ -22,17 +23,17 @@ public class CyclicallyRotateArrayByOne {
             numbers[i] = sc.nextInt();
         }
 
-        // An empty or single-element array does not need rotation.
+        // Rotation has no effect when there are fewer than two elements.
         if (n > 1) {
-            // Store the last element before shifting.
+            // Save the last value because the right shift will overwrite its position.
             int lastElement = numbers[n - 1];
 
-            // Move every element one position to the right.
+            // Shift from right to left so each source value is still available.
             for (int i = n - 1; i > 0; i--) {
                 numbers[i] = numbers[i - 1];
             }
 
-            // Place the old last element at the beginning.
+            // Wrap the saved last value around to the first position.
             numbers[0] = lastElement;
         }
 
