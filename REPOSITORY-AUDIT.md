@@ -147,3 +147,12 @@ These migrations preserve useful content, but each implementation still needs a 
 - Restored the five beginner solution files at the chapter paths referenced by the course READMEs and `SOLVED-PROBLEMS.md`.
 - Removed the five redundant legacy-path copies after verifying their source contents were preserved at the canonical locations.
 - The new CI run is pending; link-check success remains unverified until its result is available.
+
+
+## Migrated arrays solution spot-review — 19 November 2026
+
+- Reviewed the eight migrated array files at source level (not yet a full formal verification).
+- `MedianOfTwoSortedArrays.java`: added a method guard rejecting two empty arrays; regression coverage now includes odd/even and one-empty-array cases, plus the invalid both-empty case.
+- `MinimumJumpsToEnd.java`: added negative jump-value validation and clamped reach calculation to the array's last index to avoid integer overflow.
+- The median regression tests were added to the CI harness; CI status for the latest commit remains pending.
+- Remaining migrated solutions still require targeted execution tests and broader review; source inspection alone is not marked as verified.
