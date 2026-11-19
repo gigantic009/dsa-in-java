@@ -1,9 +1,6 @@
 /*
  * Problem: Determine whether any value appears at least twice.
  * LeetCode: #217
- * Companies: Amazon
- * Time Complexity: O(n) average
- * Space Complexity: O(n)
  */
 
 import java.util.HashSet;
