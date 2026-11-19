@@ -1,3 +1,7 @@
+// EDUCATIONAL NOTES:
+// At iteration i, choose the smallest value in [i, n) and place it at i.
+// The prefix [0, i] is then finalized. Quadratic comparisons; typically one swap per pass.
+
 // Selection Sort: O(n^2) time, O(1) space.
 // Selects the smallest element and puts it at the front each time.
 import java.util.Arrays;
