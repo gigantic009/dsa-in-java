@@ -1,7 +1,22 @@
-// BFS shortest distances in an unweighted graph. Unreachable vertices remain -1.
-// Time O(V+E); space O(V).
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Queue;
+
+/** BFS distances; -1 denotes an unreachable vertex. */
 public class UnweightedShortestPath {
- static int[]dist(List<List<Integer>>g,int s){if(s<0||s>=g.size())throw new IllegalArgumentException("Invalid source");int[]d=new int[g.size()];Arrays.fill(d,-1);Queue<Integer>q=new ArrayDeque<>();d[s]=0;q.add(s);while(!q.isEmpty()){int u=q.remove();for(int v:g.get(u))if(d[v]==-1){d[v]=d[u]+1;q.add(v);}}return d;}
- public static void main(String[]args){List<List<Integer>>g=new ArrayList<>();for(int i=0;i<5;i++)g.add(new ArrayList<>());g.get(0).add(1);g.get(1).add(0);g.get(1).add(2);g.get(2).add(1);g.get(3).add(4);g.get(4).add(3);System.out.println(Arrays.toString(dist(g,0)));}
+    public static int[] distances(List<List<Integer>> graph,int source) {
+        BFS.validateGraphAndStart(graph,source);
+        int[] distance=new int[graph.size()];Arrays.fill(distance,-1);
+        Queue<Integer> queue=new ArrayDeque<>();distance[source]=0;queue.add(source);
+        while(!queue.isEmpty()){
+            int u=queue.remove();
+            for(int v:graph.get(u))if(distance[v]==-1){distance[v]=distance[u]+1;queue.add(v);}
+        }
+        return distance;
+    }
+    public static void main(String[] args){
+        List<List<Integer>> graph=AdjacencyList.build(5,new int[][]{{0,1},{1,2},{3,4}});
+        System.out.println(Arrays.toString(distances(graph,0)));
+    }
 }
