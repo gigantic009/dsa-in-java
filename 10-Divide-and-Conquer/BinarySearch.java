@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class BinarySearch {
     public static int search(int[] nums, int target) {
+        if (nums == null) {
+            throw new IllegalArgumentException("Array must not be null");
+        }
+
         int low = 0;
         int high = nums.length - 1;
 
