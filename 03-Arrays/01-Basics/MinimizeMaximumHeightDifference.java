@@ -2,6 +2,7 @@
  * Problem: Given tower heights and a positive integer k, add or subtract
  * k from each height to minimize the difference between maximum and minimum.
  * LeetCode: Not available
+ * Time: O(n log n) | Auxiliary space: O(1) apart from sorting implementation
  */
 
 import java.util.Arrays;
@@ -31,11 +32,20 @@ public class MinimizeMaximumHeightDifference {
             sc.close();
             return;
         }
-        // Sorting helps us check possible minimum and maximum heights.
+
+        // Sorting gives the original minimum and maximum and makes split points usable.
         Arrays.sort(heights);
+        // Doing nothing is always a valid baseline answer.
         long answer = (long) heights[n - 1] - heights[0];
+
+        /*
+         * At each split i, raise the smaller-side values by k and lower the
+         * larger-side values by k. The resulting extremes can only be:
+         * max(original maximum - k, previous value + k) and
+         * min(original minimum + k, current value - k).
+         */
         for (int i = 1; i < n; i++) {
-            // Do not allow a tower height to become negative.
+            // Reject a lowering operation that would create a negative height.
             if ((long) heights[i] - k < 0) {
                 continue;
             }
@@ -48,6 +58,7 @@ public class MinimizeMaximumHeightDifference {
                     (long) heights[i] - k
             );
             long difference = possibleMaximum - possibleMinimum;
+            // Keep the smallest range found among all split choices.
             answer = Math.min(answer, difference);
         }
         System.out.println(answer);
