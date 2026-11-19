@@ -25,10 +25,10 @@ Maintain `prev`, `curr`, and `next`. Save next before changing curr.next. Redire
 
 ## Learning order
 ### Easy
-Create/traverse, length, search, insertion/deletion, reverse, middle node, remove duplicates.
+Create/traverse, length, search, insertion/deletion, iterative/recursive reverse (`ReverseLinkedList.java`, `ReverseRecursive.java`), middle, remove duplicates (`RemoveDuplicatesSortedList.java`).
 
 ### Medium
-Cycle detection, merge sorted lists (`MergeSortedLists.java`), remove nth from end, palindrome, intersection, add two numbers, reverse k groups.
+Cycle detection (`LinkedListCycle.java`), merge sorted lists (`MergeSortedLists.java`), remove nth from end (`RemoveNthFromEnd.java`), palindrome (`LinkedListPalindrome.java`), intersection (`IntersectionOfLinkedLists.java`), add two numbers, reverse k groups.
 
 ### Challenge
 Merge k sorted lists and copy a list with random pointers.
