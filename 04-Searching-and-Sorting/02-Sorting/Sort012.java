@@ -1,2 +1,33 @@
-/* LeetCode 75: Sort Colors. Dutch national flag, O(n), O(1). https://leetcode.com/problems/sort-colors/ */
-import java.util.Arrays;public class Sort012{static void sort(int[]a){int l=0,m=0,h=a.length-1;while(m<=h){if(a[m]==0){int t=a[l];a[l++]=a[m];a[m++]=t;}else if(a[m]==1)m++;else{int t=a[h];a[h--]=a[m];a[m]=t;}}}public static void main(String[]x){int[]a={2,0,2,1,1,0};sort(a);System.out.println(Arrays.toString(a));}}
+/**
+ * Sort Colors (LeetCode 75): sort an array containing 0, 1 and 2.
+ * Dutch National Flag algorithm.
+ * Time: O(n) | Space: O(1)
+ */
+import java.util.Arrays;
+
+public class Sort012 {
+    static void sort(int[] nums) {
+        int low = 0, mid = 0, high = nums.length - 1;
+        while (mid <= high) {
+            if (nums[mid] == 0) {
+                swap(nums, low++, mid++);
+            } else if (nums[mid] == 1) {
+                mid++;
+            } else {
+                swap(nums, mid, high--);
+            }
+        }
+    }
+
+    private static void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {2, 0, 2, 1, 1, 0};
+        sort(nums);
+        System.out.println(Arrays.toString(nums));
+    }
+}
