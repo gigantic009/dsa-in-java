@@ -1,9 +1,9 @@
 # Binary Tree Fundamentals
 
-A binary tree node has at most two child references: left and right. A tree may be empty; do not assume every node has two children.
+A binary tree node has at most two child references: left and right. A tree can be empty; a node does not need to have both children.
 
 ## Vocabulary
-Root, parent, child, sibling, leaf, depth, height, subtree.
+Root, parent, child, sibling, leaf, depth, height and subtree.
 
 ## Traversals
 - Preorder: node, left, right.
@@ -11,17 +11,18 @@ Root, parent, child, sibling, leaf, depth, height, subtree.
 - Postorder: left, right, node.
 - Level order: visit by levels, typically with a queue.
 
-## Common problems
-Maximum depth, node count and leaf count (CountTreeNodes.java), diameter, balance, level-order variants, lowest common ancestor, path sums.
+## Implemented problems
+- [Count total nodes and leaf nodes](CountTreeNodes.java) — beginner recursion exercise.
+- [Maximum depth](MaximumDepth.java) — LeetCode 104, Maximum Depth of Binary Tree.
 
 ## Recursive pattern
-Define precisely what the helper returns for a subtree. Base case for null, recursively solve left/right, and combine results. Avoid repeatedly computing the same subtree metric.
+Define exactly what the recursive method returns for a subtree. Handle the null base case, solve the left and right subtrees, and combine their results.
 
-## Practice progression
-Build a tree; implement traversals; level order; depth; counts; diameter; balance; zigzag and boundary traversals; vertical traversal; LCA; serialization; maximum path sum.
+## Future practice (not implemented in this folder yet)
+Diameter, balance checking, zigzag and boundary traversals, vertical traversal, LCA, serialization and maximum path sum.
 
 ## Complexity
-Most full-tree traversals visit each node once: O(n) time. Recursive auxiliary space is O(h), where h is tree height; worst-case h can be n.
+A full traversal visits each node once: O(n) time. Recursive auxiliary space is O(h), where h is tree height; in the worst case h can equal n.
 
 ## Checkpoint
-Trace all three DFS traversals on a small tree and implement level order without notes.
+Trace the recursion for node counting and maximum depth on an empty tree, a single node and a skewed tree.
