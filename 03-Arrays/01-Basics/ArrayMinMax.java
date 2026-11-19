@@ -1,3 +1,7 @@
+/*
+ * Problem: Find the minimum and maximum values in an array in one traversal.
+ * Time: O(n) | Auxiliary space: O(1)
+ */
 import java.util.Scanner;
 
 public class ArrayMinMax {
@@ -20,9 +24,11 @@ public class ArrayMinMax {
             arr[i] = sc.nextInt();
         }
 
+        // Initialize both extrema from the first value instead of arbitrary sentinels.
         int min = arr[0];
         int max = arr[0];
 
+        // Each remaining value can update the minimum, maximum, both, or neither.
         for (int i = 1; i < n; i++) {
             min = Math.min(min, arr[i]);
             max = Math.max(max, arr[i]);
