@@ -1,40 +1,22 @@
 # Dynamic Programming Fundamentals
 
-Dynamic programming (DP) is useful when a problem can be expressed using smaller states and reusable subproblem results. It is not simply recursion with an array; the state and transition must represent the problem correctly.
+DP reuses results of smaller subproblems. Understand the recursive state and recurrence first, then cache (memoization) or compute iteratively (tabulation).
 
-## The DP design checklist
-1. **State:** what does dp[i] (or dp[i][j]) mean in plain language?
-2. **Transition:** which smaller states determine it?
-3. **Base cases:** what is known without further computation?
-4. **Order:** in what order must states be computed?
-5. **Answer:** which state or combination of states is the result?
-6. **Complexity:** how many states and how much work per state?
+## Design checklist
+State meaning, recurrence, base cases, dependency order, answer state, time and space.
 
-## Two implementation styles
-- **Memoization:** recursive approach plus cache; compute only reached states.
-- **Tabulation:** iterative computation in dependency order.
+## Implemented
+- [FibonacciMemo.java](FibonacciMemo.java) — top-down memoization; O(n) time and O(n) memory including recursion stack. Uses checked int addition.
 
-## Starter examples
-- Fibonacci: demonstrate repeated work and memoization.
-- Climbing Stairs: define dp[i] as the ways to reach step i.
-- Frog Jump: transitions from a limited set of previous positions.
-- House Robber: choose whether to take the current item or skip it.
-- Minimum Cost Climbing Stairs: track minimum accumulated cost.
+## Related implementations
+- [Climbing Stairs](../02-Part-2-1D-DP/ClimbingStairs.java)
+- [House Robber](../02-Part-2-1D-DP/HouseRobber.java)
+- [Unique Paths](../03-Part-3-Grid-DP/UniquePaths.java)
 
 ## Practice order
-1. Fibonacci recursion → memoization → tabulation.
-2. Climbing Stairs.
-3. Frog Jump.
-4. House Robber.
-5. Min Cost Climbing Stairs.
+Fibonacci recursion → memoization → tabulation → Climbing Stairs → Frog Jump → House Robber → Minimum Cost Stairs.
 
-## Common mistakes
-- Defining the state vaguely.
-- Mixing up indices and meaning.
-- Forgetting base cases.
-- Computing states before dependencies exist.
-- Using a transition that violates the constraints.
-- Optimizing space before understanding the full table.
+## Mistakes to avoid
+Vague state, incorrect indices, missing base cases, incorrect order, invalid transitions and premature optimization.
 
-## Checkpoint
-For each problem, write the state definition, transition, base cases, computation order and complexity before writing code.
+Checkpoint: explain state, transition and base cases before coding.
