@@ -26,7 +26,7 @@ public class MinimizeMaximumHeightDifference {
         long answer = (long) heights[n - 1] - heights[0];
         for (int i = 1; i < n; i++) {
             // Do not allow a tower height to become negative.
-            if (heights[i] - k < 0) {
+            if ((long) heights[i] - k < 0) {
                 continue;
             }
             long possibleMaximum = Math.max(
