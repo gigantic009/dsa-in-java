@@ -1,0 +1,37 @@
+# DSA Glossary for Beginners
+
+- **Algorithm:** a finite sequence of steps to solve a task.
+- **Data structure:** a way to organize data for operations.
+- **Index:** a position in an indexed collection; Java arrays begin at index 0.
+- **Invariant:** a property that remains true during an algorithm.
+- **Brute force:** a straightforward approach that explores the obvious possibilities.
+- **Optimization:** reducing unnecessary work while preserving correctness.
+- **Time complexity:** how the amount of work grows as input size grows.
+- **Space complexity:** how additional memory usage grows.
+- **Big O:** an asymptotic upper-bound notation commonly used to describe growth.
+- **Recursion:** a method solving a problem through smaller instances of itself.
+- **Base case:** condition that stops recursion.
+- **Stack:** LIFO (last in, first out) structure.
+- **Queue:** FIFO (first in, first out) structure.
+- **Deque:** double-ended queue supporting operations at both ends.
+- **Hashing:** mapping keys to hash values to support efficient average-case lookup.
+- **Collision:** different keys mapping to the same hash location.
+- **Binary search:** search strategy that halves a suitable search space repeatedly.
+- **Tree:** hierarchical structure of nodes and edges.
+- **Graph:** collection of vertices and edges.
+- **Traversal:** systematically visiting vertices or elements.
+- **BFS:** breadth-first search, typically implemented using a queue.
+- **DFS:** depth-first search, typically implemented using recursion or a stack.
+- **Greedy:** choosing a locally preferred option under a strategy whose correctness must be justified.
+- **Backtracking:** exploring choices and undoing a choice when continuing that path.
+- **Dynamic programming:** solving overlapping subproblems while storing reusable results.
+- **State:** the information representing a subproblem in DP.
+- **Transition:** rule connecting DP states.
+- **Heap:** priority-oriented tree-based structure used to retrieve an extremal element efficiently.
+- **Trie:** prefix-oriented tree commonly used for strings.
+- **Disjoint Set Union (DSU):** structure for maintaining connected components under union operations.
+- **MST:** minimum spanning tree of a connected, weighted, undirected graph.
+- **Segment tree:** tree structure supporting range queries and updates.
+- **Two pointers:** strategy that uses two indices to reduce repeated work.
+- **Sliding window:** strategy for maintaining information over a moving contiguous range.
+- **Prefix sum:** cumulative sum used to answer range-sum queries or transform subarray problems.
