@@ -1,8 +1,2 @@
-// Encapsulation protects balance and validates account operations.
-public class BankAccount {
- private double balance;
- public BankAccount(double initial){if(initial<0)throw new IllegalArgumentException();balance=initial;}
- public void deposit(double amount){if(amount>0)balance+=amount;}
- public boolean withdraw(double amount){if(amount<=0||amount>balance)return false;balance-=amount;return true;}
- public double getBalance(){return balance;}
-}
+import java.util.Scanner;
+public class BankAccount {private double balance;public BankAccount(double initial){if(initial<0)throw new IllegalArgumentException("Initial balance cannot be negative");balance=initial;}public void deposit(double amount){if(amount>0)balance+=amount;}public boolean withdraw(double amount){if(amount<=0||amount>balance)return false;balance-=amount;return true;}public double getBalance(){return balance;}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Initial balance: ");double initial=sc.nextDouble();if(initial<0){System.out.println("Invalid initial balance");sc.close();return;}BankAccount account=new BankAccount(initial);System.out.print("Deposit amount: ");account.deposit(sc.nextDouble());System.out.print("Withdrawal amount: ");double amount=sc.nextDouble();System.out.println("Withdrawal successful: "+account.withdraw(amount));System.out.println("Balance: "+account.getBalance());sc.close();}}
