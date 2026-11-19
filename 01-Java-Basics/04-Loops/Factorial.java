@@ -2,11 +2,9 @@ import java.util.Scanner;
 
 /**
  * Calculates n! iteratively for n in [0, 20], where the result fits in long.
+ * 0! is 1. Negative input is invalid; n > 20 exceeds long's factorial range.
  *
- * 0! is 1. Negative input is invalid. Values above 20 overflow long.
- *
- * Time complexity: O(n) for valid input.
- * Auxiliary space: O(1).
+ * Time: O(n) for valid input. Auxiliary space: O(1).
  */
 public class Factorial {
     public static void main(String[] args) {
@@ -22,7 +20,7 @@ public class Factorial {
         } else {
             long result = 1;
 
-            // Starting at 2 is sufficient because 0! and 1! are both 1.
+            // 0! and 1! are 1, so multiplying from 2 is sufficient.
             for (int i = 2; i <= n; i++) {
                 result *= i;
             }
