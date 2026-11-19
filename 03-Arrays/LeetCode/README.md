@@ -37,7 +37,7 @@ Company interview associations are intentionally omitted from this collection un
 
 | LeetCode | Problem | Solution |
 |---|---|---|
-| #4 | Median of Two Sorted Arrays | [LeetCode-4-MedianOfTwoSortedArrays.java](Advanced/LeetCode-4-MedianOfTwoArrays.java) |
+| #4 | Median of Two Sorted Arrays | [LeetCode-4-MedianOfTwoSortedArrays.java](Advanced/LeetCode-4-MedianOfTwoSortedArrays.java) |
 | #42 | Trapping Rain Water | [LeetCode-42-TrappingRainWater.java](Advanced/LeetCode-42-TrappingRainWater.java) |
 | #123 | Best Time to Buy and Sell Stock III | [LeetCode-123-BestTimeToBuyAndSellStockIII.java](Advanced/LeetCode-123-BestTimeToBuyAndSellStockIII.java) |
 
