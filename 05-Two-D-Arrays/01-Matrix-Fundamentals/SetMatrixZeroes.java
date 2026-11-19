@@ -1,2 +1,25 @@
-/* LeetCode 73 Set Matrix Zeroes. Use first row/column as flags. O(mn), O(1) extra. https://leetcode.com/problems/set-matrix-zeroes/ */
-import java.util.Arrays;public class SetMatrixZeroes{static void setZeroes(int[][]a){int m=a.length,n=a[0].length;boolean fr=false,fc=false;for(int i=0;i<m;i++)if(a[i][0]==0)fc=true;for(int j=0;j<n;j++)if(a[0][j]==0)fr=true;for(int i=1;i<m;i++)for(int j=1;j<n;j++)if(a[i][j]==0){a[i][0]=0;a[0][j]=0;}for(int i=1;i<m;i++)if(a[i][0]==0)for(int j=1;j<n;j++)a[i][j]=0;for(int j=1;j<n;j++)if(a[0][j]==0)for(int i=1;i<m;i++)a[i][j]=0;if(fr)for(int j=0;j<n;j++)a[0][j]=0;if(fc)for(int i=0;i<m;i++)a[i][0]=0;}public static void main(String[]x){int[][]a={{1,1,1},{1,0,1},{1,1,1}};setZeroes(a);System.out.println(Arrays.deepToString(a));}}
+/** LeetCode 73: use first row/column as markers. O(mn), O(1) extra. */
+import java.util.Arrays;
+public class SetMatrixZeroes {
+    static void setZeroes(int[][] matrix) {
+        int rows=matrix.length,cols=matrix[0].length;
+        boolean firstRow=false,firstCol=false;
+        for(int row=0;row<rows;row++) if(matrix[row][0]==0) firstCol=true;
+        for(int col=0;col<cols;col++) if(matrix[0][col]==0) firstRow=true;
+        for(int row=1;row<rows;row++)
+            for(int col=1;col<cols;col++)
+                if(matrix[row][col]==0){matrix[row][0]=0;matrix[0][col]=0;}
+        for(int row=1;row<rows;row++)
+            if(matrix[row][0]==0)
+                for(int col=1;col<cols;col++) matrix[row][col]=0;
+        for(int col=1;col<cols;col++)
+            if(matrix[0][col]==0)
+                for(int row=1;row<rows;row++) matrix[row][col]=0;
+        if(firstRow) for(int col=0;col<cols;col++) matrix[0][col]=0;
+        if(firstCol) for(int row=0;row<rows;row++) matrix[row][0]=0;
+    }
+    public static void main(String[] args) {
+        int[][] matrix={{1,1,1},{1,0,1},{1,1,1}};
+        setZeroes(matrix); System.out.println(Arrays.deepToString(matrix));
+    }
+}
