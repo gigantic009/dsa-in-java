@@ -1,10 +1,12 @@
-# Divide and Conquer
+# Divide & Conquer — Question Bank
 
-## Sub-branches
-- Divide input into smaller independent parts.
-- Solve recursively and combine partial answers.
-- Recurrence relations, recursion trees and Master theorem.
-- Binary search, merge sort, quick sort and inversion count.
-
-## Practice
-Binary search; merge sort; quick sort; count inversions; kth smallest using partitioning.
+### Easy
+- [ ] Binary search
+### Medium
+- [ ] Merge sort
+- [ ] Quick sort
+- [ ] Find kth largest (quickselect)
+- [ ] Majority element using divide and conquer
+### Hard
+- [ ] Count inversions
+- [ ] Closest pair of points (introductory)
