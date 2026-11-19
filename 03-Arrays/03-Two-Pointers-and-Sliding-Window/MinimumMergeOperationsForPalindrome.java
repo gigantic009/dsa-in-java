@@ -2,10 +2,6 @@
  * Problem: Find the minimum merge operations needed to make an array a palindrome.
  * One operation merges two adjacent elements by replacing them with their sum.
  * LeetCode: Not available
- * Companies: Amazon
- * Time Complexity: O(n)
- * Space Complexity: O(1), excluding the input array.
- * Assumption: Array values are non-negative.
  */
 
 import java.util.Scanner;
