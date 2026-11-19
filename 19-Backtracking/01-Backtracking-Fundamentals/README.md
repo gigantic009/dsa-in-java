@@ -1,4 +1,13 @@
 # Backtracking Fundamentals
-
-## Theory
-State-space tree, choose/explore/unchoose, recursion tree, constraints, pruning and duplicate handling.
+## Easy
+- [ ] Subsets
+## Medium
+- [ ] Permutations
+- [ ] Combination sum
+- [ ] Combination sum II
+- [ ] Subsets II
+- [ ] Generate parentheses
+- [ ] Palindrome partitioning
+## Hard
+- [ ] N-Queens
+- [ ] Sudoku solver
