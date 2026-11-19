@@ -7,6 +7,13 @@ public class GenerateSubsetsBitmask {
 
     // Time complexity: O(n * 2^n), because each mask checks every element.
     public static List<List<Integer>> subsets(int[] nums) {
+        if (nums == null) {
+            throw new IllegalArgumentException("Input array must not be null.");
+        }
+        // Explicit cap protects against exponential memory/time consumption.
+        if (nums.length > 20) {
+            throw new IllegalArgumentException("Bitmask subset generation is limited to 20 elements.");
+        }
         List<List<Integer>> result = new ArrayList<>();
         int limit = 1 << nums.length; // n elements produce 2^n subset masks.
 
@@ -29,11 +36,11 @@ public class GenerateSubsetsBitmask {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter array size (small enough for bitmask enumeration): ");
+        System.out.print("Enter array size (at most 20 for bitmask enumeration): ");
         int n = scanner.nextInt();
 
-        if (n < 0 || n >= 31) {
-            System.out.println("Please enter a size between 0 and 30.");
+        if (n < 0 || n > 20) {
+            System.out.println("Please enter a size between 0 and 20.");
             scanner.close();
             return;
         }
