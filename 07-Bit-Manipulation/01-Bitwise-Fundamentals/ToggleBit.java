@@ -1,7 +1,2 @@
-// Toggle a bit: set bits become zero and zero bits become one.
-public class ToggleBit {
-    public static int toggle(int number, int bit) {
-        return number ^ (1 << bit); // XOR changes only the selected bit.
-    }
-    public static void main(String[] args) { System.out.println(toggle(10, 1)); }
-}
+import java.util.Scanner;
+public class ToggleBit {public static int toggle(int n,int b){return n^(1<<b);}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Number: ");int n=sc.nextInt();System.out.print("Bit index (0-based): ");int b=sc.nextInt();if(b<0||b>31)System.out.println("Bit index must be 0..31");else System.out.println(toggle(n,b));sc.close();}}
