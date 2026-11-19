@@ -64,3 +64,10 @@ Do not assume every matrix is sorted in the same way. Row-sorted and globally so
 - [ ] Implement transpose and rotation.
 - [ ] Explain the preconditions for each search technique.
 - [ ] Solve three unseen matrix problems.
+
+
+## Sprint teaching expansion
+
+Java int[][] rows may be jagged/null. State assumptions. Traversal O(rows*columns). Patterns transpose, spiral, rotation, boundary, matrix search. Test empty, single row/column, non-square and jagged.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
