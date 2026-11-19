@@ -192,3 +192,14 @@ These migrations preserve useful content, but each implementation still needs a 
 - Added guards against negative input counts in `MaximumProductSubarray`, `MaximumProfitTwoTransactions`, `MergeIntervals`, and `NextPermutation`.
 - `MergeIntervals` now rejects intervals whose start exceeds their end before sorting/merging.
 - These changes are defensive input-handling fixes; they do not represent a complete algorithm audit of the array module. Product overflow in long-based product algorithms remains a domain limitation to document/test, and CLI programs require broader test coverage.
+
+
+## 30-minute intensive sprint additions
+
+- Added teaching expansions to module landing pages for Foundations, Java Basics, Complexity, Searching/Sorting, Matrices, Strings, Bits, OOP, Recursion, Divide-and-Conquer, Linked Lists, Stacks, Queues, Trees, BSTs, Heaps/Hashing, Graphs, Greedy, Backtracking, DP, Tries, Segment Trees and Interview Patterns. These are teaching supplements, not a claim each module is now a complete textbook chapter.
+- Added mixed interview checkpoint, project-lab briefs, cumulative exam plan and monthly report template.
+- Expanded LeetCode cross-reference with candidate source paths; all mapped source solutions remain marked as verification pending.
+- Compared branch path inventories and created `BRANCH-RECONCILIATION.md`; semantic/content review remains incomplete.
+- Partially migrated supplementary arrays-branch solutions (32 source files) and preserved the branch question-bank snapshot with a warning about unverified company tags and links.
+- Expanded focused regression testing with deterministic randomized differential checks for segment-tree range sums.
+- Recent commits are triggering CI concurrently; migration code has not yet all been validated by final completed runs.
