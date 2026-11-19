@@ -4,19 +4,18 @@ import java.util.Arrays;
 
 public class QuickSort {
     static void sort(int[] arr, int low, int high) {
-        if (low >= high) return; // One element is already sorted.
+        if (low >= high) return;
 
         int pivotIndex = partition(arr, low, high);
-        sort(arr, low, pivotIndex - 1); // Sort values before the pivot.
-        sort(arr, pivotIndex + 1, high); // Sort values after the pivot.
+        sort(arr, low, pivotIndex - 1);
+        sort(arr, pivotIndex + 1, high);
     }
 
-    // Uses the last element as pivot and puts it in its correct position.
+    // Uses the last element as the pivot.
     static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = low;
 
-        // Move values smaller than or equal to pivot to the left side.
         for (int j = low; j < high; j++) {
             if (arr[j] <= pivot) {
                 swap(arr, i, j);
@@ -24,7 +23,7 @@ public class QuickSort {
             }
         }
 
-        swap(arr, i, high); // Place pivot between the two sides.
+        swap(arr, i, high); // Put pivot in its correct place.
         return i;
     }
 
