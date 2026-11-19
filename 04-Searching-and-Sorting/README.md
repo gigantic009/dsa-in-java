@@ -32,3 +32,10 @@ Sorting arranges data by a chosen ordering. Learn why comparison sorting cannot 
 
 ## Checkpoint
 Implement linear search, binary search, lower-bound style search, merge sort and quicksort from memory. Explain preconditions, stability, in-place behavior and complexity.
+
+
+## Sprint teaching expansion
+
+Binary search requires sortedness/monotonicity and an interval invariant; midpoint low+(high-low)/2. Sorting trade-offs. Test duplicates, sorted, reversed, tiny inputs. Practice lower/upper bound, merge sort, quicksort, selection.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
