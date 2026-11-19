@@ -38,3 +38,10 @@ Count calls and depth separately. A single chain of n calls may have O(n) stack 
 
 ## Checkpoint
 Trace 5 recursive methods by hand, write 5 from scratch, explain stack space and solve 3 new recursion-pattern problems.
+
+
+## Sprint teaching expansion
+
+Calls must progress toward base case. Define contract and combine smaller results. Track stack/depth. Trace frames. Test base, smallest non-base, typical and deep input.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
