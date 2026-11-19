@@ -1,12 +1,12 @@
 # Backtracking Fundamentals
 
-Backtracking explores choices systematically. Choose, explore, and undo when returning so the next branch starts from the correct state.
+Backtracking explores choices systematically: **choose, explore, undo**. Undoing restores state so the next branch is independent.
 
-## A general template
+## General template
 ```text
 backtrack(state):
-    if state is a complete solution:
-        record it
+    if state is complete:
+        record solution
         return
 
     for each valid choice:
@@ -15,31 +15,35 @@ backtrack(state):
         undo choice
 ```
 
-The template is conceptual; actual implementations differ in how they define state, choices, and constraints.
+This is a conceptual template; implementations differ in state, choices, constraints, and pruning.
 
 ## Key ideas
 - **State:** current partial solution.
 - **Choice:** next decision.
 - **Constraint:** whether a choice is legal.
-- **Pruning:** stop exploring a branch that cannot produce a valid solution.
-- **Undo:** restore the state before trying another choice.
+- **Pruning:** skip branches that cannot produce a valid solution.
+- **Undo:** restore state after recursion.
 
 ## Learning order
 1. Subsets
-2. Permutations (Permutations.java)
+2. Permutations — [Permutations.java](../02-Backtracking-Problem-Patterns/Permutations.java)
 3. Combination Sum
 4. Combination Sum II (duplicate control)
 5. Subsets II
-6. Generate Parentheses (GenerateParentheses.java)
+6. Generate Parentheses — [GenerateParentheses.java](GenerateParentheses.java)
 7. Palindrome Partitioning
-8. N-Queens (NQueens.java)
+8. N-Queens — [NQueens.java](NQueens.java)
 9. Sudoku Solver
 
-## How to trace
-For a small problem, draw a decision tree. Label each edge with the choice and each node with the state. Identify where choices are undone and where branches are pruned.
+## Tracing
+Draw a decision tree for a small input. Label each edge with the choice and each node with the current state. Identify where choices are undone and where branches are pruned.
+
+## Implemented examples
+- Generate Parentheses (LeetCode 22)
+- N-Queens (LeetCode 51)
 
 ## Practice
-Start with subsets and permutations. Before coding, predict the number of outputs for small input sizes and test duplicate inputs when allowed.
+Start with subsets and permutations. Predict the number of outputs for small inputs, then test duplicates and boundary cases where applicable.
 
 ## Checkpoint
-Write a backtracking template from memory. Solve subsets, then permutations, and explain why each branch restores state.
+Write the template from memory. Solve subsets and permutations, and explain why every branch restores its state.
