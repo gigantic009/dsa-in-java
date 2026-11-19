@@ -43,3 +43,10 @@ Java `char` represents a UTF-16 code unit, not always a complete Unicode code po
 - [ ] Choose between char array, frequency array, map and StringBuilder.
 - [ ] Distinguish substring from subsequence.
 - [ ] Implement two-pointer and sliding-window string patterns.
+
+
+## Sprint teaching expansion
+
+Strings are immutable; Java indexes UTF-16 units. Clarify alphabet/Unicode; StringBuilder for repeated edits. Patterns: frequency, two pointers, windows, palindrome. Test empty, repeated, case, punctuation and Unicode.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
