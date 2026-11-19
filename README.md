@@ -110,3 +110,11 @@ This repository aims to provide the explanations, examples, practice, revision, 
 
 - [Completion Program](./COMPLETION-PROGRAM.md) — evidence-based criteria for all 23 topics, testing, branch reconciliation, assessments and LeetCode mapping.
 - [Java Source Audit Register](./AUDIT/JAVA-SOURCE-REGISTER.md) — individual source-file review queue; entries are not marked verified without evidence.
+
+
+## Practice, projects and assessments
+
+- [Mixed Interview Checkpoint](./ASSESSMENTS/INTERVIEW-MIXED-CHECKPOINT.md) — pattern recognition, coding ladder and scoring rubric.
+- [DSA Project Lab](./PROJECTS/DSA-PROJECT-LAB.md) — nine progressive project briefs and acceptance criteria.
+- [Arrays branch migration](./BRANCH-MIGRATION/ARRAYS.md) — partial migration notes.
+- [Arrays question-bank snapshot](./BRANCH-MIGRATION/ARRAYS-QUESTION-BANK-SNAPSHOT.md) — preserved supplemental question list with metadata caveats.
