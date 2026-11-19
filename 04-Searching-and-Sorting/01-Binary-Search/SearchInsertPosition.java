@@ -1,14 +1,21 @@
-/** LeetCode 35: return target index or lower-bound insertion index. O(log n). */
+/** LeetCode 35: return target's index, or its insertion position.
+ * Time: O(log n), Space: O(1). */
 public class SearchInsertPosition {
     static int searchInsert(int[] nums, int target) {
-        int low=0, high=nums.length;
-        while(low<high) {
-            int mid=low+(high-low)/2;
-            if(nums[mid]<target) low=mid+1; else high=mid;
+        int low = 0;                    // First possible insertion position.
+        int high = nums.length;          // Exclusive upper bound.
+
+        while (low < high) {
+            int mid = low + (high - low) / 2; // Inspect the midpoint.
+            if (nums[mid] < target) {
+                low = mid + 1;           // Move past values smaller than target.
+            } else {
+                high = mid;              // Keep mid: it may be the answer.
+            }
         }
-        return low;
+        return low;                       // First index whose value is >= target.
     }
     public static void main(String[] args) {
-        System.out.println(searchInsert(new int[]{1,3,5,6},2));
+        System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 2)); // Prints 1.
     }
 }
