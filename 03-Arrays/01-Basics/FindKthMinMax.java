@@ -25,8 +25,12 @@ public class FindKthMinMax {
             sc.close();
             return;
         }
+
+        // Sorting makes the positions of the order statistics predictable.
         Arrays.sort(numbers);
+        // In ascending order, the kth smallest is k - 1 (zero-based indexing).
         System.out.println("Kth smallest: " + numbers[k - 1]);
+        // The kth largest is counted from the opposite end: n - k.
         System.out.println("Kth largest: " + numbers[n - k]);
         sc.close();
     }
