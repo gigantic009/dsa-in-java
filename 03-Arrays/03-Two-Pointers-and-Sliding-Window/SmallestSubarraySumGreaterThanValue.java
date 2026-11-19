@@ -2,10 +2,6 @@
  * Problem: Find the minimum length of a contiguous subarray
  * whose sum is greater than the target.
  * LeetCode: Not available
- * Companies: Not listed
- * Assumption: All array values are positive integers.
- * Time Complexity: O(n)
- * Space Complexity: O(1), excluding the input array.
  */
 
 import java.util.Scanner;
