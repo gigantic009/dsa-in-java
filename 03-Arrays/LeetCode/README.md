@@ -1,8 +1,8 @@
 # LeetCode Array Problems
 
-This collection contains only questions from the Arrays branch that map to a specific LeetCode problem number. Each Java file includes the problem description, LeetCode number, company information when it was present in the repository's question bank, complexity, and a complete beginner-readable Java solution.
+This collection contains questions from the Arrays branch that map to specific LeetCode problem numbers. Each Java file includes a problem description, problem number, complexity information where available, and a standalone Java implementation.
 
-Company names are reproduced from the existing question-bank entries. They are not independently verified as historical interview reports. "Not listed" means no company names were supplied in that question bank.
+Company interview associations are intentionally omitted from this collection unless independently researched and verified in a separate, clearly sourced reference.
 
 ## Easy
 
@@ -37,13 +37,11 @@ Company names are reproduced from the existing question-bank entries. They are n
 
 | LeetCode | Problem | Solution |
 |---|---|---|
-| #4 | Median of Two Sorted Arrays | [LeetCode-4-MedianOfTwoSortedArrays.java](Advanced/LeetCode-4-MedianOfTwoSortedArrays.java) |
+| #4 | Median of Two Sorted Arrays | [LeetCode-4-MedianOfTwoSortedArrays.java](Advanced/LeetCode-4-MedianOfTwoArrays.java) |
 | #42 | Trapping Rain Water | [LeetCode-42-TrappingRainWater.java](Advanced/LeetCode-42-TrappingRainWater.java) |
 | #123 | Best Time to Buy and Sell Stock III | [LeetCode-123-BestTimeToBuyAndSellStockIII.java](Advanced/LeetCode-123-BestTimeToBuyAndSellStockIII.java) |
 
 ## Notes
-
 - Difficulty labels follow LeetCode's Easy / Medium / Hard levels; this repository uses **Moderate** for Medium and **Advanced** for Hard.
-- Only exact LeetCode problem matches are included. Similar-looking questions with different requirements remain in the main Arrays question bank and are not incorrectly assigned a LeetCode number.
-- Each file is independently runnable and reads input from the console. Class names are prefixed with the LeetCode number to keep Java filenames and public class names aligned.
-- Solutions follow the compact spacing and indentation style used throughout the Arrays branch.
+- Only exact LeetCode problem matches are included. Similar-looking questions with different requirements remain in the main Arrays question bank.
+- Files are intended to be standalone console programs. Class names use problem numbers to avoid naming collisions.
