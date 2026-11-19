@@ -1,9 +1,8 @@
 /*
  * Problem: Find the minimum length of a contiguous subarray
  * whose sum is greater than the target.
- * LeetCode: Not available
+ * Requires non-negative elements for this sliding-window strategy.
  */
-
 import java.util.Scanner;
 
 public class SmallestSubarraySumGreaterThanValue {
@@ -18,25 +17,24 @@ public class SmallestSubarraySumGreaterThanValue {
         int left = 0;
         int minimumLength = numbers.length + 1;
         long currentSum = 0;
-        // Expand the window by moving the right pointer.
         for (int right = 0; right < numbers.length; right++) {
             currentSum += numbers[right];
-            // Shrink the window while its sum is still greater than target.
-            while (currentSum > target) {
-                int currentLength = right - left + 1;
-                minimumLength = Math.min(minimumLength, currentLength);
-                currentSum -= numbers[left];
-                left++;
+            while (currentSum > target && left <= right) {
+                minimumLength = Math.min(minimumLength, right - left + 1);
+                currentSum -= numbers[left++];
             }
         }
-        if (minimumLength == numbers.length + 1) {
-            return 0;
-        }
-        return minimumLength;
+        return minimumLength == numbers.length + 1 ? 0 : minimumLength;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Array size must be non-negative");
+            sc.close();
+            return;
+        }
         int[] numbers = new int[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
