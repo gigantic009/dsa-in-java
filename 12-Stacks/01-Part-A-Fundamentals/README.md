@@ -1,7 +1,17 @@
-# Stacks — Part A: Fundamentals
+# Stack Fundamentals — Question Bank
 
-## Theory
-LIFO, push/pop/peek, array and linked-list implementations, Java ArrayDeque, balanced brackets, expression conversion and evaluation.
-
-## Solved problem
-- [Valid parentheses](ValidParentheses.java)
+### Easy
+- [ ] Stack using array
+- [ ] Stack using linked list
+- [ ] Implement stack using Java collections
+- [ ] Valid parentheses
+- [ ] Reverse stack
+### Medium
+- [ ] Min stack
+- [ ] Evaluate postfix expression
+- [ ] Infix to postfix
+- [ ] Infix to prefix
+- [ ] Evaluate prefix expression
+- [ ] Implement queue using stacks
+### Hard
+- [ ] Basic calculator
