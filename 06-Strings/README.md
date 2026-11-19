@@ -1,18 +1,17 @@
 # Strings — Question Bank
-
-### Easy
-- [ ] Reverse a string
-- [ ] Check palindrome
+## Easy
+- [ ] Reverse string
+- [ ] Palindrome check
 - [ ] Count vowels/consonants
 - [ ] Toggle case
-- [ ] Remove a character
+- [ ] Remove character
 - [ ] First non-repeating character
-- [ ] Valid Anagram
+- [ ] Valid anagram
 - [ ] Isomorphic strings
 - [ ] Longest common prefix
-- [ ] Reverse words in a string
-### Medium
-- [ ] Group Anagrams
+- [ ] Reverse words
+## Medium
+- [ ] Group anagrams
 - [ ] Longest substring without repeating characters
 - [ ] String compression
 - [ ] Longest palindromic substring
@@ -21,10 +20,9 @@
 - [ ] Permutation in string
 - [ ] String to integer (atoi)
 - [ ] Compare version numbers
-### Hard
-- [ ] Rabin–Karp pattern search
-- [ ] KMP pattern matching
+## Hard
+- [ ] KMP
+- [ ] Rabin–Karp
 - [ ] Z algorithm
 - [ ] Edit distance
-
-Individual Java files, exact problem IDs and completion links will be added as solutions are implemented.
+Each implemented question gets its own Java file. See [LeetCode tracker](../LEETCODE.md).
