@@ -1,12 +1,14 @@
-# Linked Lists — Part B: Doubly, Circular and Advanced
+# Doubly, Circular & Advanced Linked Lists
 
-## Theory
-Doubly linked lists, circular linked lists, sentinel nodes, pointer updates, merge patterns and in-place rearrangement.
-
-## Practice
-Merge two sorted lists; remove duplicates; intersection of two lists; palindrome linked list; reverse nodes in groups; flatten a multilevel linked list.
-
-## Company-tagged practice
-- Flatten a linked list with next and child pointers — Google.
-- Rearrange a given linked list in place — Ola, Uber.
-- Quicksort on singly linked list — Paytm.
+### Easy
+- [ ] Doubly linked list traversal and insertion
+- [ ] Delete node in doubly linked list
+- [ ] Circular linked list traversal
+### Medium
+- [ ] Reverse doubly linked list
+- [ ] Detect loop in circular list
+- [ ] Rotate linked list
+- [ ] LRU cache (list + map)
+### Hard
+- [ ] Copy list with random pointer
+- [ ] Design LFU cache (extension)
