@@ -127,3 +127,17 @@ Status values: `Not reviewed`, `Reviewed`, `Tested`, `Verified`. Update only wit
 ## Sprint migration annotation
 
 Additional source files imported from the arrays branch during the sprint are listed in [the branch migration register](../BRANCH-MIGRATION/ARRAYS.md). They remain **Not reviewed** unless explicitly changed to Reviewed/Tested/Verified in the row above. Importing and compiling are not correctness verification.
+
+
+## Verified in focused randomized regression suite
+
+The following migrated array implementations are exercised by the regression harness with deterministic examples and/or randomized differential testing (verification is bounded to the test cases, not exhaustive proof):
+
+- `03-Arrays/LeetCode/Easy/LeetCode-121-BestTimeToBuyAndSellStock.java` — examples and 500 random differential cases against brute force.
+- `03-Arrays/LeetCode/Easy/LeetCode-53-MaximumSubarray.java` — all-negative example and 500 random differential cases against brute force.
+- `03-Arrays/LeetCode/Easy/LeetCode-217-ContainsDuplicate.java` — duplicate/no-duplicate examples.
+- `03-Arrays/LeetCode/Moderate/LeetCode-238-ProductOfArrayExceptSelf.java` — zero examples and 500 bounded random differential cases.
+- `03-Arrays/LeetCode/Advanced/LeetCode-42-TrappingRainWater.java` — classic example.
+- `03-Arrays/LeetCode/Moderate/LeetCode-287-FindTheDuplicateNumber.java` — example.
+- Median of two sorted arrays, Dijkstra, Kruskal/Union-Find, segment trees, RMQ and histogram remain covered in the same harness.
+
