@@ -25,7 +25,15 @@ Each call keeps its local state until its child returns. Calls unwind in reverse
 
 ## Learn in order
 ### Fundamentals
-- Print numbers in both directions
+1. Understand the call stack and base case.
+2. Print numbers decreasing and increasing (`PrintNumbersRecursion.java`).
+3. Return values and recursive computation: sum and factorial.
+4. Fibonacci and repeated work.
+5. Array/string recursion and search.
+6. Recursive binary search.
+
+### Existing and next topics
+- Print numbers in both directions (see `PrintNumbersRecursion.java` for call-stack order)
 - Factorial and sum
 - Fibonacci (understand why naïve recursion repeats work)
 - Recursive palindrome and string reversal
