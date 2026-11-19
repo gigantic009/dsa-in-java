@@ -18,13 +18,17 @@ class LeetCode56MergeIntervals {
             intervals[i][0] = scanner.nextInt();
             intervals[i][1] = scanner.nextInt();
         }
+
+        // Sorting by start makes overlapping intervals appear consecutively.
         Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
         List<int[]> merged = new ArrayList<>();
         for (int[] interval : intervals) {
+            // If there's no overlap with the last result, append a new interval.
             if (merged.isEmpty()
                     || merged.get(merged.size() - 1)[1] < interval[0]) {
                 merged.add(interval.clone());
             } else {
+                // Overlap exists: extend the previous end to cover both intervals.
                 int[] last = merged.get(merged.size() - 1);
                 last[1] = Math.max(last[1], interval[1]);
             }
