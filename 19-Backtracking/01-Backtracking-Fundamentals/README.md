@@ -26,13 +26,13 @@ The template is conceptual; actual implementations differ in how they define sta
 
 ## Learning order
 1. Subsets
-2. Permutations
+2. Permutations (Permutations.java)
 3. Combination Sum
 4. Combination Sum II (duplicate control)
 5. Subsets II
-6. Generate Parentheses
+6. Generate Parentheses (GenerateParentheses.java)
 7. Palindrome Partitioning
-8. N-Queens
+8. N-Queens (NQueens.java)
 9. Sudoku Solver
 
 ## How to trace
