@@ -27,11 +27,21 @@ public class MergeSortedArraysInPlace {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Invalid first array size");
+            sc.close();
+            return;
+        }
         int[] first = new int[n];
         for (int i = 0; i < n; i++) {
             first[i] = sc.nextInt();
         }
         int m = sc.nextInt();
+        if (m < 0) {
+            System.out.println("Invalid second array size");
+            sc.close();
+            return;
+        }
         int[] second = new int[m];
         for (int i = 0; i < m; i++) {
             second[i] = sc.nextInt();
