@@ -156,3 +156,20 @@ These migrations preserve useful content, but each implementation still needs a 
 - `MinimumJumpsToEnd.java`: added negative jump-value validation and clamped reach calculation to the array's last index to avoid integer overflow.
 - The median regression tests were added to the CI harness; CI status for the latest commit remains pending.
 - Remaining migrated solutions still require targeted execution tests and broader review; source inspection alone is not marked as verified.
+
+
+## Publication-readiness sprint — 19 November 2026
+
+### Improvements committed
+- Added `STUDENT-START-HERE.md` with beginner starting sequence, environment setup, active-learning loop, problem journal/help guidance and course limitations.
+- Updated the main README to prominently link the student guide and accurately describe the current course completeness and verification limitations.
+- Expanded `LEETCODE.md` with a starter set of official problem links and a personal tracking table. These are practice targets, not repository-verified solutions; company tags are deliberately omitted unless evidence exists.
+- Added a worked array traversal lesson (running maximum), including trace table, Java implementation, loop-invariant reasoning, complexity and exercises.
+- Added a GitHub issue template to make bug reports reproducible.
+- CI now triggers on pushes to all branches, not only selected branches; pull requests into main remain checked.
+
+### Verification still outstanding
+- The most recent sprint commits are still running in GitHub Actions at the time of this update.
+- A full semantic review and duplicate-content audit across all branches is still incomplete.
+- A full correctness audit of all Java files is still incomplete.
+- Topic README presence must not be interpreted as a fully developed lesson; lesson depth varies.
