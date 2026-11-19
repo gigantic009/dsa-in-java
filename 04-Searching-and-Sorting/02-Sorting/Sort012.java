@@ -1,7 +1,3 @@
-/** Sort Colors: Dutch National Flag. Time O(n), space O(1). */
-import java.util.Arrays;import java.util.Scanner;
-public class Sort012 {
- static void sort(int[]nums){int low=0,mid=0,high=nums.length-1;while(mid<=high){if(nums[mid]==0)swap(nums,low++,mid++);else if(nums[mid]==1)mid++;else if(nums[mid]==2)swap(nums,mid,high--);else throw new IllegalArgumentException("Values must be 0, 1 or 2");}}
- static void swap(int[]nums,int i,int j){int temp=nums[i];nums[i]=nums[j];nums[j]=temp;}
- public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Enter array size: ");int n=sc.nextInt();if(n<0){System.out.println("Invalid size.");sc.close();return;}int[]nums=new int[n];System.out.println("Enter 0, 1 or 2 values:");for(int i=0;i<n;i++)nums[i]=sc.nextInt();sort(nums);System.out.println(Arrays.toString(nums));sc.close();}
-}
+/** Sort Colors (0,1,2) using the Dutch National Flag algorithm. */
+import java.util.*;
+public class Sort012 {static void sort(int[]a){int low=0,mid=0,high=a.length-1;while(mid<=high){if(a[mid]==0)swap(a,low++,mid++);else if(a[mid]==1)mid++;else if(a[mid]==2)swap(a,mid,high--);else throw new IllegalArgumentException("Only 0, 1, 2 allowed");}}static void swap(int[]a,int i,int j){int t=a[i];a[i]=a[j];a[j]=t;}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Array size: ");int n=sc.nextInt();if(n<0){System.out.println("Invalid size");sc.close();return;}int[]a=new int[n];System.out.println("Enter 0/1/2 values:");for(int i=0;i<n;i++)a[i]=sc.nextInt();sort(a);System.out.println(Arrays.toString(a));sc.close();}}
