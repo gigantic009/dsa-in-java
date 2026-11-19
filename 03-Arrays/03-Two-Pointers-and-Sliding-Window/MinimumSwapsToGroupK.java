@@ -1,9 +1,6 @@
 /*
  * Problem: Find the minimum swaps needed to bring all elements <= k together.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n)
- * Space Complexity: O(1)
  */
 
 import java.util.Scanner;
