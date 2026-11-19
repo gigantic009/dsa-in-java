@@ -1,4 +1,2 @@
-// A subclass overrides a method; the runtime object selects the implementation.
-class Animal {public void sound(){System.out.println("Sound");}}
-class Dog extends Animal { @Override public void sound(){System.out.println("Bark");} }
-public class RuntimePolymorphism {public static void main(String[]args){Animal a=new Dog();a.sound();}}
+import java.util.Scanner;
+class Animal {public void sound(){System.out.println("Animal sound");}}class Dog extends Animal {@Override public void sound(){System.out.println("Bark");}}class Cat extends Animal {@Override public void sound(){System.out.println("Meow");}}public class RuntimePolymorphism {public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Choose animal (dog/cat): ");String choice=sc.nextLine().trim().toLowerCase();Animal animal;if(choice.equals("dog"))animal=new Dog();else if(choice.equals("cat"))animal=new Cat();else{System.out.println("Unknown animal");sc.close();return;}animal.sound();sc.close();}}
