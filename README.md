@@ -1,75 +1,87 @@
-# Data Structures & Algorithms in Java ☕
+# DSA in Java — The Complete Free Learning Path
 
-A single Java DSA repository organised with **one Git branch per main topic**.
+> **A self-contained, open learning course for learning Data Structures & Algorithms in Java from zero to interview-ready.** No paid batch required. Learn at your pace, read the lessons, trace the examples, write the code, complete the practice, and test yourself.
 
-**Repository → topic branch → subtopic folders → difficulty groups → individual Java solutions.**
+## Start here
 
-The topic branches are the canonical working areas. The default `main` branch is the landing page, branch directory and overall progress index.
+**New to programming? Begin at [00 — Foundations](./00-Foundations/README.md).** Do not jump directly into advanced problem solutions.
 
-## Topic branches
+### The course sequence
 
-| Topic | Git branch | Questions in supplied merged bank |
-|---|---|---:|
-| Arrays | `arrays` | 56 |
-| Strings | `strings` | 54 |
-| 2D Arrays / Matrix | `2d-arrays-matrix` | 20 |
-| Searching & Sorting | `searching-sorting` | 56 |
-| Backtracking | `backtracking` | 29 |
-| Linked Lists | `linked-lists` | 58 |
-| Stacks & Queues | `stacks-queues` | 59 |
-| Greedy | `greedy` | 51 |
-| Binary Trees | `binary-trees` | 66 |
-| Binary Search Trees | `binary-search-trees` | 41 |
-| Heaps & Hashing | `heaps-hashing` | 46 |
-| Graphs | `graphs` | 74 |
-| Tries | `tries` | 6 |
-| Dynamic Programming | `dynamic-programming` | 99 |
-| Bit Manipulation | `bit-manipulation` | 10 |
-| Segment Trees | `segment-trees` | 6 |
-| **Total** | **16 topic branches** | **731** |
+| Stage | Learn | Start |
+|---|---|---|
+| 0 | Problem solving, pseudocode, flowcharts | [Foundations](./00-Foundations/README.md) |
+| 1 | Java syntax, types, input/output, operators, control flow, loops, methods | [Java Basics](./01-Java-Basics/README.md) |
+| 2 | Time/space complexity and analysis | [Complexity](./02-Complexity/README.md) |
+| 3 | Arrays, searching, two pointers, prefix sums, hashing | [Arrays](./03-Arrays/README.md) |
+| 4 | Searching and sorting patterns | [Searching & Sorting](./04-Searching-and-Sorting/README.md) |
+| 5 | Strings and string patterns | [Strings](./05-Strings/README.md) |
+| 6 | Matrices and 2D arrays | [2D Arrays](./06-2D-Arrays/README.md) |
+| 7 | Bit operations and bit patterns | [Bit Manipulation](./07-Bit-Manipulation/README.md) |
+| 8 | Recursion and divide-and-conquer | [Recursion](./09-Recursion/README.md) / [Divide & Conquer](./10-Divide-and-Conquer/README.md) |
+| 9 | Linked lists | [Linked Lists](./11-Linked-Lists/README.md) |
+| 10 | Stacks and queues | [Stacks](./12-Stacks/README.md) / Queues |
+| 11 | Backtracking | [Backtracking](./13-Backtracking/README.md) |
+| 12 | Trees, binary trees, BSTs | [Binary Trees](./14-Binary-Trees/README.md) / [BST](./15-Binary-Search-Trees/README.md) |
+| 13 | Heaps and hashing | [Heaps & Hashing](./16-Heaps-and-Hashing/README.md) |
+| 14 | Greedy algorithms | [Greedy](./17-Greedy/README.md) |
+| 15 | Graphs | [Graphs](./18-Graphs/README.md) |
+| 16 | Tries | [Tries](./19-Tries/README.md) |
+| 17 | Dynamic programming | [DP](./20-Dynamic-Programming/README.md) |
+| 18 | Segment trees and range queries | [Segment Trees](./21-Segment-Trees/README.md) |
+| 19 | Interview practice, mixed revision and timed assessments | [LeetCode index](./LEETCODE.md) |
 
-Open a branch from the [Branches page](https://github.com/gigantic009/dsa-in-java/branches/all).
+> Folder links above are intended navigation targets; topic availability and lesson depth will be progressively audited and expanded. Check the branch/topic directory if a path isn't present yet.
 
-## Inside each topic branch
+## How to use this repository
 
-Use a consistent hierarchy:
+1. **Read the lesson README first.** Learn the idea, terminology and diagrams.
+2. **Trace the examples by hand.** Don't skip the dry run.
+3. **Run the Java example.** Use the supplied input or make your own.
+4. **Solve the warm-up exercises without looking at solutions.**
+5. **Attempt the problem bank in order.** Easy → Medium → Hard where applicable.
+6. **After attempting**, read the solution, close it, and rewrite it yourself.
+7. **Test edge cases** and explain the algorithm aloud.
+8. **Review on a spaced schedule** (next day, 1 week, 1 month).
+9. **Take checkpoints** before moving on.
 
-```text
-topic-branch/
-├── README.md
-├── topics/
-│   ├── 01-topic-fundamentals/
-│   │   └── README.md
-│   ├── 02-problem-pattern/
-│   │   ├── README.md
-│   │   ├── Easy/
-│   │   ├── Medium/
-│   │   └── Hard/
-│   └── ...
-├── question-bank/
-│   └── QUESTION-BANK.md
-└── solutions/
-    └── ProblemName.java
-```
+## Each lesson should provide
 
-- Theory-only fundamentals contain explanations, examples and diagrams—not artificial coding tasks.
-- Coding questions are grouped by actual topic and pattern, not by the sheet they came from.
-- Questions are ordered by the difficulty labels in the supplied workbook. Those labels are estimates, not universal difficulty ratings.
-- Java solutions use straightforward, readable code. Explanations, dry runs and complexity analysis belong in Markdown rather than comments inside solution code.
+- Prerequisites and learning objectives
+- Intuition, plain-language explanation and terminology
+- Visuals / diagrams when useful
+- Worked example and trace table
+- Java implementation with meaningful comments
+- Time and space complexity, including why
+- Common mistakes and debugging tips
+- Practice: warm-up, core, challenge
+- Quiz/checkpoint and answers or solution guidance
+- Links to related concepts in this repository
 
-## Source handling
+## Java conventions
 
-The merged topic-wise workbook contains **731 unique problem titles** across 16 topics. Its source column records whether a question appears in the Apna College 375 sheet, Love Babbar 450 sheet, or both. The Apna sheet's company names are retained with the corresponding questions. Love Babbar questions without supplied company labels remain untagged.
+- Use readable, idiomatic Java and meaningful variable names.
+- Standalone programs read required values from standard input.
+- LeetCode/platform solutions retain the platform-required method signatures.
+- Explain the algorithm—not every obvious syntax line—in comments.
+- Don't copy a solution until you have made a genuine attempt.
+- Include tests for empty, smallest, largest relevant, duplicate, negative and boundary cases as applicable.
 
-Company associations are transcribed source claims, not independently verified interview records. Similar-but-not-identical titles are not silently merged; original wording is preserved so that variants can be reviewed.
+## Roadmap and quality standards
 
-The uploaded *Ultimate DSA Preparation Sheet* is a resource-link page (NeetCode 150, Striver A2Z, DSA patterns and a top-LeetCode list), not a further complete question bank. Those linked resources should be imported only when their actual question lists are supplied or accessible.
+- [Complete course map](./COURSE-ROADMAP.md)
+- [How to study DSA effectively](./HOW-TO-STUDY.md)
+- [Progress tracker](./PROGRESS.md)
+- [Repository audit](./REPOSITORY-AUDIT.md)
+- [LeetCode problem index](./LEETCODE.md)
+- [Practice and testing standards](./CONTRIBUTING.md)
 
-## Completion policy
+## Topic branches and question bank
 
-A question is not considered solved merely because it appears in the bank. Mark it solved only after:
-1. a Java implementation is written;
-2. edge cases are checked;
-3. the approach and time/space complexity are documented.
+The repository contains topic branches and a question bank drawn from supplied learning sheets. Treat the problem bank as **practice inventory, not proof that solutions are complete or tested**. See the topic branches and each topic README.
 
-**Understand the pattern. Trace the code. Test edge cases. Analyse complexity.**
+## A promise—and a realistic one
+
+This repository aims to provide the explanations, examples, practice, revision, and assessments needed to learn DSA without paying for a course. Mastery still comes from actively solving problems, debugging, and reviewing—not from reading answers passively.
+
+**Start at Foundations. Be consistent. Write code every day.**
