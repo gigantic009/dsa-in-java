@@ -7,64 +7,35 @@ Recursion solves a problem by calling the same method on a smaller instance. Eve
 2. **Progress:** how does each call make the problem smaller?
 3. **Combine:** how do smaller answers or actions produce the current result?
 
-## Example: factorial
-`n! = n × (n-1)!`, with `0! = 1`.
-
-```java
-static long factorial(int n) {
-    if (n < 0) throw new IllegalArgumentException("n must be non-negative");
-    if (n <= 1) return 1;
-    return n * factorial(n - 1);
-}
-```
-
-Trace factorial(4): 4 × factorial(3) → 4 × 3 × factorial(2) → 4 × 3 × 2 × factorial(1) → 24.
+## Learn in order
+1. Call stack and base case
+2. [Print numbers in both directions](./PrintNumbersRecursion.java)
+3. [Sum](./SumNaturalNumbers.java) and [factorial](./FactorialRecursion.java)
+4. [Fibonacci](./FibonacciRecursion.java) — naïve recursion and repeated work
+5. [Reverse a string](./RecursiveStringReverse.java) and [recursive palindrome](./RecursivePalindrome.java)
+6. [First occurrence](./FirstOccurrence.java) and [check sorted array](./ArraySortedRecursion.java)
+7. [Recursive binary search](./RecursiveBinarySearch.java)
+8. [Fast power](../02-Part-B-Patterns/FastPower.java) — logarithmic recursion
 
 ## Call stack
 Each call keeps its local state until its child returns. Calls unwind in reverse order. Deep recursion can exhaust the stack.
 
-## Learn in order
-### Fundamentals
-1. Understand the call stack and base case.
-2. Print numbers decreasing and increasing (`PrintNumbersRecursion.java`).
-3. Sum of natural numbers (`SumNaturalNumbers.java`), then factorial (`FactorialRecursion.java).
-4. Fibonacci and repeated work.
-5. Array/string recursion and search.
-6. Recursive binary search.
+## Practice ladder
+- Easy: factorial, sum, first occurrence, sorted check, palindrome.
+- Medium: Fibonacci, fast power, binary search, tiling, subsets.
+- Challenge: multi-branch recursion and memoization.
 
-### Existing and next topics
-- Print numbers in both directions (see `PrintNumbersRecursion.java` for call-stack order)
-- Factorial and sum (`SumNaturalNumbers.java` and `FactorialRecursion.java`)
-- Fibonacci (understand why naïve recursion repeats work)
-- Recursive palindrome and string reversal
-- First/last occurrence in arrays
-- Check whether array is sorted
-- Recursive binary search
+## Mistakes
+- Missing base case or no progress toward it
+- Incorrectly combining returned values
+- Forgetting to restore mutable state
+- Ignoring stack depth or repeated work
 
-### Patterns
-- Fast exponentiation
-- Tiling and pairing
-- Remove duplicate characters
-- Binary strings with constraints
-- Subsets and other branching recursion (then backtracking)
+## Complexity
+- Sum/factorial: O(n) time and O(n) stack
+- Naive Fibonacci: exponential time, O(n) stack
+- String reverse/palindrome/sorted check: O(n) time, O(n) stack
+- Recursive binary search: O(log n) time and stack
+- Fast power: O(log n) calls/stack
 
-## Practice
-- Easy: factorial, sum, first/last occurrence, sorted check.
-- Medium: fast power, tiling, subsets, Tower of Hanoi.
-- Challenge: variations involving multiple recursive branches and memoization.
-
-## Mistakes to avoid
-- Missing a base case.
-- Base case exists but calls do not progress toward it.
-- Returning a value incorrectly from a recursive call.
-- Treating recursion as magic instead of tracing the stack.
-- Using recursion for a depth that could overflow the Java stack.
-
-## Checkpoint
-Draw the call stack for factorial and fast power. Implement two array recursion problems without looking at code.
-
-
-## Complexity notes
-- Sum of natural numbers: O(n) time and O(n) recursive stack space; the demo accepts non-negative values, though very large inputs can exhaust the call stack.\n- Factorial recursion: O(n) time and O(n) call-stack space; the demo restricts n to 20 for long.
-- First occurrence: O(n) worst-case time and O(n) stack space; start index must be valid and non-negative.
-- Fast power: O(log n) recursive calls and O(log n) stack space. The long result can overflow for large bases/exponents.
+Test empty, singleton, boundaries, typical inputs, and invalid input.
