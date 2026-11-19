@@ -74,6 +74,6 @@ public class AuditRegressionTests {
                 }
             }
         }
-\n        System.out.println("Audit regression tests passed.");
+        System.out.println("Audit regression tests passed.");
     }
 }
