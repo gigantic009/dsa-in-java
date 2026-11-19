@@ -1,7 +1,2 @@
-// Clear (turn off) a selected bit.
-public class ClearBit {
-    public static int clear(int number, int bit) {
-        return number & ~(1 << bit); // NOT mask has zero at target bit; AND clears it.
-    }
-    public static void main(String[] args) { System.out.println(clear(10, 1)); }
-}
+import java.util.Scanner;
+public class ClearBit {public static int clear(int n,int b){return n&~(1<<b);}public static void main(String[]args){Scanner sc=new Scanner(System.in);System.out.print("Number: ");int n=sc.nextInt();System.out.print("Bit index (0-based): ");int b=sc.nextInt();if(b<0||b>31)System.out.println("Bit index must be 0..31");else System.out.println(clear(n,b));sc.close();}}
