@@ -5,6 +5,11 @@ public class ToggleBit {
 
     // XOR flips only the bit where the mask contains a 1.
     public static int toggle(int number, int bit) {
+        // Validate here too so callers outside main cannot trigger wrapped shifts.
+        if (bit < 0 || bit > 31) {
+            throw new IllegalArgumentException("Bit position must be between 0 and 31.");
+        }
+
         int mask = 1 << bit;
         return number ^ mask;
     }
