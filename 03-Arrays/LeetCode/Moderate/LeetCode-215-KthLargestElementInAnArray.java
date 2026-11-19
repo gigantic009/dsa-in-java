@@ -1,6 +1,7 @@
 /*
  * Problem: Find the kth largest element in an unsorted array.
  * LeetCode: #215
+ * Time: O(n log n) | Auxiliary space: depends on sorting implementation
  */
 
 import java.util.Arrays;
@@ -20,9 +21,10 @@ class LeetCode215KthLargestElementInAnArray {
             sc.close();
             return;
         }
-        // Sort in ascending order.
+
+        // Sorting in ascending order puts the largest values at the array's end.
         Arrays.sort(numbers);
-        // The kth largest element is at index n - k.
+        // Count k positions from the right, converting to a zero-based index.
         System.out.println(numbers[n - k]);
         sc.close();
     }
