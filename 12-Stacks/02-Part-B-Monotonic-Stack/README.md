@@ -1,10 +1,13 @@
-# Stacks — Part B: Monotonic Stack
-
-## Theory
-Increasing/decreasing monotonic stacks, next/previous greater/smaller, amortised O(n) analysis.
-
-## Solved problem
-- [Next greater element](NextGreaterElement.java)
-
-## Practice
-Stock span; largest rectangle in histogram; trapping rain water; daily temperatures.
+# Monotonic Stack
+## Easy
+- [ ] Next greater element
+## Medium
+- [ ] Next greater circular
+- [ ] Next smaller
+- [ ] Daily temperatures
+- [ ] Stock span
+- [ ] Histogram rectangle
+- [ ] Sum subarray minimums
+## Hard
+- [ ] Trapping rain water
+- [ ] Maximal rectangle
