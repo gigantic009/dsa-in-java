@@ -1,8 +1,6 @@
 /*
  * Problem: Find the kth smallest element in an unsorted array.
  * LeetCode: Not available
- * Companies: ABCO, Accolite, Amazon, Cisco, Hike, Microsoft,
- *            Snapdeal, VMWare, Google, Adobe
  * Time Complexity: O(n log n), due to sorting.
  * Space Complexity: Depends on the sorting implementation.
  */
