@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
+/** Toggles a selected bit: 0 becomes 1, and 1 becomes 0. */
 public class ToggleBit {
-    // Flips the selected bit: 0 becomes 1 and 1 becomes 0.
+
+    // XOR flips only the bit where the mask contains a 1.
     public static int toggle(int number, int bit) {
-        int mask = 1 << bit; // Create a mask for the target bit.
-        return number ^ mask; // XOR flips only the bit where the mask is 1.
+        int mask = 1 << bit;
+        return number ^ mask;
     }
 
     public static void main(String[] args) {
