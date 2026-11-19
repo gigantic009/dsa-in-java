@@ -10,7 +10,12 @@ public class MaximumProductSubarray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        if (n == 0) {
+        if (n < 0) {
+            System.out.println("Array size must be non-negative");
+            scanner.close();
+            return;
+        }
+        if (n == 0)) {
             System.out.println("Array is empty");
             return;
         }
