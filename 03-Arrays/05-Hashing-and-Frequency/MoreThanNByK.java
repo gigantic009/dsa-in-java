@@ -1,6 +1,7 @@
 /*
  * Problem: Print all elements that occur more than n/k times.
  * LeetCode: Not available
+ * Time: O(n) average | Auxiliary space: O(n)
  */
 
 import java.util.ArrayList;
@@ -24,18 +25,22 @@ public class MoreThanNByK {
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
         }
+
+        // Count each value's frequency so candidates can be checked against n / k.
         Map<Integer, Integer> frequency = new HashMap<>();
         for (int number : numbers) {
             int oldCount = frequency.getOrDefault(number, 0);
             frequency.put(number, oldCount + 1);
         }
+
+        // Only values with a count strictly greater than the threshold qualify.
         List<Integer> answer = new ArrayList<>();
         for (Map.Entry<Integer, Integer> entry : frequency.entrySet()) {
             if (entry.getValue() > n / k) {
                 answer.add(entry.getKey());
             }
         }
-        // Print the result in sorted order for consistent output.
+        // Sort for deterministic, easier-to-read output.
         Collections.sort(answer);
         System.out.println(answer);
         sc.close();
