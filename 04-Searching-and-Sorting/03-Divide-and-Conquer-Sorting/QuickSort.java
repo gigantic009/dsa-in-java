@@ -1,33 +1,84 @@
-/** Quick sort. Average O(n log n), worst O(n^2); average recursion space O(log n). */
+/**
+ * Quick Sort partitions an array around a pivot, then recursively sorts
+ * the elements on either side of that pivot.
+ *
+ * Time Complexity: O(n log n) average, O(n^2) worst case
+ * Auxiliary Space: O(log n) average recursion stack, O(n) worst case
+ *
+ * Related problem: LeetCode 912 - Sort an Array
+ * https://leetcode.com/problems/sort-an-array/
+ */
 import java.util.Arrays;
+import java.util.Scanner;
+
 public class QuickSort {
-    static void sort(int[] nums, int low, int high) {
-        if (low >= high) return;                   // A range of 0 or 1 items is sorted.
-        int pivotIndex = partition(nums, low, high); // Place pivot in its final position.
-        sort(nums, low, pivotIndex - 1);            // Sort values left of the pivot.
-        sort(nums, pivotIndex + 1, high);            // Sort values right of the pivot.
+
+    /**
+     * Sorts the portion of the array from low to high (inclusive).
+     */
+    static void sort(int[] array, int low, int high) {
+        // A range containing at most one element is already sorted.
+        if (low >= high) {
+            return;
+        }
+
+        // Partition places the pivot at its final position.
+        int pivotIndex = partition(array, low, high);
+
+        // Recursively sort both partitions.
+        sort(array, low, pivotIndex - 1);
+        sort(array, pivotIndex + 1, high);
     }
 
-    private static int partition(int[] nums, int low, int high) {
-        int pivot = nums[high];                     // Choose the last value as pivot.
-        int smallerIndex = low;                     // Boundary for values <= pivot.
-        for (int j = low; j < high; j++) {
-            if (nums[j] <= pivot) {
-                swap(nums, smallerIndex, j);         // Move small value to left partition.
+    /**
+     * Uses the last element as pivot and places smaller/equal elements
+     * to its left and larger elements to its right.
+     */
+    private static int partition(int[] array, int low, int high) {
+        int pivot = array[high];
+        int smallerIndex = low;
+
+        for (int current = low; current < high; current++) {
+            if (array[current] <= pivot) {
+                swap(array, smallerIndex, current);
                 smallerIndex++;
             }
         }
-        swap(nums, smallerIndex, high);              // Place pivot between partitions.
-        return smallerIndex;                         // Pivot's final sorted index.
+
+        // Place the pivot between the two partitions.
+        swap(array, smallerIndex, high);
+        return smallerIndex;
     }
 
-    private static void swap(int[] nums, int i, int j) {
-        int temp = nums[i]; nums[i] = nums[j]; nums[j] = temp; // Exchange two values.
+    /** Exchanges the values at two indices. */
+    private static void swap(int[] array, int first, int second) {
+        int temporary = array[first];
+        array[first] = array[second];
+        array[second] = temporary;
     }
 
     public static void main(String[] args) {
-        int[] nums = {9, 3, 7, 1, 5};
-        sort(nums, 0, nums.length - 1);
-        System.out.println(Arrays.toString(nums));
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Array size: ");
+        int size = scanner.nextInt();
+
+        if (size < 0) {
+            System.out.println("Invalid size.");
+            scanner.close();
+            return;
+        }
+
+        int[] array = new int[size];
+
+        System.out.println("Enter elements:");
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        sort(array, 0, array.length - 1);
+
+        System.out.println("Sorted array: " + Arrays.toString(array));
+        scanner.close();
     }
 }
