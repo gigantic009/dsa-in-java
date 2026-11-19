@@ -18,3 +18,10 @@ For every problem, record: the signal that suggested the pattern; brute force; i
 
 ## Practice
 Do not simply tag a problem. After solving, explain why a tempting alternate pattern fails or is less efficient.
+
+
+## Sprint teaching expansion
+
+Clarify constraints, brute force, bottleneck, invariant, implementation, tests and complexity. Patterns hashing, pointers, window, binary search, prefix, stack, BFS/DFS, heap, backtracking, DP. Mixed practice.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
