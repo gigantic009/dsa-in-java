@@ -2,17 +2,16 @@
  * Time: O(log n), Space: O(1). */
 public class RotatedArrayMinimum {
     static int findMin(int[] nums) {
+        if (nums == null || nums.length == 0) throw new IllegalArgumentException("Array must be nonempty");
         int low = 0, high = nums.length - 1;
-
         while (low < high) {
             int mid = low + (high - low) / 2;
-            // If mid is greater than high, the rotation pivot is to the right.
             if (nums[mid] > nums[high]) low = mid + 1;
-            else high = mid;                       // Minimum may be mid itself.
+            else high = mid;
         }
-        return nums[low];                           // Range converges on minimum.
+        return nums[low];
     }
     public static void main(String[] args) {
-        System.out.println(findMin(new int[]{3,4,5,1,2})); // Prints 1.
+        System.out.println(findMin(new int[]{3,4,5,1,2}));
     }
 }
