@@ -1,9 +1,6 @@
 /*
  * Problem: Find the kth smallest and kth largest elements in an array.
  * LeetCode: Not available
- * Companies: Not listed
- * Time Complexity: O(n log n), due to sorting.
- * Space Complexity: Depends on the sorting implementation.
  */
 
 import java.util.Arrays;
