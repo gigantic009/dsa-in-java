@@ -1,42 +1,49 @@
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 import java.util.Queue;
 
+/** Breadth-first traversal from a starting vertex. */
 public class BFS {
-    public static void traverse(ArrayList<ArrayList<Integer>> graph, int start) {
+    public static void traverse(List<List<Integer>> graph, int start) {
+        validateGraphAndStart(graph, start);
         boolean[] visited = new boolean[graph.size()];
         Queue<Integer> queue = new ArrayDeque<>();
 
-        visited[start] = true;
+        visited[start] = true; // Mark when enqueued to avoid duplicate entries.
         queue.add(start);
 
         while (!queue.isEmpty()) {
             int current = queue.remove();
             System.out.print(current + " ");
 
-            for (int neighbour : graph.get(current)) {
-                if (!visited[neighbour]) {
-                    visited[neighbour] = true;
-                    queue.add(neighbour);
+            for (int neighbor : graph.get(current)) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.add(neighbor);
+                }
+            }
+        }
+    }
+
+    static void validateGraphAndStart(List<List<Integer>> graph, int start) {
+        if (graph == null || start < 0 || start >= graph.size()) {
+            throw new IllegalArgumentException("Invalid graph or start vertex");
+        }
+        for (List<Integer> neighbors : graph) {
+            if (neighbors == null) {
+                throw new IllegalArgumentException("Neighbor list cannot be null");
+            }
+            for (int v : neighbors) {
+                if (v < 0 || v >= graph.size()) {
+                    throw new IllegalArgumentException("Invalid neighbor vertex");
                 }
             }
         }
     }
 
     public static void main(String[] args) {
-        ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
-
-        for (int i = 0; i < 5; i++) {
-            graph.add(new ArrayList<>());
-        }
-
-        graph.get(0).addAll(Arrays.asList(1, 2));
-        graph.get(1).addAll(Arrays.asList(0, 3));
-        graph.get(2).addAll(Arrays.asList(0, 4));
-        graph.get(3).add(1);
-        graph.get(4).add(2);
-
-        traverse(graph, 0);
+        List<List<Integer>> graph = AdjacencyList.build(5,
+                new int[][]{{0, 1}, {0, 2}, {1, 3}, {2, 4}});
+        traverse(graph, 0); // 0 1 2 3 4
     }
 }
