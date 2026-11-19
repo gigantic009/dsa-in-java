@@ -7,13 +7,14 @@ Divide and conquer is a strategy: **divide** a problem into smaller parts, **con
 - Those instances are often independent.
 - A combine step creates the answer for the larger instance.
 
-## Examples
-- Binary search: discard half of a monotonic/sorted search space.
-- Merge sort: sort halves and merge.
-- Quick sort: partition around a pivot and sort each side.
-- Quickselect: partition to find an order statistic without fully sorting.
-- Inversion counting: count across halves during merge.
-- Closest pair of points: advanced geometric example.
+## Lessons in this branch
+| Problem | File | Key idea |
+|---|---|---|
+| Binary search | [BinarySearch.java](./BinarySearch.java) | Halve a sorted search space |
+| Merge sort | [MergeSort.java](./MergeSort.java) | Sort halves, then merge |
+| Quickselect | [QuickSelect.java](./QuickSelect.java) | Partition to find an order statistic |
+| Count inversions | [CountInversions.java](./CountInversions.java) | Count cross-half inversions while merging |
+| Majority element | [MajorityElementDivideConquer.java](./MajorityElementDivideConquer.java) | Combine half-candidates and verify |
 
 ## Merge sort outline
 1. Split the array into halves.
@@ -25,24 +26,23 @@ Time: O(n log n). Auxiliary space: O(n) for the typical array implementation.
 
 ## Practice order
 ### Warm-up
-- Binary search and recursive binary search
+- Binary search (iterative implementation here); implement recursive binary search as practice.
 
 ### Core
 - Merge sort
-- Quick sort
 - Quickselect (kth largest)
 
 ### Challenge
 - Count inversions
 - Majority element using divide and conquer
-- Closest pair of points (study after the foundations)
+- Closest pair of points (implement as an extension)
+
+## Contracts and side effects
+- Binary search requires the input to be sorted in ascending order and returns -1 if the target is absent.
+- Merge sort sorts its array in place and rejects null.
+- Count inversions sorts its input array as a side effect; inversion pairs are indices i < j where a[i] > a[j].
+- Quickselect validates k and rearranges the array during selection.
+- Majority-element method rejects empty/null arrays and arrays without a strict majority.
 
 ## Checkpoint
-Explain the divide, conquer, and combine steps for merge sort. Trace a 5-element array. Compare quicksort's average and worst-case time.
-
-
-## Sprint teaching expansion
-
-Divide, solve smaller, combine; analyze recurrence and termination. Practice merge sort, quicksort, binary search, inversion counting and selection.
-
-Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
+Explain the divide, conquer, and combine steps for merge sort. Trace a 5-element array. Compare quicksort's average and worst-case time. Test empty/singleton arrays, duplicates, already-sorted and reverse-sorted input, and absent targets.
