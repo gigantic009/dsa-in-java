@@ -1,2 +1,51 @@
-import java.util.*;
-public class TransposeMatrix {static int[][]transpose(int[][]m){int[][]out=new int[m[0].length][m.length];for(int r=0;r<m.length;r++)for(int c=0;c<m[0].length;c++)out[c][r]=m[r][c];return out;}static int[][]read(Scanner sc){System.out.print("Rows: ");int r=sc.nextInt();System.out.print("Columns: ");int c=sc.nextInt();if(r<=0||c<=0)throw new IllegalArgumentException("Dimensions must be positive");int[][]m=new int[r][c];System.out.println("Enter matrix elements row-wise:");for(int i=0;i<r;i++)for(int j=0;j<c;j++)m[i][j]=sc.nextInt();return m;}public static void main(String[]args){Scanner sc=new Scanner(System.in);int[][]m=read(sc);System.out.println(Arrays.deepToString(transpose(m)));sc.close();}}
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class TransposeMatrix {
+    // A rectangular matrix needs a new array because row/column dimensions swap.
+    // Original (row, col) becomes transposed (col, row).
+    static int[][] transpose(int[][] matrix) {
+        if (matrix == null || matrix.length == 0
+                || matrix[0] == null || matrix[0].length == 0) {
+            return new int[0][0];
+        }
+
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[][] result = new int[cols][rows];
+
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                result[col][row] = matrix[row][col];
+            }
+        }
+        return result;
+    }
+
+    static int[][] readMatrix(Scanner sc) {
+        System.out.print("Rows: ");
+        int rows = sc.nextInt();
+        System.out.print("Columns: ");
+        int cols = sc.nextInt();
+
+        if (rows <= 0 || cols <= 0) {
+            throw new IllegalArgumentException("Dimensions must be positive");
+        }
+
+        int[][] matrix = new int[rows][cols];
+        System.out.println("Enter matrix elements row-wise:");
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                matrix[row][col] = sc.nextInt();
+            }
+        }
+        return matrix;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] matrix = readMatrix(sc);
+        System.out.println(Arrays.deepToString(transpose(matrix)));
+        sc.close();
+    }
+}
