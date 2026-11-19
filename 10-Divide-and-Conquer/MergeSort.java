@@ -1,4 +1,6 @@
 // Merge sort divides the array and merges sorted halves.
+// Time Complexity: O(n log n) in all cases.
+// Space Complexity: O(n) auxiliary arrays (plus O(log n) recursion stack).
 import java.util.Arrays;
 
 public class MergeSort {
