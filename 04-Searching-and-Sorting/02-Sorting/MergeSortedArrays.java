@@ -1,3 +1,7 @@
+// EDUCATIONAL NOTES:
+// Both inputs must already be sorted. Two read pointers select the next smaller
+// value; a write pointer fills the output. Remaining tails are copied afterward.
+
 // Merge two sorted arrays: O(n + m) time, O(n + m) space.
 import java.util.Arrays;
 
