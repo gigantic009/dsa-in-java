@@ -1,7 +1,15 @@
-# BST — Part A: Operations
-
-## Theory
-BST invariant, search, insertion, deletion, minimum/maximum, predecessor/successor and inorder traversal.
-
-## Solved problem
-- [Search in BST](SearchInBST.java)
+# BST Operations
+## Easy
+- [ ] Search
+- [ ] Insert
+- [ ] Minimum/maximum
+- [ ] Traversal
+## Medium
+- [ ] Delete
+- [ ] Floor/ceiling
+- [ ] LCA
+- [ ] Kth smallest/largest
+- [ ] BST iterator
+## Hard
+- [ ] Recover BST
+- [ ] Largest BST subtree
