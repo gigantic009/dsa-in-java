@@ -1,4 +1,10 @@
-# Backtracking Problem Patterns
-
-## Practice
-Subsets; permutations; combinations; combination sum; palindrome partitioning; rat in a maze; Sudoku; N-Queens.
+# Backtracking Patterns
+## Medium
+- [ ] Phone keypad combinations
+- [ ] Word search
+- [ ] Rat in maze
+- [ ] Restore IP addresses
+## Hard
+- [ ] N-Queens II
+- [ ] Unique paths III
+- [ ] Sudoku solver
