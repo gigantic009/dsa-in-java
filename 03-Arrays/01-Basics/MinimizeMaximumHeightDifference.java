@@ -12,6 +12,11 @@ public class MinimizeMaximumHeightDifference {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
+        if (n < 0 || k < 0) {
+            System.out.println("Array size and k must be non-negative");
+            sc.close();
+            return;
+        }
         int[] heights = new int[n];
         for (int i = 0; i < n; i++) {
             heights[i] = sc.nextInt();
