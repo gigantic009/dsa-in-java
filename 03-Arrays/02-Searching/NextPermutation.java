@@ -2,9 +2,6 @@
  * Problem: Find the next lexicographically greater permutation.
  * If no greater permutation exists, rearrange the array into ascending order.
  * LeetCode: #31
- * Companies: Uber, Goldman Sachs, Adobe
- * Time Complexity: O(n)
- * Space Complexity: O(1), excluding the input array.
  */
 
 import java.util.Arrays;
