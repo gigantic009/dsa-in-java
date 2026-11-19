@@ -1,25 +1,34 @@
 # Trie Fundamentals
 
-A trie is a tree that stores keys through shared prefixes. It is useful for prefix queries over strings and can be adapted for bitwise keys.
+A trie (prefix tree) stores strings by sharing nodes for common prefixes. It is useful for prefix lookup, dictionaries, autocomplete and related string problems.
 
 ## Node design
-Each node stores child references and metadata such as whether a complete word ends here. For a fixed alphabet, child arrays may be efficient; for flexible characters, maps may be appropriate.
+This implementation uses a 26-element child array for each node and a terminal flag. It supports only lowercase English letters (a-z). Other characters and null inputs are rejected. The empty string is supported.
 
 ## Operations
-- Insert: walk/create nodes for each character; mark terminal.
-- Search: walk the path and verify terminal.
-- Prefix query: walk path and check that it exists, without requiring terminal.
+- **Insert:** create nodes along the path and mark the final node as a complete word.
+- **Search:** follow the path and check the terminal flag.
+- **Prefix query:** follow the path; terminal status is not required.
 
-For a word of length L, operations take O(L) time under typical assumptions.
+For a string of length L, these operations take O(L) time. Space is proportional to the nodes created (up to 26 child references per node).
+
+## Example
+Insert `apple` and `app`:
+- `search("apple")` → true
+- `search("app")` → true
+- `search("ap")` → false (it is a prefix, not a stored word)
+- `startsWith("ap")` → true
+- `startsWith("")` → true (the root represents the empty prefix)
 
 ## Practice
-Implement insert/search/prefix, word and prefix counts, longest word with all prefixes, replace words and wildcard search.
+Try word and prefix counts, longest word with all prefixes, replace words, wildcard search and autocomplete.
 
 ## Pitfalls
 - Distinguishing a prefix from a complete stored word.
-- Correctly incrementing/decrementing counts if deletion is supported.
-- Character indexing assumptions.
-- Empty word behavior.
+- Character-index assumptions and validation.
+- Empty-string behavior.
+- Duplicate insertions: marking a node terminal repeatedly does not create extra words.
+- Deletion requires careful node cleanup.
 
 ## Checkpoint
-Insert several words sharing prefixes. Draw the node structure and implement prefix query.
+Trace insertions of words with shared prefixes, draw the node structure, and explain why prefix lookup differs from exact search.
