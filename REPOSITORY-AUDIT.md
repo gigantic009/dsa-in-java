@@ -66,3 +66,8 @@ This audit consolidates recoverable instructions from prior conversations about 
 - [ ] Complexity documented
 - [ ] Topic README/problem index accurately links solution
 - [ ] Compile/test status recorded
+
+
+## Course transformation — 19 November 2026
+
+The learning-first entrypoint and course scaffold were committed: README.md, COURSE-ROADMAP.md, HOW-TO-STUDY.md, PROGRESS.md and CONTRIBUTING.md. Added beginner-oriented 00-Foundations/README.md and expanded Java Basics, Complexity and Arrays topic READMEs. This is scaffolding and initial instructional content—not a claim that every topic has complete lessons or that all Java files have been audited/tested. Continue module-by-module, branch-by-branch.
