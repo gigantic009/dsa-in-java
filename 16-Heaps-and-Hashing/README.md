@@ -18,3 +18,10 @@ Typical hash lookup/insert is expected O(1); worst-case details depend on implem
 
 ## Checkpoint
 Build a frequency map, solve a top-K problem and explain why a heap is not a fully sorted array.
+
+
+## Sprint teaching expansion
+
+Hash maps expected constant operations but collisions/worst cases matter; heaps maintain partial order. Patterns frequency, top-k, scheduling, streaming. Test duplicates, empty, ties and equality.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
