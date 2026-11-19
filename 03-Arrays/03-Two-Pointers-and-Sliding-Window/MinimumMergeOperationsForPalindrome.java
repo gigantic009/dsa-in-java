@@ -10,7 +10,7 @@ public class MinimumMergeOperationsForPalindrome {
     public static int minOperations(int[] numbers) {
         int left = 0;
         int right = numbers.length - 1;
-        int operations = 0;
+        long operations = 0;
         while (left < right) {
             if (numbers[left] == numbers[right]) {
                 // Both sides already match.
@@ -33,6 +33,11 @@ public class MinimumMergeOperationsForPalindrome {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Invalid array size");
+            sc.close();
+            return;
+        }
         int[] numbers = new int[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
