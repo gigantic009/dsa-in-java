@@ -1,8 +1,60 @@
-// Insert a key into a BST; duplicates are ignored.
-// Time: O(h); recursive stack: O(h).
+/*
+ * Problem: Insert a Value into a Binary Search Tree
+ * Difficulty: Easy
+ * Interview practice: Standard BST operation.
+ * Duplicate values are ignored.
+ *
+ * Time: O(h); recursive stack: O(h).
+ */
+
 public class InsertIntoBST {
- static class Node{int v;Node l,r;Node(int v){this.v=v;}}
- static Node insert(Node n,int x){if(n==null)return new Node(x);if(x<n.v)n.l=insert(n.l,x);else if(x>n.v)n.r=insert(n.r,x);return n;}
- static void inorder(Node n){if(n==null)return;inorder(n.l);System.out.print(n.v+" ");inorder(n.r);}
- public static void main(String[]args){Node r=null;for(int x:new int[]{5,3,7,2,4,6,8})r=insert(r,x);inorder(r);System.out.println();}
+
+    static class Node {
+        int value;
+        Node left;
+        Node right;
+
+        Node(int value) {
+            this.value = value;
+        }
+    }
+
+    public static Node insert(Node root, int key) {
+        // The empty position is where the new node belongs.
+        if (root == null) {
+            return new Node(key);
+        }
+
+        if (key < root.value) {
+            root.left = insert(root.left, key);
+        } else if (key > root.value) {
+            root.right = insert(root.right, key);
+        }
+        // If key equals root.value, we do not insert a duplicate.
+
+        return root;
+    }
+
+    // Inorder traversal of a BST produces values in sorted order.
+    static void inorder(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        inorder(root.left);
+        System.out.print(root.value + " ");
+        inorder(root.right);
+    }
+
+    public static void main(String[] args) {
+        Node root = null;
+        int[] values = {5, 3, 7, 2, 4, 6, 8};
+
+        for (int value : values) {
+            root = insert(root, value);
+        }
+
+        inorder(root); // Expected: 2 3 4 5 6 7 8
+        System.out.println();
+    }
 }
