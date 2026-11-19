@@ -173,3 +173,5 @@ These migrations preserve useful content, but each implementation still needs a 
 - A full semantic review and duplicate-content audit across all branches is still incomplete.
 - A full correctness audit of all Java files is still incomplete.
 - Topic README presence must not be interpreted as a fully developed lesson; lesson depth varies.
+
+- Added a self-assessment checkpoint for beginner foundations, Java, arrays and complexity with tracing exercises, implementation tasks, an answer key and mastery gate; linked from the homepage.
