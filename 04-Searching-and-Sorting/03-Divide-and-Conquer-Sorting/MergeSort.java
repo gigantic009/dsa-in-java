@@ -1,3 +1,7 @@
+// EDUCATIONAL NOTES:
+// Divide ranges until each has one element, then merge sorted halves.
+// Each level costs O(n), with O(log n) levels; auxiliary space is O(n).
+
 // Merge Sort: O(n log n) time, O(n) extra space.
 // LeetCode: 912 - Sort an Array
 import java.util.Arrays;
