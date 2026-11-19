@@ -52,6 +52,28 @@ public class AuditRegressionTests {
         check(LargestRectangleHistogram.largest(new int[]{}) == 0, "Histogram empty");
         check(LargestRectangleHistogram.largest(new int[]{100_000,100_000}) == 200_000L, "Histogram long arithmetic");
 
-        System.out.println("Audit regression tests passed.");
+        
+        // Deterministic randomized differential checks for segment-tree range sums.
+        Random rng = new Random(20261119L);
+        for (int trial = 0; trial < 150; trial++) {
+            int size = 1 + rng.nextInt(32);
+            int[] values = new int[size];
+            for (int i = 0; i < size; i++) values[i] = rng.nextInt(201) - 100;
+            SegmentTree tree = new SegmentTree(values.clone());
+            for (int q = 0; q < 30; q++) {
+                if (rng.nextBoolean()) {
+                    int index = rng.nextInt(size), replacement = rng.nextInt(201) - 100;
+                    values[index] = replacement;
+                    tree.update(index, replacement);
+                } else {
+                    int left = rng.nextInt(size), right = rng.nextInt(size);
+                    if (left > right) { int tmp = left; left = right; right = tmp; }
+                    long expected = 0;
+                    for (int i = left; i <= right; i++) expected += values[i];
+                    check(tree.sum(left, right) == expected, "Random segment-tree sum trial=" + trial);
+                }
+            }
+        }
+\n        System.out.println("Audit regression tests passed.");
     }
 }
