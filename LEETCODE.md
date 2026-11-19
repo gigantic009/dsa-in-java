@@ -97,3 +97,36 @@ Copy this table into your own notes as you work:
 |---|---|---|---|---|---|---|
 | | | | | | | |
 
+
+
+## Repository solution cross-reference (path inventory, not judge verification)
+
+The following topics have matching implementation files in this repository. These are **topic-learning implementations**, and may not use LeetCode's exact `Solution` signature or judge format. Presence of a path is not a claim that the solution passed LeetCode.
+
+| Problem | Candidate repository file | Status |
+|---|---|---|
+| Two Sum (#1) | [TwoSum.java](./16-Heaps-and-Hashing/01-Hashing/TwoSum.java) | Path located; correctness/judge verification pending |
+| Contains Duplicate (#217) | [ContainsDuplicate.java](./03-Arrays/05-Hashing-and-Frequency/ContainsDuplicate.java) | Path located; verification pending |
+| Binary Search (#704) | [BinarySearch.java](./04-Searching-and-Sorting/01-Binary-Search/BinarySearch.java) | Path located; verification pending |
+| Search Insert Position (#35) | [SearchInsertPosition.java](./04-Searching-and-Sorting/01-Binary-Search/SearchInsertPosition.java) | Path located; verification pending |
+| First/Last Position (#34) | [FirstLastPosition.java](./04-Searching-and-Sorting/01-Binary-Search/FirstLastPosition.java) | Path located; verification pending |
+| Search Rotated Array (#33) | [SearchRotatedArray.java](./04-Searching-and-Sorting/01-Binary-Search/SearchRotatedArray.java) | Path located; verification pending |
+| Find Minimum Rotated (#153) | [RotatedArrayMinimum.java](./04-Searching-and-Sorting/01-Binary-Search/RotatedArrayMinimum.java) | Path located; verification pending |
+| Merge Sorted Array (#88) | [MergeSortedArrays.java](./04-Searching-and-Sorting/02-Sorting/MergeSortedArrays.java) | Path located; verification pending |
+| Search 2D Matrix (#74) | [SearchMatrix.java](./05-Two-D-Arrays/01-Matrix-Fundamentals/SearchMatrix.java) | Path located; verification pending |
+| Set Matrix Zeroes (#73) | [SetMatrixZeroes.java](./05-Two-D-Arrays/01-Matrix-Fundamentals/SetMatrixZeroes.java) | Path located; verification pending |
+| Spiral Matrix (#54) | [SpiralMatrix.java](./05-Two-D-Arrays/01-Matrix-Fundamentals/SpiralMatrix.java) | Path located; verification pending |
+| Rotate Image (#48) | [RotateMatrix90.java](./05-Two-D-Arrays/01-Matrix-Fundamentals/RotateMatrix90.java) | Path located; verification pending |
+| Reverse String (#344) | [ReverseString.java](./06-Strings/ReverseString.java) | Path located; verification pending |
+| Valid Palindrome (#125) | [ValidPalindrome.java](./06-Strings/ValidPalindrome.java) | Path located; verification pending |
+| Single Number (#136) | [SingleNumber.java](./07-Bit-Manipulation/02-Bitwise-Problem-Patterns/SingleNumber.java) | Path located; verification pending |
+| Power of Two (#231) | [PowerOfTwo.java](./07-Bit-Manipulation/02-Bitwise-Problem-Patterns/PowerOfTwo.java) | Path located; verification pending |
+| Linked List Cycle (#141) | [LinkedListCycle.java](./11-Linked-Lists/01-Part-A-Singly-Linked-List/LinkedListCycle.java) | Path located; verification pending |
+| Reverse Linked List (#206) | [ReverseLinkedList.java](./11-Linked-Lists/01-Part-A-Singly-Linked-List/ReverseLinkedList.java) | Path located; verification pending |
+| Middle of Linked List (#876) | [MiddleOfLinkedList.java](./11-Linked-Lists/01-Part-A-Singly-Linked-List/MiddleOfLinkedList.java) | Path located; verification pending |
+| Remove Nth from End (#19) | [RemoveNthFromEnd.java](./11-Linked-Lists/01-Part-A-Singly-Linked-List/RemoveNthFromEnd.java) | Path located; verification pending |
+| Group Anagrams (#49) | [GroupAnagrams.java](./16-Heaps-and-Hashing/01-Hashing/GroupAnagrams.java) | Path located; verification pending |
+| Climbing Stairs (#70) | [ClimbingStairs.java](./20-Dynamic-Programming/02-Part-2-1D-DP/ClimbingStairs.java) | Path located; verification pending |
+| House Robber (#198) | [HouseRobber.java](./20-Dynamic-Programming/02-Part-2-1D-DP/HouseRobber.java) | Path located; verification pending |
+
+**Verification policy:** Mark a problem solution verified only after checking algorithm correctness, edge cases, and compiling/testing against a representative harness or judge. Company tags are omitted unless independently substantiated.
