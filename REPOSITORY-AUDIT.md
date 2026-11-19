@@ -185,3 +185,10 @@ These migrations preserve useful content, but each implementation still needs a 
 ### Latest CI evidence
 
 - Workflow run for commit `437ad8215fdd1313942b021b1d39798d24ffb722` completed successfully: individual Java compilation, focused regression tests and internal Markdown navigation all passed.
+
+
+## Additional source audit actions (arrays)
+
+- Added guards against negative input counts in `MaximumProductSubarray`, `MaximumProfitTwoTransactions`, `MergeIntervals`, and `NextPermutation`.
+- `MergeIntervals` now rejects intervals whose start exceeds their end before sorting/merging.
+- These changes are defensive input-handling fixes; they do not represent a complete algorithm audit of the array module. Product overflow in long-based product algorithms remains a domain limitation to document/test, and CLI programs require broader test coverage.
