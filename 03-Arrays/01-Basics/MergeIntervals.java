@@ -23,6 +23,11 @@ public class MergeIntervals {
         for (int i = 0; i < n; i++) {
             intervals[i][0] = scanner.nextInt();
             intervals[i][1] = scanner.nextInt();
+            if (intervals[i][0] > intervals[i][1]) {
+                System.out.println("Interval start must not exceed its end");
+                scanner.close();
+                return;
+            }
         }
         Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
         List<int[]> merged = new ArrayList<>();
