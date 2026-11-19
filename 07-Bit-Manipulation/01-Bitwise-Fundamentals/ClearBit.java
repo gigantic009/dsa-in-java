@@ -1,10 +1,14 @@
 import java.util.Scanner;
 
+/** Clears (sets to 0) a selected bit in an integer. */
 public class ClearBit {
-    // Turns the selected bit off without changing other bit positions.
+
+    // Leaves all other bits unchanged.
     public static int clear(int number, int bit) {
-        int mask = 1 << bit; // Identify the bit that must be cleared.
-        return number & ~mask; // NOT makes that mask bit 0; AND clears it.
+        int mask = 1 << bit;
+
+        // NOT turns the mask's selected bit off; AND clears that bit in number.
+        return number & ~mask;
     }
 
     public static void main(String[] args) {
