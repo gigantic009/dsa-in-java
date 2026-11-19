@@ -15,7 +15,7 @@ public class MaximumProductSubarray {
             scanner.close();
             return;
         }
-        if (n == 0)) {
+        if (n == 0) {
             System.out.println("Array is empty");
             return;
         }
