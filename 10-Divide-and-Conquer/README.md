@@ -39,3 +39,10 @@ Time: O(n log n). Auxiliary space: O(n) for the typical array implementation.
 
 ## Checkpoint
 Explain the divide, conquer, and combine steps for merge sort. Trace a 5-element array. Compare quicksort's average and worst-case time.
+
+
+## Sprint teaching expansion
+
+Divide, solve smaller, combine; analyze recurrence and termination. Practice merge sort, quicksort, binary search, inversion counting and selection.
+
+Self-check: explain, trace, justify, implement, test boundaries and analyze complexity.
