@@ -14,6 +14,11 @@ public class NextPermutation {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Array size must be non-negative");
+            sc.close();
+            return;
+        }
         int[] numbers = new int[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
