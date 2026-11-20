@@ -46,10 +46,3 @@ jobs:
           mapfile -t graph_files < <(find 17-Graphs -name '*.java' -print)
           javac -d compile-results/graphs "${graph_files[@]}"
           echo "Compiled Graphs module source files."
-      - name: Run temporary readability smoke tests
-        shell: bash
-        run: |
-          set -e
-          javac -cp compile-results/graphs -d compile-results/graphs             11-Linked-Lists/01-Part-A-Singly-Linked-List/LinkedListPalindrome.java             12-Stacks/01-Part-A-Fundamentals/MinStack.java             12-Stacks/01-Part-A-Fundamentals/PostfixEvaluation.java             12-Stacks/02-Part-B-Monotonic-Stack/NextSmallerElement.java             13-Queues/01-Queue-Fundamentals/CircularQueue.java             13-Queues/02-Queue-Problem-Patterns/FirstNegativeInWindow.java             13-Queues/02-Queue-Problem-Patterns/FirstNonRepeatingCharacter.java             13-Queues/02-Queue-Problem-Patterns/GenerateBinaryNumbers.java
-          javac -cp compile-results/graphs -d compile-results/graphs tests/TemporaryAuditSmokeTest.java
-          java -cp compile-results/graphs TemporaryAuditSmokeTest
