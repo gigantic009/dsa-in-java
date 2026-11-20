@@ -2,7 +2,7 @@ name: Compile Java DSA Files
 
 on:
   push:
-    branches: [main]
+    branches: [main, audit-graphs-readable]
   workflow_dispatch:
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Compile every Java source independently with source discovery
+      - name: Compile every non-graph Java source independently
         shell: bash
         run: |
           set -e
@@ -22,10 +22,13 @@ jobs:
           failures=0
           mkdir -p compile-results
           while IFS= read -r -d '' file; do
+            case "$file" in
+              ./17-Graphs/*|./tests/*) continue ;;
+            esac
             count=$((count + 1))
             out="compile-results/$count"
             mkdir -p "$out"
-            if javac -sourcepath . -d "$out" "$file" 2> "$out/error.txt"; then
+            if javac -d "$out" "$file" 2> "$out/error.txt"; then
               echo "PASS: $file"
             else
               failures=$((failures + 1))
@@ -33,5 +36,19 @@ jobs:
               cat "$out/error.txt"
             fi
           done < <(find . -name '*.java' -not -path './compile-results/*' -print0)
-          echo "Checked $count Java files; failures: $failures"
+          echo "Checked $count non-graph Java files; failures: $failures"
           if [ "$failures" -gt 0 ]; then exit 1; fi
+      - name: Compile the Graphs module together
+        shell: bash
+        run: |
+          set -e
+          mkdir -p compile-results/graphs
+          mapfile -t graph_files < <(find 17-Graphs -name '*.java' -print)
+          javac -d compile-results/graphs "${graph_files[@]}"
+          echo "Compiled Graphs module source files."
+      - name: Run temporary Graphs smoke tests
+        shell: bash
+        run: |
+          set -e
+          javac -cp compile-results/graphs -d compile-results/graphs tests/GraphSmokeTest.java
+          java -cp compile-results/graphs GraphSmokeTest

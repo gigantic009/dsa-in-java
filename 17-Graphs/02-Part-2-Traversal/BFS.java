@@ -6,6 +6,7 @@ import java.util.Queue;
 public class BFS {
     public static void traverse(List<List<Integer>> graph, int start) {
         validateGraphAndStart(graph, start);
+
         boolean[] visited = new boolean[graph.size()];
         Queue<Integer> queue = new ArrayDeque<>();
 
@@ -25,20 +26,28 @@ public class BFS {
         }
     }
 
-    static void validateGraphAndStart(List<List<Integer>> graph, int start) {
-        if (graph == null || start < 0 || start >= graph.size()) {
-            throw new IllegalArgumentException("Invalid graph or start vertex");
+    static void validateGraph(List<List<Integer>> graph) {
+        if (graph == null) {
+            throw new IllegalArgumentException("Graph cannot be null");
         }
+
         for (List<Integer> neighbors : graph) {
             if (neighbors == null) {
                 throw new IllegalArgumentException("Neighbor list cannot be null");
             }
-            for (int v : neighbors) {
-                if (v < 0 || v >= graph.size()) {
+            for (int vertex : neighbors) {
+                if (vertex < 0 || vertex >= graph.size()) {
                     throw new IllegalArgumentException("Invalid neighbor vertex");
                 }
             }
         }
+    }
+
+    static void validateGraphAndStart(List<List<Integer>> graph, int start) {
+        if (graph == null || start < 0 || start >= graph.size()) {
+            throw new IllegalArgumentException("Invalid graph or start vertex");
+        }
+        validateGraph(graph);
     }
 
     public static void main(String[] args) {
