@@ -28,7 +28,7 @@ jobs:
             count=$((count + 1))
             out="compile-results/$count"
             mkdir -p "$out"
-            if javac -d "$out" "$file" 2> "$out/error.txt"; then
+            if javac -sourcepath . -d "$out" "$file" 2> "$out/error.txt"; then
               echo "PASS: $file"
             else
               failures=$((failures + 1))
