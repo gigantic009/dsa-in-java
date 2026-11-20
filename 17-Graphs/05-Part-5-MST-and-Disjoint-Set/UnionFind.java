@@ -1,21 +1,54 @@
 /** Disjoint Set Union using path compression and union by rank. */
 public class UnionFind {
-    private final int[] parent,rank;
-    public UnionFind(int n){
-        if(n<0)throw new IllegalArgumentException("Size cannot be negative");
-        parent=new int[n];rank=new int[n];for(int i=0;i<n;i++)parent[i]=i;
+    private final int[] parent;
+    private final int[] rank;
+
+    public UnionFind(int size) {
+        if (size < 0) {
+            throw new IllegalArgumentException("Size cannot be negative");
+        }
+
+        parent = new int[size];
+        rank = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            parent[i] = i;
+        }
     }
+
     /** Returns the representative and compresses the path. */
-    public int find(int x){
-        validate(x);if(parent[x]!=x)parent[x]=find(parent[x]);return parent[x];
+    public int find(int value) {
+        validate(value);
+
+        if (parent[value] != value) {
+            parent[value] = find(parent[value]);
+        }
+        return parent[value];
     }
-    /** Merges sets; false means the elements were already connected. */
-    public boolean union(int a,int b){
-        a=find(a);b=find(b);if(a==b)return false;
-        if(rank[a]<rank[b])parent[a]=b;
-        else if(rank[a]>rank[b])parent[b]=a;
-        else{parent[b]=a;rank[a]++;}
+
+    /** Merges two sets; false means the elements were already connected. */
+    public boolean union(int first, int second) {
+        first = find(first);
+        second = find(second);
+
+        if (first == second) {
+            return false;
+        }
+
+        if (rank[first] < rank[second]) {
+            parent[first] = second;
+        } else if (rank[first] > rank[second]) {
+            parent[second] = first;
+        } else {
+            parent[second] = first;
+            rank[first]++;
+        }
         return true;
     }
-    private void validate(int x){if(x<0||x>=parent.length)throw new IllegalArgumentException("Index out of bounds");}
+
+    private void validate(int value) {
+        if (value < 0 || value >= parent.length) {
+            throw new IllegalArgumentException("Index out of bounds");
+        }
+    }
 }

@@ -6,22 +6,54 @@ import java.util.Queue;
 /** Kahn's algorithm; an empty result indicates a directed cycle. */
 public class KahnTopologicalSort {
     public static List<Integer> sort(List<List<Integer>> graph) {
-        if(graph==null)throw new IllegalArgumentException("Graph cannot be null");
-        for(int i=0;i<graph.size();i++) BFS.validateGraphAndStart(graph,i);
-        int n=graph.size();int[] indegree=new int[n];
-        for(List<Integer> neighbors:graph)for(int v:neighbors)indegree[v]++;
-        Queue<Integer> queue=new ArrayDeque<>();
-        for(int i=0;i<n;i++)if(indegree[i]==0)queue.add(i);
-        List<Integer> order=new ArrayList<>();
-        while(!queue.isEmpty()){
-            int u=queue.remove();order.add(u);
-            for(int v:graph.get(u))if(--indegree[v]==0)queue.add(v);
+        BFS.validateGraph(graph);
+
+        int vertices = graph.size();
+        int[] indegree = new int[vertices];
+
+        for (List<Integer> neighbors : graph) {
+            for (int neighbor : neighbors) {
+                indegree[neighbor]++;
+            }
         }
-        return order.size()==n?order:new ArrayList<>();
+
+        Queue<Integer> queue = new ArrayDeque<>();
+        for (int vertex = 0; vertex < vertices; vertex++) {
+            if (indegree[vertex] == 0) {
+                queue.add(vertex);
+            }
+        }
+
+        List<Integer> order = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            int vertex = queue.remove();
+            order.add(vertex);
+
+            for (int neighbor : graph.get(vertex)) {
+                indegree[neighbor]--;
+                if (indegree[neighbor] == 0) {
+                    queue.add(neighbor);
+                }
+            }
+        }
+
+        if (order.size() == vertices) {
+            return order;
+        }
+        return new ArrayList<>();
     }
-    public static void main(String[] args){
-        List<List<Integer>> graph=new ArrayList<>();for(int i=0;i<4;i++)graph.add(new ArrayList<>());
-        graph.get(0).add(1);graph.get(0).add(2);graph.get(1).add(3);graph.get(2).add(3);
+
+    public static void main(String[] args) {
+        List<List<Integer>> graph = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            graph.add(new ArrayList<>());
+        }
+
+        graph.get(0).add(1);
+        graph.get(0).add(2);
+        graph.get(1).add(3);
+        graph.get(2).add(3);
+
         System.out.println(sort(graph));
     }
 }
