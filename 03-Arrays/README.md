@@ -12,8 +12,13 @@ Java variables, loops, methods, basic input/output and complexity fundamentals.
 4. [Subarrays and prefix sum](04-Subarrays-and-Prefix-Sum/README.md): contiguous ranges, cumulative sums and Kadane's algorithm.
 5. [Hashing and frequency](05-Hashing-and-Frequency/README.md): lookup, counting, duplicate detection and frequency maps.
 
-## Additional problems migrated from the legacy arrays branch
-Preserved implementations include [Maximum Product Subarray](01-Basics/MaximumProductSubarray.java), [Product Except Self](01-Basics/ProductOfArrayExceptSelf.java), [Maximum Profit — Two Transactions](01-Basics/MaximumProfitTwoTransactions.java), [Minimum Jumps](01-Basics/MinimumJumpsToEnd.java), [Merge Intervals](01-Basics/MergeIntervals.java), and [Move Negatives to One Side](01-Basics/MoveNegativesToOneSide.java).
+## Additional standalone practice
+- [Container With Most Water](03-Two-Pointers-and-Sliding-Window/ContainerWithMostWater.java)
+- [Given Sum Pair](05-Hashing-and-Frequency/GivenSumPair.java)
+- [Repeat and Missing Number](05-Hashing-and-Frequency/RepeatAndMissingNumber.java)
+
+## Additional preserved implementations
+The module also includes [Maximum Product Subarray](01-Basics/MaximumProductSubarray.java), [Product Except Self](01-Basics/ProductOfArrayExceptSelf.java), [Maximum Profit — Two Transactions](01-Basics/MaximumProfitTwoTransactions.java), [Minimum Jumps](01-Basics/MinimumJumpsToEnd.java), [Merge Intervals](01-Basics/MergeIntervals.java), and [Move Negatives to One Side](01-Basics/MoveNegativesToOneSide.java).
 
 ## Additional reference material
 The repository also contains supplementary problem notes in [03-Two-Pointers](03-Two-Pointers/) and [06-Hashing](06-Hashing/). These folders contain reference markdown, not the primary chapter sequence.
@@ -33,7 +38,7 @@ The repository also contains supplementary problem notes in [03-Two-Pointers](03
 Start with traversal and min/max, then reverse, search, frequency, sorted checks, rotations, prefix sums, two pointers, sliding windows and subarray problems. Don't jump straight to Hard.
 
 ## Every problem
-Write the brute-force solution first when appropriate, explain why it works, improve it, test edge cases and state complexity. Consult the topic branch and question bank for the expanded practice inventory.
+Write the brute-force solution first when appropriate, explain why it works, improve it, test edge cases and state complexity.
 
 ## Checkpoint
 - [ ] Explain array indices and length.
