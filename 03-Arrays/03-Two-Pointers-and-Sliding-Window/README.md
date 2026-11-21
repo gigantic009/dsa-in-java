@@ -56,6 +56,9 @@ Array `[2, 1, 5, 1, 3, 2]`, k = 3.
 
 Answer: 9. Instead of recalculating each sum, subtract the outgoing element and add the incoming one.
 
+## Implemented solution
+- [Container With Most Water](ContainerWithMostWater.java) — use the two-pointer width and height trade-off to find the maximum area in O(n).
+
 ## Practice progression
 ### Warm-up
 - Move Zeroes
