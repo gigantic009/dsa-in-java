@@ -18,7 +18,11 @@ A set answers whether an item has already been seen. This often converts repeate
 ## 3. Hashing and complexity
 Hash-table operations are typically O(1) average, but are not guaranteed O(1) in every circumstance. The key must obey consistent equals/hashCode behavior when used in Java maps and sets.
 
-## 4. Pattern recognition
+## 4. Implemented examples
+- [Given Sum Pair](GivenSumPair.java) — check for a complement while scanning with a set.
+- [Repeat and Missing Number](RepeatAndMissingNumber.java) — use XOR partitioning to find the two values in O(n) time and O(1) extra space.
+
+## 5. Pattern recognition
 - Need to know whether an element exists? Set.
 - Need counts? Map.
 - Need to group items by a shared signature? Map from signature to collection.
