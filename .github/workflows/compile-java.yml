@@ -2,7 +2,7 @@ name: Compile Java DSA Files
 
 on:
   push:
-    branches: [main, audit-graphs-readable]
+    branches: [main, 'audit-*']
   workflow_dispatch:
 
 jobs:
