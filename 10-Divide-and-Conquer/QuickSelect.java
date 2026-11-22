@@ -1,7 +1,8 @@
 // Quickselect finds the kth largest element without fully sorting.
-// Time Complexity: Average O(n), worst O(n^2), depending on pivot placement.
-// Space Complexity: Average O(log n), worst O(n) recursion stack.
+// Time Complexity: Average O(n), worst O(n^2), depending on pivot choices.
+// Space Complexity: O(1) extra space because the selection loop is iterative.
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class QuickSelect {
     public static int kthLargest(int[] nums, int k) {
@@ -15,31 +16,45 @@ public class QuickSelect {
     }
 
     private static int select(int[] nums, int left, int right, int target) {
-        int pivot = nums[right];
-        int storeIndex = left;
+        while (left <= right) {
+            int pivotIndex = ThreadLocalRandom.current().nextInt(left, right + 1);
+            int pivot = nums[pivotIndex];
 
-        // Move values smaller than the pivot to its left.
-        for (int i = left; i < right; i++) {
-            if (nums[i] < pivot) {
-                int temp = nums[i];
-                nums[i] = nums[storeIndex];
-                nums[storeIndex] = temp;
-                storeIndex++;
+            // Group values smaller than, equal to, and greater than the pivot.
+            int smaller = left;
+            int current = left;
+            int larger = right;
+
+            while (current <= larger) {
+                if (nums[current] < pivot) {
+                    swap(nums, smaller, current);
+                    smaller++;
+                    current++;
+                } else if (nums[current] > pivot) {
+                    swap(nums, current, larger);
+                    larger--;
+                } else {
+                    current++;
+                }
+            }
+
+            // The target is in one of the three groups, so narrow the range.
+            if (target < smaller) {
+                right = smaller - 1;
+            } else if (target > larger) {
+                left = larger + 1;
+            } else {
+                return pivot;
             }
         }
 
-        // Place the pivot at its final position.
-        int temp = nums[storeIndex];
-        nums[storeIndex] = nums[right];
-        nums[right] = temp;
+        throw new IllegalStateException("Target index was not found");
+    }
 
-        if (storeIndex == target) {
-            return nums[storeIndex];
-        }
-        if (storeIndex > target) {
-            return select(nums, left, storeIndex - 1, target);
-        }
-        return select(nums, storeIndex + 1, right, target);
+    private static void swap(int[] nums, int first, int second) {
+        int temp = nums[first];
+        nums[first] = nums[second];
+        nums[second] = temp;
     }
 
     public static void main(String[] args) {
