@@ -1,12 +1,27 @@
 // Reverse a stack recursively without using another stack.
-import java.util.*;
+import java.util.Stack;
+
 public class ReverseStack {
- private static void insertBottom(Stack<Integer> s,int value){
-  if(s.empty()){s.push(value);return;} // Base case: value reaches the bottom.
-  int top=s.pop();insertBottom(s,value);s.push(top); // Restore items above the inserted value.
- }
- public static void reverse(Stack<Integer> s){
-  if(s.empty())return;
-  int top=s.pop();reverse(s);insertBottom(s,top); // Place each removed item at the bottom.
- }
+    private static void insertBottom(Stack<Integer> stack, int value) {
+        if (stack.empty()) {
+            stack.push(value);
+            return;
+        }
+
+        // Temporarily remove the items above the bottom.
+        int top = stack.pop();
+        insertBottom(stack, value);
+        stack.push(top);
+    }
+
+    public static void reverse(Stack<Integer> stack) {
+        if (stack.empty()) {
+            return;
+        }
+
+        // Remove the top item, reverse the rest, then insert it at the bottom.
+        int top = stack.pop();
+        reverse(stack);
+        insertBottom(stack, top);
+    }
 }

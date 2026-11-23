@@ -1,15 +1,30 @@
 /** LeetCode 62: counts paths moving only right or down. */
 public class UniquePaths {
     public static int count(int m, int n) {
-        if (m <= 0 || n <= 0) throw new IllegalArgumentException("Dimensions must be positive.");
+        if (m <= 0 || n <= 0) {
+            throw new IllegalArgumentException("Dimensions must be positive.");
+        }
+
         int[][] dp = new int[m][n];
-        for (int r = 0; r < m; r++) dp[r][0] = 1;
-        for (int c = 0; c < n; c++) dp[0][c] = 1;
-        for (int r = 1; r < m; r++)
-            for (int c = 1; c < n; c++)
-                dp[r][c] = Math.addExact(dp[r - 1][c], dp[r][c - 1]);
+
+        for (int row = 0; row < m; row++) {
+            dp[row][0] = 1;
+        }
+        for (int column = 0; column < n; column++) {
+            dp[0][column] = 1;
+        }
+
+        for (int row = 1; row < m; row++) {
+            for (int column = 1; column < n; column++) {
+                dp[row][column] = Math.addExact(
+                        dp[row - 1][column], dp[row][column - 1]);
+            }
+        }
+
         return dp[m - 1][n - 1];
     }
-    public static void main(String[] args) { System.out.println(count(3,7)); // 28
+
+    public static void main(String[] args) {
+        System.out.println(count(3, 7)); // 28
     }
 }
