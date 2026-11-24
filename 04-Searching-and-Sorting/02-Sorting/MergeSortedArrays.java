@@ -7,18 +7,32 @@ import java.util.Arrays;
 
 public class MergeSortedArrays {
     static int[] merge(int[] a, int[] b) {
+        if (a == null || b == null) {
+            throw new IllegalArgumentException("Both arrays must not be null");
+        }
+
         int[] result = new int[a.length + b.length];
-        int i = 0, j = 0, k = 0;
+        int i = 0;
+        int j = 0;
+        int k = 0;
 
         // Pick the smaller element from the two arrays.
         while (i < a.length && j < b.length) {
-            if (a[i] <= b[j]) result[k++] = a[i++];
-            else result[k++] = b[j++];
+            if (a[i] <= b[j]) {
+                result[k++] = a[i++];
+            } else {
+                result[k++] = b[j++];
+            }
         }
 
         // Copy leftover elements.
-        while (i < a.length) result[k++] = a[i++];
-        while (j < b.length) result[k++] = b[j++];
+        while (i < a.length) {
+            result[k++] = a[i++];
+        }
+
+        while (j < b.length) {
+            result[k++] = b[j++];
+        }
 
         return result;
     }

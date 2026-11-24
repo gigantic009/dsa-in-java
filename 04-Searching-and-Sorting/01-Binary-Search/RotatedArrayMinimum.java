@@ -7,17 +7,25 @@
 // Time: O(log n), Space: O(1).
 public class RotatedArrayMinimum {
     static int findMin(int[] nums) {
-        if (nums == null || nums.length == 0) throw new IllegalArgumentException("Array must be nonempty");
+        if (nums == null || nums.length == 0) {
+            throw new IllegalArgumentException("Array must be nonempty");
+        }
 
-        int low = 0, high = nums.length - 1;
+        int low = 0;
+        int high = nums.length - 1;
+
         while (low < high) {
             int mid = low + (high - low) / 2;
 
             // If mid is bigger, the minimum is on its right.
-            if (nums[mid] > nums[high]) low = mid + 1;
-            // Otherwise, mid may be the minimum, so keep it.
-            else high = mid;
+            if (nums[mid] > nums[high]) {
+                low = mid + 1;
+            } else {
+                // Otherwise, mid may be the minimum, so keep it.
+                high = mid;
+            }
         }
+
         return nums[low];
     }
 

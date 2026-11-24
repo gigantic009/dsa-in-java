@@ -13,7 +13,9 @@ public class SelectionSort {
 
             // Find the smallest element in the remaining array.
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[min]) min = j;
+                if (arr[j] < arr[min]) {
+                    min = j;
+                }
             }
 
             int temp = arr[i];
