@@ -22,7 +22,9 @@ public class BubbleSort {
             }
 
             // If no swap happened, the array is already sorted.
-            if (!swapped) break;
+            if (!swapped) {
+                break;
+            }
         }
     }
 

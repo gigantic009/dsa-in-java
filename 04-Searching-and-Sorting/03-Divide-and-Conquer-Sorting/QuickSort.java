@@ -1,35 +1,43 @@
 // EDUCATIONAL NOTES:
-// Lomuto partition places pivot at its final index and groups <= pivot before it.
-// Recursively sort both sides. Last-element pivot can yield O(n^2) on sorted or
-// duplicate-heavy input; average time is O(n log n).
+// A three-way partition places values below, equal to and above the pivot in
+// separate regions. Random pivots help avoid consistently unbalanced partitions.
+// Sorting the smaller region first keeps the recursion depth bounded.
 
-// Quick Sort: O(n log n) average, O(n^2) worst-case time.
-// LeetCode: 912 - Sort an Array
+// Quick Sort: O(n log n) average time, O(log n) average space.
 import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class QuickSort {
     static void sort(int[] arr, int low, int high) {
-        if (low >= high) return;
+        while (low < high) {
+            int pivot = arr[ThreadLocalRandom.current().nextInt(low, high + 1)];
+            int smaller = low;
+            int current = low;
+            int larger = high;
 
-        int pivotIndex = partition(arr, low, high);
-        sort(arr, low, pivotIndex - 1);
-        sort(arr, pivotIndex + 1, high);
-    }
+            // Divide the range into values below, equal to and above the pivot.
+            while (current <= larger) {
+                if (arr[current] < pivot) {
+                    swap(arr, smaller, current);
+                    smaller++;
+                    current++;
+                } else if (arr[current] > pivot) {
+                    swap(arr, current, larger);
+                    larger--;
+                } else {
+                    current++;
+                }
+            }
 
-    // Uses the last element as the pivot.
-    static int partition(int[] arr, int low, int high) {
-        int pivot = arr[high];
-        int i = low;
-
-        for (int j = low; j < high; j++) {
-            if (arr[j] <= pivot) {
-                swap(arr, i, j);
-                i++;
+            // Recurse on the smaller range, then continue with the larger one.
+            if (smaller - low < high - larger) {
+                sort(arr, low, smaller - 1);
+                low = larger + 1;
+            } else {
+                sort(arr, larger + 1, high);
+                high = smaller - 1;
             }
         }
-
-        swap(arr, i, high); // Put pivot in its correct place.
-        return i;
     }
 
     static void swap(int[] arr, int i, int j) {
