@@ -4,25 +4,47 @@ import java.util.Comparator;
 /** Fractional knapsack: items can be split, so sort by value/weight ratio. */
 public class FractionalKnapsack {
     static class Item {
-        final double value, weight;
+        final double value;
+        final double weight;
+
         Item(double value, double weight) {
-            if (value < 0 || weight <= 0) throw new IllegalArgumentException("Invalid item");
-            this.value = value; this.weight = weight;
+            if (!Double.isFinite(value) || !Double.isFinite(weight)
+                    || value < 0 || weight <= 0) {
+                throw new IllegalArgumentException("Item values must be finite; weight must be positive.");
+            }
+            this.value = value;
+            this.weight = weight;
         }
     }
 
+    // Time: O(n log n); auxiliary space: O(n) for the sorted copy.
     public static double maxValue(Item[] items, double capacity) {
-        if (items == null || capacity < 0) throw new IllegalArgumentException("Invalid input");
+        if (items == null || !Double.isFinite(capacity) || capacity < 0) {
+            throw new IllegalArgumentException("Capacity must be finite and nonnegative; items must not be null.");
+        }
+
         Item[] copy = items.clone();
-        for (Item item : copy) if (item == null) throw new IllegalArgumentException("Item cannot be null");
-        Arrays.sort(copy, Comparator.comparingDouble((Item item) -> item.value / item.weight).reversed());
+        for (Item item : copy) {
+            if (item == null) {
+                throw new IllegalArgumentException("Item cannot be null.");
+            }
+        }
+
+        Arrays.sort(copy,
+                Comparator.comparingDouble((Item item) -> item.value / item.weight)
+                        .reversed());
+
         double total = 0;
         for (Item item : copy) {
-            if (capacity == 0) break;
+            if (capacity == 0) {
+                break;
+            }
+
             double amount = Math.min(capacity, item.weight);
             total += amount * item.value / item.weight;
             capacity -= amount;
         }
+
         return total;
     }
 
