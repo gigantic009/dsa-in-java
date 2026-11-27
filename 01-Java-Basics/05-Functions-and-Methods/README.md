@@ -1,37 +1,70 @@
 # Functions and Methods
 
-## 1. Method anatomy
-A method defines a reusable operation. A declaration includes a return type, name, parameter list and body.
+Methods allow logic to be named, reused and tested independently. They also help divide a problem into smaller units.
+
+## 1. Anatomy of a method
+
 ```java
 static int add(int a, int b) {
     return a + b;
 }
 ```
-- **Return type:** type of returned value, or `void` when no value is returned.
-- **Parameters:** local names for values supplied by the caller.
-- **Arguments:** actual values supplied during a call.
-- **Signature:** method name and parameter types (not return type alone).
 
-## 2. Calling a method
-Calling a method transfers control to its body. When it returns, execution continues at the call site. A return value can be stored, printed or passed to another method.
+- `static`: this example can be called from the class without creating an instance.
+- `int`: return type.
+- `add`: method name.
+- `int a, int b`: parameters.
+- `return`: sends a result back to the caller.
 
-## 3. Java is pass-by-value
-Java passes a copy of each argument value. For object arguments, the copied value is a reference: a method can use it to mutate an object, but assigning a different reference to the parameter does not change the caller's variable.
+A `void` method does not return a value.
 
-## 4. Scope and lifetime
-Local variables and parameters are available within their method/block. Fields belong to objects or classes. Keep variables close to where they are used.
+## 2. Calling methods
 
-## 5. Overloading
-Methods can share a name when parameter lists differ. Return type alone cannot distinguish overloads. Overload selection occurs at compile time.
+```java
+int result = add(4, 7);
+System.out.println(result);
+```
 
-## 6. Call-stack tracing
-For each call, track argument values, local variables, return value and where execution resumes. Recursion uses this same stack concept and is covered separately.
+The arguments 4 and 7 are passed to the parameters. The method computes its return value; execution resumes at the call site.
+
+## 3. Parameters vs arguments
+
+Parameters are the variables declared in the method definition. Arguments are the values or expressions supplied when calling it.
+
+## 4. Java is pass-by-value
+
+Java always passes a copy of the argument value. When the value is a reference, the copied reference can be used to mutate the same object, but reassigning the parameter does not reassign the caller's variable.
+
+## 5. Scope
+
+Parameters and local variables are accessible in their method/block. Fields belong to instances or classes. Keep variables close to where they are used.
+
+## 6. Overloading
+
+Methods can share a name if their parameter lists differ. Return type alone does not distinguish overloaded methods. Overload selection occurs at compile time.
+
+## 7. Trace a call
+
+For `sum(4, 7)`:
+1. Caller evaluates arguments.
+2. Parameter `a` receives 4; `b` receives 7.
+3. `a + b` evaluates to 11.
+4. The method returns 11.
+5. Execution resumes at the caller, which can store or print the value.
+
+## Existing example
+- [Sum of two numbers](SumOfTwo.java)
 
 ## Practice
-- [Sum of two numbers using a method](SumOfTwo.java)
-
-## Dry run
-With inputs 4 and 7, trace `sum(4, 7)`: parameters receive the values, the expression evaluates to 11, and the caller prints that return value.
+1. Write methods to add, subtract and multiply.
+2. Write a method that returns the larger of two numbers.
+3. Write an even/odd method.
+4. Write a factorial method.
+5. Write a prime-check method.
+6. Build a menu that calls methods for each operation.
 
 ## Complexity
-The sum method performs constant work: O(1) time and O(1) auxiliary space.
+A method performing a fixed number of operations is O(1) time and O(1) auxiliary space. Complexity depends on what the method does, not on the fact that it is a method.
+
+## Checkpoint
+Explain return types, parameters vs arguments, scope, overloading, pass-by-value and tracing a method call.

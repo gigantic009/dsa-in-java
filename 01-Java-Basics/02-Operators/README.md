@@ -1,33 +1,80 @@
 # Operators
 
-**Theory-only foundation.** No standalone interview problem files are needed at this stage.
+Operators combine, compare, transform or assign values. Understand the expression's type and evaluation order—not only the symbol.
 
 ## 1. Arithmetic
-`+`, `-`, `*`, `/`, `%`. Integer division truncates toward zero. Remainder is useful for parity, divisibility and extracting digits. Integer division by zero throws ArithmeticException.
 
-## 2. Unary
-`++`, `--`, unary `+`, unary `-`, and `!`. Prefix changes the value before the expression uses it; postfix uses the old value before changing it. Prefer separate statements when this distinction harms readability.
+`+`, `-`, `*`, `/`, `%`. Integer division truncates toward zero. Remainder is useful for parity, divisibility and digit extraction. Integer division by zero throws `ArithmeticException`.
 
-## 3. Relational and equality
-`==`, `!=`, `<`, `>`, `<=`, `>=`. For primitives equality compares values. For object references, `==` compares identity; use value-comparison methods such as `equals` when appropriate.
+```java
+int quotient = 9 / 2; // 4
+int remainder = 9 % 2; // 1
+double decimal = 9.0 / 2; // 4.5
+```
 
-## 4. Logical and short-circuiting
-`&&`, `||`, `!`. With `&&`, the right side is skipped if the left side is false. With `||`, the right side is skipped if the left side is true.
+## 2. Unary and increment
+
+`++`, `--`, unary `+`, unary `-`, `!`.
+
+Prefix increment updates before the expression uses the value; postfix increment uses the old value in that expression and then updates. When tracing is confusing, prefer separate statements.
+
+## 3. Comparison
+
+`==`, `!=`, `<`, `>`, `<=`, `>=`. Primitive comparisons compare values. For object references, `==` compares whether references identify the same object; compare string contents using `equals()`.
+
+## 4. Logical operators and short-circuiting
+
+`&&`, `||`, `!`.
+
+- `a && b`: if `a` is false, `b` is not evaluated.
+- `a || b`: if `a` is true, `b` is not evaluated.
+
+```java
+int n = 0;
+boolean safe = n != 0 && 10 / n > 1; // second expression is skipped
+```
+
+Short-circuiting can prevent errors, but write clear conditions.
 
 ## 5. Assignment
-`=`, `+=`, `-=`, `*=`, `/=`, `%=` and related forms. Compound assignment has conversion rules that can differ from a separately written expression.
 
-## 6. Bitwise and shifts
-`&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`. These operate on integral values; boolean logical operators are conceptually different.
+`=`, `+=`, `-= `, `*= `, `/= `, `%=`. Compound assignments have conversion behaviour; for example, `byte b = 1; b += 1;` is legal whereas `b = b + 1;` requires a narrowing cast because the expression is promoted to int.
 
-## 7. Ternary
-`condition ? valueIfTrue : valueIfFalse` is a compact conditional expression. Avoid deep nesting.
+## 6. Bitwise operators and shifts
 
-## 8. Precedence
-Operators follow precedence rules. Parentheses make intended grouping clearer and safer than relying on memorization.
+`&`, `|`, `^`, `~`, `<<`, `>>`, `>>>` work on integral values. They differ from boolean short-circuit operators.
 
-## Trace exercises
-Predict `9 / 2`, `9.0 / 2`, `9 % 2`, `false && (10 / 0 > 1)`, prefix/postfix increment, `5 & 3`, `5 | 3`, `5 ^ 3`, and `1 << 3`.
+For example, the binary representation of 5 and 3 is:
+- 5: `0101`
+- 3: `0011`
+- AND: `0001` → 1
+- OR: `0111` → 7
+- XOR: `0110` → 6
 
-## Self-check
-Explain integer division, short-circuiting, reference equality, prefix/postfix and bitwise versus logical operators.
+## 7. Ternary expression
+
+`condition ? valueIfTrue : valueIfFalse` selects one of two expressions. Use it for simple choices, not deeply nested logic.
+
+## 8. Precedence and parentheses
+
+Operators follow precedence rules. Parentheses help make intended grouping explicit. Avoid relying on memorised precedence when a simple parenthesised expression is clearer.
+
+## Dry-run practice
+
+Predict each before executing:
+- `9 / 2`, `9.0 / 2`, `9 % 2`
+- `false && (10 / 0 > 1)`
+- prefix vs postfix increment
+- `5 & 3`, `5 | 3`, `5 ^ 3`
+- `1 << 3`
+- `byte b = 1; b += 1;`
+
+## Exercises
+1. Check divisibility by both 3 and 5.
+2. Use remainder to extract the last digit.
+3. Demonstrate prefix and postfix increments in separate traced statements.
+4. Compare two strings by content.
+5. Write a bitwise AND example and explain each bit.
+
+## Checkpoint
+Explain integer division, short-circuit evaluation, reference equality, prefix/postfix and logical vs bitwise operators.
