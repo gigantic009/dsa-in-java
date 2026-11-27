@@ -16,6 +16,9 @@ Vertices, edges, directed/undirected, weighted/unweighted, degree, path, cycle a
 ## BFS vs DFS
 BFS uses a queue and explores distance layers. DFS explores deeply before backtracking. With adjacency lists both typically take O(V+E) time.
 
+## Input contracts
+The adjacency-list examples use zero-based vertices. Validation rejects null rows, null neighbor entries and out-of-range vertices. For cycle detection on undirected graphs, the adjacency list must represent edges symmetrically. Self-loops and parallel edges are supported by the builder.
+
 ## Checkpoint
 - [x] Build an adjacency list
 - [x] Run BFS and DFS
