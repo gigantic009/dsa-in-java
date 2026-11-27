@@ -3,6 +3,8 @@ name: Compile Java DSA Files
 on:
   push:
     branches: [main, 'audit-*']
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 jobs:

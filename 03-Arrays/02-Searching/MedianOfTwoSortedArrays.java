@@ -17,13 +17,14 @@ public class MedianOfTwoSortedArrays {
         }
         int n = first.length;
         int m = second.length;
+        long totalLength = (long) n + m;
         int left = 0;
         int right = n;
         while (left <= right) {
             // Choose how many elements belong to the left partition of the first array.
             int firstPartition = left + (right - left) / 2;
             // Balance the total left partition so it contains half (or one extra) values.
-            int secondPartition = (n + m + 1) / 2 - firstPartition;
+            int secondPartition = (int) ((totalLength + 1) / 2) - firstPartition;
             // Values immediately around each partition; sentinels handle empty sides.
             int firstLeft = firstPartition == 0
                     ? Integer.MIN_VALUE : first[firstPartition - 1];
@@ -40,7 +41,7 @@ public class MedianOfTwoSortedArrays {
              * average of the largest left and smallest right values (even total).
              */
             if (firstLeft <= secondRight && secondLeft <= firstRight) {
-                if ((n + m) % 2 == 1) {
+                if (totalLength % 2 == 1) {
                     return Math.max(firstLeft, secondLeft);
                 }
                 long middleLeft = Math.max(firstLeft, secondLeft);
@@ -61,11 +62,21 @@ public class MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Array sizes must be non-negative");
+            sc.close();
+            return;
+        }
         int[] first = new int[n];
         for (int i = 0; i < n; i++) {
             first[i] = sc.nextInt();
         }
         int m = sc.nextInt();
+        if (m < 0) {
+            System.out.println("Array sizes must be non-negative");
+            sc.close();
+            return;
+        }
         int[] second = new int[m];
         for (int i = 0; i < m; i++) {
             second[i] = sc.nextInt();
