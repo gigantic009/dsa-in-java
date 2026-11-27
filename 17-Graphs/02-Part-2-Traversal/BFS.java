@@ -35,8 +35,8 @@ public class BFS {
             if (neighbors == null) {
                 throw new IllegalArgumentException("Neighbor list cannot be null");
             }
-            for (int vertex : neighbors) {
-                if (vertex < 0 || vertex >= graph.size()) {
+            for (Integer vertex : neighbors) {
+                if (vertex == null || vertex < 0 || vertex >= graph.size()) {
                     throw new IllegalArgumentException("Invalid neighbor vertex");
                 }
             }

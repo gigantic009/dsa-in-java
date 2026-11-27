@@ -21,6 +21,8 @@ In an undirected adjacency list, an edge is stored at both endpoints. Directed e
 ## Implemented
 - [x] Build undirected adjacency list — AdjacencyList.java
 
+The builder accepts a nonnegative vertex count and an edge array. Each edge must contain at least two valid zero-based endpoints. Null edge arrays, null edge rows and out-of-range endpoints are rejected. Self-loops and repeated edges are retained.
+
 ## Practice
 - [ ] Build adjacency matrix and edge list
 - [ ] Compute degrees

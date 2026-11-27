@@ -1,6 +1,6 @@
 import java.util.List;
 
-/** Detects cycles in an undirected graph using DFS and parent tracking. */
+/** Detects cycles in an undirected graph using DFS and parent-edge tracking. */
 public class CycleDetectionUndirected {
     public static boolean hasCycle(List<List<Integer>> graph) {
         BFS.validateGraph(graph);
@@ -17,13 +17,18 @@ public class CycleDetectionUndirected {
     private static boolean dfs(List<List<Integer>> graph, int vertex,
                                int parent, boolean[] visited) {
         visited[vertex] = true;
+        boolean skippedParentEdge = false;
 
         for (int neighbor : graph.get(vertex)) {
-            if (!visited[neighbor]) {
-                if (dfs(graph, neighbor, vertex, visited)) {
-                    return true;
-                }
-            } else if (neighbor != parent) {
+            // Skip only the tree edge to the parent; another parallel edge is a cycle.
+            if (neighbor == parent && !skippedParentEdge) {
+                skippedParentEdge = true;
+                continue;
+            }
+            if (visited[neighbor]) {
+                return true;
+            }
+            if (dfs(graph, neighbor, vertex, visited)) {
                 return true;
             }
         }

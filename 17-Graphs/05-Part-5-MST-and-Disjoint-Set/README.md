@@ -6,7 +6,7 @@ A minimum spanning tree connects all vertices in a connected, undirected, weight
 - [x] DSU — UnionFind.java (path compression and union by rank)
 - [x] Kruskal's MST — KruskalMST.java
 
-Union-Find operations are amortized near O(1). Kruskal typically runs in O(E log E).
+Union-Find operations are amortized near O(1). Kruskal typically runs in O(E log E). The implementation validates edge endpoints, rejects disconnected graphs and sorts a shallow copy of the edge array so the caller's order is preserved.
 
 ## Practice
 - [ ] Prim's algorithm
