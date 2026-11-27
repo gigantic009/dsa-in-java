@@ -21,7 +21,7 @@ Company interview associations are intentionally omitted from this collection un
 | #11 | Container With Most Water | [LeetCode-11-ContainerWithMostWater.java](Moderate/LeetCode-11-ContainerWithMostWater.java) |
 | #15 | 3Sum | [LeetCode-15-ThreeSum.java](Moderate/LeetCode-15-ThreeSum.java) |
 | #31 | Next Permutation | [LeetCode-31-NextPermutation.java](Moderate/LeetCode-31-NextPermutation.java) |
-| #33 | Search in Rotated Sorted Array | [LeetCode-33-SearchInRotatedSortedArray.java](Moderate/LeetCode-33-SearchInRotatedArray.java) |
+| #33 | Search in Rotated Sorted Array | [LeetCode-33-SearchInRotatedSortedArray.java](Moderate/LeetCode-33-SearchInRotatedSortedArray.java) |
 | #45 | Jump Game II | [LeetCode-45-JumpGameII.java](Moderate/LeetCode-45-JumpGameII.java) |
 | #53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [LeetCode-53-MaximumSubarray.java](Moderate/LeetCode-53-MaximumSubarray.java) |
 | #56 | Merge Intervals | [LeetCode-56-MergeIntervals.java](Moderate/LeetCode-56-MergeIntervals.java) |
