@@ -1,17 +1,31 @@
 /** Jump Game: determines if the last index is reachable. */
 public class JumpGame {
+    // Time: O(n); auxiliary space: O(1).
     public static boolean canReach(int[] jumps) {
-        if (jumps == null) throw new IllegalArgumentException("Array cannot be null");
-        for (int jump : jumps) if (jump < 0) throw new IllegalArgumentException("Jump lengths must be nonnegative");
-        if (jumps.length == 0) return false;
-
-        int farthest = 0;
-        for (int i = 0; i < jumps.length; i++) {
-            if (i > farthest) return false; // This index cannot be reached.
-            long reach = (long) i + jumps[i];
-            farthest = (int) Math.min(Integer.MAX_VALUE, Math.max(farthest, reach));
-            if (farthest >= jumps.length - 1) return true;
+        if (jumps == null) {
+            throw new IllegalArgumentException("Array cannot be null.");
         }
+        for (int jump : jumps) {
+            if (jump < 0) {
+                throw new IllegalArgumentException("Jump lengths must be nonnegative.");
+            }
+        }
+        if (jumps.length == 0) {
+            return false;
+        }
+
+        long farthest = 0;
+        for (int i = 0; i < jumps.length; i++) {
+            if (i > farthest) {
+                return false;
+            }
+
+            farthest = Math.max(farthest, (long) i + jumps[i]);
+            if (farthest >= jumps.length - 1) {
+                return true;
+            }
+        }
+
         return true;
     }
 
