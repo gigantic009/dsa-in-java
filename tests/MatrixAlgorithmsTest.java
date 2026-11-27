@@ -77,7 +77,7 @@ public class MatrixAlgorithmsTest {
         };
         SetMatrixZeroes.setZeroes(firstColumnZero);
         assertMatrixEquals(new int[][]{
-            {1, 2},
+            {0, 2},
             {0, 0},
             {0, 6}
         }, firstColumnZero, "first-column zero");
