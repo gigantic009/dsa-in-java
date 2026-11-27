@@ -3,12 +3,10 @@ import java.util.Comparator;
 
 /** Kruskal's algorithm for a minimum spanning tree of an undirected graph. */
 public class KruskalMST {
+    /** Returns the MST weight without sorting or modifying the caller's edge array. */
     public static long total(int vertices, int[][] edges) {
         if (vertices < 0 || edges == null) {
             throw new IllegalArgumentException("Invalid vertex count or edges");
-        }
-        if (vertices == 0) {
-            return 0;
         }
 
         for (int[] edge : edges) {
@@ -18,14 +16,18 @@ public class KruskalMST {
                 throw new IllegalArgumentException("Invalid edge");
             }
         }
+        if (vertices == 0) {
+            return 0;
+        }
 
-        Arrays.sort(edges, Comparator.comparingInt(edge -> edge[2]));
+        int[][] sortedEdges = edges.clone();
+        Arrays.sort(sortedEdges, Comparator.comparingInt(edge -> edge[2]));
 
         UnionFind unionFind = new UnionFind(vertices);
         long totalWeight = 0;
         int selectedEdges = 0;
 
-        for (int[] edge : edges) {
+        for (int[] edge : sortedEdges) {
             if (unionFind.union(edge[0], edge[1])) {
                 totalWeight += edge[2];
                 selectedEdges++;
