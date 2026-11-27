@@ -40,6 +40,15 @@ jobs:
           done < <(find . -name '*.java' -not -path './compile-results/*' -print0)
           echo "Checked $count non-graph Java files; failures: $failures"
           if [ "$failures" -gt 0 ]; then exit 1; fi
+      - name: Compile and run matrix algorithm tests
+        shell: bash
+        run: |
+          set -e
+          mkdir -p compile-results/matrix-tests
+          javac -d compile-results/matrix-tests \
+            05-Two-D-Arrays/01-Matrix-Fundamentals/*.java \
+            tests/MatrixAlgorithmsTest.java
+          java -cp compile-results/matrix-tests MatrixAlgorithmsTest
       - name: Compile the Graphs module together
         shell: bash
         run: |
