@@ -1,5 +1,6 @@
 // Reverse a string recursively by reversing its suffix and moving the first character.
-// Time and auxiliary space: O(n), excluding the returned string allocations.
+// Time: O(n^2) because substring and concatenation copy characters repeatedly.
+// Stack depth: O(n); total intermediate string allocation is O(n^2).
 public class RecursiveStringReverse {
     public static String reverse(String s) {
         if (s == null) {
