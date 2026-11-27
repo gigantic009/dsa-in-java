@@ -20,11 +20,12 @@ public class TwoSum {
         Map<Integer, Integer> seen = new HashMap<>();
 
         for (int i = 0; i < numbers.length; i++) {
-            int needed = target - numbers[i];
+            // Use long so subtraction cannot wrap into a false int complement.
+            long needed = (long) target - numbers[i];
 
-            // Check whether the complement was encountered earlier.
-            if (seen.containsKey(needed)) {
-                return new int[] {seen.get(needed), i};
+            if (needed >= Integer.MIN_VALUE && needed <= Integer.MAX_VALUE
+                    && seen.containsKey((int) needed)) {
+                return new int[] {seen.get((int) needed), i};
             }
 
             // Save this value's index for future complement checks.
