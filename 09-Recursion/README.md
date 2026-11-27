@@ -25,6 +25,13 @@ Backtracking explores choices, then restores state so another choice can be trie
 ## Complexity
 Count calls and depth separately. A single chain of n calls may have O(n) stack space; branching recursion may have much more time. State assumptions and recurrence.
 
+The current `RecursiveStringReverse` example uses `substring` and string concatenation, so it takes O(n²) time and allocates O(n²) characters across the intermediate strings; its call-stack depth is O(n). A two-pointer helper over a character array can reduce the work to O(n) time, but still uses O(n) recursion depth.
+
+## Practical limits
+- Naive Fibonacci is exponential; use small inputs only (the code warns above roughly 40).
+- Linear-depth examples such as recursive sum, printing, sorted-array checking, palindrome checking and string reversal can exhaust the Java stack on very large inputs.
+- Binary-string, subset, permutation and N-Queens generators have rapidly growing output or search spaces. Test small cases before increasing the input size.
+
 ## Common mistakes
 - Missing or unreachable base case
 - Recursive input does not get smaller
