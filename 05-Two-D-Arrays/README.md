@@ -45,6 +45,18 @@ A common square-matrix 90-degree clockwise rotation strategy is transpose follow
 ## 6. Search in sorted matrix
 Do not assume every matrix is sorted in the same way. A globally sorted matrix supports flattened binary search; a row/column sorted matrix can use staircase search. State the precondition before choosing an algorithm.
 
+## 7. Implementation contracts and complexity
+
+| Implementation | Input contract | Time | Extra space |
+|---|---|---|---|
+| Rotate 90° clockwise | Square matrix | O(n²) | O(1) |
+| Flattened binary search | Rectangular matrix sorted globally row-wise | O(log(rc)) | O(1) |
+| Set Matrix Zeroes | Rectangular matrix | O(rc) | O(1) |
+| Spiral traversal | Rectangular matrix | O(rc) | O(1), excluding result |
+| Transpose | Rectangular matrix | O(rc) | O(rc) for output |
+
+These implementations do not validate every row of a jagged array. Use them only when their listed shape and ordering preconditions hold. The Java 2D-array model itself permits jagged rows; an algorithm's contract must state when that flexibility is not supported.
+
 ## Practice ladder
 1. Print all cells.
 2. Sum each row and column.
