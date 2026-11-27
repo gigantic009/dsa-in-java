@@ -4,8 +4,8 @@ import java.util.List;
 /** Builds an undirected adjacency list. */
 public class AdjacencyList {
     public static List<List<Integer>> build(int vertices, int[][] edges) {
-        if (vertices < 0) {
-            throw new IllegalArgumentException("Vertex count cannot be negative");
+        if (vertices < 0 || edges == null) {
+            throw new IllegalArgumentException("Invalid vertex count or edges");
         }
 
         List<List<Integer>> graph = new ArrayList<>();
