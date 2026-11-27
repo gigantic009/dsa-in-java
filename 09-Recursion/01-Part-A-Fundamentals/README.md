@@ -34,7 +34,8 @@ Each call keeps its local state until its child returns. Calls unwind in reverse
 ## Complexity
 - Sum/factorial: O(n) time and O(n) stack
 - Naive Fibonacci: exponential time, O(n) stack
-- String reverse/palindrome/sorted check: O(n) time, O(n) stack
+- Recursive string reverse: O(n²) time and O(n) stack in the current substring/concatenation implementation; repeated string copies also allocate O(n²) total characters.
+- Recursive palindrome and sorted-array check: O(n) time and O(n) stack
 - Recursive binary search: O(log n) time and stack
 - Fast power: O(log n) calls/stack
 
