@@ -22,5 +22,9 @@ Greedy algorithms make locally optimal choices. A greedy strategy is not automat
 - [ ] Gas Station
 - [ ] Huffman Coding
 
+## Greedy coin counterexample
+
+For denominations `{1, 3, 4}` and amount `6`, choosing the largest coin first gives `4 + 1 + 1` (three coins), while `3 + 3` uses two. Greedy is therefore not a general minimum-coin algorithm.
+
 ## Self-check
 Explain the greedy choice, trace it, justify its correctness, test boundaries, and analyze time/space complexity.
