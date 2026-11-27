@@ -40,6 +40,16 @@ jobs:
           done < <(find . -name '*.java' -not -path './compile-results/*' -print0)
           echo "Checked $count non-graph Java files; failures: $failures"
           if [ "$failures" -gt 0 ]; then exit 1; fi
+      - name: Compile and run greedy algorithm tests
+        shell: bash
+        run: |
+          set -e
+          mkdir -p compile-results/greedy-tests
+          javac -d compile-results/greedy-tests \
+            18-Greedy/01-Greedy-Fundamentals/*.java \
+            18-Greedy/02-Greedy-Problem-Patterns/*.java \
+            tests/GreedyAlgorithmsTest.java
+          java -cp compile-results/greedy-tests GreedyAlgorithmsTest
       - name: Compile and run matrix algorithm tests
         shell: bash
         run: |
