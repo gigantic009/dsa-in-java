@@ -8,6 +8,10 @@ import java.util.Set;
 
 public class ContainsDuplicate {
     public static boolean containsDuplicate(int[] numbers) {
+        if (numbers == null) {
+            throw new IllegalArgumentException("Array must not be null.");
+        }
+
         // A set keeps only distinct values and supports average constant-time insertion.
         Set<Integer> values = new HashSet<>();
         for (int number : numbers) {
