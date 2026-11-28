@@ -9,12 +9,21 @@ import java.util.Scanner;
 
 public class FindDuplicateNPlusOne {
     public static int findDuplicate(int[] numbers) {
+        if (numbers == null || numbers.length < 2) {
+            throw new IllegalArgumentException("Array must contain at least two values");
+        }
+
+        int n = numbers.length - 1;
+        for (int number : numbers) {
+            if (number < 1 || number > n) {
+                throw new IllegalArgumentException("Values must be between 1 and n");
+            }
+        }
+
         /*
-         * Treat each value as the next index, creating a linked traversal.
-         * Because there are n + 1 values restricted to indices 1..n,
-         * a cycle must exist. Floyd's algorithm finds its entry.
+         * The input contract guarantees exactly one repeated value.
+         * Treat each value as a link to the next index and use Floyd's algorithm.
          */
-        // Phase 1: advance slow by one link and fast by two until they meet in the cycle.
         int slow = numbers[0];
         int fast = numbers[0];
         do {
@@ -22,10 +31,7 @@ public class FindDuplicateNPlusOne {
             fast = numbers[numbers[fast]];
         } while (slow != fast);
 
-        /*
-         * Phase 2: reset one pointer to the start. Advancing both by one
-         * makes them meet at the cycle entry, which corresponds to the duplicate.
-         */
+        // Phase 2: find the cycle entry, which is the repeated value.
         slow = numbers[0];
         while (slow != fast) {
             slow = numbers[slow];
@@ -37,6 +43,12 @@ public class FindDuplicateNPlusOne {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        if (n < 1 || n == Integer.MAX_VALUE) {
+            System.out.println("n must be at least 1 and within the array-size limit");
+            sc.close();
+            return;
+        }
+
         int[] numbers = new int[n + 1];
         for (int i = 0; i <= n; i++) {
             numbers[i] = sc.nextInt();
